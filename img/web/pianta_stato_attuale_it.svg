@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 -45 910 740" width="1820" height="1480">
+  <!-- STATO ATTUALE (8/11/2026): muri, porte e finestre come oggi; arredi tolti. Generata da pianta_stato_attuale.py -->
+  <defs>
+    <pattern id="tile" width="22" height="22" patternUnits="userSpaceOnUse">
+      <rect width="22" height="22" fill="#DCD1BD"/><path d="M22 0V22H0" fill="none" stroke="#C9BCA5" stroke-width="0.6"/>
+    </pattern>
+    <pattern id="tileb" width="16" height="16" patternUnits="userSpaceOnUse">
+      <rect width="16" height="16" fill="#D3CEC4"/><path d="M16 0V16H0" fill="none" stroke="#BDB6AA" stroke-width="0.5"/>
+    </pattern>
+    <pattern id="oak" width="252" height="32" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="126" height="16" fill="#CBA680" stroke="#A9845E" stroke-width="0.5"/>
+      <rect x="126" y="0" width="126" height="16" fill="#C59F78" stroke="#A9845E" stroke-width="0.5"/>
+      <rect x="0" y="16" width="63" height="16" fill="#C7A27B" stroke="#A9845E" stroke-width="0.5"/>
+      <rect x="63" y="16" width="126" height="16" fill="#CEAA84" stroke="#A9845E" stroke-width="0.5"/>
+      <rect x="189" y="16" width="63" height="16" fill="#C29C74" stroke="#A9845E" stroke-width="0.5"/>
+      <path d="M8 6 q40 -2 90 1 M140 10 q35 2 80 -1 M75 24 q30 -2 70 1 M200 22 q20 2 45 0" stroke="#B48E67" stroke-width="0.45" fill="none" opacity="0.7"/>
+    </pattern>
+    <pattern id="mc" width="90" height="90" patternUnits="userSpaceOnUse">
+      <rect width="90" height="90" fill="#B1A99E"/>
+      <circle cx="20" cy="25" r="18" fill="#BDB5AA" opacity="0.5"/>
+      <circle cx="65" cy="60" r="22" fill="#A49C91" opacity="0.35"/>
+      <circle cx="70" cy="15" r="10" fill="#C2BBB1" opacity="0.4"/>
+    </pattern>
+    <pattern id="klinker" width="24" height="12" patternUnits="userSpaceOnUse">
+      <rect width="24" height="12" fill="#8C4934"/>
+      <rect x="0.6" y="0.6" width="22.8" height="10.8" fill="#97513B" stroke="#6E3626" stroke-width="0.6"/>
+    </pattern>
+    <filter id="sh" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="1.6" dy="2.4" stdDeviation="2" flood-color="#000" flood-opacity="0.32"/>
+    </filter>
+    <filter id="apt" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity="0.7"/>
+    </filter>
+    <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF1CF" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#FFF1CF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="board" cx="50%" cy="45%" r="70%">
+      <stop offset="0%" stop-color="#161B25"/>
+      <stop offset="100%" stop-color="#0B0D11"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="20" y="-45" width="910" height="740" fill="url(#board)"/>
+  <rect x="34" y="-31" width="882" height="712" fill="none" stroke="#D4AF37" stroke-opacity="0.32" stroke-width="1"/>
+
+  <!-- ================= PARTI COMUNI ================= -->
+  <g filter="url(#apt)">
+    <polygon points="472,405 890,405 890,495 590,495 590,660 472,660" fill="#1C212B"/>
+    <rect x="715" y="340" width="93" height="65" fill="#1C212B"/>
+    <rect x="590" y="495" width="300" height="165" fill="#232935"/>
+    <rect x="375" y="495" width="97" height="165" fill="#232935"/>
+  </g>
+  <g stroke="#3A4250" stroke-width="1.2">
+    <line x1="610" y1="500" x2="610" y2="574"/><line x1="628" y1="500" x2="628" y2="574"/><line x1="646" y1="500" x2="646" y2="574"/><line x1="664" y1="500" x2="664" y2="574"/><line x1="682" y1="500" x2="682" y2="574"/><line x1="700" y1="500" x2="700" y2="574"/><line x1="718" y1="500" x2="718" y2="574"/><line x1="736" y1="500" x2="736" y2="574"/><line x1="754" y1="500" x2="754" y2="574"/><line x1="772" y1="500" x2="772" y2="574"/><line x1="790" y1="500" x2="790" y2="574"/><line x1="808" y1="500" x2="808" y2="574"/><line x1="826" y1="500" x2="826" y2="574"/><line x1="844" y1="500" x2="844" y2="574"/>
+    <line x1="610" y1="582" x2="610" y2="656"/><line x1="628" y1="582" x2="628" y2="656"/><line x1="646" y1="582" x2="646" y2="656"/><line x1="664" y1="582" x2="664" y2="656"/><line x1="682" y1="582" x2="682" y2="656"/><line x1="700" y1="582" x2="700" y2="656"/><line x1="718" y1="582" x2="718" y2="656"/><line x1="736" y1="582" x2="736" y2="656"/><line x1="754" y1="582" x2="754" y2="656"/><line x1="772" y1="582" x2="772" y2="656"/><line x1="790" y1="582" x2="790" y2="656"/><line x1="808" y1="582" x2="808" y2="656"/><line x1="826" y1="582" x2="826" y2="656"/><line x1="844" y1="582" x2="844" y2="656"/>
+  </g>
+  <rect x="600" y="575" width="250" height="6" fill="#3A4250"/>
+  <rect x="390" y="510" width="68" height="76" fill="none" stroke="#3A4250" stroke-width="1.2"/>
+  <path d="M390 510 L458 586 M458 510 L390 586" stroke="#3A4250" stroke-width="1.2"/>
+  <g fill="none" stroke="#3A4150" stroke-width="6" stroke-linecap="square">
+    <path d="M890,405 L890,660 L375,660 M590,495 L890,495 M590,495 L590,512 M590,562 L590,660 M472,495 L472,521 M472,575 L472,660 M375,600 L472,600 M808,340 L808,405"/>
+  </g>
+
+  <!-- ================= TERRAZZO ================= -->
+  <polygon points="330,35 808,35 808,150 610,150 610,125 330,125" fill="url(#klinker)" filter="url(#apt)"/>
+  <ellipse cx="470" cy="80" rx="150" ry="45" fill="url(#sun)" opacity="0.5"/>
+  <line x1="330" y1="35" x2="808" y2="35" stroke="#5B606A" stroke-width="7"/>
+  <g fill="#A5402E" stroke="#6E2A1E" stroke-width="0.8">
+    <rect x="322" y="29" width="22" height="22"/><rect x="592" y="29" width="30" height="24"/><rect x="788" y="29" width="22" height="24"/>
+  </g>
+
+  <!-- ================= PAVIMENTI ================= -->
+  <polygon points="60,50 330,50 330,125 610,125 610,150 808,150 808,340 715,340 715,405 472,405 472,495 375,495 375,660 60,660" fill="url(#tile)" filter="url(#apt)"/>
+  <rect x="330" y="340" width="142" height="155" fill="url(#tileb)"/>
+  <rect x="262" y="495" width="113" height="165" fill="url(#tileb)"/>
+  <ellipse cx="485" cy="150" rx="120" ry="50" fill="url(#sun)"/>
+  <ellipse cx="715" cy="175" rx="90" ry="40" fill="url(#sun)"/>
+  <ellipse cx="195" cy="72" rx="80" ry="34" fill="url(#sun)"/>
+  <ellipse cx="80" cy="535" rx="40" ry="70" fill="url(#sun)"/>
+  <ellipse cx="80" cy="328" rx="34" ry="56" fill="url(#sun)"/>
+
+  <!-- ================= MURATURE (tutte invariate) ================= -->
+  <g fill="none" stroke-linecap="square">
+    <path stroke="#D4AF37" stroke-opacity="0.55" stroke-width="15" d="M330,125 L330,50 L60,50 L60,660 L375,660 L375,495 L472,495 L472,405 L512,405 M564,405 L715,405 L715,340 L808,340 L808,150 L775,150 M655,150 L610,150 L610,125 L540,125 M430,125 L330,125 M808,150 L808,35"/>
+    <path stroke="#16181C" stroke-width="12" d="M330,125 L330,50 L60,50 L60,660 L375,660 L375,495 L472,495 L472,405 L512,405 M564,405 L715,405 L715,340 L808,340 L808,150 L775,150 M655,150 L610,150 L610,125 L540,125 M430,125 L330,125 M808,150 L808,35"/>
+    <path stroke="#16181C" stroke-width="7" d="M330,125 L330,268 M330,312 L330,380 M330,420 L330,495 M60,245 L278,245 M322,245 L330,245 M262,245 L262,292 M262,336 L262,442 M262,486 L262,495 L276,495 M318,495 L375,495 M262,495 L262,660 M330,340 L472,340 M610,125 L610,215 M610,260 L610,356 M610,394 L610,405 M610,340 L715,340"/>
+  </g>
+  <rect x="56" y="406" width="208" height="12" fill="#16181C" stroke="#D4AF37" stroke-opacity="0.9" stroke-width="1.4"/>
+  <g stroke="#D4AF37" stroke-opacity="0.45" stroke-width="0.8">
+    <line x1="70" y1="417" x2="80" y2="407"/><line x1="90" y1="417" x2="100" y2="407"/><line x1="110" y1="417" x2="120" y2="407"/><line x1="130" y1="417" x2="140" y2="407"/><line x1="150" y1="417" x2="160" y2="407"/><line x1="170" y1="417" x2="180" y2="407"/><line x1="190" y1="417" x2="200" y2="407"/><line x1="210" y1="417" x2="220" y2="407"/><line x1="230" y1="417" x2="240" y2="407"/><line x1="250" y1="417" x2="260" y2="407"/>
+  </g>
+
+  <!-- dente murario con il clarinetto idrico (angolo Sud-Ovest ex Bagno A, come da pianta originale) -->
+  <rect x="330" y="445" width="11" height="50" fill="#16181C"/>
+  <!-- serramenti -->
+  <g fill="#CFE0E8" stroke="#0E1014" stroke-width="0.8">
+    <rect x="140" y="45" width="110" height="10"/>
+    <rect x="55" y="280" width="10" height="95"/>
+    <rect x="55" y="485" width="10" height="100"/>
+    <rect x="430" y="120" width="110" height="10"/>
+    <rect x="655" y="145" width="120" height="10"/>
+  </g>
+  <g stroke="#0E1014" stroke-width="0.8">
+    <line x1="176.6" y1="45" x2="176.6" y2="55"/><line x1="213.3" y1="45" x2="213.3" y2="55"/>
+    <line x1="55" y1="311.6" x2="65" y2="311.6"/><line x1="55" y1="343.3" x2="65" y2="343.3"/>
+    <line x1="55" y1="518.3" x2="65" y2="518.3"/><line x1="55" y1="551.6" x2="65" y2="551.6"/>
+    <line x1="485" y1="120" x2="485" y2="130"/>
+    <line x1="715" y1="145" x2="715" y2="155"/>
+  </g>
+
+  <!-- porte (posizioni reali) -->
+  <g fill="none" stroke="#16181C">
+    <line x1="512" y1="405" x2="512" y2="353" stroke-width="3"/>
+    <path d="M564,405 A52,52 0 0 0 512,353" stroke-width="0.8" stroke-dasharray="3 3"/>
+    <!-- porta-finestra soggiorno scorrevole (come la cucina) --><rect x="430" y="130" width="58" height="2.5" fill="#16181C" stroke="none"/>
+    
+    <g stroke="#8C6748" stroke-width="3">
+      <line x1="330" y1="312" x2="374" y2="312"/>
+      <line x1="322" y1="245" x2="322" y2="201"/>
+      <line x1="262" y1="292" x2="217" y2="292"/>
+      <line x1="262" y1="442" x2="217" y2="442"/>
+      <line x1="318" y1="495" x2="318" y2="537"/>
+    </g>
+    <g stroke-width="0.8" stroke-dasharray="3 3">
+      <path d="M330,268 A44,44 0 0 1 374,312"/>
+      <path d="M278,245 A44,44 0 0 1 322,201"/>
+      <path d="M262,336 A44,44 0 0 1 217,292"/>
+      <path d="M262,486 A44,44 0 0 1 217,442"/>
+      <path d="M276,495 A42,42 0 0 0 318,537"/>
+    </g>
+  </g>
+  <rect x="655" y="155" width="62" height="2.5" fill="#16181C"/>
+  <!-- porte reali: cucina (apre verso la parete Sud, il tavolo è arretrato per lasciarla chiudere) e guardaroba (apre verso il soggiorno) -->
+  <line x1="610" y1="258" x2="648" y2="258" stroke="#8C6748" stroke-width="3"/>
+  <path d="M610,215 A43,43 0 0 1 653,258" fill="none" stroke="#16181C" stroke-width="0.8" stroke-dasharray="3 3"/>
+  <line x1="610" y1="394" x2="572" y2="394" stroke="#8C6748" stroke-width="3"/>
+  <path d="M610,356 A38,38 0 0 0 572,394" fill="none" stroke="#16181C" stroke-width="0.8" stroke-dasharray="3 3"/>
+  <rect x="338" y="452" width="126" height="38" rx="9" fill="#EDEAE3" stroke="#8A93A3" stroke-width="1.2"/>
+  <rect x="333" y="500" width="37" height="38" rx="2" fill="#E4E6E8" stroke="#8A93A3" stroke-width="1.2"/><path d="M333 500 L370 538 M370 500 L333 538" stroke="#B6BDC8" stroke-width="0.8"/>
+  <g font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" text-anchor="middle">
+    <text x="468" y="222" font-size="16.0" font-weight="700" fill="#1E242E">Soggiorno</text>
+    <text x="468" y="240" font-size="14.0" fill="#4A5363">20,2 m²</text>
+    <text x="711" y="236" font-size="16.0" font-weight="700" fill="#1E242E">Cucina</text>
+    <text x="711" y="254" font-size="14.0" fill="#4A5363">10,5 m²</text>
+    <text x="663" y="372" font-size="12.5" font-weight="700" fill="#1E242E">Ripostiglio</text>
+    <text x="663" y="386" font-size="10.9" fill="#4A5363">1,8 m²</text>
+    <text x="541" y="349" font-size="13.1" font-weight="700" fill="#1E242E">Ingresso</text>
+    <text x="192" y="150" font-size="16.0" font-weight="700" fill="#1E242E">Camera Carso</text>
+    <text x="192" y="168" font-size="14.0" fill="#4A5363">14,5 m²</text>
+    <text x="160" y="322" font-size="16.0" font-weight="700" fill="#1E242E">Studio</text>
+    <text x="160" y="340" font-size="14.0" fill="#4A5363">9,5 m²</text>
+    <text x="160" y="530" font-size="16.0" font-weight="700" fill="#1E242E">Camera Mare</text>
+    <text x="160" y="548" font-size="14.0" fill="#4A5363">14,3 m²</text>
+    <text x="401" y="404" font-size="13.1" font-weight="700" fill="#1E242E">Bagno grande</text>
+    <text x="401" y="418" font-size="11.5" fill="#4A5363">vasca · 5,2 m²</text>
+    <text x="318" y="596" font-size="12.5" font-weight="700" fill="#1E242E">Bagno piccolo</text>
+    <text x="318" y="610" font-size="10.9" fill="#4A5363">doccia · 4,4 m²</text>
+    <text transform="translate(297 372) rotate(-90)" font-size="13.5" font-weight="700" fill="#1E242E">Corridoio · 4,8 m²</text>
+    <text x="470" y="78" font-size="16" font-weight="700" fill="#FFF6E5">Terrazzo</text>
+    <text x="470" y="96" font-size="14" fill="#F3E5AB">11,0 m² · ~8,5 × 1,5 m</text>
+    <text x="424" y="621" font-size="12.5" fill="#9AA3B2">Ascensore</text>
+    <text x="745" y="476" font-size="12.5" fill="#9AA3B2">Scale</text>
+  </g>
+  <text x="46" y="-11" font-family="Georgia, 'Times New Roman', serif" font-size="17" font-weight="700" letter-spacing="1.5" fill="#F3E5AB">VIA GIULIA 77 · 9° E ULTIMO PIANO</text>
+  <text x="46" y="7" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" fill="#A3ABB8">Com’è oggi · 108 m² catastali</text>
+  <g transform="translate(872 42)"><circle r="17" fill="none" stroke="#D4AF37" stroke-opacity="0.7" stroke-width="1.2"/><path d="M0 -13 L6 6 L0 2 L-6 6 Z" fill="#D4AF37"/><text y="-21" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#F3E5AB">N</text></g>
+  <g transform="translate(64 676)" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" fill="#A3ABB8">
+    <rect width="54.9" height="5" fill="#D4AF37"/><rect x="54.9" width="54.9" height="5" fill="#0B0D11" stroke="#D4AF37" stroke-width="1"/>
+    <text x="0" y="17">0</text><text x="54.9" y="17" text-anchor="middle">1</text><text x="109.9" y="17" text-anchor="middle">2 m</text></g>
+  <text x="904" y="690" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" text-anchor="end" fill="#8B93A1">Superfici nette dalla planimetria di progetto: 85,19 m² calpestabili in tutto</text>
+</svg>

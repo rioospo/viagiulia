@@ -1,0 +1,294 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 -5 910 700" width="1820" height="1400">
+  <!-- VARIANTE "PIANTA REALE" v1: nessuna opera muraria. Muri e porte nelle posizioni del modello 3D del sito (index.html buildWall).
+       3 camere intatte: Camera Carso matrimoniale (vista Carso), Studio cameretta, Camera Mare studio / camera ospiti.
+       Finiture rifatte come il concept (rovere XL, microcemento, limestone); sanitari negli stessi punti. Pranzo in cucina, ripostiglio = guardaroba d'ingresso. -->
+  <defs>
+    <pattern id="oak" width="252" height="32" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="126" height="16" fill="#CBA680" stroke="#A9845E" stroke-width="0.5"/>
+      <rect x="126" y="0" width="126" height="16" fill="#C59F78" stroke="#A9845E" stroke-width="0.5"/>
+      <rect x="0" y="16" width="63" height="16" fill="#C7A27B" stroke="#A9845E" stroke-width="0.5"/>
+      <rect x="63" y="16" width="126" height="16" fill="#CEAA84" stroke="#A9845E" stroke-width="0.5"/>
+      <rect x="189" y="16" width="63" height="16" fill="#C29C74" stroke="#A9845E" stroke-width="0.5"/>
+      <path d="M8 6 q40 -2 90 1 M140 10 q35 2 80 -1 M75 24 q30 -2 70 1 M200 22 q20 2 45 0" stroke="#B48E67" stroke-width="0.45" fill="none" opacity="0.7"/>
+    </pattern>
+    <pattern id="mc" width="90" height="90" patternUnits="userSpaceOnUse">
+      <rect width="90" height="90" fill="#B1A99E"/>
+      <circle cx="20" cy="25" r="18" fill="#BDB5AA" opacity="0.5"/>
+      <circle cx="65" cy="60" r="22" fill="#A49C91" opacity="0.35"/>
+      <circle cx="70" cy="15" r="10" fill="#C2BBB1" opacity="0.4"/>
+    </pattern>
+    <pattern id="klinker" width="24" height="12" patternUnits="userSpaceOnUse">
+      <rect width="24" height="12" fill="#8C4934"/>
+      <rect x="0.6" y="0.6" width="22.8" height="10.8" fill="#97513B" stroke="#6E3626" stroke-width="0.6"/>
+    </pattern>
+    <filter id="sh" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="1.6" dy="2.4" stdDeviation="2" flood-color="#000" flood-opacity="0.32"/>
+    </filter>
+    <filter id="apt" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity="0.7"/>
+    </filter>
+    <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF1CF" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#FFF1CF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="board" cx="50%" cy="45%" r="70%">
+      <stop offset="0%" stop-color="#161B25"/>
+      <stop offset="100%" stop-color="#0B0D11"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="20" y="-5" width="910" height="700" fill="url(#board)"/>
+  <rect x="34" y="9" width="882" height="672" fill="none" stroke="#D4AF37" stroke-opacity="0.32" stroke-width="1"/>
+
+  <!-- ================= PARTI COMUNI ================= -->
+  <g filter="url(#apt)">
+    <polygon points="472,405 890,405 890,495 590,495 590,660 472,660" fill="#1C212B"/>
+    <rect x="715" y="340" width="93" height="65" fill="#1C212B"/>
+    <rect x="590" y="495" width="300" height="165" fill="#232935"/>
+    <rect x="375" y="495" width="97" height="165" fill="#232935"/>
+  </g>
+  <g stroke="#3A4250" stroke-width="1.2">
+    <line x1="610" y1="500" x2="610" y2="574"/><line x1="628" y1="500" x2="628" y2="574"/><line x1="646" y1="500" x2="646" y2="574"/><line x1="664" y1="500" x2="664" y2="574"/><line x1="682" y1="500" x2="682" y2="574"/><line x1="700" y1="500" x2="700" y2="574"/><line x1="718" y1="500" x2="718" y2="574"/><line x1="736" y1="500" x2="736" y2="574"/><line x1="754" y1="500" x2="754" y2="574"/><line x1="772" y1="500" x2="772" y2="574"/><line x1="790" y1="500" x2="790" y2="574"/><line x1="808" y1="500" x2="808" y2="574"/><line x1="826" y1="500" x2="826" y2="574"/><line x1="844" y1="500" x2="844" y2="574"/>
+    <line x1="610" y1="582" x2="610" y2="656"/><line x1="628" y1="582" x2="628" y2="656"/><line x1="646" y1="582" x2="646" y2="656"/><line x1="664" y1="582" x2="664" y2="656"/><line x1="682" y1="582" x2="682" y2="656"/><line x1="700" y1="582" x2="700" y2="656"/><line x1="718" y1="582" x2="718" y2="656"/><line x1="736" y1="582" x2="736" y2="656"/><line x1="754" y1="582" x2="754" y2="656"/><line x1="772" y1="582" x2="772" y2="656"/><line x1="790" y1="582" x2="790" y2="656"/><line x1="808" y1="582" x2="808" y2="656"/><line x1="826" y1="582" x2="826" y2="656"/><line x1="844" y1="582" x2="844" y2="656"/>
+  </g>
+  <rect x="600" y="575" width="250" height="6" fill="#3A4250"/>
+  <rect x="390" y="510" width="68" height="76" fill="none" stroke="#3A4250" stroke-width="1.2"/>
+  <path d="M390 510 L458 586 M458 510 L390 586" stroke="#3A4250" stroke-width="1.2"/>
+  <g fill="none" stroke="#3A4150" stroke-width="6" stroke-linecap="square">
+    <path d="M890,405 L890,660 L375,660 M590,495 L890,495 M590,495 L590,512 M590,562 L590,660 M472,495 L472,521 M472,575 L472,660 M375,600 L472,600 M808,340 L808,405"/>
+  </g>
+
+  <!-- ================= TERRAZZO ================= -->
+  <polygon points="330,35 808,35 808,150 610,150 610,125 330,125" fill="url(#klinker)" filter="url(#apt)"/>
+  <ellipse cx="470" cy="80" rx="150" ry="45" fill="url(#sun)" opacity="0.5"/>
+  <line x1="330" y1="35" x2="808" y2="35" stroke="#5B606A" stroke-width="7"/>
+  <g fill="#A5402E" stroke="#6E2A1E" stroke-width="0.8">
+    <rect x="322" y="29" width="22" height="22"/><rect x="592" y="29" width="30" height="24"/><rect x="788" y="29" width="22" height="24"/>
+  </g>
+  <g filter="url(#sh)">
+    <rect x="655" y="44" width="100" height="40" rx="4" fill="#7A5B40"/>
+    <rect x="659" y="52" width="92" height="28" rx="3" fill="#CDBFA8"/>
+    <rect x="657" y="45" width="96" height="8" rx="3" fill="#D8CCB6"/>
+    <circle cx="766" cy="64" r="9" fill="#D6C8AE"/>
+    <!-- poltroncine tolte (5/11): davanti al divano resta libero il passaggio verso la portafinestra della cucina -->
+    <circle cx="798" cy="84" r="4.5" fill="#B4643F"/><circle cx="798" cy="97" r="4" fill="#B4643F"/>
+    <circle cx="790" cy="64" r="10" fill="#B4643F"/>
+    <circle cx="352" cy="58" r="9" fill="#B4643F"/>
+  </g>
+  <circle cx="790" cy="64" r="12" fill="#6B8A4E" opacity="0.85"/><circle cx="786" cy="60" r="5.5" fill="#8FA77C"/><circle cx="798" cy="84" r="4.5" fill="#6B8A4E" opacity="0.8"/><circle cx="798" cy="97" r="4" fill="#6B8A4E" opacity="0.8"/>
+  <circle cx="352" cy="58" r="10" fill="#6B8A4E" opacity="0.85"/>
+
+  <!-- ================= PAVIMENTI ================= -->
+  <polygon points="60,50 330,50 330,125 610,125 610,150 808,150 808,340 715,340 715,405 472,405 472,495 375,495 375,660 60,660" fill="url(#oak)" filter="url(#apt)"/>
+  <rect x="330" y="340" width="142" height="155" fill="url(#bg_lastre)"/>
+  <rect x="262" y="495" width="113" height="165" fill="url(#mc)"/>
+  <ellipse cx="485" cy="150" rx="120" ry="50" fill="url(#sun)"/>
+  <ellipse cx="715" cy="175" rx="90" ry="40" fill="url(#sun)"/>
+  <ellipse cx="195" cy="72" rx="80" ry="34" fill="url(#sun)"/>
+  <ellipse cx="80" cy="535" rx="40" ry="70" fill="url(#sun)"/>
+  <ellipse cx="80" cy="328" rx="34" ry="56" fill="url(#sun)"/>
+
+  <!-- ================= SOGGIORNO (tutto relax: si mangia in cucina) ================= -->
+  <rect x="360" y="160" width="122" height="150" rx="3" fill="#CDBFA8" opacity="0.6"/>
+  <g filter="url(#sh)">
+    <rect x="333.5" y="140" width="4" height="112" fill="#56575B"/>
+    <rect x="337.5" y="148" width="13" height="98" rx="1" fill="#8C6748"/>
+    <rect x="440" y="168" width="34" height="134" rx="5" fill="#F2EEE6"/>
+    <rect x="466" y="168" width="8" height="134" rx="3" fill="#E4DED2"/>
+    <!-- tavolino basso davanti al divano (6/11) --><rect x="390" y="205" width="26" height="60" rx="3" fill="#D6C8AE" stroke="#B8A88C" stroke-width="0.6"/>
+    <rect x="594" y="268" width="13" height="44" rx="1" fill="#8C6748"/>
+  </g>
+  <rect x="337.5" y="160" width="1.5" height="75" fill="#0B0B0D"/>
+  <g fill="#E8E2D6" stroke="#D3CBBE" stroke-width="0.5">
+    <rect x="442" y="171" width="24" height="42" rx="3"/><rect x="442" y="215" width="24" height="42" rx="3"/><rect x="442" y="259" width="24" height="41" rx="3"/>
+  </g>
+  <circle cx="598" cy="141" r="9" fill="#6B8A4E"/><circle cx="595" cy="138" r="4" fill="#8FA77C"/>
+  <circle cx="570" cy="300" r="8" fill="#6B8A4E"/>
+  <!-- ingresso libero -->
+  <rect x="520" y="388" width="36" height="12" rx="2" fill="#56575B" opacity="0.5"/>
+
+  <!-- ================= CUCINA ABITABILE (stanza chiusa) ================= -->
+  <g filter="url(#sh)">
+    <rect x="614" y="303" width="34" height="34" fill="#9D978F"/>
+    <rect x="648" y="303" width="156" height="34" fill="#3A3B3E"/>
+    <g fill="#F2EEE6">
+      <rect x="693" y="186" width="18" height="13" rx="6"/><rect x="733" y="186" width="18" height="13" rx="6"/>
+      <rect x="693" y="247" width="18" height="13" rx="6"/><rect x="733" y="247" width="18" height="13" rx="6"/>
+      <rect x="666" y="214" width="13" height="18" rx="6"/><rect x="763" y="214" width="13" height="18" rx="6"/>
+    </g>
+    <rect x="682" y="200" width="80" height="46" rx="3" fill="#C9A47E" stroke="#8C6748" stroke-width="0.8"/>
+  </g>
+  <rect x="650" y="305" width="152" height="30" fill="#DCD5C8"/>
+  <!-- piano cottura e lavello nei punti attuali della cucina -->
+  <rect x="684" y="307" width="36" height="24" rx="2" fill="#0B0B0D"/>
+  <g fill="none" stroke="#3A3B3E" stroke-width="0.9"><circle cx="694" cy="314" r="5"/><circle cx="710" cy="314" r="5"/><circle cx="694" cy="325" r="4"/><circle cx="710" cy="325" r="4"/></g>
+  <rect x="740" y="309" width="28" height="20" rx="2" fill="#161617"/>
+  <line x1="631" y1="303" x2="631" y2="337" stroke="#161617" stroke-width="0.6"/>
+  <circle cx="722" cy="223" r="12" fill="url(#sun)"/><circle cx="722" cy="223" r="5" fill="#D6C8AE"/>
+
+  <!-- ================= GUARDAROBA D'INGRESSO (ex ripostiglio) ================= -->
+  <g filter="url(#sh)">
+    <rect x="614" y="344" width="97" height="22" fill="#8C6748"/>
+    <rect x="652" y="384" width="59" height="17" fill="#C9A47E"/>
+  </g>
+  <line x1="616" y1="355" x2="709" y2="355" stroke="#D6C8AE" stroke-width="1"/>
+  <g stroke="#8C6748" stroke-width="0.8"><line x1="666" y1="384" x2="666" y2="401"/><line x1="681" y1="384" x2="681" y2="401"/><line x1="696" y1="384" x2="696" y2="401"/></g>
+
+  <!-- ================= CAMERA 1 · MATRIMONIALE (vista Carso) ================= -->
+  <rect x="100" y="118" width="180" height="124" rx="3" fill="#CDBFA8" opacity="0.6"/>
+  <g filter="url(#sh)">
+    <rect x="100" y="238" width="160" height="5" fill="#C9A47E"/>
+    <rect x="122" y="126" width="115" height="112" rx="2" fill="#8C6748"/>
+    <rect x="124" y="128" width="111" height="108" rx="2" fill="#E8E2D6"/>
+    <rect x="123" y="130" width="113" height="80" rx="2" fill="#F2EEE6"/>
+    <rect x="123" y="150" width="113" height="16" fill="#CDBFA8"/>
+    <rect x="128" y="214" width="46" height="19" rx="4" fill="#F8F7F3"/>
+    <rect x="185" y="214" width="46" height="19" rx="4" fill="#F8F7F3"/>
+    <rect x="98" y="220" width="20" height="18" rx="1" fill="#C9A47E"/>
+    <rect x="241" y="220" width="20" height="18" rx="1" fill="#C9A47E"/>
+    <rect x="296" y="56" width="30" height="140" fill="#9D978F"/>
+    <rect x="68" y="62" width="30" height="30" rx="9" fill="#F2EEE6"/>
+  </g>
+  <g stroke="#161617" stroke-width="0.6"><line x1="296" y1="90" x2="326" y2="90"/><line x1="296" y1="126" x2="326" y2="126"/><line x1="296" y1="162" x2="326" y2="162"/></g>
+  <circle cx="108" cy="229" r="5" fill="url(#sun)"/><circle cx="251" cy="229" r="5" fill="url(#sun)"/>
+  <circle cx="276" cy="78" r="10" fill="#6B8A4E"/><circle cx="272" cy="74" r="4" fill="#8FA77C"/>
+
+  <!-- ================= CAMERA 2 · CAMERETTA ================= -->
+  <rect x="104" y="286" width="120" height="48" rx="3" fill="#B9C4BC" opacity="0.6"/>
+  <g filter="url(#sh)">
+    <rect x="66" y="249" width="176" height="26" fill="#C9A47E"/>
+    <rect x="100" y="343" width="115" height="64" rx="2" fill="#8C6748"/>
+    <rect x="102" y="345" width="111" height="60" rx="2" fill="#E8E2D6"/>
+    <rect x="128" y="346" width="84" height="58" rx="2" fill="#9FB3A6"/>
+    <rect x="104" y="352" width="18" height="46" rx="4" fill="#F8F7F3"/>
+    <rect x="64" y="285" width="26" height="56" rx="1" fill="#C9A47E"/>
+    <rect x="96" y="304" width="17" height="17" rx="6" fill="#F2EEE6"/>
+    <circle cx="190" cy="312" r="11" fill="#E8E2D6"/>
+  </g>
+  <rect x="66" y="273" width="176" height="2" fill="#8C6748" opacity="0.8"/>
+  <g stroke="#8C6748" stroke-width="0.8"><line x1="110" y1="249" x2="110" y2="273"/><line x1="154" y1="249" x2="154" y2="273"/><line x1="198" y1="249" x2="198" y2="273"/></g>
+  <circle cx="77" cy="292" r="4" fill="#FFF1CF"/>
+
+  <!-- ================= CAMERA 3 · SECONDA MATRIMONIALE / OSPITI (letto vero) ================= -->
+  <rect x="92" y="440" width="140" height="112" rx="3" fill="#CDBFA8" opacity="0.55"/>
+  <g filter="url(#sh)">
+    <rect x="96" y="417" width="128" height="5" fill="#C9A47E"/>
+    <rect x="101" y="422" width="115" height="112" rx="2" fill="#8C6748"/>
+    <rect x="103" y="425" width="111" height="107" rx="2" fill="#E8E2D6"/>
+    <rect x="102" y="449" width="113" height="84" rx="2" fill="#F2EEE6"/>
+    <rect x="102" y="496" width="113" height="18" fill="#B9C4BC"/>
+    <rect x="110" y="428" width="43" height="18" rx="4" fill="#F8F7F3"/>
+    <rect x="162" y="428" width="43" height="18" rx="4" fill="#F8F7F3"/>
+    <rect x="78" y="422" width="20" height="18" rx="1" fill="#C9A47E"/>
+    <rect x="218" y="422" width="18" height="16" rx="1" fill="#C9A47E"/>
+    <rect x="64" y="548" width="28" height="70" rx="1" fill="#C9A47E"/>
+    <rect x="98" y="574" width="18" height="18" rx="6" fill="#9A5B32"/>
+    <rect x="66" y="630" width="190" height="26" fill="#8C6748"/>
+    <rect x="196" y="572" width="32" height="32" rx="9" fill="#F2EEE6"/>
+  </g>
+  <g stroke="#6E5A44" stroke-width="0.8"><line x1="104" y1="630" x2="104" y2="656"/><line x1="142" y1="630" x2="142" y2="656"/><line x1="180" y1="630" x2="180" y2="656"/><line x1="218" y1="630" x2="218" y2="656"/></g>
+  <circle cx="88" cy="431" r="5" fill="url(#sun)"/><circle cx="227" cy="430" r="5" fill="url(#sun)"/>
+  <circle cx="78" cy="556" r="4" fill="#FFF1CF"/>
+  <circle cx="240" cy="616" r="3" fill="#161617"/>
+
+  <!-- corridoio: libero, luce d'accento -->
+  <g fill="#D4AF37" opacity="0.55"><rect x="326" y="330" width="2" height="40"/></g>
+
+  <!-- ================= BAGNO GRANDE · "PIETRA CHIARA" (8/11/2026): stessi punti di oggi, nessun impianto spostato; pavimento, pareti, bordo vasca e mensola in lastre di gres effetto pietra chiara 120 × 120 ================= -->
+  <defs><pattern id="bg_lastre" width="67" height="67" patternUnits="userSpaceOnUse"><rect width="67" height="67" fill="#DCD4C6"/><path d="M0,0 H67 M0,0 V67" stroke="#B5AA97" stroke-width="0.6" fill="none"/></pattern></defs>
+  <g filter="url(#sh)">
+    <rect x="438" y="346" width="30" height="34" fill="#DCD5C8"/>
+    <rect x="466" y="384" width="5" height="52" fill="#D2C9B9"/>
+    <rect x="448" y="388" width="18" height="18" rx="2" fill="#F8F7F3"/>
+    <rect x="448" y="414" width="18" height="18" rx="2" fill="#F8F7F3"/>
+    <rect x="341" y="447" width="126" height="45" rx="4" fill="url(#bg_lastre)" stroke="#B5AA97" stroke-width="0.8"/>
+  </g>
+  <rect x="444" y="352" width="18" height="22" rx="3" fill="#56575B"/>
+  <rect x="466.5" y="350" width="2" height="28" fill="#C9D6DA"/>
+  <ellipse cx="455" cy="397" rx="5" ry="7" fill="#FFFFFF" stroke="#CFCFCB" stroke-width="0.5"/>
+  <ellipse cx="455" cy="423" rx="5" ry="7" fill="#FFFFFF" stroke="#CFCFCB" stroke-width="0.5"/>
+  <rect x="347" y="452" width="114" height="35" rx="12" fill="#E6EDF0"/>
+  <circle cx="458" cy="469" r="2.5" fill="#161617"/>
+  <line x1="400" y1="446" x2="467" y2="446" stroke="#D3E7EE" stroke-width="2.2"/>
+  <!-- scaldasalviette nero sulla parete Ovest, tra la porta e il dente -->
+  <rect x="334.6" y="424" width="2" height="18" fill="#161617"/>
+
+  <!-- ================= BAGNO B · DOCCIA + LAVANDERIA (sanitari negli stessi punti) ================= -->
+  <!-- doccia walk-in a NE (dove oggi c'è il box), WC e bidet a Est, lavatrice a Sud, lavabo a Ovest dopo l'anta della porta -->
+  <g filter="url(#sh)">
+    <rect x="265" y="545" width="26" height="55" fill="#DCD5C8"/>
+    <rect x="367" y="556" width="5" height="52" fill="#DCD5C8"/>
+    <rect x="349" y="560" width="18" height="18" rx="2" fill="#F8F7F3"/>
+    <rect x="349" y="586" width="18" height="18" rx="2" fill="#F8F7F3"/>
+    <rect x="334" y="626" width="36" height="30" rx="2" fill="#F8F7F3"/>
+    <rect x="266" y="630" width="64" height="26" fill="#9D978F"/>
+  </g>
+  <rect x="270" y="562" width="16" height="22" rx="3" fill="#56575B"/>
+  <rect x="264" y="548" width="2" height="49" fill="#C9D6DA"/>
+  <ellipse cx="355" cy="569" rx="7" ry="5" fill="#FFFFFF" stroke="#CFCFCB" stroke-width="0.5"/>
+  <ellipse cx="355" cy="595" rx="7" ry="5" fill="#FFFFFF" stroke="#CFCFCB" stroke-width="0.5"/>
+  <circle cx="352" cy="641" r="9" fill="#2E3135"/>
+  <rect x="320" y="498" width="52" height="50" fill="#A59E94"/>
+  <rect x="322" y="544" width="48" height="1.5" fill="#161617"/>
+  <circle cx="346" cy="523" r="10" fill="none" stroke="#161617" stroke-width="1.2"/>
+  <line x1="320" y1="498" x2="320" y2="535" stroke="#D3E7EE" stroke-width="2.2"/>
+
+  <!-- ================= MURATURE (tutte invariate) ================= -->
+  <g fill="none" stroke-linecap="square">
+    <path stroke="#D4AF37" stroke-opacity="0.55" stroke-width="15" d="M330,125 L330,50 L60,50 L60,660 L375,660 L375,495 L472,495 L472,405 L512,405 M564,405 L715,405 L715,340 L808,340 L808,150 L775,150 M655,150 L610,150 L610,125 L540,125 M430,125 L330,125 M808,150 L808,35"/>
+    <path stroke="#16181C" stroke-width="12" d="M330,125 L330,50 L60,50 L60,660 L375,660 L375,495 L472,495 L472,405 L512,405 M564,405 L715,405 L715,340 L808,340 L808,150 L775,150 M655,150 L610,150 L610,125 L540,125 M430,125 L330,125 M808,150 L808,35"/>
+    <path stroke="#16181C" stroke-width="7" d="M330,125 L330,268 M330,312 L330,380 M330,420 L330,495 M60,245 L278,245 M322,245 L330,245 M262,245 L262,292 M262,336 L262,442 M262,486 L262,495 L276,495 M318,495 L375,495 M262,495 L262,660 M330,340 L472,340 M610,125 L610,215 M610,260 L610,356 M610,394 L610,405 M610,340 L715,340"/>
+  </g>
+  <rect x="56" y="406" width="208" height="12" fill="#16181C" stroke="#D4AF37" stroke-opacity="0.9" stroke-width="1.4"/>
+  <g stroke="#D4AF37" stroke-opacity="0.45" stroke-width="0.8">
+    <line x1="70" y1="417" x2="80" y2="407"/><line x1="90" y1="417" x2="100" y2="407"/><line x1="110" y1="417" x2="120" y2="407"/><line x1="130" y1="417" x2="140" y2="407"/><line x1="150" y1="417" x2="160" y2="407"/><line x1="170" y1="417" x2="180" y2="407"/><line x1="190" y1="417" x2="200" y2="407"/><line x1="210" y1="417" x2="220" y2="407"/><line x1="230" y1="417" x2="240" y2="407"/><line x1="250" y1="417" x2="260" y2="407"/>
+  </g>
+
+  <!-- dente murario con il clarinetto idrico (angolo Sud-Ovest ex Bagno A, come da pianta originale) -->
+  <rect x="330" y="445" width="11" height="50" fill="#16181C"/>
+  <!-- serramenti -->
+  <g fill="#CFE0E8" stroke="#0E1014" stroke-width="0.8">
+    <rect x="140" y="45" width="110" height="10"/>
+    <rect x="55" y="280" width="10" height="95"/>
+    <rect x="55" y="485" width="10" height="100"/>
+    <rect x="430" y="120" width="110" height="10"/>
+    <rect x="655" y="145" width="120" height="10"/>
+  </g>
+  <g stroke="#0E1014" stroke-width="0.8">
+    <line x1="176.6" y1="45" x2="176.6" y2="55"/><line x1="213.3" y1="45" x2="213.3" y2="55"/>
+    <line x1="55" y1="311.6" x2="65" y2="311.6"/><line x1="55" y1="343.3" x2="65" y2="343.3"/>
+    <line x1="55" y1="518.3" x2="65" y2="518.3"/><line x1="55" y1="551.6" x2="65" y2="551.6"/>
+    <line x1="485" y1="120" x2="485" y2="130"/>
+    <line x1="715" y1="145" x2="715" y2="155"/>
+  </g>
+
+  <!-- porte (posizioni reali) -->
+  <g fill="none" stroke="#16181C">
+    <line x1="512" y1="405" x2="512" y2="353" stroke-width="3"/>
+    <path d="M564,405 A52,52 0 0 0 512,353" stroke-width="0.8" stroke-dasharray="3 3"/>
+    <!-- porta-finestra soggiorno scorrevole (come la cucina) --><rect x="430" y="130" width="58" height="2.5" fill="#16181C" stroke="none"/>
+    
+    <g stroke="#8C6748" stroke-width="3">
+      <line x1="330" y1="312" x2="374" y2="312"/>
+      <line x1="322" y1="245" x2="322" y2="201"/>
+      <line x1="262" y1="292" x2="217" y2="292"/>
+      <line x1="262" y1="442" x2="217" y2="442"/>
+      <line x1="324" y1="418" x2="324" y2="462"/><!-- bagno A: porta scorrevole esterno muro sul lato corridoio (aperta verso Sud) -->
+      <line x1="318" y1="495" x2="318" y2="537"/>
+    </g>
+    <g stroke-width="0.8" stroke-dasharray="3 3">
+      <path d="M330,268 A44,44 0 0 1 374,312"/>
+      <path d="M278,245 A44,44 0 0 1 322,201"/>
+      <path d="M262,336 A44,44 0 0 1 217,292"/>
+      <path d="M262,486 A44,44 0 0 1 217,442"/>
+      <path d="M320.5,378 L320.5,464"/>
+      <path d="M276,495 A42,42 0 0 0 318,537"/>
+    </g>
+  </g>
+  <rect x="655" y="155" width="62" height="2.5" fill="#16181C"/>
+  <!-- porte reali: cucina (apre verso la parete Sud, il tavolo è arretrato per lasciarla chiudere) e guardaroba (apre verso il soggiorno) -->
+  <line x1="610" y1="258" x2="648" y2="258" stroke="#8C6748" stroke-width="3"/>
+  <path d="M610,215 A43,43 0 0 1 653,258" fill="none" stroke="#16181C" stroke-width="0.8" stroke-dasharray="3 3"/>
+  <line x1="610" y1="394" x2="572" y2="394" stroke="#8C6748" stroke-width="3"/>
+  <path d="M610,356 A38,38 0 0 0 572,394" fill="none" stroke="#16181C" stroke-width="0.8" stroke-dasharray="3 3"/>
+</svg>

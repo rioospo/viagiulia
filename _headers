@@ -1,0 +1,10 @@
+# Intestazioni HTTP per Netlify (8/11/2026): protezioni di base per i visitatori e cache lunga solo per i caratteri,
+# che non cambiano mai. Foto, video e PDF restano con la cache normale di Netlify, che li aggiorna a ogni pubblicazione.
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable

@@ -1,0 +1,398 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 -5 910 700" width="1820" height="1400">
+  <!-- VARIANTE LA FAMIGLIA "legno e argilla" · Trieste, Via Giulia 77 · Piano 9 · Due figli, la casa che cresce -->
+  <defs>
+    <pattern id="oak" width="252" height="32" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="126" height="16" fill="#CBA680" stroke="#A9845E" stroke-width="0.5"/>
+      <rect x="126" y="0" width="126" height="16" fill="#C59F78" stroke="#A9845E" stroke-width="0.5"/>
+      <rect x="0" y="16" width="63" height="16" fill="#C7A27B" stroke="#A9845E" stroke-width="0.5"/>
+      <rect x="63" y="16" width="126" height="16" fill="#CEAA84" stroke="#A9845E" stroke-width="0.5"/>
+      <rect x="189" y="16" width="63" height="16" fill="#C29C74" stroke="#A9845E" stroke-width="0.5"/>
+      <path d="M8 6 q40 -2 90 1 M140 10 q35 2 80 -1 M75 24 q30 -2 70 1 M200 22 q20 2 45 0" stroke="#B48E67" stroke-width="0.45" fill="none" opacity="0.7"/>
+    </pattern>
+    <pattern id="mc" width="90" height="90" patternUnits="userSpaceOnUse">
+      <rect width="90" height="90" fill="#B1A99E"/>
+      <circle cx="20" cy="25" r="18" fill="#BDB5AA" opacity="0.5"/>
+      <circle cx="65" cy="60" r="22" fill="#A49C91" opacity="0.35"/>
+      <circle cx="70" cy="15" r="10" fill="#C2BBB1" opacity="0.4"/>
+    </pattern>
+    <pattern id="cotto" width="28" height="24.25" patternUnits="userSpaceOnUse">
+      <rect width="28" height="24.25" fill="#D6A587"/>
+      <polygon points="14,0.5 27.5,8.3 27.5,23.7 14,16.0" fill="#DCB093" stroke="#BA8767" stroke-width="0.6"/>
+      <polygon points="14,0.5 0.5,8.3 0.5,23.7 14,16.0" fill="#E2B79A" stroke="#BA8767" stroke-width="0.6"/>
+    </pattern>
+    <pattern id="klinker" width="24" height="12" patternUnits="userSpaceOnUse">
+      <rect width="24" height="12" fill="#8C4934"/>
+      <rect x="0.6" y="0.6" width="22.8" height="10.8" fill="#97513B" stroke="#6E3626" stroke-width="0.6"/>
+    </pattern>
+    <pattern id="stoneGrey" width="80" height="80" patternUnits="userSpaceOnUse">
+      <rect width="80" height="80" fill="#9EA3A6"/>
+      <path d="M0 20 C20 10 35 40 55 28 S75 8 80 15 M0 60 C25 70 40 50 80 66" stroke="#C7CBCD" stroke-width="0.8" fill="none"/>
+      <path d="M30 0 C34 25 22 50 40 80" stroke="#7E8487" stroke-width="0.5" fill="none"/>
+    </pattern>
+    <filter id="sh" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="1.6" dy="2.4" stdDeviation="2" flood-color="#000" flood-opacity="0.32"/>
+    </filter>
+    <filter id="apt" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity="0.7"/>
+    </filter>
+    <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF1CF" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#FFF1CF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="board" cx="50%" cy="45%" r="70%">
+      <stop offset="0%" stop-color="#161B25"/>
+      <stop offset="100%" stop-color="#0B0D11"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="20" y="-5" width="910" height="700" fill="url(#board)"/>
+  <rect x="34" y="9" width="882" height="672" fill="none" stroke="#D4AF37" stroke-opacity="0.32" stroke-width="1"/>
+
+  <!-- ================= PARTI COMUNI ================= -->
+  <g filter="url(#apt)">
+    <polygon points="472,405 890,405 890,495 590,495 590,660 472,660" fill="#1C212B"/>
+    <rect x="715" y="340" width="93" height="65" fill="#1C212B"/>
+    <rect x="590" y="495" width="300" height="165" fill="#232935"/>
+    <rect x="375" y="495" width="97" height="165" fill="#232935"/>
+  </g>
+  <g stroke="#3A4250" stroke-width="1.2">
+    <line x1="610" y1="500" x2="610" y2="574"/><line x1="628" y1="500" x2="628" y2="574"/><line x1="646" y1="500" x2="646" y2="574"/><line x1="664" y1="500" x2="664" y2="574"/><line x1="682" y1="500" x2="682" y2="574"/><line x1="700" y1="500" x2="700" y2="574"/><line x1="718" y1="500" x2="718" y2="574"/><line x1="736" y1="500" x2="736" y2="574"/><line x1="754" y1="500" x2="754" y2="574"/><line x1="772" y1="500" x2="772" y2="574"/><line x1="790" y1="500" x2="790" y2="574"/><line x1="808" y1="500" x2="808" y2="574"/><line x1="826" y1="500" x2="826" y2="574"/><line x1="844" y1="500" x2="844" y2="574"/>
+    <line x1="610" y1="582" x2="610" y2="656"/><line x1="628" y1="582" x2="628" y2="656"/><line x1="646" y1="582" x2="646" y2="656"/><line x1="664" y1="582" x2="664" y2="656"/><line x1="682" y1="582" x2="682" y2="656"/><line x1="700" y1="582" x2="700" y2="656"/><line x1="718" y1="582" x2="718" y2="656"/><line x1="736" y1="582" x2="736" y2="656"/><line x1="754" y1="582" x2="754" y2="656"/><line x1="772" y1="582" x2="772" y2="656"/><line x1="790" y1="582" x2="790" y2="656"/><line x1="808" y1="582" x2="808" y2="656"/><line x1="826" y1="582" x2="826" y2="656"/><line x1="844" y1="582" x2="844" y2="656"/>
+  </g>
+  <rect x="600" y="575" width="250" height="6" fill="#3A4250"/>
+  <rect x="390" y="510" width="68" height="76" fill="none" stroke="#3A4250" stroke-width="1.2"/>
+  <path d="M390 510 L458 586 M458 510 L390 586" stroke="#3A4250" stroke-width="1.2"/>
+  <g fill="none" stroke="#3A4150" stroke-width="6" stroke-linecap="square">
+    <path d="M890,405 L890,660 L375,660 M590,495 L890,495 M590,495 L590,512 M590,562 L590,660 M472,495 L472,521 M472,575 L472,660 M375,600 L472,600 M808,340 L808,405"/>
+  </g>
+
+  <!-- ================= TERRAZZO in klinker ================= -->
+  <polygon points="330,35 808,35 808,150 610,150 610,125 330,125" fill="url(#klinker)" filter="url(#apt)"/>
+  <ellipse cx="470" cy="80" rx="150" ry="45" fill="url(#sun)" opacity="0.5"/>
+  <line x1="330" y1="35" x2="808" y2="35" stroke="#5B606A" stroke-width="7"/>
+  <g fill="#A5402E" stroke="#6E2A1E" stroke-width="0.8">
+    <rect x="322" y="29" width="22" height="22"/><rect x="592" y="29" width="30" height="24"/><rect x="788" y="29" width="22" height="24"/>
+  </g>
+  <g filter="url(#sh)">
+    <rect x="655" y="44" width="100" height="40" rx="4" fill="#7A5B40"/>
+    <rect x="659" y="52" width="92" height="28" rx="3" fill="#CDBFA8"/>
+    <rect x="657" y="45" width="96" height="8" rx="3" fill="#D8CCB6"/>
+    <circle cx="766" cy="64" r="9" fill="#D6C8AE"/>
+    <circle cx="798" cy="84" r="4.5" fill="#B4643F"/><circle cx="798" cy="97" r="4" fill="#B4643F"/>
+    <circle cx="790" cy="64" r="10" fill="#B4643F"/>
+    <circle cx="352" cy="58" r="9" fill="#B4643F"/>
+  </g>
+  <circle cx="790" cy="64" r="12" fill="#6B8A4E" opacity="0.85"/><circle cx="786" cy="60" r="5.5" fill="#8FA77C"/><circle cx="798" cy="84" r="4.5" fill="#6B8A4E" opacity="0.8"/><circle cx="798" cy="97" r="4" fill="#6B8A4E" opacity="0.8"/>
+  <circle cx="352" cy="58" r="10" fill="#6B8A4E" opacity="0.85"/>
+
+  <!-- ================= PAVIMENTI ================= -->
+  <!-- Parquet in rovere su tutta la casa; esagonette cotto chiaro nei due bagni; microcemento in lavanderia -->
+  <polygon points="60,50 330,50 330,125 610,125 610,150 808,150 808,340 715,340 715,405 472,405 472,495 375,495 375,660 60,660" fill="url(#oak)" filter="url(#apt)"/>
+  <rect x="330" y="340" width="142" height="155" fill="url(#cotto)"/>
+  <rect x="262" y="495" width="113" height="165" fill="url(#cotto)"/>
+  <rect x="610" y="356" width="105" height="49" fill="url(#mc)"/>
+  <ellipse cx="485" cy="150" rx="120" ry="50" fill="url(#sun)"/>
+  <ellipse cx="715" cy="175" rx="90" ry="40" fill="url(#sun)"/>
+  <ellipse cx="195" cy="72" rx="80" ry="34" fill="url(#sun)"/>
+  <ellipse cx="80" cy="535" rx="40" ry="70" fill="url(#sun)"/>
+  <ellipse cx="80" cy="328" rx="34" ry="56" fill="url(#sun)"/>
+
+  <!-- ================= ZONA GIORNO UNICA ================= -->
+  <!-- Stanza di Famiglia (ex Camera 1, aperta sul soggiorno): libreria Ovest a tutta parete con TV, divano salvia ad angolo, due pouf in lana, pianta grande in vaso d'argilla -->
+  <rect x="84" y="66" width="150" height="160" rx="3" fill="#D6C8AE" opacity="0.6"/>
+  <g filter="url(#sh)">
+    <!-- Libreria a tutta parete Ovest -->
+    <rect x="63.5" y="62" width="12.5" height="176" fill="#8C6748" stroke="#5E432A" stroke-width="0.6"/>
+    <!-- Vano TV centrale -->
+    <rect x="64.6" y="127" width="2" height="46" fill="#0B0B0D"/>
+    <!-- Vani e scatole giochi / libri nei toni argilla, salvia e lino -->
+    <rect x="68" y="70" width="7" height="18" fill="#A66343"/>
+    <rect x="68" y="94" width="7" height="22" fill="#8FA38B"/>
+    <rect x="68" y="180" width="7" height="20" fill="#A66343"/>
+    <rect x="68" y="206" width="7" height="24" fill="#8FA38B"/>
+    <!-- Divano letto ad angolo in tessuto salvia sfoderabile -->
+    <rect x="176" y="80" width="36" height="140" rx="5" fill="#8FA38B"/>
+    <rect x="204" y="80" width="8" height="140" rx="3" fill="#758B72"/>
+    <rect x="120" y="190" width="60" height="32" rx="5" fill="#8FA38B"/>
+    <rect x="120" y="214" width="60" height="8" rx="3" fill="#758B72"/>
+    <!-- Cuscini salvia e lino -->
+    <g fill="#A2B49F" stroke="#758B72" stroke-width="0.5">
+      <rect x="178" y="83" width="26" height="44" rx="3"/><rect x="178" y="129" width="26" height="44" rx="3"/><rect x="178" y="175" width="26" height="43" rx="3"/>
+    </g>
+    <!-- Due pouf in lana: argilla e lino -->
+    <circle cx="118" cy="140" r="11" fill="#A66343"/>
+    <circle cx="146" cy="116" r="9" fill="#E8E2D6"/>
+    <!-- Pianta grande in vaso d'argilla vicino alla finestra Nord -->
+    <circle cx="246" cy="72" r="10" fill="#A66343"/>
+    <circle cx="246" cy="72" r="13" fill="#55773F" opacity="0.85"/>
+    <circle cx="243" cy="68" r="6" fill="#729458"/>
+  </g>
+  <!-- Ingombro divano-letto da aperto quando diventa camera del figlio grande -->
+  <rect x="96" y="96" width="116" height="110" rx="3" fill="none" stroke="#F3E5AB" stroke-opacity="0.8" stroke-width="1" stroke-dasharray="4 3"/>
+  <!-- Binario a soffitto per i pannelli scorrevoli impacchettati -->
+  <line x1="330" y1="128" x2="330" y2="243" stroke="#F3E5AB" stroke-opacity="0.7" stroke-width="0.8" stroke-dasharray="3 3"/>
+  <rect x="322.5" y="53.5" width="4" height="71.5" fill="#16181C"/>
+
+  <circle cx="598" cy="141" r="9" fill="#6B8A4E"/><circle cx="595" cy="138" r="4" fill="#8FA77C"/>
+
+  <!-- Tavolo OVALE in rovere per 6 e lampada in carta di riso -->
+  <g filter="url(#sh)">
+    <g fill="#F2EEE6">
+      <rect x="488" y="188" width="18" height="14" rx="6"/><rect x="528" y="188" width="18" height="14" rx="6"/>
+      <rect x="488" y="264" width="18" height="14" rx="6"/><rect x="528" y="264" width="18" height="14" rx="6"/>
+      <rect x="452" y="225" width="14" height="18" rx="6"/><rect x="568" y="225" width="14" height="18" rx="6"/>
+    </g>
+    <!-- Tavolo ovale in rovere -->
+    <ellipse cx="517" cy="233" rx="49" ry="27" fill="#C9A47E" stroke="#8C6748" stroke-width="0.8"/>
+  </g>
+  <!-- Lampada sferica in carta di riso sopra il tavolo -->
+  <circle cx="517" cy="233" r="13" fill="#FFFDF8" stroke="#D3CBBE" stroke-width="0.8"/>
+  <circle cx="517" cy="233" r="3" fill="#C9A47E"/>
+
+  <!-- Cucina La Famiglia "legno e argilla": colonne argilla, basi rovere, paraschizzi argilla, isola cannettata tonda con induzione e aspirazione integrata -->
+  <g filter="url(#sh)">
+    <!-- Colonne a tutta altezza argilla -->
+    <rect x="614" y="304" width="74" height="33" fill="#A66343"/>
+    <!-- Basi rovere con piano in quarzo sabbia -->
+    <rect x="688" y="304" width="116" height="33" fill="#C9A47E"/>
+    <rect x="688" y="304" width="116" height="33" fill="#F4EFE6" opacity="0.65"/>
+    <!-- Pensile caldo argilla a Sud per caldaia -->
+    <rect x="770" y="318" width="34" height="19" fill="#A66343"/>
+    <!-- Isola cannettata in rovere con angoli tondi e piano a sbalzo -->
+    <rect x="652" y="200" width="116" height="64" rx="6" fill="#F4EFE6" stroke="#C9A47E" stroke-width="1.2"/>
+    <!-- Mobile basso in rovere parete Est -->
+    <rect x="788" y="172" width="16" height="76" fill="#C9A47E"/>
+    <!-- Tre sedie alte in rovere con schienale -->
+    <g fill="#C9A47E">
+      <circle cx="675" cy="192" r="7"/><circle cx="710" cy="192" r="7"/><circle cx="745" cy="192" r="7"/>
+    </g>
+  </g>
+  <!-- Fughe colonne e basi -->
+  <line x1="638" y1="304" x2="638" y2="337" stroke="#7A3D22" stroke-width="0.8"/>
+  <line x1="663" y1="304" x2="663" y2="337" stroke="#7A3D22" stroke-width="0.8"/>
+  <line x1="717" y1="304" x2="717" y2="337" stroke="#8C6748" stroke-width="0.6"/>
+  <line x1="746" y1="304" x2="746" y2="337" stroke="#8C6748" stroke-width="0.6"/>
+  <line x1="775" y1="304" x2="775" y2="337" stroke="#8C6748" stroke-width="0.6"/>
+  <!-- Induzione con aspirazione integrata al centro (nessuna cappa) -->
+  <rect x="680" y="232" width="36" height="26" rx="2" fill="#0B0B0D"/>
+  <rect x="696" y="234" width="4" height="22" fill="#56575B"/>
+  <g fill="none" stroke="#3A3B3E" stroke-width="0.8"><circle cx="688" cy="245" r="5"/><circle cx="708" cy="245" r="5"/></g>
+  <!-- Lavello sottotop in acciaio e rubinetto a collo di cigno -->
+  <rect x="738" y="308" width="30" height="22" rx="2" fill="#A8B0B5"/>
+  <circle cx="753" cy="305" r="1.6" fill="#757D82"/>
+
+  <!-- Lavanderia / dispensa (ex ripostiglio) -->
+  <g filter="url(#sh)">
+    <rect x="616" y="378" width="24" height="23" rx="2" fill="#F8F7F3"/>
+    <rect x="642" y="384" width="70" height="17" fill="#9D978F"/>
+  </g>
+  <circle cx="628" cy="389.5" r="7" fill="#2E3135"/>
+  <rect x="520" y="388" width="36" height="12" rx="2" fill="#56575B" opacity="0.5"/>
+
+  <!-- ================= BAGNO FAMIGLIA "IL CIELO" ================= -->
+  <!-- Lavabo a canale in quarzo sabbia con tre rubinetti neri e gradino in rovere per i bimbi, tre ganci, WC e bidet, vasca con zoccolatura salvia e lucernario virtuale -->
+  <g filter="url(#sh)">
+    <!-- Lavabo a canale (170 cm) -->
+    <rect x="345" y="344" width="95" height="24" rx="2" fill="#E8E2D6" stroke="#C9C2B5" stroke-width="0.6"/>
+    <!-- Gradino bimbi in rovere -->
+    <rect x="398" y="369" width="34" height="12" rx="1.5" fill="#C9A47E"/>
+    <!-- Tre ganci con asciugamani salvia, argilla, sabbia -->
+    <rect x="466" y="352" width="2.5" height="28" fill="#C9A47E"/>
+    <rect x="464.5" y="354" width="1.5" height="6" fill="#8FA38B"/>
+    <rect x="464.5" y="364" width="1.5" height="6" fill="#A66343"/>
+    <rect x="464.5" y="374" width="1.5" height="6" fill="#D6C8AE"/>
+    <!-- Mensola quarzo con WC e bidet sulla colonna Est -->
+    <rect x="463" y="384" width="5.5" height="54" fill="#E8E2D6"/>
+    <rect x="444" y="387" width="19" height="19" rx="3" fill="#F8F7F3"/>
+    <rect x="444" y="416" width="19" height="19" rx="3" fill="#F8F7F3"/>
+    <!-- Vasca-doccia da parete a parete con fronte piastrellato salvia -->
+    <rect x="341" y="448" width="127.5" height="44" rx="4" fill="#F8F8F6" stroke="#CFCFCB" stroke-width="0.8"/>
+    <rect x="341" y="447" width="127.5" height="2" fill="#8FA38B"/>
+  </g>
+  <!-- Tre rubinetti neri a parete sopra il lavabo a canale -->
+  <rect x="350" y="347.5" width="85" height="16.5" rx="4" fill="#DCD5C8"/>
+  <g fill="#161617">
+    <circle cx="361.7" cy="345.5" r="1.3"/><circle cx="392.5" cy="345.5" r="1.3"/><circle cx="423.3" cy="345.5" r="1.3"/>
+  </g>
+  <!-- Specchio retroilluminato caldo a tutta larghezza -->
+  <rect x="348" y="343" width="89" height="2" fill="#FFFDF8" stroke="#D3E7EE" stroke-width="0.5"/>
+  <ellipse cx="453" cy="396.5" rx="5" ry="7" fill="#FFFFFF" stroke="#CFCFCB" stroke-width="0.5"/>
+  <ellipse cx="453" cy="425.5" rx="5" ry="7" fill="#FFFFFF" stroke="#CFCFCB" stroke-width="0.5"/>
+  <rect x="347" y="453" width="115" height="34" rx="12" fill="#E6EDF0"/>
+  <!-- Vetro paraspruzzi fisso e soffione + doccetta -->
+  <line x1="400" y1="447" x2="468" y2="447" stroke="#D3E7EE" stroke-width="2.2"/>
+  <line x1="452" y1="474" x2="452" y2="491" stroke="#161617" stroke-width="1.2"/>
+  <circle cx="452" cy="474" r="4.5" fill="#2E3135" stroke="#161617" stroke-width="0.6"/>
+  <!-- Scaldasalviette nero a scaletta -->
+  <rect x="334.8" y="422" width="2" height="20" fill="#161617"/>
+  <!-- Lucernario virtuale a soffitto -->
+  <rect x="350" y="398" width="110" height="88" fill="#BFDDF5" fill-opacity="0.25" stroke="#378ADD" stroke-width="0.9" stroke-dasharray="4 3"/>
+
+  <!-- ================= ZONA NOTTE ================= -->
+  <!-- Galleria notte: asta delle altezze in rovere con tacche colorate e segnapasso a 30 cm -->
+  <rect x="292" y="489.5" width="8" height="2" fill="#C9A47E" stroke="#8C6748" stroke-width="0.4"/>
+  <circle cx="294" cy="490.5" r="0.6" fill="#8FA38B"/><circle cx="298" cy="490.5" r="0.6" fill="#A66343"/>
+  <circle cx="326" cy="330" r="1.5" fill="#FFF1CF"/><circle cx="326" cy="440" r="1.5" fill="#FFF1CF"/>
+
+  <!-- Cameretta per due fratelli (ex Camera 2): letto a castello in rovere con biancheria salvia/argilla, scrivania doppia sotto la finestra, armadio diviso a metà con libreria centrale, tappeto tondo e lampada washi -->
+  <g filter="url(#sh)">
+    <!-- Armadio diviso a metà con libreria centrale a giorno -->
+    <rect x="66" y="249" width="74" height="26" fill="#C9A47E"/>
+    <rect x="140" y="249" width="28" height="26" fill="#8C6748"/>
+    <rect x="168" y="249" width="74" height="26" fill="#C9A47E"/>
+    <!-- Libri e giochi nella libreria centrale -->
+    <rect x="143" y="265" width="6" height="8.5" fill="#A66343"/>
+    <rect x="151" y="265" width="6" height="8.5" fill="#8FA38B"/>
+    <rect x="159" y="265" width="6" height="8.5" fill="#D6C8AE"/>
+    <!-- Scrivania doppia in rovere sotto la finestra Ovest -->
+    <rect x="64" y="278" width="32" height="105" rx="1.5" fill="#C9A47E" stroke="#8C6748" stroke-width="0.6"/>
+    <!-- Due sedie in rovere -->
+    <rect x="98" y="296" width="16" height="16" rx="5" fill="#E8E2D6" stroke="#C9A47E" stroke-width="0.8"/>
+    <rect x="98" y="348" width="16" height="16" rx="5" fill="#E8E2D6" stroke="#C9A47E" stroke-width="0.8"/>
+    <!-- Letto a castello in rovere lungo il setto Sud -->
+    <rect x="108" y="360" width="96" height="48.5" rx="2" fill="#C9A47E" stroke="#8C6748" stroke-width="0.8"/>
+    <!-- Biancheria argilla (letto superiore visibile in pianta) e salvia (risvolto) -->
+    <rect x="111" y="362" width="90" height="44.5" rx="2" fill="#FAF7F2"/>
+    <rect x="111" y="362" width="65" height="44.5" rx="2" fill="#A66343"/>
+    <rect x="176" y="366" width="20" height="36.5" rx="3" fill="#FAF7F2"/>
+    <!-- Scaletta sul lato finestra (Ovest) -->
+    <rect x="97" y="366" width="11" height="22" fill="#C9A47E" stroke="#8C6748" stroke-width="0.6"/>
+    <line x1="97" y1="371" x2="108" y2="371" stroke="#8C6748" stroke-width="0.8"/>
+    <line x1="97" y1="377" x2="108" y2="377" stroke="#8C6748" stroke-width="0.8"/>
+    <line x1="97" y1="383" x2="108" y2="383" stroke="#8C6748" stroke-width="0.8"/>
+  </g>
+  <!-- Due pannelli in sughero ai lati della finestra -->
+  <rect x="63.6" y="252" width="1" height="24" fill="#B27A4B"/>
+  <rect x="63.6" y="383" width="1" height="24" fill="#B27A4B"/>
+  <!-- Lampade da tavolo sulla scrivania doppia -->
+  <circle cx="72" cy="290" r="3.5" fill="#FFFDF8" stroke="#D3CBBE" stroke-width="0.6"/>
+  <circle cx="72" cy="372" r="3.5" fill="#FFFDF8" stroke="#D3CBBE" stroke-width="0.6"/>
+  <!-- Tappeto tondo sabbia al centro della cameretta e lampada washi -->
+  <circle cx="196" cy="312" r="28" fill="#D6C8AE" opacity="0.6"/>
+  <circle cx="196" cy="312" r="10.5" fill="#FFFDF8" stroke="#D3CBBE" stroke-width="0.8"/>
+  <circle cx="196" cy="312" r="2.5" fill="#C9A47E"/>
+
+  <!-- Camera dei genitori (ex Camera 3): testiera imbottita in tessuto argilla a tutta parete, comodini rovere e lampade washi a sospensione, armadio a filo color calce, poltrona lino e tavolino rovere alla finestra -->
+  <rect x="88" y="440" width="144" height="112" rx="3" fill="#D6C8AE" opacity="0.6"/>
+  <g filter="url(#sh)">
+    <!-- Testiera imbottita in tessuto argilla a tutta parete con mensola rovere -->
+    <rect x="62" y="415.5" width="198" height="4.5" fill="#A66343"/>
+    <rect x="62" y="415.5" width="198" height="1.5" fill="#C9A47E"/>
+    <!-- Letto matrimoniale in rovere e lino -->
+    <rect x="103" y="422" width="115" height="112" rx="2" fill="#C9A47E"/>
+    <rect x="105" y="425" width="111" height="107" rx="2" fill="#FAF7F2"/>
+    <rect x="104" y="449" width="113" height="84" rx="2" fill="#F2EEE6"/>
+    <rect x="104" y="498" width="113" height="18" fill="#CDBFA8"/>
+    <!-- Cuscini lino e rullo argilla -->
+    <rect x="111" y="428" width="44" height="18" rx="4" fill="#FAF7F2"/>
+    <rect x="164" y="428" width="44" height="18" rx="4" fill="#FAF7F2"/>
+    <rect x="114" y="434" width="38" height="9" rx="3" fill="#A66343"/>
+    <rect x="167" y="434" width="38" height="9" rx="3" fill="#A66343"/>
+    <!-- Comodini in rovere -->
+    <rect x="84" y="420" width="16" height="22" rx="1" fill="#C9A47E"/>
+    <rect x="221" y="420" width="16" height="22" rx="1" fill="#C9A47E"/>
+    <!-- Poltrona in lino e tavolino in rovere alla finestra -->
+    <rect x="68" y="554" width="28" height="28" rx="8" fill="#F2EEE6" stroke="#D3CBBE" stroke-width="0.8"/>
+    <circle cx="82" cy="596" r="6.5" fill="#C9A47E"/>
+    <!-- Armadio a tutta altezza color calce sulla parete Sud con maniglie a gola -->
+    <rect x="66" y="628" width="190" height="28" fill="#F1EDE6" stroke="#DCD5C8" stroke-width="0.8"/>
+  </g>
+  <!-- Lampade a sospensione in carta di riso sopra i comodini -->
+  <circle cx="92" cy="431" r="5" fill="#FFFDF8" stroke="#D3CBBE" stroke-width="0.6"/>
+  <circle cx="229" cy="431" r="5" fill="#FFFDF8" stroke="#D3CBBE" stroke-width="0.6"/>
+  <!-- Divisioni ante armadio calce -->
+  <g stroke="#CFC8BC" stroke-width="0.8">
+    <line x1="104" y1="628" x2="104" y2="656"/><line x1="142" y1="628" x2="142" y2="656"/><line x1="180" y1="628" x2="180" y2="656"/><line x1="218" y1="628" x2="218" y2="656"/>
+  </g>
+
+  <!-- ================= BAGNO PADRONALE PRIVATO ================= -->
+  <!-- Chiusa porta corridoio, nuova porta dalla camera; pavimento esagonette cotto, doccia walk-in argilla a tutta altezza con panca rovere e nicchia, doppio lavabo rovere cannettato, WC e bidet sulla colonna -->
+  <g filter="url(#sh)">
+    <!-- Doppio lavabo sospeso compatto in rovere cannettato con piano in quarzo sabbia -->
+    <rect x="347" y="501" width="24.5" height="54" rx="2" fill="#C9A47E" stroke="#8C6748" stroke-width="0.6"/>
+    <rect x="347" y="501" width="24.5" height="54" rx="2" fill="#F4EFE6" opacity="0.65"/>
+    <rect x="350" y="508" width="16" height="15" rx="3" fill="#DCD5C8"/>
+    <rect x="350" y="534" width="16" height="15" rx="3" fill="#DCD5C8"/>
+    <!-- Specchio retroilluminato largo -->
+    <rect x="369.5" y="503" width="2" height="50" fill="#FFFDF8" stroke="#D3E7EE" stroke-width="0.5"/>
+    <!-- Scaldasalviette nero a scaletta tra lavabo e sanitari -->
+    <rect x="368.5" y="560" width="2.8" height="20" fill="#16181C"/>
+    <!-- Sanitari sospesi bianchi su mensola in quarzo sabbia -->
+    <rect x="366" y="584" width="5.5" height="54" fill="#E8E2D6"/>
+    <rect x="347" y="587" width="19" height="19" rx="3" fill="#F8F7F3"/>
+    <rect x="347" y="616" width="19" height="19" rx="3" fill="#F8F7F3"/>
+    <!-- Doccia walk-in: piastrelle argilla, nicchia illuminata, panca rovere con asciugamano, soffione a soffitto -->
+    <rect x="266" y="540" width="47" height="116" fill="#A66343" opacity="0.3"/>
+    <!-- Nicchia illuminata parete Ovest -->
+    <rect x="265.5" y="594" width="2.5" height="28" fill="#FFF1CF" stroke="#A66343" stroke-width="0.4"/>
+    <!-- Panca sospesa in rovere trattato fondo Sud + asciugamano lino -->
+    <rect x="266" y="640" width="47" height="16" rx="2" fill="#C9A47E"/>
+    <rect x="285" y="643" width="18" height="9" rx="1.5" fill="#FAF7F2"/>
+    <!-- Soffione nero a soffitto -->
+    <rect x="282" y="606" width="14" height="14" rx="2" fill="#16181C"/>
+    <circle cx="289" cy="613" r="3" fill="#56575B"/>
+  </g>
+  <ellipse cx="355.5" cy="596.5" rx="7" ry="5" fill="#FFFFFF" stroke="#CFCFCB" stroke-width="0.5"/>
+  <ellipse cx="355.5" cy="625.5" rx="7" ry="5" fill="#FFFFFF" stroke="#CFCFCB" stroke-width="0.5"/>
+  <!-- Vetro fisso doccia senza profili ancorato a Sud -->
+  <line x1="313" y1="576" x2="313" y2="656" stroke="#D3E7EE" stroke-width="2.2"/>
+  <rect x="312.4" y="576" width="1.2" height="80" fill="#16181C" opacity="0.3"/>
+  <!-- Canalina di scarico a pavimento -->
+  <rect x="268" y="638" width="44" height="1.8" fill="#16181C"/>
+
+  <!-- ================= MURATURE ================= -->
+  <g fill="none" stroke-linecap="square">
+    <path stroke="#D4AF37" stroke-opacity="0.55" stroke-width="15" d="M330,125 L330,50 L60,50 L60,660 L375,660 L375,495 L472,495 L472,405 L512,405 M564,405 L715,405 L715,340 L808,340 L808,150 L775,150 M655,150 L610,150 L610,125 L540,125 M430,125 L330,125 M808,150 L808,35"/>
+    <path stroke="#16181C" stroke-width="12" d="M330,125 L330,50 L60,50 L60,660 L375,660 L375,495 L472,495 L472,405 L512,405 M564,405 L715,405 L715,340 L808,340 L808,150 L775,150 M655,150 L610,150 L610,125 L540,125 M430,125 L330,125 M808,150 L808,35"/>
+    <!-- Tramezzi: chiusa la vecchia porta Camera 1 sul corridoio (278..322, y 245); chiusa la porta del bagno B sul corridoio (262..375, y 495); nuova porta camera/bagno (500..540, x 262) -->
+    <path stroke="#16181C" stroke-width="7" d="M330,245 L330,265 M330,315 L330,380 M330,420 L330,495 M60,245 L330,245 M262,245 L262,292 M262,336 L262,486 M262,486 L262,500 M262,540 L262,660 M262,495 L375,495 M330,340 L472,340 L472,405 M610,125 L610,152 M610,338 L610,356 M610,340 L715,340"/>
+  </g>
+  <!-- Setto in cemento armato mantenuto -->
+  <rect x="56" y="406" width="208" height="12" fill="#16181C" stroke="#D4AF37" stroke-opacity="0.9" stroke-width="1.4"/>
+  <g stroke="#D4AF37" stroke-opacity="0.45" stroke-width="0.8">
+    <line x1="70" y1="417" x2="80" y2="407"/><line x1="90" y1="417" x2="100" y2="407"/><line x1="110" y1="417" x2="120" y2="407"/><line x1="130" y1="417" x2="140" y2="407"/><line x1="150" y1="417" x2="160" y2="407"/><line x1="170" y1="417" x2="180" y2="407"/><line x1="190" y1="417" x2="200" y2="407"/><line x1="210" y1="417" x2="220" y2="407"/><line x1="230" y1="417" x2="240" y2="407"/><line x1="250" y1="417" x2="260" y2="407"/>
+  </g>
+
+  <!-- Dente murario clarinetto idrico -->
+  <rect x="330" y="445" width="11" height="50" fill="#16181C"/>
+
+  <!-- Serramenti -->
+  <g fill="#CFE0E8" stroke="#0E1014" stroke-width="0.8">
+    <rect x="140" y="45" width="110" height="10"/>
+    <rect x="55" y="280" width="10" height="95"/>
+    <rect x="55" y="485" width="10" height="100"/>
+    <rect x="430" y="120" width="110" height="10"/>
+    <rect x="655" y="145" width="120" height="10"/>
+  </g>
+  <g stroke="#0E1014" stroke-width="0.8">
+    <line x1="176.6" y1="45" x2="176.6" y2="55"/><line x1="213.3" y1="45" x2="213.3" y2="55"/>
+    <line x1="55" y1="311.6" x2="65" y2="311.6"/><line x1="55" y1="343.3" x2="65" y2="343.3"/>
+    <line x1="55" y1="518.3" x2="65" y2="518.3"/><line x1="55" y1="551.6" x2="65" y2="551.6"/>
+    <line x1="485" y1="120" x2="485" y2="130"/>
+    <line x1="715" y1="145" x2="715" y2="155"/>
+  </g>
+
+  <!-- Porte e battenti -->
+  <g fill="none" stroke="#16181C">
+    <!-- Portoncino blindato ingresso -->
+    <line x1="512" y1="405" x2="512" y2="353" stroke-width="3"/>
+    <path d="M564,405 A52,52 0 0 0 512,353" stroke-width="0.8" stroke-dasharray="3 3"/>
+    <rect x="430" y="130" width="58" height="2.5" fill="#16181C" stroke="none"/>
+    <!-- Porta zona notte in rovere -->
+    <rect x="328.5" y="312" width="3" height="44" fill="#8C6748" stroke="#16181C" stroke-width="0.5" stroke-dasharray="2 2"/>
+    <!-- Porta cameretta fratelli -->
+    <line x1="262" y1="292" x2="218" y2="292" stroke="#8C6748" stroke-width="3"/>
+    <path d="M262,336 A44,44 0 0 1 218,292" stroke-width="0.8" stroke-dasharray="3 3"/>
+    <!-- Porta camera genitori -->
+    <line x1="262" y1="442" x2="218" y2="442" stroke="#8C6748" stroke-width="3"/>
+    <path d="M262,486 A44,44 0 0 1 218,442" stroke-width="0.8" stroke-dasharray="3 3"/>
+  </g>
+  <rect x="655" y="155" width="62" height="2.5" fill="#16181C"/>
+  <!-- Porta scorrevole esterno muro Bagno Famiglia -->
+  <line x1="324" y1="338" x2="324" y2="382" stroke="#8C6748" stroke-width="3"/>
+  <path d="M320.5,336 L320.5,422" fill="none" stroke="#16181C" stroke-width="0.8" stroke-dasharray="3 3"/>
+  <!-- Nuova porta privata interna camera genitori / bagno padronale -->
+  <line x1="262" y1="502" x2="302" y2="502" stroke="#FFFFFF" stroke-width="3"/>
+  <path d="M262,540 A38,38 0 0 0 300,502" fill="none" stroke="#16181C" stroke-width="0.8" stroke-dasharray="3 3"/>
+
+</svg>

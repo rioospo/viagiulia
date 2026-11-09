@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scheda di vendita A4 — Via Giulia 77, Trieste</title>
+  <!-- Caratteri ospitati sul sito (7/11/2026): nessuna richiesta ai server di Google (privacy dei visitatori, GDPR) -->
+  <link rel="preload" href="fonts/plus-jakarta-sans-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <style>
+    @font-face { font-family: 'Cinzel'; font-style: normal; font-weight: 500 800; font-display: swap; src: url(fonts/cinzel-normal-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'Cinzel'; font-style: normal; font-weight: 500 800; font-display: swap; src: url(fonts/cinzel-normal-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(fonts/jetbrains-mono-normal-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(fonts/jetbrains-mono-normal-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Plus Jakarta Sans'; font-style: italic; font-weight: 300 400; font-display: swap; src: url(fonts/plus-jakarta-sans-italic-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'Plus Jakarta Sans'; font-style: italic; font-weight: 300 400; font-display: swap; src: url(fonts/plus-jakarta-sans-italic-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 300 700; font-display: swap; src: url(fonts/plus-jakarta-sans-normal-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 300 700; font-display: swap; src: url(fonts/plus-jakarta-sans-normal-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Space Grotesk'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(fonts/space-grotesk-normal-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'Space Grotesk'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(fonts/space-grotesk-normal-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  </style>
+  
+  <style>
+    /* STILI TIPOGRAFICI EDITORIALI DI PREGIO */
+    :root {
+      --gold: #b38e2e;
+      --gold-dark: #8e6f1f;
+      --dark: #0f131a;
+      --dark-card: #171d26;
+      --text-main: #1e242e;
+      --text-muted: #5e6878;
+      --green: #0a8a56;
+      --green-bg: #eaf8f1;
+      --border: #dbe1ea;
+      --border-dark: #2a3342;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      color: var(--text-main);
+      background: #eef2f6;
+      font-size: 13px;
+      line-height: 1.5;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* BARRA DI CONTROLLO SU SCHERMO (NON STAMPATA) */
+    .screen-toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: #11151e;
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid var(--gold);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+    .screen-toolbar h1 { font-size: 15px; font-family: 'Cinzel', serif; letter-spacing: 0.05em; }
+    .screen-btn {
+      background: var(--gold);
+      color: #0b0d11;
+      border: none;
+      font-weight: 700;
+      font-size: 12px;
+      padding: 8px 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .screen-btn:hover { background: #d4af37; }
+    .screen-btn.ghost { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.25); }
+
+    /* LAYOUT DELLE 4 PAGINE A4 */
+    .a4-page {
+      width: 210mm;
+      min-height: 297mm;
+      max-height: 297mm;
+      margin: 16px auto;
+      background: #fff;
+      padding: 16mm 18mm;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      page-break-after: always;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .screen-toolbar { display: none; }
+      .a4-page {
+        margin: 0;
+        width: 100%;
+        min-height: 100vh;
+        max-height: 100vh;
+        box-shadow: none;
+        padding: 14mm 16mm;
+        page-break-after: always;
+      }
+    }
+
+    /* HEADER & FOOTER COMUNI PER PAGINA */
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-bottom: 2px solid var(--dark);
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+    }
+    .page-header .brand {
+      font-family: 'Cinzel', serif;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: var(--dark);
+    }
+    .page-header .brand span { color: var(--gold-dark); font-size: 11px; margin-left: 6px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; }
+    .page-header .page-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--gold-dark);
+      text-transform: uppercase;
+    }
+
+    .page-footer {
+      border-top: 1px solid var(--border);
+      padding-top: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 10px;
+      color: var(--text-muted);
+      margin-top: 12px;
+    }
+    .page-footer strong { color: var(--dark); }
+
+    /* COMPONENTI SPECIFICI */
+    .hero-box {
+      background: var(--dark);
+      color: #fff;
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin-bottom: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-left: 6px solid var(--gold);
+    }
+    .hero-title {
+      font-family: 'Cinzel', serif;
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 4px;
+      color: #fff;
+    }
+    .hero-title span { color: #f3e5ab; }
+    .hero-sub { font-size: 11.5px; color: #a9b3c4; max-width: 500px; }
+
+    .badge-bar {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .pill {
+      background: #f1f4f8;
+      border: 1px solid var(--border);
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--dark);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .pill.gold { background: rgba(179,142,46,0.12); border-color: var(--gold); color: var(--gold-dark); }
+    .pill.green { background: var(--green-bg); border-color: var(--green); color: var(--green); }
+
+    .grid-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+    .grid-3col {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px;
+    }
+    .card.dark {
+      background: var(--dark-card);
+      color: #fff;
+      border-color: var(--border-dark);
+    }
+    .card-title {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--gold-dark);
+    }
+    .card.dark .card-title { color: #f3e5ab; }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+    }
+    .data-table th, .data-table td {
+      padding: 5px 6px;
+      border-bottom: 1px solid #edf1f6;
+      text-align: left;
+    }
+    .data-table th {
+      font-size: 10px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      background: #f8fafc;
+      font-weight: 700;
+    }
+    .data-table tr:last-child td { border-bottom: none; }
+    .data-table .num {
+      text-align: right;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+    }
+
+    .img-box {
+      width: 100%;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      margin-bottom: 6px;
+    }
+    .img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .highlight-strip {
+      background: #fdfbf7;
+      border: 1px solid #ebd9a9;
+      border-left: 4px solid var(--gold);
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-size: 11px;
+      margin-bottom: 10px;
+      color: #4a3b10;
+    }
+
+    .qr-contact-block {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .qr-code {
+      width: 82px;
+      height: 82px;
+      background: #fff;
+      padding: 4px;
+      border-radius: 6px;
+      border: 1px solid #cbd5e1;
+      flex-shrink: 0;
+    }
+    .qr-code svg { width: 100%; height: 100%; display: block; }
+    .ico { display: inline-block; width: 1.15em; height: 1.15em; vertical-align: -0.2em; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+    .pill .ico { color: var(--gold-dark, #8a6d1f); }
+    @page { size: A4; margin: 0; }
+    .tb-actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; justify-content: flex-end; }
+    .tb-lang { display: inline-flex; border: 1px solid rgba(255,255,255,0.25); border-radius: 6px; overflow: hidden; }
+    .tb-lang a { color: #cbd5e1; text-decoration: none; font-size: 11px; font-weight: 700; padding: 8px 10px; letter-spacing: 0.04em; }
+    .tb-lang a:hover { color: #fff; }
+    .tb-lang a[aria-current] { background: var(--gold); color: #0b0d11; }
+    .data-table.kv td:first-child { width: 26%; }
+    .offer-card { border: 2px dashed var(--gold); background: #fdfbf7; }
+    .offer-title { font-size: 11.5px; font-weight: 800; color: var(--dark); text-transform: uppercase; line-height: 1.3; margin-bottom: 6px; }
+    .offer-body { font-size: 10.5px; color: var(--text-muted); line-height: 1.45; }
+    .offer-body p { margin-bottom: 5px; }
+    .offer-body ol { margin: 0 0 6px 18px; }
+    .offer-body strong { color: var(--dark); }
+    @media screen and (max-width: 860px) {
+      .screen-toolbar { position: static; flex-direction: column; align-items: flex-start; gap: 10px; padding: 12px 16px; }
+      .tb-actions { justify-content: flex-start; }
+      .a4-page { zoom: var(--fit, 1); margin: 10px auto; }
+    }
+  </style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1.2 12.5H6.2z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2.5L4.5 14H11l-1 7.5L19.5 10H13z"/></symbol>
+    <symbol id="i-car" viewBox="0 0 24 24"><path d="M4 16.5V13l2-5h12l2 5v3.5z"/><path d="M4 13h16"/><circle cx="8" cy="16.5" r="1.7"/><circle cx="16" cy="16.5" r="1.7"/></symbol>
+    <symbol id="i-cert" viewBox="0 0 24 24"><path d="M4.5 3h15v12h-15z"/><path d="M8 7h8M8 10.5h5"/><circle cx="16" cy="16.5" r="2.8"/><path d="M14.5 18.8V22l1.5-1 1.5 1v-3.2"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 2.5h8.5L19 7v14.5H6z"/><path d="M14 2.5V7h5M9 12h7M9 16h7"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15.5" r="4.2"/><path d="M11 12.5l9-9M16.5 7l3 3M14 9.5l2 2"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol>
+    <symbol id="i-plan" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1.5"/><path d="M3 12h7v9M14 3v6h7"/></symbol>
+    <symbol id="i-window" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M12 3v18M4 12h16"/></symbol>
+  </defs></svg>
+
+
+  <!-- BARRA TOOLBAR SU SCHERMO -->
+  <div class="screen-toolbar">
+    <div>
+      <h1>VIA GIULIA 77 • TRIESTE — SCHEDA DI VENDITA A4</h1>
+      <span style="font-size: 11px; color: #94a3b8;">4 pagine A4 · da scaricare in PDF o da stampare</span>
+    </div>
+    <div class="tb-actions">
+      <nav class="tb-lang" aria-label="Lingua"><!-- LANG-LINKS:start --><a href="brochure_vendita_a4.html" hreflang="it" lang="it" aria-current="page">IT</a><a href="brochure_vendita_a4_en.html" hreflang="en" lang="en">EN</a><a href="brochure_vendita_a4_de.html" hreflang="de" lang="de">DE</a><a href="brochure_vendita_a4_sl.html" hreflang="sl" lang="sl">SL</a><!-- LANG-LINKS:end --></nav>
+      <a href="index.html" class="screen-btn ghost">← Torna al Sito Web</a>
+      <a href="pdf/via-giulia-77-trieste_it.pdf" target="_blank" rel="noopener" class="screen-btn"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg> Scarica il PDF</a>
+      <button type="button" onclick="window.print()" class="screen-btn ghost">Stampa</button>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       FACCIATA 1 (A4): COPERTINA EMOZIONALE & I 5 ASSET UNICI
+  ======================================================== -->
+  <div class="a4-page">
+    <div>
+      <div class="page-header">
+        <div class="brand">VIA GIULIA 77 <span>9° E ULTIMO PIANO • TRIESTE</span></div>
+        <div class="page-tag">PAG. 01/04 • SCHEDA IDENTITÀ &amp; POSIZIONAMENTO</div>
+      </div>
+
+      <div class="hero-box">
+        <div>
+          <div style="font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; color: var(--gold); margin-bottom: 4px;">
+            TRIESTE • VIA GIULIA 77 • 9° PIANO CON ASCENSORE
+          </div>
+          <div class="hero-title">Ultimo Piano sul Carso <span>con Posto Auto Coperto</span></div>
+          <div class="hero-sub">108 m² catastali al 9° e ultimo piano, in Classe B (APE 2024): terrazzo con vista sul Carso, scorcio di mare da due camere, riscaldamento autonomo e lavori Superbonus 110% già fatti (cappotto, infissi a triplo vetro, porta blindata e caldaia).</div>
+        </div>
+      </div>
+
+      <div class="badge-bar">
+        <div class="pill gold"><svg class="ico" aria-hidden="true"><use href="#i-window"/></svg> 9° e Ultimo Piano Panoramico</div>
+        <div class="pill gold"><svg class="ico" aria-hidden="true"><use href="#i-plan"/></svg> 108 m² Catastali (6 Vani)</div>
+        <div class="pill gold"><svg class="ico" aria-hidden="true"><use href="#i-car"/></svg> Posto Auto Coperto S1 (13 m²)</div>
+        <div class="pill green"><svg class="ico" aria-hidden="true"><use href="#i-bolt"/></svg> Classe B (59,09 kWh/m²a)</div>
+        <div class="pill"><svg class="ico" aria-hidden="true"><use href="#i-window"/></svg> Serramenti Triplo Vetro IPR (Ug 0.5 • Bora Cat. 5)</div>
+        <div class="pill"><svg class="ico" aria-hidden="true"><use href="#i-bag"/></svg> Centro "Il Giulia" (PAM) a 30–40 m • Bus 6, 9, 35</div>
+        <div class="pill"><svg class="ico" aria-hidden="true"><use href="#i-cert"/></svg> Proprietà Superficiaria 1/1 (Riscatto 0 € approvato)</div>
+      </div>
+
+      <div class="grid-2col">
+        <div>
+          <div class="img-box" style="height: 165px;">
+            <img src="img/web/hero_panorama.jpg" alt="Vista aperta sul Carso dal 9° piano">
+          </div>
+          <div style="font-size: 9.5px; color: var(--text-muted); text-align: center; margin-bottom: 8px;">
+            Foto reale dal terrazzo al 9° piano: vista aperta sul Carso.
+          </div>
+
+          <div class="img-box" style="height: 140px;">
+            <img src="img/web/living_room.jpg" alt="Living moderno e luminoso">
+          </div>
+          <div style="font-size: 9.5px; color: var(--text-muted); text-align: center;">
+            Zona living con pavimentazione uniforme in gres porcellanato color sabbia.
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div class="card" style="height: 100%;">
+            <div class="card-title">I 5 Punti di Forza dell'Immobile</div>
+            <ul style="list-style: none; font-size: 11px; display: flex; flex-direction: column; gap: 8px;">
+              <li>
+                <strong style="color: var(--dark);">1. 9° e Ultimo Piano (Vista &amp; Luce):</strong><br>
+                <span style="color: var(--text-muted);">Sopra c'è solo la grande terrazza condominiale con i pannelli fotovoltaici: nessun vicino al piano di sopra. Il traffico resta in basso, attutito dai tripli vetri.</span>
+              </li>
+              <li>
+                <strong style="color: var(--dark);">2. Posto Auto Coperto S1 in Proprietà (13 m²):</strong><br>
+                <span style="color: var(--text-muted);">Un posto auto di proprietà, raro in questa zona. L'ascensore porta dal 9° piano al portone; da lì 2 rampe di scale interne (14 gradini) scendono al garage.</span>
+              </li>
+              <li>
+                <strong style="color: var(--dark);">3. Classe B &amp; Lavori Superbonus 110% Già Fatti:</strong><br>
+                <span style="color: var(--text-muted);">Cappotto termico tutto intorno alla casa, infissi a triplo vetro, porta blindata e caldaia a condensazione (2022–2023). Già tra le classi più efficienti per la direttiva europea sulle case green; la Classe B permette di chiedere un mutuo green, alle condizioni della banca.</span>
+              </li>
+              <li>
+                <strong style="color: var(--dark);">4. Ingresso con Rampa &amp; Servizi Sotto Casa:</strong><br>
+                <span style="color: var(--text-muted);">Senza gradini fino all'appartamento: rampa d'accesso al portone e ascensore fino al 9° piano. Il centro commerciale "Il Giulia" (PAM) è a 30–40 metri dal portone, quasi tutto al coperto (c'è un solo breve tratto all'aperto); la fermata dei bus 6, 9 e 35, per il centro, la stazione e il mare, è a circa 60 metri.</span>
+              </li>
+              <li>
+                <strong style="color: var(--dark);">5. Sicurezza Giuridica:</strong><br>
+                <span style="color: var(--text-muted);">Trasformazione in piena proprietà già approvata a 0 € dal Comune di Trieste (in attesa della convenzione notarile); prezzo di vendita libero, senza vincoli PEEP; conformità urbanistica attestata da un architetto.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="highlight-strip">
+        <strong>Una garanzia in più per chi compra:</strong> a Trieste vale il <strong>sistema tavolare (Libro Fondiario)</strong>: la proprietà passa con l'iscrizione, verificata prima da un giudice. L'appartamento sarà libero al rogito.
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <div><strong>Via Giulia 77, Trieste (9° Piano)</strong> • Vendita Diretta Proprietà Marco Laurenti</div>
+      <div><strong>Trattativa diretta tra privati</strong></div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       FACCIATA 2 (A4): PLANIMETRIA, 3D & MICRO-RESTYLING
+  ======================================================== -->
+  <div class="a4-page">
+    <div>
+      <div class="page-header">
+        <div class="brand">DISTRIBUZIONE SPAZI &amp; SPACCATO 3D <span>108 M² CATASTALI (6 VANI)</span></div>
+        <div class="page-tag">PAG. 02/04 • ARCHITETTURA &amp; POTENZIALE D'ARREDO</div>
+      </div>
+
+      <div class="grid-2col" style="align-items: start; margin-bottom: 12px;">
+        <div>
+          <div class="card-title">Planimetria Catastale Ufficiale (108 m²)</div>
+          <div class="img-box" style="height: 185px; background: #fff;">
+            <img src="img/web/planimetria.jpg" alt="Planimetria catastale 6 vani" style="object-fit: contain;">
+          </div>
+          <table class="data-table">
+            <thead>
+              <tr><th>Vano / Ambiente</th><th>Superficie / Destinazione</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Soggiorno (20,2 m²)</strong></td><td>Con uscita sul terrazzo a nord e vista sul Carso</td></tr>
+              <tr><td><strong>Cucina abitabile (10,5 m²)</strong></td><td>Cucina lineare con portafinestra sul terrazzo</td></tr>
+              <tr><td><strong>Terrazzo (11 m²)</strong></td><td>Lungo terrazzo a loggia, circa 8,5 × 1,5 m, vista sul Carso</td></tr>
+              <tr><td><strong>Camera Carso (14,5 m²)</strong></td><td>Matrimoniale con finestra sul Carso e armadio a 4 ante salvia</td></tr>
+              <tr><td><strong>Studio (9,5 m²)</strong></td><td>Singola o studio, armadiatura a tutta altezza e scorcio di mare</td></tr>
+              <tr><td><strong>Camera Mare (14,3 m²)</strong></td><td>Doppia con scorcio di mare dalla finestra a ovest</td></tr>
+              <tr><td><strong>Bagno grande (5,2 m²)</strong></td><td>Bagno completo con vasca</td></tr>
+              <tr><td><strong>Bagno piccolo (4,4 m²)</strong></td><td>Doccia idromassaggio, radio FM e luce LED</td></tr>
+              <tr><td><strong>Posto Auto S1 (C/6)</strong></td><td>13 m² catastali in autorimessa coperta</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div>
+          <div class="card-title">Spaccato Isometrico 3D Fedele</div>
+          <div class="card dark" style="padding: 10px; margin-bottom: 10px;">
+            <div style="font-size: 10.5px; color: #a9b3c4; margin-bottom: 8px;">
+              Sul sito di vendita il modello 3D si esplora liberamente, con tre idee di ristrutturazione (la Classica, la Famiglia e il Loft), il tour a 360° e i video.
+            </div>
+            <div class="img-box" style="height: 165px; border-color: #334155; margin-bottom: 6px;">
+              <img src="img/web/living_wide.jpg" alt="Spazio giorno e pranzo">
+            </div>
+            <div style="font-size: 9.5px; color: #cbd5e1; text-align: center;">
+              Pavimento uniforme in gres color sabbia nella zona giorno e nelle camere.
+            </div>
+          </div>
+
+          <div class="card" style="border-left: 4px solid var(--gold);">
+            <div style="font-size: 11px; font-weight: 700; color: var(--dark); margin-bottom: 4px;">Abitabile Subito, o da Trasformare</div>
+            <p style="font-size: 10.5px; color: var(--text-muted); line-height: 1.45;">
+              L'alloggio è <strong>abitabile subito</strong>. Chi vuole può limitarsi a un rinfresco (tinteggiatura calda e nuova illuminazione: indicativamente ~2.000 €) oppure trasformarlo: lo spaccato 3D sul sito mostra tre idee, dalla più classica al loft. Per i lavori valgono le detrazioni fiscali in vigore al momento dell'intervento.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-3col">
+        <div class="card">
+          <div class="img-box" style="height: 85px;">
+            <img src="img/web/bagno_idromassaggio.jpg" alt="Bagno con doccia idromassaggio">
+          </div>
+          <div style="font-size: 10px; font-weight: 700; color: var(--dark);">Bagno piccolo</div>
+          <div style="font-size: 9.5px; color: var(--text-muted);">Doccia con idromassaggio dorsale, cromoterapia e radio FM.</div>
+        </div>
+
+        <div class="card">
+          <div class="img-box" style="height: 85px;">
+            <img src="img/web/bagno_vasca.jpg" alt="Bagno padronale con vasca">
+          </div>
+          <div style="font-size: 10px; font-weight: 700; color: var(--dark);">Bagno grande</div>
+          <div style="font-size: 9.5px; color: var(--text-muted);">Bagno con vasca da bagno e ampia specchiera a parete.</div>
+        </div>
+
+        <div class="card">
+          <div class="img-box" style="height: 85px;">
+            <img src="img/web/terrazzo_abitabile.jpg" alt="Terrazzo vivibile con klinker">
+          </div>
+          <div style="font-size: 10px; font-weight: 700; color: var(--dark);">Terrazzo Vivibile</div>
+          <div style="font-size: 9.5px; color: var(--text-muted);">Pavimento in klinker cotto, colonna pompeiana e vista Carso.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <div>Planimetria Catasto Fabbricati Trieste (Sez. V, Fg 13, Part. 7011, Sub. 50)</div>
+      <div><!-- SITE-FOOT:start -->Spaccato 3D, tour a 360° e video: <strong>rioospo.github.io/viagiulia</strong><!-- SITE-FOOT:end --></div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       FACCIATA 3 (A4): CERTIFICAZIONE SERRAMENTI & CLASSE B
+  ======================================================== -->
+  <div class="a4-page">
+    <div>
+      <div class="page-header">
+        <div class="brand">CAPITALE TECNICO &amp; CONSUMI <span>INFISSI, PORTA BLINDATA + CLASSE B</span></div>
+        <div class="page-tag">PAG. 03/04 • PRESTAZIONE ENERGETICA &amp; SICUREZZA</div>
+      </div>
+
+      <div class="grid-2col" style="margin-bottom: 12px;">
+        <div class="card">
+          <div class="card-title">Infissi a triplo vetro IPR (2022–2023)</div>
+          <div style="font-size: 10.5px; color: var(--text-muted); margin-bottom: 8px;">
+            Installazione eseguita a regola d'arte con <strong>10 anni di garanzia contrattuale sulla posa</strong> (norma UNI 11673-2).
+          </div>
+          <table class="data-table">
+            <thead>
+              <tr><th>Voce di Fornitura</th><th>Descrizione Tecnica</th><th style="text-align: right;">Prestazione &amp; Garanzia</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Serramenti PVC</strong></td>
+                <td>Aluplast Ideal 8000 Triplo Vetro 41 mm con saldature invisibili V-Perfect</td>
+                <td class="num" style="color: var(--green); font-size: 10.5px;">Ug 0.5 • Rw 33 dB</td>
+              </tr>
+              <tr>
+                <td><strong>Cassonetti</strong></td>
+                <td>Monoblocco PVC Expert XT sp. 30 mm coibentati ad alta tenuta termica</td>
+                <td class="num" style="color: var(--green); font-size: 10.5px;">Coibentazione continua</td>
+              </tr>
+              <tr>
+                <td><strong>Tapparelle</strong></td>
+                <td>Alluminio coibentato Aluprof PA 43 — <strong>Resistenza Vento Classe 5</strong></td>
+                <td class="num" style="color: var(--green); font-size: 10.5px;">Tenuta alla Bora Cat. 5</td>
+              </tr>
+              <tr>
+                <td><strong>Blindata</strong></td>
+                <td>Stark Style7 Nettuno Classe 3 (11 punti, carenatura acciaio INOX) + <strong>Mottura Champions CM5+1</strong></td>
+                <td class="num" style="color: var(--green); font-size: 10.5px;">Classe 3 Antieffrazione</td>
+              </tr>
+              <tr style="background: #fdfbf7; font-weight: 700;">
+                <td colspan="2">Posa Certificata UNI 11673-2 (Capisquadra IPR Liv. IV con nastri Würth e schiuma Soudal)</td>
+                <td class="num" style="color: var(--green); font-size: 10.5px;">Posa a regola d'arte</td>
+              </tr>
+              <tr style="background: rgba(179,142,46,0.12); font-weight: 800;">
+                <td colspan="2">GARANZIA CONTRATTUALE UFFICIALE SULLA POSA IN OPERA</td>
+                <td class="num" style="color: var(--gold-dark); font-size: 11px;">10 ANNI DI GARANZIA</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Attestato di Prestazione Energetica 2024–2034 (Classe B)</div>
+          <div style="background: var(--green-bg); border: 1px solid var(--green); border-radius: 6px; padding: 10px; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <div style="font-size: 9px; text-transform: uppercase; font-weight: 700; color: var(--green);">Certificazione Ufficiale CENEDfvg</div>
+              <div style="font-size: 18px; font-weight: 800; color: #065f38;">CLASSE ENERGETICA B</div>
+              <div style="font-size: 10px; color: #1e3a2b;">EPgl,nren: <strong>59,09 kWh/m² anno</strong> (certificato 2024–2034)</div>
+            </div>
+            <div style="text-align: right; font-family: 'Space Grotesk', sans-serif;">
+              <div style="font-size: 18px; font-weight: 800; color: var(--green);">~ € 600 / anno</div>
+              <div style="font-size: 9px; color: #555;">Spesa Gas Riscaldamento Stimata</div>
+            </div>
+          </div>
+
+          <table class="data-table">
+            <thead>
+              <tr><th>Parametro Energetico</th><th>Via Giulia 77 (Classe B)</th><th>Appartamento tipico anni '60–'80 (Classe G)</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Fabbisogno Gas Annuo</strong></td>
+                <td><strong style="color: var(--green);">486 Sm³ / anno</strong></td>
+                <td>1.600 – 2.100 Sm³ / anno</td>
+              </tr>
+              <tr>
+                <td><strong>Spesa Riscaldamento</strong></td>
+                <td><strong style="color: var(--green);">~ € 580 – € 680 / anno</strong></td>
+                <td>~ € 1.900 – € 2.400 / anno</td>
+              </tr>
+              <tr>
+                <td><strong>Risparmio in 10 Anni</strong></td>
+                <td colspan="2"><strong style="color: var(--green);">~ € 12.000 – 18.000 in 10 anni</strong> (stima, ai prezzi attuali del gas)</td>
+              </tr>
+              <tr>
+                <td><strong>Direttiva Europea Case Green</strong></td>
+                <td><strong style="color: var(--green);">Già tra le classi più efficienti</strong></td>
+                <td>Tra gli immobili da riqualificare per primi</td>
+              </tr>
+              <tr>
+                <td><strong>Caldaia Autonoma</strong></td>
+                <td><strong>Viessmann Vitodens 100-W 25 kW (2022), Wi-Fi</strong></td>
+                <td>Spesso centralizzato o vetusto</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div style="margin-top: 8px; font-size: 9.5px; color: var(--text-muted); line-height: 1.35;">
+            APE Cod. <strong>3200600981824</strong> (Prot. Insiel TS1-REGAPE-2024-0037290-A) registrato il 21/10/2024, redatto da System Mind S.r.l. (Per. Ind. Diego Piazzolla).
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-2col">
+        <div class="card">
+          <div style="font-size: 11px; font-weight: 700; color: var(--dark); margin-bottom: 4px;">Isolamento Acustico &amp; Tenuta alla Bora</div>
+          <p style="font-size: 10px; color: var(--text-muted);">
+            Il triplo vetro stratificato 33.1/12Ar/4/12Ar/33.1 assicura un abbattimento acustico di <strong>33 dB</strong> e canalina Warm Edge. Le tapparelle e i telai sono certificati in <strong>Classe 5 di resistenza al carico del vento</strong>: pensati per le raffiche di Bora.
+          </p>
+        </div>
+        <div class="card">
+          <div style="font-size: 11px; font-weight: 700; color: var(--dark); margin-bottom: 4px;">Porta Blindata Stark &amp; Mottura Champions</div>
+          <p style="font-size: 10px; color: var(--text-muted);">
+            Porta certificata antieffrazione <strong>Classe 3 (UNI EN 1627)</strong> con carenatura perimetrale in acciaio inox, 11 punti di chiusura e cilindro europeo Mottura Champions CM5+1 dotato di 5 chiavi padronali sigillate, chiave di emergenza "Seconda Vita" e tessera di proprietà.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <div>Fatture e certificazioni DoP originali consultabili su richiesta</div>
+      <div>Classe energetica dall'APE registrato nel catasto energetico CENEDfvg · consumi e spese sono stime</div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       FACCIATA 4 (A4): DATI CATASTALI, RENDITA & FORMULA OFFERTA
+  ======================================================== -->
+  <div class="a4-page">
+    <div>
+      <div class="page-header">
+        <div class="brand">DATI TAVOLARI &amp; MODALITÀ D'OFFERTA <span>PROCEDURA DI VENDITA DIRETTA</span></div>
+        <div class="page-tag">PAG. 04/04 • TRASPARENZA GIURIDICA &amp; CONTATTI</div>
+      </div>
+
+      <div class="card" style="margin-bottom: 12px;">
+        <div class="card-title">Dati Tavolari e Catastali (da Visura)</div>
+        <table class="data-table kv">
+          <tbody>
+            <tr>
+              <td><strong>Comune Catastale</strong></td>
+              <td>Trieste (Cod. Fiscale L424) • Sez. V, Fg 13, Part. 7011</td>
+            </tr>
+            <tr>
+              <td><strong>Appartamento (Sub. 50)</strong></td>
+              <td><strong>Cat. A/2</strong> (Abitazione Civile), Classe 3, Vani 6,0, Superficie Catastale <strong>108 m²</strong> (totale escluse aree scoperte 104 m²), Rendita Catastale € 945,12</td>
+            </tr>
+            <tr>
+              <td><strong>Posto Auto (Sub. 189)</strong></td>
+              <td><strong>Cat. C/6</strong> (autorimessa), Classe 3, Superficie <strong>13 m²</strong>, Rendita € 88,62 (Piano S1)</td>
+            </tr>
+            <tr>
+              <td><strong>Titolo di Provenienza</strong></td>
+              <td>Proprietà Superficiaria 1/1 intestata a <strong>LAURENTI Marco</strong>. Trasformazione in Piena Proprietà già determinata e accettata a 0,00 € (Comune di Trieste Prot. 0018927/2026), in attesa di stipula convenzione notarile</td>
+            </tr>
+            <tr>
+              <td><strong>Prezzo di Vendita</strong></td>
+              <td>Libero, senza vincoli della convenzione PEEP</td>
+            </tr>
+            <tr>
+              <td><strong>Imposte d'Acquisto</strong></td>
+              <td>~2.490 € prima casa · ~11.820 € seconda casa (sul valore catastale, sistema prezzo-valore; da confermare col notaio)</td>
+            </tr>
+            <tr>
+              <td><strong>Regolarità Urbanistica</strong></td>
+              <td>Conformità urbanistica attestata da un architetto; documenti tavolari e catastali allineati</td>
+            </tr>
+            <tr>
+              <td><strong>Spese Condominiali</strong></td>
+              <td>Circa 1.100–1.200 € l'anno, comprese acqua (l'appartamento non ha un contatore proprio), ascensore e parti comuni: più basse del normale grazie al fotovoltaico condominiale, già esistente, sul tetto. Il riscaldamento è autonomo e si paga a parte.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid-2col" style="margin-bottom: 12px;">
+        <div class="card">
+          <div class="card-title">Rendimento per Investitori (Buy-to-Let)</div>
+          <div style="font-size: 10.5px; color: var(--text-muted); margin-bottom: 6px;">
+            Stima secondo l'Accordo Territoriale di Trieste (zona 3, sub-fascia 2):
+          </div>
+          <table class="data-table">
+            <tbody>
+              <tr>
+                <td>Canone Concordato 3+2</td>
+                <td><strong style="color: var(--dark);">€ 1.081 / mese</strong> (€ 12.973 / anno)</td>
+              </tr>
+              <tr>
+                <td>Tassazione Agevolata</td>
+                <td><strong>Cedolare Secca al 10%</strong> (anziché 21%)</td>
+              </tr>
+              <tr>
+                <td>Imposta Municipale ILIA</td>
+                <td><strong>-25% di sconto per legge</strong> in Friuli Venezia Giulia</td>
+              </tr>
+              <tr style="background: var(--green-bg); font-weight: 700;">
+                <td>Netto stimato dopo cedolare e ILIA</td>
+                <td style="color: var(--green); font-size: 12px;">~ € 10.838 / anno netti</td>
+              </tr>
+              <tr>
+                <td>Canone Libero (4+4)</td>
+                <td>€ 1.300 / mese (~ € 11.230 / anno netti al 21%)</td>
+              </tr>
+            </tbody>
+          </table>
+          <div style="margin-top: 8px; font-size: 9.5px; color: var(--text-muted);">
+            Stima prima di manutenzione, assicurazione ed eventuali mesi sfitti; le spese condominiali ordinarie di norma le paga l'inquilino. Da verificare con un commercialista.
+          </div>
+        </div>
+
+        <div class="card offer-card">
+          <div class="offer-title"><svg class="ico" aria-hidden="true"><use href="#i-key"/></svg> Vendita Diretta tra Privati: Come Fare un'Offerta</div>
+          <div class="offer-body">
+            <p>La vendita si svolge <strong>direttamente con il proprietario, Marco Laurenti</strong>, senza agenzia: nessuna provvigione, né per chi vende né per chi compra.</p>
+            <p>Nella proposta scritta basta indicare:</p>
+            <ol>
+              <li><strong>l'importo offerto</strong>;</li>
+              <li><strong>come si paga</strong>: liquidità o mutuo già deliberato;</li>
+              <li><strong>quando si vorrebbe il rogito</strong>.</li>
+            </ol>
+            <p>Se la proposta viene accettata, si firma il preliminare con la caparra; il rogito si fa poi dal <strong>notaio scelto da chi compra, a Trieste</strong>, che verifica anche il Libro Fondiario.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="qr-contact-block">
+        <!-- QR:start --><div class="qr-code"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-3 -3 35 35" shape-rendering="crispEdges" role="img" aria-label="QR: rioospo.github.io/viagiulia"><rect x="-3" y="-3" width="35" height="35" fill="#fff"/><path d="M0 0h1v1h-1zM1 0h1v1h-1zM2 0h1v1h-1zM3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM10 0h1v1h-1zM11 0h1v1h-1zM12 0h1v1h-1zM14 0h1v1h-1zM15 0h1v1h-1zM16 0h1v1h-1zM18 0h1v1h-1zM20 0h1v1h-1zM22 0h1v1h-1zM23 0h1v1h-1zM24 0h1v1h-1zM25 0h1v1h-1zM26 0h1v1h-1zM27 0h1v1h-1zM28 0h1v1h-1zM0 1h1v1h-1zM6 1h1v1h-1zM8 1h1v1h-1zM9 1h1v1h-1zM13 1h1v1h-1zM14 1h1v1h-1zM16 1h1v1h-1zM17 1h1v1h-1zM22 1h1v1h-1zM28 1h1v1h-1zM0 2h1v1h-1zM2 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM6 2h1v1h-1zM8 2h1v1h-1zM10 2h1v1h-1zM11 2h1v1h-1zM12 2h1v1h-1zM13 2h1v1h-1zM16 2h1v1h-1zM18 2h1v1h-1zM19 2h1v1h-1zM22 2h1v1h-1zM24 2h1v1h-1zM25 2h1v1h-1zM26 2h1v1h-1zM28 2h1v1h-1zM0 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM6 3h1v1h-1zM8 3h1v1h-1zM9 3h1v1h-1zM11 3h1v1h-1zM12 3h1v1h-1zM15 3h1v1h-1zM16 3h1v1h-1zM17 3h1v1h-1zM20 3h1v1h-1zM22 3h1v1h-1zM24 3h1v1h-1zM25 3h1v1h-1zM26 3h1v1h-1zM28 3h1v1h-1zM0 4h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM6 4h1v1h-1zM10 4h1v1h-1zM11 4h1v1h-1zM12 4h1v1h-1zM17 4h1v1h-1zM18 4h1v1h-1zM19 4h1v1h-1zM20 4h1v1h-1zM22 4h1v1h-1zM24 4h1v1h-1zM25 4h1v1h-1zM26 4h1v1h-1zM28 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM10 5h1v1h-1zM11 5h1v1h-1zM12 5h1v1h-1zM16 5h1v1h-1zM18 5h1v1h-1zM20 5h1v1h-1zM22 5h1v1h-1zM28 5h1v1h-1zM0 6h1v1h-1zM1 6h1v1h-1zM2 6h1v1h-1zM3 6h1v1h-1zM4 6h1v1h-1zM5 6h1v1h-1zM6 6h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM14 6h1v1h-1zM16 6h1v1h-1zM18 6h1v1h-1zM20 6h1v1h-1zM22 6h1v1h-1zM23 6h1v1h-1zM24 6h1v1h-1zM25 6h1v1h-1zM26 6h1v1h-1zM27 6h1v1h-1zM28 6h1v1h-1zM8 7h1v1h-1zM14 7h1v1h-1zM20 7h1v1h-1zM0 8h1v1h-1zM6 8h1v1h-1zM8 8h1v1h-1zM11 8h1v1h-1zM15 8h1v1h-1zM17 8h1v1h-1zM20 8h1v1h-1zM21 8h1v1h-1zM22 8h1v1h-1zM25 8h1v1h-1zM26 8h1v1h-1zM27 8h1v1h-1zM0 9h1v1h-1zM1 9h1v1h-1zM2 9h1v1h-1zM3 9h1v1h-1zM9 9h1v1h-1zM11 9h1v1h-1zM13 9h1v1h-1zM15 9h1v1h-1zM17 9h1v1h-1zM18 9h1v1h-1zM19 9h1v1h-1zM21 9h1v1h-1zM23 9h1v1h-1zM24 9h1v1h-1zM26 9h1v1h-1zM27 9h1v1h-1zM3 10h1v1h-1zM5 10h1v1h-1zM6 10h1v1h-1zM10 10h1v1h-1zM11 10h1v1h-1zM13 10h1v1h-1zM14 10h1v1h-1zM15 10h1v1h-1zM16 10h1v1h-1zM17 10h1v1h-1zM21 10h1v1h-1zM23 10h1v1h-1zM1 11h1v1h-1zM2 11h1v1h-1zM3 11h1v1h-1zM4 11h1v1h-1zM5 11h1v1h-1zM7 11h1v1h-1zM8 11h1v1h-1zM11 11h1v1h-1zM13 11h1v1h-1zM21 11h1v1h-1zM22 11h1v1h-1zM23 11h1v1h-1zM25 11h1v1h-1zM0 12h1v1h-1zM3 12h1v1h-1zM4 12h1v1h-1zM5 12h1v1h-1zM6 12h1v1h-1zM9 12h1v1h-1zM11 12h1v1h-1zM13 12h1v1h-1zM16 12h1v1h-1zM18 12h1v1h-1zM20 12h1v1h-1zM22 12h1v1h-1zM23 12h1v1h-1zM28 12h1v1h-1zM1 13h1v1h-1zM4 13h1v1h-1zM5 13h1v1h-1zM12 13h1v1h-1zM15 13h1v1h-1zM16 13h1v1h-1zM17 13h1v1h-1zM18 13h1v1h-1zM19 13h1v1h-1zM20 13h1v1h-1zM21 13h1v1h-1zM22 13h1v1h-1zM23 13h1v1h-1zM24 13h1v1h-1zM27 13h1v1h-1zM28 13h1v1h-1zM0 14h1v1h-1zM2 14h1v1h-1zM3 14h1v1h-1zM6 14h1v1h-1zM7 14h1v1h-1zM9 14h1v1h-1zM11 14h1v1h-1zM15 14h1v1h-1zM17 14h1v1h-1zM21 14h1v1h-1zM23 14h1v1h-1zM25 14h1v1h-1zM26 14h1v1h-1zM4 15h1v1h-1zM8 15h1v1h-1zM12 15h1v1h-1zM22 15h1v1h-1zM23 15h1v1h-1zM26 15h1v1h-1zM28 15h1v1h-1zM1 16h1v1h-1zM4 16h1v1h-1zM6 16h1v1h-1zM8 16h1v1h-1zM11 16h1v1h-1zM17 16h1v1h-1zM20 16h1v1h-1zM25 16h1v1h-1zM26 16h1v1h-1zM0 17h1v1h-1zM8 17h1v1h-1zM11 17h1v1h-1zM13 17h1v1h-1zM14 17h1v1h-1zM15 17h1v1h-1zM16 17h1v1h-1zM19 17h1v1h-1zM20 17h1v1h-1zM22 17h1v1h-1zM23 17h1v1h-1zM24 17h1v1h-1zM26 17h1v1h-1zM27 17h1v1h-1zM28 17h1v1h-1zM0 18h1v1h-1zM1 18h1v1h-1zM2 18h1v1h-1zM3 18h1v1h-1zM4 18h1v1h-1zM6 18h1v1h-1zM7 18h1v1h-1zM9 18h1v1h-1zM10 18h1v1h-1zM11 18h1v1h-1zM15 18h1v1h-1zM19 18h1v1h-1zM24 18h1v1h-1zM25 18h1v1h-1zM28 18h1v1h-1zM0 19h1v1h-1zM3 19h1v1h-1zM5 19h1v1h-1zM7 19h1v1h-1zM9 19h1v1h-1zM10 19h1v1h-1zM12 19h1v1h-1zM13 19h1v1h-1zM16 19h1v1h-1zM18 19h1v1h-1zM21 19h1v1h-1zM22 19h1v1h-1zM0 20h1v1h-1zM2 20h1v1h-1zM4 20h1v1h-1zM5 20h1v1h-1zM6 20h1v1h-1zM9 20h1v1h-1zM14 20h1v1h-1zM15 20h1v1h-1zM16 20h1v1h-1zM17 20h1v1h-1zM19 20h1v1h-1zM20 20h1v1h-1zM21 20h1v1h-1zM22 20h1v1h-1zM23 20h1v1h-1zM24 20h1v1h-1zM26 20h1v1h-1zM27 20h1v1h-1zM28 20h1v1h-1zM8 21h1v1h-1zM10 21h1v1h-1zM11 21h1v1h-1zM12 21h1v1h-1zM14 21h1v1h-1zM15 21h1v1h-1zM17 21h1v1h-1zM18 21h1v1h-1zM20 21h1v1h-1zM24 21h1v1h-1zM25 21h1v1h-1zM0 22h1v1h-1zM1 22h1v1h-1zM2 22h1v1h-1zM3 22h1v1h-1zM4 22h1v1h-1zM5 22h1v1h-1zM6 22h1v1h-1zM9 22h1v1h-1zM10 22h1v1h-1zM15 22h1v1h-1zM16 22h1v1h-1zM18 22h1v1h-1zM19 22h1v1h-1zM20 22h1v1h-1zM22 22h1v1h-1zM24 22h1v1h-1zM25 22h1v1h-1zM26 22h1v1h-1zM0 23h1v1h-1zM6 23h1v1h-1zM12 23h1v1h-1zM14 23h1v1h-1zM19 23h1v1h-1zM20 23h1v1h-1zM24 23h1v1h-1zM0 24h1v1h-1zM2 24h1v1h-1zM3 24h1v1h-1zM4 24h1v1h-1zM6 24h1v1h-1zM10 24h1v1h-1zM13 24h1v1h-1zM14 24h1v1h-1zM16 24h1v1h-1zM19 24h1v1h-1zM20 24h1v1h-1zM21 24h1v1h-1zM22 24h1v1h-1zM23 24h1v1h-1zM24 24h1v1h-1zM25 24h1v1h-1zM28 24h1v1h-1zM0 25h1v1h-1zM2 25h1v1h-1zM3 25h1v1h-1zM4 25h1v1h-1zM6 25h1v1h-1zM10 25h1v1h-1zM12 25h1v1h-1zM14 25h1v1h-1zM15 25h1v1h-1zM16 25h1v1h-1zM18 25h1v1h-1zM19 25h1v1h-1zM20 25h1v1h-1zM25 25h1v1h-1zM26 25h1v1h-1zM28 25h1v1h-1zM0 26h1v1h-1zM2 26h1v1h-1zM3 26h1v1h-1zM4 26h1v1h-1zM6 26h1v1h-1zM10 26h1v1h-1zM12 26h1v1h-1zM15 26h1v1h-1zM16 26h1v1h-1zM18 26h1v1h-1zM19 26h1v1h-1zM21 26h1v1h-1zM22 26h1v1h-1zM23 26h1v1h-1zM24 26h1v1h-1zM25 26h1v1h-1zM26 26h1v1h-1zM27 26h1v1h-1zM0 27h1v1h-1zM6 27h1v1h-1zM10 27h1v1h-1zM11 27h1v1h-1zM13 27h1v1h-1zM15 27h1v1h-1zM21 27h1v1h-1zM25 27h1v1h-1zM26 27h1v1h-1zM28 27h1v1h-1zM0 28h1v1h-1zM1 28h1v1h-1zM2 28h1v1h-1zM3 28h1v1h-1zM4 28h1v1h-1zM5 28h1v1h-1zM6 28h1v1h-1zM8 28h1v1h-1zM9 28h1v1h-1zM12 28h1v1h-1zM15 28h1v1h-1zM17 28h1v1h-1zM19 28h1v1h-1zM21 28h1v1h-1zM22 28h1v1h-1zM24 28h1v1h-1zM25 28h1v1h-1zM26 28h1v1h-1z" fill="#000"/></svg></div><!-- QR:end -->
+        <div style="flex: 1;">
+          <div style="font-size: 10px; font-weight: 800; text-transform: uppercase; color: var(--gold-dark); letter-spacing: 0.1em; margin-bottom: 2px;">
+            CONTATTO DIRETTO PROPRIETÀ &amp; VISITE PRIVATE
+          </div>
+          <div style="font-size: 16px; font-weight: 800; color: var(--dark); margin-bottom: 4px;">
+            Marco Laurenti • Tel. / WhatsApp: +39 329 073 9936
+          </div>
+          <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 6px;">
+            Visite su appuntamento, pomeriggi dei giorni feriali e weekend, anche in video; risposta entro 24 ore.
+          </div>
+          <div style="font-size: 10px; color: var(--dark); font-weight: 600;">
+            <!-- QR-TXT:start --><svg class="ico" aria-hidden="true"><use href="#i-link"/></svg> Inquadra il QR o vai su <strong>rioospo.github.io/viagiulia</strong>: spaccato 3D, tour a 360° e video.<!-- QR-TXT:end -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <div>Scheda informativa: fanno fede i documenti ufficiali (visure, APE, atti)</div>
+      <div>Tutti i diritti riservati © 2026 Marco Laurenti • Via Giulia 77 Trieste</div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      function fit() { var z = Math.min(1, (document.documentElement.clientWidth - 16) / 794); document.documentElement.style.setProperty('--fit', z.toFixed(3)); }
+      fit(); window.addEventListener('resize', fit);
+    })();
+  </script>
+</body>
+</html>
