@@ -363,8 +363,9 @@
     /* ingresso morbido: il video emerge dal buio, poi arrivano i testi uno dopo l'altro */
     @keyframes heroTxtIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
     /* il video resta nascosto finché il suo primo fotogramma vero non è a schermo, poi entra in dissolvenza */
-    #heroSlideVideo { opacity: 0; transform: scale(1.05); transition: opacity 2.5s ease-out, transform 3s cubic-bezier(0.22, 1, 0.36, 1); }
-    #heroSlideVideo.is-on { opacity: 1; transform: none; }
+    /* 16/11/2026 notte: il video entra dal buio da solo, senza ingrandimento (prima sotto c'era una foto ferma e le due immagini si vedevano sdoppiate) */
+    #heroSlideVideo { opacity: 0; transition: opacity 2.5s ease-out; }
+    #heroSlideVideo.is-on { opacity: 1; }
     /* 16/11/2026: titolo e prezzo compaiono subito sul nero; l'immagine sale lentamente dietro (3,5 s) */
     .hero-first > .eyebrow, .hero-first > .hero-headline, .hero-first > .hero-price, .hero-content > .hero-subhead, .hero-content > .hero-badges-row {
       animation: heroTxtIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
@@ -378,7 +379,7 @@
     .hero-content > .hero-subhead { animation-delay: 0.24s; }
     .hero-content > .hero-badges-row { animation-delay: 0.32s; }
     @keyframes heroImgIn { from { opacity: 0; } to { opacity: 1; } }
-    #heroSlide0::before { content: ''; position: absolute; inset: 0; background: url(img/web/video/poster_hero_glide.jpg?v=3) center / cover no-repeat; filter: brightness(0.70) contrast(1.04); animation: heroImgIn 3.5s ease-out 0.3s both; }
+    /* nessuna foto sotto il video: se il video non parte, la copertina la mostra il video stesso (attributo poster) */
     #heroSlide0 video { position: relative; }
     @media (prefers-reduced-motion: reduce) {
       #heroSlideVideo, #heroSlide0::before, .hero-content > *, .hero-first > *, .mobile-bottom-bar, .hero-scroll-cue { animation: none !important; transition: none !important; }
