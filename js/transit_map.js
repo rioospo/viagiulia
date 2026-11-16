@@ -131,7 +131,7 @@ window.VG77_TRANSIT = {"source":"OpenStreetMap (relazioni 13295183, 13297000, 13
       k9: 'Piazza Goldoni ~6 Min. · Piazza Unità ~9 Min. · Largo Irneri ~19 Min.',
       k35: 'Stadtpark ~4 Min. · Piazza Oberdan ~6 Min.',
       q6: 'alle 15 Min. (10 zur Hauptverkehrszeit)', q9: 'alle 7–8 Min.', q35: 'alle 15 Min. (nach Longera alle 30–60 Min.)',
-      destTitle: 'Wie lange von zu Hause',
+      destTitle: 'Fahrzeiten ab der Haustür',
       destSub: 'Minuten mit dem Bus ab der Haltestelle Via Giulia, plus Fußweg. Tippen Sie auf ein Ziel, um es auf der Karte zu sehen.',
       bus: 'mit dem Bus', walk: 'zu Fuß', onFoot: 'zu Fuß von zu Hause', line1: 'Linie', lineN: 'Linien',
       d_giardino: 'Stadtpark (Giardino Pubblico)', d_oberdan: 'Piazza Oberdan', d_goldoni: 'Piazza Goldoni', d_stazione: 'Hauptbahnhof',
@@ -149,7 +149,7 @@ window.VG77_TRANSIT = {"source":"OpenStreetMap (relazioni 13295183, 13297000, 13
     },
     sl: {
       kick: 'Brez avtomobila',
-      title: 'Interaktivni zemljevid &amp; avtobusne povezave',
+      title: 'Interaktivni zemljevid in avtobusne povezave',
       sub: 'S postaje na Via Giulia, minuto hoje od vhodnih vrat, vas tri neposredne linije (končni postaji Piazzale Gioberti in Lonjer) pripeljejo do morja, v zgodovinsko mestno središče in na železniško postajo: avto lahko ostane na lastnem pokritem parkirnem mestu v etaži S1.',
       f1: '<b>60 m</b> od vhodnih vrat do postaje »Via Giulia (centro commerciale)«',
       f2: '<b>3 neposredne linije</b> do središča, nabrežja, postaje in morja',

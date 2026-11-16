@@ -42,7 +42,7 @@
   <meta name="twitter:image" content="https://rioospo.github.io/viagiulia/img/web/og_via_giulia_77.jpg" />
   <!-- SEO-URL:end -->
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "RealEstateListing", "name": "Stanovanje naprodaj v Trstu – Via Giulia 77, zadnje nadstropje", "description": "Trst, Via Giulia 77: 108 m² (katastrska; ~85 m² neto) v 9. in zadnjem nadstropju, terasa s pogledom na Kras, morje v daljavi iz dveh sob, pokrito parkirno mesto, energijski razred B. Izolacija, okna in kotel že obnovljeni. Cena 349.000 €.", "inLanguage": ["it", "en", "de", "sl"], "image": ["https://rioospo.github.io/viagiulia/img/web/og_via_giulia_77.jpg", "https://rioospo.github.io/viagiulia/img/web/hero_panorama.jpg"], "about": {"@type": "Apartment", "name": "Appartamento al 9° piano, Via Giulia 77, Trieste", "address": {"@type": "PostalAddress", "streetAddress": "Via Giulia 77", "addressLocality": "Trieste", "addressRegion": "Friuli Venezia Giulia", "addressCountry": "IT"}, "floorSize": {"@type": "QuantitativeValue", "value": 108, "unitCode": "MTK"}, "numberOfRooms": 6, "numberOfBedrooms": 3, "numberOfBathroomsTotal": 2, "floorLevel": "9", "yearBuilt": 1990, "amenityFeature": [{"@type": "LocationFeatureSpecification", "name": "Terasa", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Lastno pokrito parkirno mesto", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Dvigalo", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Samostojno ogrevanje", "value": true}], "geo": {"@type": "GeoCoordinates", "latitude": 45.655062, "longitude": 13.795209}}, "url": "https://rioospo.github.io/viagiulia/sl/", "offers": {"@type": "Offer", "price": 349000, "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "businessFunction": "http://purl.org/goodrelations/v1#Sell", "description": "Cena vključuje pokrito parkirno mesto (sub. 189)"}, "datePosted": "2026-11-16"}
+  {"@context": "https://schema.org", "@type": "RealEstateListing", "name": "Stanovanje naprodaj v Trstu – Via Giulia 77, zadnje nadstropje", "description": "Trst, Via Giulia 77: 108 m² (katastrska; ~85 m² neto) v 9. in zadnjem nadstropju, terasa s pogledom na Kras, morje v daljavi iz dveh sob, pokrito parkirno mesto, energijski razred B. Izolacija, okna in kotel že obnovljeni. Cena 349.000 €.", "inLanguage": ["it", "en", "de", "sl"], "image": ["https://rioospo.github.io/viagiulia/img/web/og_via_giulia_77.jpg", "https://rioospo.github.io/viagiulia/img/web/hero_panorama.jpg"], "about": {"@type": "Apartment", "name": "Appartamento al 9° piano, Via Giulia 77, Trieste", "address": {"@type": "PostalAddress", "streetAddress": "Via Giulia 77", "postalCode": "34126", "addressLocality": "Trieste", "addressRegion": "Friuli Venezia Giulia", "addressCountry": "IT"}, "floorSize": {"@type": "QuantitativeValue", "value": 108, "unitCode": "MTK"}, "numberOfRooms": 6, "numberOfBedrooms": 3, "numberOfBathroomsTotal": 2, "floorLevel": "9", "yearBuilt": 1990, "amenityFeature": [{"@type": "LocationFeatureSpecification", "name": "Terasa", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Lastno pokrito parkirno mesto", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Dvigalo", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Samostojno ogrevanje", "value": true}], "geo": {"@type": "GeoCoordinates", "latitude": 45.655062, "longitude": 13.795209}}, "url": "https://rioospo.github.io/viagiulia/sl/", "offers": {"@type": "Offer", "price": 349000, "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "businessFunction": "http://purl.org/goodrelations/v1#Sell", "description": "Cena vključuje pokrito parkirno mesto (sub. 189)"}, "datePosted": "2026-11-16"}
   </script>
 
   <!-- Caratteri ospitati sul sito (7/11/2026): nessuna richiesta ai server di Google (privacy dei visitatori, GDPR) -->
@@ -66,7 +66,7 @@
   <!-- Leaflet (mappa dei bus): file locali, caricati senza bloccare la pagina -->
   <link rel="stylesheet" href="js/leaflet.css" />
   <script src="js/leaflet.js" defer></script>
-  <script src="js/transit_map.js?v=7" defer></script>
+  <script src="js/transit_map.js?v=8" defer></script>
 
   <style>
     /* ========================================================
@@ -258,7 +258,7 @@
       backdrop-filter: blur(10px);
     }
     .lang-btn {
-      background: transparent;
+      background: transparent; text-decoration: none; display: inline-flex; align-items: center; justify-content: center;
       border: none;
       color: var(--text-secondary);
       font-family: var(--font-mono);
@@ -2167,15 +2167,17 @@
 
     <div style="display: flex; align-items: center; gap: 12px;">
       <div class="lang-switcher" id="langSwitcher">
-        <button class="lang-btn" data-lang="it" onclick="setLanguage('it')" title="Italiano">IT</button>
-        <button class="lang-btn" data-lang="en" onclick="setLanguage('en')" title="English">EN</button>
-        <button class="lang-btn" data-lang="de" onclick="setLanguage('de')" title="Deutsch">DE</button>
-        <button class="lang-btn active" data-lang="sl" onclick="setLanguage('sl')" title="Slovenščina">SL</button>
+        <a class="lang-btn" data-lang="it" href="./" hreflang="it" lang="it" title="Italiano">IT</a>
+        <a class="lang-btn" data-lang="en" href="en/" hreflang="en" lang="en" title="English">EN</a>
+        <a class="lang-btn" data-lang="de" href="de/" hreflang="de" lang="de" title="Deutsch">DE</a>
+        <a class="lang-btn active" data-lang="sl" href="sl/" hreflang="sl" lang="sl" title="Slovenščina">SL</a>
       </div>
 
       <a href="https://wa.me/393290739936?text=Buongiorno%20Marco%2C%20ti%20contatto%20per%20l%27appartamento%20in%20Via%20Giulia%2077%20a%20Trieste." target="_blank" rel="noopener" class="nav-cta" data-i18n="nav_cta"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg> <span class="cta-txt">Pišite Marcu</span></a>
     </div>
   </header>
+
+  <main id="contenuto">
 
   <!-- ========================================================
        HERO CINEMATICO (Hybrid Video Intro + Ken Burns Slideshow)
@@ -2253,11 +2255,11 @@
         <div class="kf-grid">
           <div class="kf kf-price" data-i18n="kf_price"><span class="kf-l">Cena</span><span class="kf-v">349.000 € · parkirno mesto vključeno</span></div>
           <div class="kf" data-i18n="kf_1"><span class="kf-l">Površina</span><span class="kf-v">108 m² (katastrska)</span></div>
-          <div class="kf" data-i18n="kf_14"><span class="kf-l">Uporabna površina</span><span class="kf-v">~85 m² neto (projektni načrt)</span></div>
+          <div class="kf" data-i18n="kf_14"><span class="kf-l">Neto tlorisna površina</span><span class="kf-v">~85 m² (projektni načrt) · 93 m² ogrevane površine po energetski izkaznici</span></div>
           <div class="kf" data-i18n="kf_2"><span class="kf-l">Sobe</span><span class="kf-v">4 sobe (dnevna soba + 3 spalnice) · 2 kopalnici · 6 katastrskih prostorov</span></div>
           <div class="kf" data-i18n="kf_bagni"><span class="kf-l">Kopalnici</span><span class="kf-v">2, notranji brez okna, obe z odvodnim ventilatorjem: ena s kadjo, ena s hidromasažno prho</span></div>
           <div class="kf" data-i18n="kf_3"><span class="kf-l">Nadstropje</span><span class="kf-v">9. in zadnje, z dvigalom</span></div>
-          <div class="kf" data-i18n="kf_13"><span class="kf-l">Lega</span><span class="kf-v">Sever (terasa, dnevna soba, kuhinja, Kraška soba) in zahod (Morska soba in delovna soba). Poleti je terasa v senci, pred vami pa osončen Kras.</span></div>
+          <div class="kf" data-i18n="kf_13"><span class="kf-l">Lega</span><span class="kf-v">Sever (terasa, dnevna soba, kuhinja, Kraška soba) in zahod (Morska soba in delovna soba). Poleti je terasa v senci, pred vami pa osončen Kras. Pozimi je svetloba razpršena, brez neposrednega sonca.</span></div>
           <div class="kf" data-i18n="kf_4"><span class="kf-l">Zunanjost</span><span class="kf-v">Terasa ~11 m², pogled na Kras</span></div>
           <div class="kf" data-i18n="kf_5"><span class="kf-l">Parkiranje</span><span class="kf-v">Lastno pokrito parkirno mesto, S1 (13 m²)</span></div>
           <div class="kf" data-i18n="kf_15"><span class="kf-l">Dostop</span><span class="kf-v">Brez stopnic do stanovanja (klančina in dvigalo); 14 notranjih stopnic do garaže</span></div>
@@ -2269,6 +2271,7 @@
           <div class="kf" data-i18n="kf_10"><span class="kf-l">Gradnja</span><span class="kf-v">Konec 80. let (uporabno dovoljenje 1990)</span></div>
           <div class="kf" data-i18n="kf_11"><span class="kf-l">Višina stropov</span><span class="kf-v">2,70 m</span></div>
           <div class="kf" data-i18n="kf_12"><span class="kf-l">Razpoložljivost</span><span class="kf-v">Prosto ob podpisu kupoprodajne pogodbe pri notarju</span></div>
+          <div class="kf" data-i18n="kf_stato"><span class="kf-l">Stanje</span><span class="kf-v">Takoj vseljivo, prodaja se v obstoječem stanju. Izolacija, okna in kotel obnovljeni 2022–2023; kopalnici, kuhinja in elektroinštalacije so prvotne (1990), delujoče, z zaščitnim stikalom (FID). Oprema po dogovoru ob ogledu.</span></div>
         </div>
         <div class="kf-rooms">
           <div class="kf-head" data-i18n="kf_rooms_title">Velikosti prostorov</div>
@@ -2375,10 +2378,10 @@
         </div>
 
         <div class="mosaic-item col-4" data-cat="living" onclick="openLightbox('img/web/terrazzo_abitabile.jpg')">
-          <img width="1600" height="459" loading="lazy" decoding="async" src="img/web/terrazzo_abitabile.jpg" alt="Uporabna terasa v 9. nadstropju" />
+          <img width="1600" height="459" loading="lazy" decoding="async" src="img/web/terrazzo_abitabile.jpg" alt="Dolga terasa v 9. nadstropju" />
           <div class="mosaic-overlay">
             <span class="mosaic-tag">Zunanji prostor</span>
-            <span class="mosaic-caption">Uporabna terasa v 9. in zadnjem nadstropju</span>
+            <span class="mosaic-caption">Dolga terasa v 9. in zadnjem nadstropju</span>
           </div>
         </div>
 
@@ -2637,7 +2640,7 @@
       <div class="chapter-divider" style="text-align: center;">
         <div class="chapter-num cyan" style="justify-content: center;" data-i18n="cap3_num">Poglavje 04 • Interaktivni 3D-model</div>
         <h2 class="chapter-title" data-i18n="cap3_title">3D-prerez: stanovanje, kakršno je, in tri ideje za bivanje</h2>
-        <p class="chapter-subtitle" style="margin: 0 auto;" data-i18n="cap3_subtitle">Zvesta rekonstrukcija po izmeri in resničnih fotografijah. Raziščite sedanje stanje, nato primerjajte tri projekte — La Classica, La Famiglia in Il Loft — s tlorisi in primerjavami Prej/Potem, posnetimi z istih točk kot fotografije. V vsaki ideji se lahko razgledate v 360° in si ogledate video sprehoda.</p>
+        <p class="chapter-subtitle" style="margin: 0 auto;" data-i18n="cap3_subtitle">Zvesta rekonstrukcija po izmeri in resničnih fotografijah. Raziščite sedanje stanje, nato primerjajte tri projekte — La Classica, La Famiglia in Il Loft — s tlorisi in primerjavami Prej/Potem, posnetimi z istih točk kot fotografije. V vsaki ideji se lahko razgledate v 360° in si ogledate video sprehoda. To so ideje, ne predračuni: strošek je odvisen od izbrane opreme, o tem se pogovorimo ob ogledu.</p>
       </div>
 
       <!-- Il modello 3D è la pagina spaccato3d/index.html, incorporata: lingua e visibilità le comunica questa pagina (postMessage) -->
@@ -2706,7 +2709,7 @@
         <header class="vgt-head">
           <div class="vgt-head-text">
             <div class="vgt-kick" data-vgt="kick">Brez avtomobila</div>
-            <h3 class="vgt-title" id="vgtTitle" data-vgt="title">Interaktivni zemljevid &amp; avtobusne povezave</h3>
+            <h3 class="vgt-title" id="vgtTitle" data-vgt="title">Interaktivni zemljevid in avtobusne povezave</h3>
             <p class="vgt-sub" data-vgt="sub">S postaje na Via Giulia, minuto hoje od vhodnih vrat, vas tri neposredne linije (končni postaji Piazzale Gioberti in Lonjer) pripeljejo do morja, v zgodovinsko mestno središče in na železniško postajo: avto lahko ostane na lastnem pokritem parkirnem mestu v etaži S1.</p>
           </div>
           <ul class="vgt-facts">
@@ -2716,8 +2719,8 @@
           </ul>
         </header>
 
-        <div class="vgt-toolbar" role="toolbar" aria-label="Mappa">
-          <div class="vgt-group vgt-filters" role="group" aria-label="Linee">
+        <div class="vgt-toolbar" role="toolbar" aria-label="Zemljevid">
+          <div class="vgt-group vgt-filters" role="group" aria-label="Linije">
             <span class="vgt-group-label" data-vgt="lines">Linije</span>
             <button type="button" class="vgt-chip" data-filter="all" aria-pressed="true" data-vgt="all">Vse</button>
             <button type="button" class="vgt-chip vgt-chip-line" data-filter="6" aria-pressed="false" style="--c:#00B4D8"><i></i>6</button>
@@ -2735,7 +2738,7 @@
         </div>
 
         <div class="vgt-mapwrap">
-          <div id="vgtMap" class="vgt-map" role="region" aria-label="Mappa dei collegamenti bus da Via Giulia 77"></div>
+          <div id="vgtMap" class="vgt-map" role="region" aria-label="Zemljevid avtobusnih povezav z Via Giulia 77"></div>
           <div class="vgt-zoom">
             <button type="button" data-act="zin" data-vgt-title="Povečaj" aria-label="Povečaj">+</button>
             <button type="button" data-act="zout" data-vgt-title="Pomanjšaj" aria-label="Pomanjšaj">−</button>
@@ -3319,7 +3322,7 @@
                   <td><strong>Faktor oblike S/V</strong></td>
                   <td class="num">0,68 m⁻¹</td>
                   <td>—</td>
-                  <td>Kompaktna oblika, idealna proti burji</td>
+                  <td>Kompaktna oblika, manj izpostavljena burji</td>
                 </tr>
                 <tr>
                   <td><strong>Stopinjski dnevi v Trstu</strong></td>
@@ -3331,7 +3334,7 @@
                   <td><strong>Periodična prehodnost (Yie)</strong></td>
                   <td class="num" style="color: var(--accent-green);">0,01 W/m²K</td>
                   <td>Meja: 0,10 W/m²K</td>
-                  <td><strong>Odlična poletna toplotna vztrajnost:</strong> stanovanje ostane hladno brez močne klimatizacije</td>
+                  <td><strong>Dobra poletna toplotna vztrajnost:</strong> stanovanje ostane hladno brez močne klimatizacije</td>
                 </tr>
                 <tr>
                   <td><strong>Zimska potreba ovoja (EP H,nd)</strong></td>
@@ -3406,7 +3409,7 @@
             </tr>
             <tr>
               <td>Dela s Superbonusom 110 %</td>
-              <td>Toplotna izolacija fasade okoli in okoli, okna s trojno zasteklitvijo, protivlomna vrata in kondenzacijski kotel (2022–2023); dokumentacija na vpogled ob ogledu. Sončna elektrarna na strehi je skupna in je obstajala že prej: ne spada med ta dela</td>
+              <td>Toplotna izolacija vseh zunanjih sten, okna s trojno zasteklitvijo, protivlomna vrata in kondenzacijski kotel (2022–2023); dokumentacija na vpogled ob ogledu. Sončna elektrarna na strehi je skupna in je obstajala že prej: ne spada med ta dela</td>
             </tr>
             <tr>
               <td>Skupni stroški</td>
@@ -3418,7 +3421,7 @@
             </tr>
             <tr>
               <td>Pravni status in lastništvo</td>
-              <td><strong style="color: #fff;">Polna lastnina že odobrena za 0 €</strong> (Občina Trst, dopis P.G. 0090278 z dne 20. 4. 2026, sprejet 21. 4. 2026). Danes: stavbna pravica 1/1 (diritto di superficie iz programa PEEP, velja do 16. 4. 2086, podaljšljiva). Manjka le podpis nove pogodbe pri notarju, datum določi občina: preoblikovanje je brezplačno, plača se le notar. Če do podpisa pri notarju še ni podpisana, kupec preoblikovanje dobi pod enakimi pogoji brezplačno: plača le notarja.</td>
+              <td><strong style="color: #fff;">Preoblikovanje v polno lastnino že odobreno za 0 €</strong> (Občina Trst, dopis P.G. 0090278 z dne 20. 4. 2026, ponudba sprejeta 21. 4. 2026). Danes: stavbna pravica 1/1 (diritto di superficie iz programa PEEP, velja do 16. 4. 2086, z možnostjo podaljšanja). Manjka le podpis nove pogodbe pri notarju, datum določi občina: preoblikovanje je brezplačno, plača se le notar. Če do podpisa pri notarju še ni podpisana, kupec vstopi v isti postopek: znesek, ki ga je sporočila občina, je 0 €, ostane le plačilo notarja.</td>
             </tr>
             <tr>
               <td>Omejitve cene</td>
@@ -3492,13 +3495,13 @@
           <details class="faq"><summary data-i18n="faq_q1">Ali lahko kupim, če ne živim v Italiji?</summary><p data-i18n="faq_a1">Da. Potrebujete italijansko davčno številko (codice fiscale), ki jo izda italijanska davčna uprava ali italijanski konzulat. Za državljane EU ni omejitev; za druge velja vzajemnost z njihovo državo. Če ne prijavite prebivališča v Trstu, veljajo davki za drugo stanovanje. Italijanski državljani s prebivališčem v tujini (vpisani v AIRE) lahko v nekaterih primerih dobijo davke za prvo stanovanje tudi brez prijave prebivališča: vprašajte notarja.</p></details>
           <details class="faq"><summary data-i18n="faq_q2">Kako poteka nakup?</summary><p data-i18n="faq_a2">Po ogledu oddate pisno ponudbo. Ko je sprejeta, podpišete predpogodbo z aro; kupoprodajna pogodba se nato podpiše pri notarju, ki ga izbere kupec, običajno v dveh do treh mesecih (odvisno od morebitnega kredita). Stanovanje je prosto ob podpisu kupoprodajne pogodbe pri notarju.</p></details>
           <details class="faq"><summary data-i18n="faq_q3">Kaj je sistem zemljiške knjige (tavolare)?</summary><p data-i18n="faq_a3">V Trstu se, tako kot na drugih območjih nekdanje Avstro-Ogrske, lastnina vpisuje v zemljiško knjigo (Libro Fondiario): na kupca preide z vpisom, ki ga pred odobritvijo preveri sodnik. To je dodatno jamstvo v primerjavi s preostalo Italijo — in sistem, ki ga v Sloveniji dobro poznate.</p></details>
-          <details class="faq"><summary data-i18n="faq_q4">Stavbna pravica in PEEP: kaj to pomeni za kupca?</summary><p data-i18n="faq_a4">Polna lastnina je že odobrena: Občina Trst je preoblikovanje odobrila brezplačno (dopis P.G. 0090278 z dne 20. 4. 2026). Stavba je bila zgrajena v okviru programa subvencionirane gradnje (PEEP), stanovanje pa je zdaj v stavbni pravici (diritto di superficie), ki velja do 16. aprila 2086 in jo je mogoče podaljšati. Manjka le podpis nove pogodbe pri notarju; datum določi občina. Če do nakupa še ni podpisana, kupec preoblikovanje dobi pod enakimi pogoji brezplačno: plača le notarja. Prodajna cena je prosta, brez omejitev.</p></details>
+          <details class="faq"><summary data-i18n="faq_q4">Stavbna pravica in PEEP: kaj to pomeni za kupca?</summary><p data-i18n="faq_a4">Preoblikovanje v polno lastnino je že odobreno: Občina Trst ga je odobrila brezplačno (dopis P.G. 0090278 z dne 20. 4. 2026). Stavba je bila zgrajena v okviru programa subvencionirane gradnje (PEEP), stanovanje pa je zdaj v stavbni pravici (diritto di superficie), ki velja do 16. aprila 2086 in jo je mogoče podaljšati. Manjka le podpis nove pogodbe pri notarju; datum določi občina. Če do nakupa še ni podpisana, kupec vstopi v isti postopek: znesek, ki ga je sporočila občina, je 0 €, ostane le plačilo notarja. Prodajna cena je prosta, brez omejitev.</p></details>
           <details class="faq"><summary data-i18n="faq_q5">Kdo plača notarja?</summary><p data-i18n="faq_a5">Po navadi notarja izbere in plača kupec: pred ponudbo se splača pridobiti predračun.</p></details>
           <details class="faq"><summary data-i18n="faq_q6">Koliko stane vzdrževanje?</summary><p data-i18n="faq_a6">Skupni stroški približno 1.100–1.200 € na leto, z vodo; ogrevanje in topla voda ocenjeno 580–680 € na leto. Kot glavno prebivališče se davek na nepremičnine (ILIA, deželna oblika davka IMU) ne plača; kot drugo stanovanje se plača po stopnji občine.</p></details>
           <details class="faq"><summary data-i18n="faq_q7">Ali si lahko stanovanje ogledam na daljavo?</summary><p data-i18n="faq_a7">Da: Marco omogoča video oglede v živo prek WhatsAppa ali FaceTima. Tloris in podatki energetske izkaznice so že na tej strani; celotno dokumentacijo prejmejo zainteresirani kupci po ogledu.</p></details>
           <details class="faq"><summary data-i18n="faq_q8">Ali moram govoriti italijansko?</summary><p data-i18n="faq_a8">Pogodba je v italijanščini: če jezika ne govorite, notar pokliče tolmača, kot zahteva zakon.</p></details>
           <details class="faq"><summary data-i18n="faq_q9">Ali kupcu ostanejo davčne olajšave Superbonus?</summary><p data-i18n="faq_a9">Ne. Dela Superbonus 110 % so bila plačana s popustom na računu (sconto in fattura), zato ni preostalih olajšav za prenos. Kupec dobi izolacijo, okna, protivlomna vrata in kotel že narejene in plačane.</p></details>
-          <details class="faq"><summary data-i18n="faq_q10">Ali lahko kupim, ne da bi za podpis pogodbe prišli v Trst?</summary><p data-i18n="faq_a10">Da, s pooblastilom, overjenim pri notarju v vaši državi ali na italijanskem konzulatu. Notar v Trstu vam pove, kakšno besedilo je potrebno in ali je potreben apostil.</p></details>
+          <details class="faq"><summary data-i18n="faq_q10">Ali lahko kupim, ne da bi za podpis pogodbe prišel v Trst?</summary><p data-i18n="faq_a10">Da, s pooblastilom, overjenim pri notarju v vaši državi ali na italijanskem konzulatu. Notar v Trstu vam pove, kakšno besedilo je potrebno in ali je potreben apostil.</p></details>
           <details class="faq"><summary data-i18n="faq_q11">Kako se plača?</summary><p data-i18n="faq_a11">Z bančnim nakazilom ali bančnim čekom (assegno circolare): v Italiji morajo biti plačila pri nakupu nepremičnine sledljiva in so navedena v pogodbi. Ara se plača ob podpisu predpogodbe, preostanek ob podpisu pri notarju.</p></details>
         </div>
       </div>
@@ -3546,7 +3549,7 @@
             <div class="seller-avatar" aria-hidden="true">ML</div>
             <div>
               <div class="seller-tag" data-i18n="seller_tag">Kdo prodaja</div>
-              <p data-i18n="seller_text">Sem Marco Laurenti in to je moje stanovanje. Oglede vodim osebno, v živo ali po videu, in odgovorim na vsako vprašanje o stanovanju, o delih iz let 2022–2023 in o dokumentih, ki si jih lahko ogledate ob obisku. Odgovorim v 24 urah.</p>
+              <p data-i18n="seller_text">Sem Marco Laurenti in to je moje stanovanje. Oglede vodim osebno, v živo ali po videu, in odgovorim na vsako vprašanje o stanovanju, o delih iz let 2022–2023 in o dokumentih, ki si jih lahko ogledate ob obisku. Odgovorim v 24 urah. Pišete mi lahko v italijanščini ali angleščini; v slovenščini odgovorim pisno, s pomočjo prevajalnika.</p>
             </div>
           </div>
 
@@ -3648,6 +3651,8 @@
     </div>
   </section>
 
+  </main>
+
   <!-- SITE FOOTER -->
   <footer class="site-footer">
     <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
@@ -3666,7 +3671,7 @@
   </footer>
 
   <!-- MOBILE BOTTOM STICKY BAR -->
-  <nav class="mobile-bottom-bar" aria-label="Navigazione rapida mobile">
+  <nav class="mobile-bottom-bar" aria-label="Hitra navigacija">
     <a href="#galleria" class="mob-nav-item">
       <span><svg class="ico" aria-hidden="true"><use href="#i-camera"/></svg></span>
       <span data-i18n="mob_foto">Foto</span>
@@ -4210,7 +4215,8 @@
         v3d_tour: "◉ Entra nel Loft a 360°",
         v3d_tours_lbl: "◉ Dentro le idee, a 360°:",
         kf_12: "<span class=\"kf-l\">Disponibilità</span><span class=\"kf-v\">Libero al rogito</span>",
-        kf_14: "<span class=\"kf-l\">Superficie utile</span><span class=\"kf-v\">~85 m² calpestabili (planimetria di progetto)</span>",
+        kf_stato: "<span class=\"kf-l\">Stato</span><span class=\"kf-v\">Abitabile subito, si vende così com'è. Cappotto, infissi e caldaia rifatti nel 2022–2023; bagni, cucina e impianto elettrico sono quelli d'origine (1990), funzionanti, con salvavita. Arredi da concordare alla visita.</span>",
+        kf_14: "<span class=\"kf-l\">Superficie calpestabile</span><span class=\"kf-v\">~85 m² (planimetria di progetto) · 93 m² riscaldati secondo l'APE</span>",
         kf_15: "<span class=\"kf-l\">Accesso</span><span class=\"kf-v\">Senza gradini fino all'appartamento (rampa e ascensore); 14 gradini interni per il garage</span>",
         kf_16: "<span class=\"kf-l\">Servizi</span><span class=\"kf-v\">«Il Giulia» (PAM) a 30–40 m, quasi tutto al coperto; bus 6, 9, 35 a ~60 m</span>",
         kf_rooms_title: "Superfici delle stanze",
@@ -4226,7 +4232,7 @@
         kf_5: "<span class=\"kf-l\">Posto auto</span><span class=\"kf-v\">Coperto di proprietà, S1 (13 m²)</span>",
         kf_4: "<span class=\"kf-l\">Esterno</span><span class=\"kf-v\">Terrazzo di ~11 m², vista sul Carso</span>",
         kf_3: "<span class=\"kf-l\">Piano</span><span class=\"kf-v\">9° e ultimo, con ascensore</span>",
-        kf_13: "<span class=\"kf-l\">Esposizione</span><span class=\"kf-v\">Nord (terrazzo, soggiorno, cucina, Camera Carso) e ovest (Camera Mare e Studio). D'estate il terrazzo resta all'ombra, con il Carso illuminato di fronte.</span>",
+        kf_13: "<span class=\"kf-l\">Esposizione</span><span class=\"kf-v\">Nord (terrazzo, soggiorno, cucina, Camera Carso) e ovest (Camera Mare e Studio). D'estate il terrazzo resta all'ombra, con il Carso illuminato di fronte. D'inverno la luce è diffusa, senza sole diretto.</span>",
         kf_2: "<span class=\"kf-l\">Locali</span><span class=\"kf-v\">6 vani · 3 camere · 2 bagni</span>",
         kf_bagni: "<span class=\"kf-l\">Bagni</span><span class=\"kf-v\">2, interni senza finestra, entrambi con aspiratore: uno con vasca, uno con doccia idromassaggio</span>",
         kf_price: "<span class=\"kf-l\">Prezzo</span><span class=\"kf-v\">349.000 € · posto auto compreso</span>",
@@ -4243,7 +4249,7 @@
         wa_name: "Nome",
         wa_hello: "Buongiorno Marco, ti contatto dal sito di Via Giulia 77 (Trieste, 9° piano).",
         wa_text: "Buongiorno Marco, ti contatto dal sito per l'appartamento in Via Giulia 77 a Trieste.",
-        meta_desc: "Trieste, Via Giulia 77: 108 m² al 9° e ultimo piano, terrazzo con vista sul Carso, scorcio di mare da due camere, posto auto coperto, Classe B. Cappotto, infissi e caldaia già rifatti con il Superbonus. Prezzo 349.000 €.",
+        meta_desc: "Trieste, Via Giulia 77: 108 m² catastali (~85 m² calpestabili) al 9° e ultimo piano, terrazzo con vista sul Carso, scorcio di mare da due camere, posto auto coperto, Classe B. Cappotto, infissi e caldaia già rifatti con il Superbonus. Prezzo 349.000 €.",
         meta_title: "Appartamento in vendita a Trieste, Via Giulia 77 – ultimo piano",
         brand_floor: "9° Piano",
         nav_residenza: "Residenza",
@@ -4334,7 +4340,7 @@
 
         cap3_num: "Capitolo 04 • Modello 3D Interattivo",
         cap3_title: "Spaccato 3D: la casa com'è e tre idee per viverla",
-        cap3_subtitle: "Ricostruzione fedele al rilievo e alle foto reali. Esplora lo Stato Reale, poi confronta tre progetti — La Classica, La Famiglia e Il Loft — con le planimetrie e i confronti Prima/Dopo ripresi dagli stessi punti delle foto. Dentro ogni idea puoi guardarti intorno a 360° e vedere il video della passeggiata.",
+        cap3_subtitle: "Ricostruzione fedele al rilievo e alle foto reali. Esplora lo Stato Reale, poi confronta tre progetti — La Classica, La Famiglia e Il Loft — con le planimetrie e i confronti Prima/Dopo ripresi dagli stessi punti delle foto. Dentro ogni idea puoi guardarti intorno a 360° e vedere il video della passeggiata. Sono idee, non preventivi: il costo dipende dalle finiture, ne parliamo alla visita.",
         v3d_help_touch: "<b>Tocca</b> il riquadro per esplorare · in alto scegli <b>La Classica</b>, <b>La Famiglia</b> o <b>Il Loft</b>",
         v3d_help_desk: "<b>Trascina</b> per ruotare · <b>Ctrl + rotella</b> o i tasti <b>+ −</b> per lo zoom · a sinistra scegli <b>La Classica</b>, <b>La Famiglia</b> o <b>Il Loft</b>",
         v3d_done: "✓ Fine: torna a scorrere la pagina",
@@ -4440,7 +4446,7 @@
         faq_q3: "Che cos'è il sistema tavolare?",
         faq_a3: "A Trieste, come in altre zone dell'ex Impero austro-ungarico, la proprietà si registra nel Libro Fondiario: passa a chi compra con l'iscrizione, che un giudice controlla prima di disporla. È una garanzia in più rispetto al resto d'Italia.",
         faq_q4: "Diritto di superficie e PEEP: cosa cambia per chi compra?",
-        faq_a4: "La piena proprietà è già approvata: il Comune di Trieste ha concesso la trasformazione a costo zero (lettera P.G. 0090278 del 20/04/2026). Il palazzo è nato in un programma di edilizia convenzionata (PEEP) e oggi l'appartamento è in diritto di superficie, valido fino al 16 aprile 2086 e rinnovabile. Manca solo la firma della nuova convenzione dal notaio; la data la fissa il Comune. Se non è ancora firmata al momento del rogito, chi compra ottiene la trasformazione alle stesse condizioni, a costo zero: paga solo l'onorario del notaio. Il prezzo di vendita è libero, senza vincoli.",
+        faq_a4: "La trasformazione in piena proprietà è già approvata: il Comune di Trieste l'ha concessa a costo zero (lettera P.G. 0090278 del 20/04/2026). Il palazzo è nato in un programma di edilizia convenzionata (PEEP) e oggi l'appartamento è in diritto di superficie, valido fino al 16 aprile 2086 e rinnovabile. Manca solo la firma della nuova convenzione dal notaio; la data la fissa il Comune. Se non è ancora firmata al momento del rogito, chi compra subentra nella stessa pratica: il corrispettivo comunicato dal Comune è 0 € e resta solo l'onorario del notaio. Il prezzo di vendita è libero, senza vincoli.",
         faq_q5: "Chi paga il notaio?",
         faq_a5: "Per consuetudine il notaio lo sceglie e lo paga chi compra: conviene chiederne un preventivo prima della proposta.",
         faq_q6: "Quanto costa tenerla?",
@@ -4460,7 +4466,7 @@
         contact_title: "Fissa una visita o chiedi informazioni",
         contact_sub: "Parla direttamente con Marco Laurenti per fissare una visita o chiedere informazioni.",
         seller_tag: "Chi vende",
-        seller_text: "Mi chiamo Marco Laurenti e questa è casa mia. Le visite le faccio io, di persona o in video, e rispondo a ogni domanda: sulla casa, sui lavori del 2022–2023 e sui documenti, che puoi vedere alla visita. Rispondo entro 24 ore.",
+        seller_text: "Mi chiamo Marco Laurenti e questa è casa mia. Le visite le faccio io, di persona o in video, e rispondo a ogni domanda: sulla casa, sui lavori del 2022–2023 e sui documenti, che puoi vedere alla visita. Rispondo entro 24 ore. Puoi scrivermi in italiano o in inglese; nelle altre lingue rispondo per iscritto, con l'aiuto di un traduttore.",
         ch_wa_tag: "Il canale più rapido",
         ch_wa_title: "Chat su WhatsApp (+39 329 073 9936)",
         ch_wa_sub: "Scrivi a Marco: risposta entro 24 ore",
@@ -4502,7 +4508,8 @@
         v3d_tour: "◉ Step inside the Loft in 360°",
         v3d_tours_lbl: "◉ Inside the ideas, in 360°:",
         kf_12: "<span class=\"kf-l\">Availability</span><span class=\"kf-v\">Vacant on completion</span>",
-        kf_14: "<span class=\"kf-l\">Net floor area</span><span class=\"kf-v\">~85 m² usable (design floor plan)</span>",
+        kf_stato: "<span class=\"kf-l\">Condition</span><span class=\"kf-v\">Ready to move into, sold as seen. Insulation, windows and boiler renewed in 2022–2023; bathrooms, kitchen and electrics are the original ones (1990), in working order, with a safety switch (RCD). Furniture to be agreed at the viewing.</span>",
+        kf_14: "<span class=\"kf-l\">Net internal area</span><span class=\"kf-v\">~85 m² (design floor plan) · 93 m² heated area in the energy certificate</span>",
         kf_15: "<span class=\"kf-l\">Access</span><span class=\"kf-v\">Step-free to the flat (ramp and lift); 14 indoor steps down to the garage</span>",
         kf_16: "<span class=\"kf-l\">Shops & buses</span><span class=\"kf-v\">“Il Giulia” (PAM) 30–40 m away, almost all under cover; buses 6, 9, 35 ~60 m</span>",
         kf_rooms_title: "Room sizes",
@@ -4518,7 +4525,7 @@
         kf_5: "<span class=\"kf-l\">Parking</span><span class=\"kf-v\">Private covered space, S1 (13 m²)</span>",
         kf_4: "<span class=\"kf-l\">Outdoor</span><span class=\"kf-v\">~11 m² terrace, Karst views</span>",
         kf_3: "<span class=\"kf-l\">Floor</span><span class=\"kf-v\">9th and top floor, with lift</span>",
-        kf_13: "<span class=\"kf-l\">Aspect</span><span class=\"kf-v\">North (terrace, living room, kitchen, Karst Room) and west (Sea Room and Study). In summer the terrace stays in the shade, with the sunlit Karst in front of you.</span>",
+        kf_13: "<span class=\"kf-l\">Aspect</span><span class=\"kf-v\">North (terrace, living room, kitchen, Karst Room) and west (Sea Room and Study). In summer the terrace stays in the shade, with the sunlit Karst in front of you. In winter the light is diffuse, with no direct sun.</span>",
         kf_2: "<span class=\"kf-l\">Rooms</span><span class=\"kf-v\">4 rooms (living room + 3 bedrooms) · 2 bathrooms · 6 cadastral rooms</span>",
         kf_bagni: "<span class=\"kf-l\">Bathrooms</span><span class=\"kf-v\">2, internal with no window, both with an extractor fan: one with bathtub, one with hydromassage shower</span>",
         kf_price: "<span class=\"kf-l\">Price</span><span class=\"kf-v\">€349,000 · parking space included</span>",
@@ -4577,7 +4584,7 @@
         pil3_title: "Generous rooms and two full bathrooms",
         pil3_desc: "Generous layout with uniform sand-tone porcelain stoneware floors, panoramic living room, eat-in kitchen opening onto the clinker-tiled terrace, two bathrooms (bathtub + hydromassage cabin with FM radio & LED) and three bedrooms, with 2.70 m ceilings.",
         pil4_title: "Paperwork in order, ready to complete",
-        pil4_desc: "Planning, cadastral and Land Registry compliance certified by an architect (2021); conversion to full freehold already approved by the Municipality of Trieste, and no PEEP price restriction.",
+        pil4_desc: "Planning, cadastral and Land Register compliance certified by an architect (2021); conversion to full freehold already approved by the Municipality of Trieste, and no PEEP price restriction.",
 
         loc_strip_title: "<span><svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-compass\"/></svg></span> Location: Doorstep Amenities, Sea & Fast Connections",
         loc_strip_badge: "VIA GIULIA 77 • TRIESTE",
@@ -4626,7 +4633,7 @@
 
         cap3_num: "Chapter 04 • Interactive 3D Model",
         cap3_title: "The 3D Cutaway: the home as it is, and three ways to live in it",
-        cap3_subtitle: "A faithful reconstruction based on the survey and real photos. Explore the current state, then compare three projects — La Classica, La Famiglia and Il Loft — with floor plans and Before/After views taken from the same spots as the photos. Inside each idea you can look around in 360° and watch a walk-through video.",
+        cap3_subtitle: "A faithful reconstruction based on the survey and real photos. Explore the current state, then compare three projects — La Classica, La Famiglia and Il Loft — with floor plans and Before/After views taken from the same spots as the photos. Inside each idea you can look around in 360° and watch a walk-through video. They are ideas, not quotes: the cost depends on the finishes, and we can discuss it at the viewing.",
         v3d_help_touch: "<b>Tap</b> the view to explore · at the top choose <b>La Classica</b>, <b>La Famiglia</b> or <b>Il Loft</b>",
         v3d_help_desk: "<b>Drag</b> to rotate · <b>Ctrl + scroll wheel</b> or the <b>+ −</b> buttons to zoom · on the left choose <b>La Classica</b>, <b>La Famiglia</b> or <b>Il Loft</b>",
         v3d_done: "✓ Done: back to scrolling",
@@ -4678,8 +4685,8 @@
         gfil_edificio: "Systems & Building",
 
         cap7_num: "Chapter 08 • Land register & cadastral data · Rent",
-        cap7_title: "Land Registry and Cadastral Data",
-        cap7_subtitle: "Land Registry and cadastral records aligned, planning compliance certified by an architect, and the property is vacant on completion.",
+        cap7_title: "Land Register and Cadastral Data",
+        cap7_subtitle: "Land Register and cadastral records aligned, planning compliance certified by an architect, and the property is vacant on completion.",
         cad_card1_title: "Apartment + covered parking space",
         cad_card2_title: "For investors: rent estimate",
         yield_btn_conc: "Agreed Rent 3+2 (Tax-Advantaged)",
@@ -4707,7 +4714,7 @@
         trattativa_banner_desc: "The apartment is sold directly by the owner, with no agency: the buyer pays no brokerage fee, which is usually 3–4% + VAT. I reply to messages within 24 hours and to every written offer within 48.",
         tstep1_num: "Step 01 • Viewing",
         tstep1_title: "Private viewing",
-        tstep1_desc: "Tour of the 9th-floor apartment with the owner. Land Registry records, 2024 Energy Certificate, window invoices, Superbonus paperwork and floor plans are available on request.",
+        tstep1_desc: "Tour of the 9th-floor apartment with the owner. Land Register records, 2024 Energy Certificate, window invoices, Superbonus paperwork and floor plans are available on request.",
         tstep2_num: "Step 02 • Offer",
         tstep2_title: "Offer and preliminary contract",
         tstep2_desc: "Make your written offer directly to Marco Laurenti; once it is accepted, the preliminary contract is signed with a deposit.",
@@ -4729,10 +4736,10 @@
         faq_a1: "Yes. You need an Italian tax code (codice fiscale), issued by the Italian Revenue Agency or an Italian consulate. EU citizens face no restrictions; for others, reciprocity with their own country applies. If you don't move your residence to Trieste, the second-home taxes apply. Italian citizens living abroad (registered with AIRE) can in some cases get the first-home rates without moving their residence: ask the notary.",
         faq_q2: "How does the purchase work?",
         faq_a2: "After the viewing you make a written offer. Once it is accepted you sign a preliminary contract with a deposit; the deed is then signed before a notary chosen by the buyer, usually within two to three months (depending on any mortgage). The flat is vacant on completion.",
-        faq_q3: "What is the Land Book (tavolare) system?",
-        faq_a3: "In Trieste, as in other former Austro-Hungarian areas, property is recorded in the Land Book (Libro Fondiario): ownership passes to the buyer on registration, which a judge checks before ordering it. It is an extra safeguard compared with the rest of Italy.",
+        faq_q3: "What is the Land Register (tavolare) system?",
+        faq_a3: "In Trieste, as in other former Austro-Hungarian areas, property is recorded in the Land Register (Libro Fondiario): ownership passes to the buyer on registration, which a judge checks before ordering it. It is an extra safeguard compared with the rest of Italy.",
         faq_q4: "Surface right and PEEP: what does it mean for the buyer?",
-        faq_a4: "Full ownership is already approved: the City of Trieste has granted the conversion free of charge (letter ref. P.G. 0090278 of 20/04/2026). The building was built under a subsidised housing scheme (PEEP) and the apartment is currently held as a surface right (diritto di superficie), valid until 16 April 2086 and renewable. Only the signing of the new agreement before a notary remains; the City sets the date. If it has not been signed by completion, the buyer obtains the conversion on the same terms, free of charge: only the notary's fee is payable. The sale price is free, with no restrictions.",
+        faq_a4: "The conversion to full ownership is already approved: the City of Trieste has granted it free of charge (letter ref. P.G. 0090278 of 20/04/2026). The building was built under a subsidised housing scheme (PEEP) and the apartment is currently held as a surface right (diritto di superficie), valid until 16 April 2086 and renewable. Only the signing of the new agreement before a notary remains; the City sets the date. If it has not been signed by completion, the buyer takes over the same procedure: the amount notified by the City is €0 and only the notary's fee remains. The sale price is unrestricted.",
         faq_q5: "Who pays the notary?",
         faq_a5: "By custom the buyer chooses and pays the notary: it is worth asking for a quote before making an offer.",
         faq_q6: "What are the running costs?",
@@ -4742,7 +4749,7 @@
         faq_q8: "Do I need to speak Italian?",
         faq_a8: "The deed is in Italian: if you don't speak it, the notary brings in an interpreter, as the law requires.",
         faq_q9: "Are there any Superbonus tax deductions left for the buyer?",
-        faq_a9: "No. The Superbonus 110% works were paid through a discount on the invoice (sconto in fattura), so there are no remaining tax deductions to transfer. The buyer gets the insulation, windows, armoured door and boiler already done and paid for.",
+        faq_a9: "No. The Superbonus 110% works were paid through a discount on the invoice (sconto in fattura), so there are no remaining tax deductions to transfer. The buyer gets the insulation, windows, security door and boiler already done and paid for.",
         faq_q10: "Can I buy without coming to Trieste for the deed?",
         faq_a10: "Yes: you can sign through a power of attorney, made before a notary in your country or at an Italian consulate. The notary in Trieste will tell you which wording is needed and whether an apostille is required.",
         faq_q11: "How is payment made?",
@@ -4751,12 +4758,12 @@
         contact_num: "Chapter 09 • Contact",
         contact_title: "Book a viewing or ask a question",
         contact_sub: "Speak directly with Marco Laurenti to book a viewing or ask for information.",
-        seller_tag: "Who is selling",
-        seller_text: "My name is Marco Laurenti and this is my home. I show it myself, in person or on video, and I answer every question about the flat, the 2022–2023 works and the documents, which you can see at the viewing. I reply within 24 hours.",
+        seller_tag: "About the seller",
+        seller_text: "My name is Marco Laurenti and this is my home. I show it myself, in person or on video, and I answer every question about the flat, the 2022–2023 works and the documents, which you can see at the viewing. I reply within 24 hours. You can write to me in Italian or English; in other languages I reply in writing, with the help of a translator.",
         ch_wa_tag: "Fastest way to reach me",
         ch_wa_title: "Chat on WhatsApp (+39 329 073 9936)",
         ch_wa_sub: "Message Marco: reply within 24 hours",
-        ch_tel_tag: "Direct Phone Call",
+        ch_tel_tag: "Phone",
         ch_tel_sub: "Marco Laurenti • Viewings by appointment: weekday afternoons and weekends",
         ch_pdf_tag: "Sales sheet",
         ch_pdf_title: "Sales sheet as a PDF (A4) ↗",
@@ -4764,9 +4771,9 @@
         ch_loc_tag: "Property Address",
         ch_loc_sub: "Il Giulia shopping centre (PAM) and buses 6, 9 and 35 right outside",
         contact_box_title: "Ask a question or book a viewing",
-        contact_name_label: "Full Name *",
+        contact_name_label: "Full name *",
         contact_phone_label: "Phone / WhatsApp",
-        contact_email_label: "Email Address",
+        contact_email_label: "Email address",
         contact_type_label: "What would you like? *",
         contact_opt_visit: "I would like to book a private viewing",
         contact_opt_videovisit: "Book a live video viewing (WhatsApp or FaceTime, if you are far away)",
@@ -4794,7 +4801,8 @@
         v3d_tour: "◉ Das Loft in 360° betreten",
         v3d_tours_lbl: "◉ In den Ideen, in 360°:",
         kf_12: "<span class=\"kf-l\">Verfügbarkeit</span><span class=\"kf-v\">Bezugsfrei zum Notartermin</span>",
-        kf_14: "<span class=\"kf-l\">Wohnfläche</span><span class=\"kf-v\">~85 m² Nutzfläche (Bauplan)</span>",
+        kf_stato: "<span class=\"kf-l\">Zustand</span><span class=\"kf-v\">Sofort bezugsfertig, Verkauf wie besichtigt. Dämmung, Fenster und Therme 2022–2023 erneuert; Bäder, Küche und Elektrik stammen aus der Bauzeit (1990), funktionstüchtig, mit FI-Schutzschalter. Möbel nach Absprache bei der Besichtigung.</span>",
+        kf_14: "<span class=\"kf-l\">Wohnfläche</span><span class=\"kf-v\">ca. 85 m² (Bauplan) · 93 m² beheizte Fläche laut Energieausweis</span>",
         kf_15: "<span class=\"kf-l\">Zugang</span><span class=\"kf-v\">Stufenlos bis zur Wohnung (Rampe und Aufzug); 14 Stufen innen zur Garage</span>",
         kf_16: "<span class=\"kf-l\">Einkauf & Bus</span><span class=\"kf-v\">„Il Giulia“ (PAM) in 30–40 m, fast durchgehend überdacht; Busse 6, 9, 35 in ~60 m</span>",
         kf_rooms_title: "Raumgrößen",
@@ -4802,7 +4810,7 @@
         kf_rooms_note: "Nettoflächen laut Bauplan (insgesamt 85,19 m² Wohnfläche). Die 108 m² Katasterfläche enthalten auch die Wände und einen Teil der Terrasse. Die 93 m² im Energieausweis (APE) sind die beheizte Nutzfläche nach den Regeln der Energieberechnung. Die Terrasse ist etwa 8,5 m lang und 1,5 m tief.",
         plan_caption: "Der Grundriss im heutigen Zustand, mit Raumnamen und Größen: zum Vergrößern antippen.",
         kf_11: "<span class=\"kf-l\">Raumhöhe</span><span class=\"kf-v\">2,70 m</span>",
-        kf_10: "<span class=\"kf-l\">Baujahr</span><span class=\"kf-v\">Ende der 1980er (Bezug 1990)</span>",
+        kf_10: "<span class=\"kf-l\">Baujahr</span><span class=\"kf-v\">Ende der 1980er (Nutzungsgenehmigung 1990)</span>",
         kf_9: "<span class=\"kf-l\">Hausgeld (Betriebskosten)</span><span class=\"kf-v\">ca. 1.100–1.200 €/Jahr, inkl. Wasser</span>",
         kf_8: "<span class=\"kf-l\">Superbonus 110 %</span><span class=\"kf-v\">Dämmung, Fenster, Sicherheitstür, Therme</span>",
         kf_7: "<span class=\"kf-l\">Heizung</span><span class=\"kf-v\">Eigene Brennwerttherme (2022)</span>",
@@ -4810,7 +4818,7 @@
         kf_5: "<span class=\"kf-l\">Stellplatz</span><span class=\"kf-v\">Eigener Tiefgaragenplatz, S1 (13 m²)</span>",
         kf_4: "<span class=\"kf-l\">Außen</span><span class=\"kf-v\">~11 m² Terrasse, Karstblick</span>",
         kf_3: "<span class=\"kf-l\">Etage</span><span class=\"kf-v\">9. und oberste Etage, mit Aufzug</span>",
-        kf_13: "<span class=\"kf-l\">Ausrichtung</span><span class=\"kf-v\">Norden (Terrasse, Wohnzimmer, Küche, Karstzimmer) und Westen (Meerzimmer und Arbeitszimmer). Im Sommer liegt die Terrasse im Schatten, mit dem sonnenbeschienenen Karst gegenüber.</span>",
+        kf_13: "<span class=\"kf-l\">Ausrichtung</span><span class=\"kf-v\">Norden (Terrasse, Wohnzimmer, Küche, Karstzimmer) und Westen (Meerzimmer und Arbeitszimmer). Im Sommer liegt die Terrasse im Schatten, mit dem sonnenbeschienenen Karst gegenüber. Im Winter ist das Licht diffus, ohne direkte Sonne.</span>",
         kf_2: "<span class=\"kf-l\">Zimmer</span><span class=\"kf-v\">4 Zimmer (Wohnzimmer + 3 Schlafzimmer) · 2 Bäder · 6 Räume laut Kataster</span>",
         kf_bagni: "<span class=\"kf-l\">Bäder</span><span class=\"kf-v\">2, innenliegend ohne Fenster, beide mit Abluftventilator: eines mit Badewanne, eines mit Massagedusche</span>",
         kf_price: "<span class=\"kf-l\">Kaufpreis</span><span class=\"kf-v\">349.000 € · Stellplatz inklusive</span>",
@@ -4918,7 +4926,7 @@
 
         cap3_num: "Kapitel 04 • Interaktives 3D-Modell",
         cap3_title: "Das 3D-Schnittmodell: die Wohnung, wie sie ist, und drei Ideen zum Wohnen",
-        cap3_subtitle: "Maßgetreue Rekonstruktion nach Aufmaß und Originalfotos. Entdecken Sie den Ist-Zustand und vergleichen Sie drei Entwürfe — La Classica, La Famiglia und Il Loft — mit Grundrissen und Vorher/Nachher-Ansichten von denselben Standpunkten wie die Fotos. In jeder Idee können Sie sich in 360° umsehen und ein Video des Rundgangs ansehen.",
+        cap3_subtitle: "Maßgetreue Rekonstruktion nach Aufmaß und Originalfotos. Entdecken Sie den Ist-Zustand und vergleichen Sie drei Entwürfe — La Classica, La Famiglia und Il Loft — mit Grundrissen und Vorher/Nachher-Ansichten von denselben Standpunkten wie die Fotos. In jeder Idee können Sie sich in 360° umsehen und ein Video des Rundgangs ansehen. Es sind Ideen, keine Kostenvoranschläge: Die Kosten hängen von der Ausstattung ab, darüber sprechen wir bei der Besichtigung.",
         v3d_help_touch: "<b>Tippen</b> Sie auf die Ansicht zum Erkunden · oben <b>La Classica</b>, <b>La Famiglia</b> oder <b>Il Loft</b> wählen",
         v3d_help_desk: "<b>Ziehen</b> zum Drehen · <b>Strg + Mausrad</b> oder die Tasten <b>+ −</b> zum Zoomen · links <b>La Classica</b>, <b>La Famiglia</b> oder <b>Il Loft</b> wählen",
         v3d_done: "✓ Fertig: weiter scrollen",
@@ -5024,7 +5032,7 @@
         faq_q3: "Was ist das Grundbuchsystem (tavolare)?",
         faq_a3: "In Triest wird – wie in anderen Gebieten des früheren Österreich-Ungarn – das Eigentum im Grundbuch (Libro Fondiario) eingetragen: Es geht mit der Eintragung auf den Käufer über, die ein Richter vorher prüft. Das ist eine zusätzliche Sicherheit gegenüber dem übrigen Italien.",
         faq_q4: "Baurecht (diritto di superficie) und PEEP: Was bedeutet das für den Käufer?",
-        faq_a4: "Das Volleigentum ist bereits genehmigt: Die Stadt Triest hat die Umwandlung kostenlos bewilligt (Schreiben P.G. 0090278 vom 20.04.2026). Das Gebäude entstand im Rahmen eines geförderten Wohnbauprogramms (PEEP); die Wohnung steht derzeit im Baurecht (diritto di superficie), gültig bis zum 16. April 2086 und verlängerbar. Es fehlt nur die Unterzeichnung der neuen Vereinbarung beim Notar; den Termin legt die Stadt fest. Ist sie beim Kauf noch nicht unterzeichnet, erhält der Käufer die Umwandlung zu denselben Bedingungen kostenlos: Es fällt nur das Notarhonorar an. Der Verkaufspreis ist frei, ohne Preisbindung.",
+        faq_a4: "Die Umwandlung in Volleigentum ist bereits genehmigt: Die Stadt Triest hat sie kostenlos bewilligt (Schreiben P.G. 0090278 vom 20.04.2026). Das Gebäude entstand im Rahmen eines geförderten Wohnbauprogramms (PEEP); die Wohnung steht derzeit im Baurecht (diritto di superficie), gültig bis zum 16. April 2086 und verlängerbar. Es fehlt nur die Unterzeichnung der neuen Vereinbarung beim Notar; den Termin legt die Stadt fest. Ist sie beim Kauf noch nicht unterzeichnet, tritt der Käufer in dasselbe Verfahren ein: Der von der Stadt mitgeteilte Betrag ist 0 €, es bleibt nur das Notarhonorar. Der Verkaufspreis ist frei, ohne Preisbindung.",
         faq_q5: "Wer bezahlt den Notar?",
         faq_a5: "Üblicherweise wählt und bezahlt der Käufer den Notar: Es lohnt sich, vor dem Angebot einen Kostenvoranschlag einzuholen.",
         faq_q6: "Welche laufenden Kosten fallen an?",
@@ -5043,9 +5051,9 @@
         contact_num: "Kapitel 09 • Kontakt",
         contact_title: "Besichtigungstermin vereinbaren oder Informationen anfordern",
         contact_sub: "Sprechen Sie direkt mit Marco Laurenti, um eine Besichtigung zu vereinbaren oder Fragen zu stellen.",
-        seller_tag: "Wer verkauft",
-        seller_text: "Ich heiße Marco Laurenti, und das ist meine Wohnung. Ich zeige sie selbst, vor Ort oder per Video, und beantworte jede Frage zur Wohnung, zu den Arbeiten von 2022–2023 und zu den Unterlagen, die Sie bei der Besichtigung einsehen können. Ich antworte innerhalb von 24 Stunden.",
-        ch_wa_tag: "Empfohlener Sofortkontakt",
+        seller_tag: "Der Verkäufer",
+        seller_text: "Ich heiße Marco Laurenti, und das ist meine Wohnung. Ich zeige sie selbst, vor Ort oder per Video, und beantworte jede Frage zur Wohnung, zu den Arbeiten von 2022–2023 und zu den Unterlagen, die Sie bei der Besichtigung einsehen können. Ich antworte innerhalb von 24 Stunden. Schreiben Sie mir auf Italienisch oder Englisch; auf Deutsch antworte ich schriftlich, mit Hilfe eines Übersetzungsprogramms.",
+        ch_wa_tag: "Am schnellsten: WhatsApp",
         ch_wa_title: "Direkter WhatsApp-Chat (+39 329 073 9936)",
         ch_wa_sub: "Schreiben Sie Marco: Antwort innerhalb von 24 Stunden",
         ch_tel_tag: "Direkter Telefonanruf",
@@ -5086,7 +5094,8 @@
         v3d_tour: "◉ Vstopite v Loft v 360°",
         v3d_tours_lbl: "◉ V notranjosti idej, v 360°:",
         kf_12: "<span class=\"kf-l\">Razpoložljivost</span><span class=\"kf-v\">Prosto ob podpisu kupoprodajne pogodbe pri notarju</span>",
-        kf_14: "<span class=\"kf-l\">Uporabna površina</span><span class=\"kf-v\">~85 m² neto (projektni načrt)</span>",
+        kf_stato: "<span class=\"kf-l\">Stanje</span><span class=\"kf-v\">Takoj vseljivo, prodaja se v obstoječem stanju. Izolacija, okna in kotel obnovljeni 2022–2023; kopalnici, kuhinja in elektroinštalacije so prvotne (1990), delujoče, z zaščitnim stikalom (FID). Oprema po dogovoru ob ogledu.</span>",
+        kf_14: "<span class=\"kf-l\">Neto tlorisna površina</span><span class=\"kf-v\">~85 m² (projektni načrt) · 93 m² ogrevane površine po energetski izkaznici</span>",
         kf_15: "<span class=\"kf-l\">Dostop</span><span class=\"kf-v\">Brez stopnic do stanovanja (klančina in dvigalo); 14 notranjih stopnic do garaže</span>",
         kf_16: "<span class=\"kf-l\">Trgovine in avtobusi</span><span class=\"kf-v\">»Il Giulia« (PAM) na 30–40 m, skoraj povsem pod streho; avtobusi 6, 9, 35 na ~60 m</span>",
         kf_rooms_title: "Velikosti prostorov",
@@ -5102,7 +5111,7 @@
         kf_5: "<span class=\"kf-l\">Parkiranje</span><span class=\"kf-v\">Lastno pokrito parkirno mesto, S1 (13 m²)</span>",
         kf_4: "<span class=\"kf-l\">Zunanjost</span><span class=\"kf-v\">Terasa ~11 m², pogled na Kras</span>",
         kf_3: "<span class=\"kf-l\">Nadstropje</span><span class=\"kf-v\">9. in zadnje, z dvigalom</span>",
-        kf_13: "<span class=\"kf-l\">Lega</span><span class=\"kf-v\">Sever (terasa, dnevna soba, kuhinja, Kraška soba) in zahod (Morska soba in delovna soba). Poleti je terasa v senci, pred vami pa osončen Kras.</span>",
+        kf_13: "<span class=\"kf-l\">Lega</span><span class=\"kf-v\">Sever (terasa, dnevna soba, kuhinja, Kraška soba) in zahod (Morska soba in delovna soba). Poleti je terasa v senci, pred vami pa osončen Kras. Pozimi je svetloba razpršena, brez neposrednega sonca.</span>",
         kf_2: "<span class=\"kf-l\">Sobe</span><span class=\"kf-v\">4 sobe (dnevna soba + 3 spalnice) · 2 kopalnici · 6 katastrskih prostorov</span>",
         kf_bagni: "<span class=\"kf-l\">Kopalnici</span><span class=\"kf-v\">2, notranji brez okna, obe z odvodnim ventilatorjem: ena s kadjo, ena s hidromasažno prho</span>",
         kf_price: "<span class=\"kf-l\">Cena</span><span class=\"kf-v\">349.000 € · parkirno mesto vključeno</span>",
@@ -5203,7 +5212,7 @@
         vid5_desc: "Drsna steklena vrata z neposrednim izhodom na prosto.",
         cap3_num: "Poglavje 04 • Interaktivni 3D-model",
         cap3_title: "3D-prerez: stanovanje, kakršno je, in tri ideje za bivanje",
-        cap3_subtitle: "Zvesta rekonstrukcija po izmeri in resničnih fotografijah. Raziščite sedanje stanje, nato primerjajte tri projekte — La Classica, La Famiglia in Il Loft — s tlorisi in primerjavami Prej/Potem, posnetimi z istih točk kot fotografije. V vsaki ideji se lahko razgledate v 360° in si ogledate video sprehoda.",
+        cap3_subtitle: "Zvesta rekonstrukcija po izmeri in resničnih fotografijah. Raziščite sedanje stanje, nato primerjajte tri projekte — La Classica, La Famiglia in Il Loft — s tlorisi in primerjavami Prej/Potem, posnetimi z istih točk kot fotografije. V vsaki ideji se lahko razgledate v 360° in si ogledate video sprehoda. To so ideje, ne predračuni: strošek je odvisen od izbrane opreme, o tem se pogovorimo ob ogledu.",
         v3d_help_touch: "<b>Tapnite</b> pogled za raziskovanje · zgoraj izberite <b>La Classica</b>, <b>La Famiglia</b> ali <b>Il Loft</b>",
         v3d_help_desk: "<b>Povlecite</b> za vrtenje · <b>Ctrl + kolešček</b> ali gumba <b>+ −</b> za povečavo · na levi izberite <b>La Classica</b>, <b>La Famiglia</b> ali <b>Il Loft</b>",
         v3d_done: "✓ Končano: nazaj na pomikanje",
@@ -5304,7 +5313,7 @@
         faq_q3: "Kaj je sistem zemljiške knjige (tavolare)?",
         faq_a3: "V Trstu se, tako kot na drugih območjih nekdanje Avstro-Ogrske, lastnina vpisuje v zemljiško knjigo (Libro Fondiario): na kupca preide z vpisom, ki ga pred odobritvijo preveri sodnik. To je dodatno jamstvo v primerjavi s preostalo Italijo — in sistem, ki ga v Sloveniji dobro poznate.",
         faq_q4: "Stavbna pravica in PEEP: kaj to pomeni za kupca?",
-        faq_a4: "Polna lastnina je že odobrena: Občina Trst je preoblikovanje odobrila brezplačno (dopis P.G. 0090278 z dne 20. 4. 2026). Stavba je bila zgrajena v okviru programa subvencionirane gradnje (PEEP), stanovanje pa je zdaj v stavbni pravici (diritto di superficie), ki velja do 16. aprila 2086 in jo je mogoče podaljšati. Manjka le podpis nove pogodbe pri notarju; datum določi občina. Če do nakupa še ni podpisana, kupec preoblikovanje dobi pod enakimi pogoji brezplačno: plača le notarja. Prodajna cena je prosta, brez omejitev.",
+        faq_a4: "Preoblikovanje v polno lastnino je že odobreno: Občina Trst ga je odobrila brezplačno (dopis P.G. 0090278 z dne 20. 4. 2026). Stavba je bila zgrajena v okviru programa subvencionirane gradnje (PEEP), stanovanje pa je zdaj v stavbni pravici (diritto di superficie), ki velja do 16. aprila 2086 in jo je mogoče podaljšati. Manjka le podpis nove pogodbe pri notarju; datum določi občina. Če do nakupa še ni podpisana, kupec vstopi v isti postopek: znesek, ki ga je sporočila občina, je 0 €, ostane le plačilo notarja. Prodajna cena je prosta, brez omejitev.",
         faq_q5: "Kdo plača notarja?",
         faq_a5: "Po navadi notarja izbere in plača kupec: pred ponudbo se splača pridobiti predračun.",
         faq_q6: "Koliko stane vzdrževanje?",
@@ -5315,7 +5324,7 @@
         faq_a8: "Pogodba je v italijanščini: če jezika ne govorite, notar pokliče tolmača, kot zahteva zakon.",
         faq_q9: "Ali kupcu ostanejo davčne olajšave Superbonus?",
         faq_a9: "Ne. Dela Superbonus 110 % so bila plačana s popustom na računu (sconto in fattura), zato ni preostalih olajšav za prenos. Kupec dobi izolacijo, okna, protivlomna vrata in kotel že narejene in plačane.",
-        faq_q10: "Ali lahko kupim, ne da bi za podpis pogodbe prišli v Trst?",
+        faq_q10: "Ali lahko kupim, ne da bi za podpis pogodbe prišel v Trst?",
         faq_a10: "Da, s pooblastilom, overjenim pri notarju v vaši državi ali na italijanskem konzulatu. Notar v Trstu vam pove, kakšno besedilo je potrebno in ali je potreben apostil.",
         faq_q11: "Kako se plača?",
         faq_a11: "Z bančnim nakazilom ali bančnim čekom (assegno circolare): v Italiji morajo biti plačila pri nakupu nepremičnine sledljiva in so navedena v pogodbi. Ara se plača ob podpisu predpogodbe, preostanek ob podpisu pri notarju.",
@@ -5323,7 +5332,7 @@
         contact_title: "Dogovorite se za ogled ali zahtevajte informacije",
         contact_sub: "Pogovorite se neposredno z Marcom Laurentijem, da se dogovorite za ogled ali zastavite vprašanja.",
         seller_tag: "Kdo prodaja",
-        seller_text: "Sem Marco Laurenti in to je moje stanovanje. Oglede vodim osebno, v živo ali po videu, in odgovorim na vsako vprašanje o stanovanju, o delih iz let 2022–2023 in o dokumentih, ki si jih lahko ogledate ob obisku. Odgovorim v 24 urah.",
+        seller_text: "Sem Marco Laurenti in to je moje stanovanje. Oglede vodim osebno, v živo ali po videu, in odgovorim na vsako vprašanje o stanovanju, o delih iz let 2022–2023 in o dokumentih, ki si jih lahko ogledate ob obisku. Odgovorim v 24 urah. Pišete mi lahko v italijanščini ali angleščini; v slovenščini odgovorim pisno, s pomočjo prevajalnika.",
         ch_wa_tag: "Priporočen takojšnji kanal",
         ch_wa_title: "Neposreden klepet na WhatsAppu (+39 329 073 9936)",
         ch_wa_sub: "Pišite Marcu: odgovor v 24 urah",
@@ -6206,10 +6215,10 @@
       "0,68 m⁻¹",
       "0,68 m⁻¹"
       ],
-      "Compattezza architettonica ideale contro i venti di bora": [
-      "Compact shape, ideal against the Bora wind",
-      "Kompakte Bauform, ideal gegen die Bora",
-      "Kompaktna oblika, idealna proti burji"
+      "Forma compatta, meno esposta ai venti di bora": [
+      "Compact shape, less exposed to the Bora wind",
+      "Kompakte Bauform, der Bora weniger ausgesetzt",
+      "Kompaktna oblika, manj izpostavljena burji"
       ],
       "Gradi Giorno Trieste": [
       "Trieste degree days",
@@ -6241,10 +6250,10 @@
       "Grenzwert: 0,10 W/m²K",
       "Meja: 0,10 W/m²K"
       ],
-      "Inerzia termica estiva perfetta:": [
-      "Excellent summer thermal inertia:",
-      "Sehr gute sommerliche Wärmeträgheit:",
-      "Odlična poletna toplotna vztrajnost:"
+      "Buona inerzia termica estiva:": [
+      "Good summer thermal inertia:",
+      "Gute sommerliche Wärmeträgheit:",
+      "Dobra poletna toplotna vztrajnost:"
       ],
       "l'alloggio resta fresco senza climatizzazione esasperata": [
       "the flat stays cool without heavy air-conditioning",
@@ -6307,9 +6316,9 @@
       "Zunanji prostor"
       ],
       "Terrazzo abitabile profondo, al 9° e ultimo piano": [
-      "Deep usable terrace on the 9th and top floor",
-      "Tiefe, bewohnbare Terrasse in der 9. und obersten Etage",
-      "Uporabna terasa v 9. in zadnjem nadstropju"
+      "Long terrace on the 9th and top floor",
+      "Lange Terrasse in der 9. und obersten Etage",
+      "Dolga terasa v 9. in zadnjem nadstropju"
       ],
       "Zona pranzo e salone con grande superficie finestrata": [
       "Dining area and living room with large windows",
@@ -6557,9 +6566,9 @@
       "Prostorna dnevna soba, bele stene in naravna svetloba"
       ],
       "Terrazzo abitabile, al 9° e ultimo piano": [
-      "Usable terrace on the 9th and top floor",
-      "Bewohnbare Terrasse in der 9. und obersten Etage",
-      "Uporabna terasa v 9. in zadnjem nadstropju"
+      "Long terrace on the 9th and top floor",
+      "Lange Terrasse in der 9. und obersten Etage",
+      "Dolga terasa v 9. in zadnjem nadstropju"
       ],
       "STIMA": [
       "ESTIMATE",
@@ -6662,9 +6671,9 @@
       "Svetla dnevna soba v 9. nadstropju"
       ],
       "Terrazzo abitabile al 9° piano": [
-      "Usable terrace on the 9th floor",
-      "Bewohnbare Terrasse im 9. Stock",
-      "Uporabna terasa v 9. nadstropju"
+      "Long terrace on the 9th floor",
+      "Lange Terrasse im 9. Stock",
+      "Dolga terasa v 9. nadstropju"
       ],
       "Zona giorno con tavolo da pranzo e vista aperta": [
       "Living area with dining table and open view",
@@ -6768,7 +6777,7 @@
       ],
       "Camera matrimoniale o per due, 14,3 m², con scorcio di mare dalla finestra": [
       "14.3 m² double or twin room with a glimpse of the sea from the window",
-      "14,3-m²-Schlaf- oder Zweibettzimmer mit Blick bis zum Meer",
+      "14,3-m²-Doppel- oder Zweibettzimmer mit Blick bis zum Meer",
       "Zakonska ali dvoposteljna soba 14,3 m² s pogledom na morje v daljavi"
       ],
       "Camera Carso, con armadio verde salvia": [
@@ -6859,7 +6868,7 @@
       "Cappotto termico tutto intorno alla casa, infissi a triplo vetro, porta blindata e caldaia a condensazione (2022–2023); pratiche consultabili alla visita. Il fotovoltaico sul tetto è del condominio e c'era già: non fa parte di questi lavori": [
       "External insulation all around the home, triple-glazed windows, security door and condensing boiler (2022–2023); paperwork available at the viewing. The solar panels on the roof belong to the building and were already there: they are not part of these works",
       "Außendämmung rundum, Dreifachverglasung, Sicherheitstür und Brennwerttherme (2022–2023); Unterlagen bei der Besichtigung einsehbar. Die Solaranlage auf dem Dach gehört dem Haus und bestand schon vorher: Sie ist nicht Teil dieser Arbeiten",
-      "Toplotna izolacija fasade okoli in okoli, okna s trojno zasteklitvijo, protivlomna vrata in kondenzacijski kotel (2022–2023); dokumentacija na vpogled ob ogledu. Sončna elektrarna na strehi je skupna in je obstajala že prej: ne spada med ta dela"
+      "Toplotna izolacija vseh zunanjih sten, okna s trojno zasteklitvijo, protivlomna vrata in kondenzacijski kotel (2022–2023); dokumentacija na vpogled ob ogledu. Sončna elektrarna na strehi je skupna in je obstajala že prej: ne spada med ta dela"
       ],
       ", comprese l'acqua (l'appartamento non ha un contatore autonomo), l'ascensore e le parti comuni; sono più basse della media grazie all'impianto fotovoltaico condominiale, già esistente, sul tetto": [
       ", including water (the flat has no separate meter), the lift and the common areas; lower than average thanks to the building’s existing solar panels on the roof",
@@ -6911,15 +6920,15 @@
       "Rechtssicherheit in Triest",
       "Pravna varnost v Trstu"
       ],
-      "Piena proprietà già approvata a 0 €": [
-      "Full ownership already approved at €0",
-      "Volleigentum bereits zu 0 € genehmigt",
-      "Polna lastnina že odobrena za 0 €"
+      "Trasformazione in piena proprietà già approvata a 0 €": [
+      "Conversion to full ownership already approved at €0",
+      "Umwandlung in Volleigentum bereits zu 0 € genehmigt",
+      "Preoblikovanje v polno lastnino že odobreno za 0 €"
       ],
-      "(Comune di Trieste, lettera P.G. 0090278 del 20/04/2026, accettata il 21/04/2026). Oggi: proprietà superficiaria 1/1 (diritto di superficie PEEP, valido fino al 16/04/2086, rinnovabile). Manca solo la firma della nuova convenzione dal notaio, con data fissata dal Comune: la trasformazione non costa nulla, si paga solo l'onorario del notaio. Se la firma non avviene prima del rogito, chi compra ottiene la trasformazione alle stesse condizioni, a costo zero: paga solo il notaio.": [
-      "(City of Trieste, letter ref. P.G. 0090278 of 20/04/2026, accepted on 21/04/2026). Today: surface-right ownership 1/1 (PEEP diritto di superficie, valid until 16/04/2086, renewable). Only the signing of the new agreement before a notary remains, on a date set by the City: the conversion is free, only the notary's fee applies. If it has not been signed before completion, the buyer obtains the conversion on the same terms, free of charge: only the notary's fee applies.",
-      "(Stadt Triest, Schreiben P.G. 0090278 vom 20.04.2026, angenommen am 21.04.2026). Derzeit: Baurecht 1/1 (diritto di superficie aus dem geförderten Wohnbau PEEP, gültig bis 16.04.2086, verlängerbar). Es fehlt nur die Unterzeichnung der neuen Vereinbarung beim Notar, den Termin legt die Stadt fest: Die Umwandlung ist kostenlos, es fällt nur das Notarhonorar an. Ist sie bis zum Notartermin nicht unterzeichnet, erhält der Käufer die Umwandlung zu denselben Bedingungen kostenlos und zahlt nur den Notar.",
-      "(Občina Trst, dopis P.G. 0090278 z dne 20. 4. 2026, sprejet 21. 4. 2026). Danes: stavbna pravica 1/1 (diritto di superficie iz programa PEEP, velja do 16. 4. 2086, podaljšljiva). Manjka le podpis nove pogodbe pri notarju, datum določi občina: preoblikovanje je brezplačno, plača se le notar. Če do podpisa pri notarju še ni podpisana, kupec preoblikovanje dobi pod enakimi pogoji brezplačno: plača le notarja."
+      "(Comune di Trieste, lettera P.G. 0090278 del 20/04/2026, accettata il 21/04/2026). Oggi: proprietà superficiaria 1/1 (diritto di superficie PEEP, valido fino al 16/04/2086, rinnovabile). Manca solo la firma della nuova convenzione dal notaio, con data fissata dal Comune: la trasformazione non costa nulla, si paga solo l'onorario del notaio. Se la firma non avviene prima del rogito, chi compra subentra nella stessa pratica: il corrispettivo comunicato dal Comune è 0 € e resta solo l'onorario del notaio.": [
+      "(City of Trieste, letter ref. P.G. 0090278 of 20/04/2026, accepted on 21/04/2026). Today: surface-right ownership 1/1 (PEEP diritto di superficie, valid until 16/04/2086, renewable). Only the signing of the new agreement before a notary remains, on a date set by the City: the conversion is free, only the notary's fee applies. If it has not been signed before completion, the buyer takes over the same procedure: the amount notified by the City is €0 and only the notary's fee remains.",
+      "(Stadt Triest, Schreiben P.G. 0090278 vom 20.04.2026, angenommen am 21.04.2026). Derzeit: Baurecht 1/1 (diritto di superficie aus dem geförderten Wohnbau PEEP, gültig bis 16.04.2086, verlängerbar). Es fehlt nur die Unterzeichnung der neuen Vereinbarung beim Notar, den Termin legt die Stadt fest: Die Umwandlung ist kostenlos, es fällt nur das Notarhonorar an. Ist sie bis zum Notartermin nicht unterzeichnet, tritt der Käufer in dasselbe Verfahren ein: Der von der Stadt mitgeteilte Betrag ist 0 €, es bleibt nur das Notarhonorar.",
+      "(Občina Trst, dopis P.G. 0090278 z dne 20. 4. 2026, ponudba sprejeta 21. 4. 2026). Danes: stavbna pravica 1/1 (diritto di superficie iz programa PEEP, velja do 16. 4. 2086, z možnostjo podaljšanja). Manjka le podpis nove pogodbe pri notarju, datum določi občina: preoblikovanje je brezplačno, plača se le notar. Če do podpisa pri notarju še ni podpisana, kupec vstopi v isti postopek: znesek, ki ga je sporočila občina, je 0 €, ostane le plačilo notarja."
       ],
       "Pianta dell'appartamento com'è oggi, con i nomi delle stanze e le superfici": [
       "Floor plan of the flat as it is today, with room names and sizes",
