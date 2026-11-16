@@ -374,6 +374,17 @@
     .hero-content > .hero-price { animation-delay: 0.16s; }
     .hero-content > .hero-subhead { animation-delay: 0.24s; }
     .hero-content > .hero-badges-row { animation-delay: 0.32s; }
+    /* 16/11/2026 (audit 2): video-visita e offerta visibili nel primo schermo, anche sul telefono */
+    .hero-content > .hero-extra { animation: heroTxtIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.4s both; }
+    .hero-extra { margin-top: 18px; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; }
+    .hero-extra a { color: var(--sand-light); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--border-gold); }
+    .hero-extra a:hover, .hero-extra a:focus-visible { color: #fff; text-decoration-color: var(--sand-gold); }
+    @media (max-width: 768px) {
+      /* sul telefono la riga video-visita/offerta sale sopra le etichette, così resta nel primo schermo in tutte le lingue */
+      .hero-content { display: flex; flex-direction: column; align-items: flex-start; }
+      .hero-content > .hero-badges-row { order: 2; }
+      .hero-extra { margin-top: -4px; margin-bottom: 4px; font-size: 0.9rem; line-height: 1.5; }
+    }
     @keyframes heroImgIn { from { opacity: 0; } to { opacity: 1; } }
     #heroSlide0::before { content: ''; position: absolute; inset: 0; background: url(img/web/video/poster_hero_glide.jpg?v=3) center / cover no-repeat; filter: brightness(0.70) contrast(1.04); animation: heroImgIn 3.5s ease-out 0.3s both; }
     #heroSlide0 video { position: relative; }
@@ -1981,6 +1992,9 @@
     .tax-n { font-size: 0.86rem; color: var(--text-secondary); line-height: 1.55; }
     .tax-foot { margin-top: 14px; font-size: 0.82rem; color: var(--text-tertiary); line-height: 1.55; }
     .faq-title { margin-top: 30px; }
+    #domande { scroll-margin-top: 110px; }
+    .faq-link { margin-top: 12px; }
+    .faq-link a { color: var(--sand-light); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--border-gold); }
     .faq { border-top: 1px solid var(--border-subtle); }
     .faq:last-child { border-bottom: 1px solid var(--border-subtle); }
     .faq > summary { list-style: none; cursor: pointer; padding: 15px 0 15px 26px; position: relative; color: #fff; font-weight: 700; line-height: 1.45; }
@@ -2186,6 +2200,7 @@
         <a href="#richiesta" class="btn-cinema btn-gold" data-i18n="hero_btn_visit">Prenota una visita</a>
         <a href="#videotour" class="btn-cinema btn-ghost" data-i18n="hero_btn_video">▶ Guarda i video</a>
       </div>
+      <p class="hero-extra" data-i18n="hero_extra">Abiti lontano? <a href="#richiesta" data-pick="videovisita">Video-visita in diretta</a> su WhatsApp · Hai già deciso? <a href="#richiesta" data-pick="offerta">Fai un'offerta scritta</a></p>
     </div>
 
     <div class="slide-indicators">
@@ -2236,6 +2251,7 @@
           <div class="kf-head" data-i18n="kf_rooms_title">Superfici delle stanze</div>
           <div class="kf-room-list" data-i18n="kf_rooms"><span>Soggiorno: <b>20,2 m²</b></span><span>Camera Carso: <b>14,5 m²</b></span><span>Camera Mare: <b>14,3 m²</b></span><span>Cucina: <b>10,5 m²</b></span><span>Studio: <b>9,5 m²</b></span><span>Terrazzo: <b>11,0 m²</b></span><span>Bagno grande: <b>5,2 m²</b></span><span>Corridoio: <b>4,8 m²</b></span><span>Bagno piccolo: <b>4,4 m²</b></span><span>Ripostiglio: <b>1,8 m²</b></span></div>
           <p class="kf-note" data-i18n="kf_rooms_note">Superfici nette dalla planimetria di progetto (in tutto 85,19 m² calpestabili). I 108 m² catastali comprendono anche i muri e una parte del terrazzo. I 93 m² indicati nell'APE sono la superficie utile riscaldata, misurata con le regole del calcolo energetico. Il terrazzo è lungo circa 8,5 m e profondo circa 1,5 m.</p>
+          <p class="kf-note faq-link" data-i18n="faq_link"><a href="#domande">Compri dall'estero? 11 risposte pratiche →</a></p>
           <figure class="plan-fig">
             <a id="planLink" href="img/web/pianta_stato_attuale_it.svg" target="_blank" rel="noopener" data-plan-it="img/web/pianta_stato_attuale_it.svg" data-plan-en="img/web/pianta_stato_attuale_en.svg" data-plan-de="img/web/pianta_stato_attuale_de.svg" data-plan-sl="img/web/pianta_stato_attuale_sl.svg" data-png-it="img/web/pianta_via_giulia_77_it.png" data-png-en="img/web/pianta_via_giulia_77_en.png" data-png-de="img/web/pianta_via_giulia_77_de.png" data-png-sl="img/web/pianta_via_giulia_77_sl.png">
               <img id="planImg" src="img/web/pianta_stato_attuale_it.svg" width="1820" height="1480" loading="lazy" decoding="async" alt="Pianta dell'appartamento com'è oggi, con i nomi delle stanze e le superfici" />
@@ -2278,7 +2294,7 @@
               <span class="pillar-num">03.</span>
               <div class="pillar-content">
                 <strong data-i18n="pil3_title">Spazi ampi e due bagni completi</strong>
-                <span data-i18n="pil3_desc">Spazi generosi con pavimento uniforme in gres porcellanato sabbia, salone panoramico, cucina abitabile con uscita sul terrazzo in klinker, doppi bagni (bagno grande con vasca + box idromassaggio con radio FM e LED) e tre camere, con soffitti alti 2,70 m.</span>
+                <span data-i18n="pil3_desc">Spazi generosi con pavimento uniforme in gres porcellanato sabbia, salone panoramico, cucina abitabile con uscita sul terrazzo in klinker, due bagni (bagno grande con vasca + box idromassaggio con radio FM e LED) e tre camere, con soffitti alti 2,70 m.</span>
               </div>
             </li>
 
@@ -2453,7 +2469,7 @@
           <img width="901" height="1600" loading="lazy" decoding="async" src="img/web/ascensore_piano9.jpg" alt="Pulsantiera ascensore piano 9" />
           <div class="mosaic-overlay">
             <span class="mosaic-tag">Accessibilità</span>
-            <span class="mosaic-caption">Ascensore al piano 9 fino al portone d'ingresso e due rampe interne per l'autorimessa S1</span>
+            <span class="mosaic-caption">L'ascensore porta dal 9° piano al piano terra; da lì due rampe interne scendono al garage S1</span>
           </div>
         </div>
 
@@ -2461,7 +2477,7 @@
           <img width="1600" height="901" loading="lazy" decoding="async" src="img/web/quartiere_servizi.jpg" alt="Fermata Bus 9 e Centro Commerciale Il Giulia" />
           <div class="mosaic-overlay">
             <span class="mosaic-tag">Servizi & Trasporti</span>
-            <span class="mosaic-caption">Centro commerciale "Il Giulia" (PAM) a 30–40 metri e fermata dei bus 6, 9, 35 a circa 60</span>
+            <span class="mosaic-caption">Centro commerciale "Il Giulia" (PAM) a 30–40 metri e fermata dei bus 6, 9, 35 a circa 60 metri</span>
           </div>
         </div>
 
@@ -2540,7 +2556,7 @@
             <div class="video-card-body">
               <span class="video-card-tag" data-i18n="vid1_tag">Camera Mare</span>
               <div class="video-card-title" data-i18n="vid1_title">Scorcio di mare</div>
-              <div class="video-card-desc" data-i18n="vid1_desc">Dal golfo all'orizzonte alla Camera Mare.</div>
+              <div class="video-card-desc" data-i18n="vid1_desc">Lo scorcio di mare dalla finestra della Camera Mare.</div>
             </div>
           </div>
 
@@ -2646,7 +2662,7 @@
         <div class="location-grid">
           <div class="location-item">
             <div class="location-dist"><span><svg class="ico" aria-hidden="true"><use href="#i-bag"/></svg></span> Sotto casa</div>
-            <div class="location-desc" data-i18n="loc_item_1"><strong>Centro Commerciale "Il Giulia" & Bus 6, 9, 35:</strong> supermercato PAM, negozi e farmacia a 30–40 metri dal portone, quasi tutto al coperto (c'è un solo breve tratto all'aperto); la fermata dei bus è a circa 60 metri.</div>
+            <div class="location-desc" data-i18n="loc_item_1"><strong>Centro commerciale «Il Giulia» e bus 6, 9, 35:</strong> supermercato PAM, negozi e farmacia a 30–40 metri dal portone, quasi tutto al coperto (c'è un solo breve tratto all'aperto); la fermata dei bus è a circa 60 metri.</div>
           </div>
           <div class="location-item">
             <div class="location-dist"><span><svg class="ico" aria-hidden="true"><use href="#i-tree"/></svg></span> 4 min</div>
@@ -3339,7 +3355,7 @@
     <div class="container">
       
       <div class="chapter-divider">
-        <div class="chapter-num" data-i18n="cap7_num">Capitolo 08 • Dati tavolari & Rendita</div>
+        <div class="chapter-num" data-i18n="cap7_num">Capitolo 08 • Dati tavolari e catastali · Affitto</div>
         <h2 class="chapter-title" data-i18n="cap7_title">Dati tavolari e catastali</h2>
         <p class="chapter-subtitle" data-i18n="cap7_subtitle">Documenti tavolari e catastali allineati, conformità urbanistica attestata da un architetto, immobile libero al rogito.</p>
       </div>
@@ -3395,7 +3411,7 @@
             </tr>
             <tr>
               <td>Stato giuridico e proprietà</td>
-              <td><strong style="color: #fff;">Piena proprietà già approvata a 0 €</strong> (Comune di Trieste, lettera P.G. 0090278 del 20/04/2026, accettata il 21/04/2026). Oggi: proprietà superficiaria 1/1 (diritto di superficie PEEP, valido fino al 16/04/2086, rinnovabile). Manca solo la firma della nuova convenzione dal notaio, con data fissata dal Comune: la trasformazione non costa nulla, si paga solo l'onorario del notaio.</td>
+              <td><strong style="color: #fff;">Piena proprietà già approvata a 0 €</strong> (Comune di Trieste, lettera P.G. 0090278 del 20/04/2026, accettata il 21/04/2026). Oggi: proprietà superficiaria 1/1 (diritto di superficie PEEP, valido fino al 16/04/2086, rinnovabile). Manca solo la firma della nuova convenzione dal notaio, con data fissata dal Comune: la trasformazione non costa nulla, si paga solo l'onorario del notaio. Se la firma non avviene prima del rogito, chi compra ottiene la trasformazione alle stesse condizioni, a costo zero: paga solo il notaio.</td>
             </tr>
             <tr>
               <td>Vincoli sul prezzo</td>
@@ -3468,7 +3484,7 @@
           <div class="tax-card"><div class="tax-l" data-i18n="tax_second_label">Seconda casa</div><div class="tax-v" data-i18n="tax_second_value">~11.820 €</div><p class="tax-n" data-i18n="tax_second_note">Registro 9% su 130.251 € (rendita × 1,05 × 120) + 100 € di imposte fisse. Vale per chi compra senza trasferire la residenza.</p></div>
         </div>
         <p class="tax-foot" data-i18n="tax_foot">Rendita catastale: appartamento 945,12 € + posto auto 88,62 €. A parte c'è l'onorario del notaio, di solito a carico di chi compra. Cifre indicative: fanno fede i calcoli del notaio.</p>
-        <h3 class="buy-title faq-title" data-i18n="faq_title">Domande frequenti</h3>
+        <h2 class="buy-title faq-title" id="domande" data-i18n="faq_title">Domande frequenti</h2>
         <div class="faq-list">
           <details class="faq"><summary data-i18n="faq_q1">Posso comprare se non vivo in Italia?</summary><p data-i18n="faq_a1">Sì. Serve un codice fiscale italiano, che si chiede all'Agenzia delle Entrate o a un consolato italiano. Per i cittadini dell'Unione Europea non ci sono limiti; per gli altri vale la reciprocità con il proprio Paese. Se non porti la residenza a Trieste si applicano le imposte della seconda casa. Se sei cittadino italiano iscritto all'AIRE, in alcuni casi puoi avere le agevolazioni prima casa anche senza trasferire la residenza: chiedilo al notaio.</p></details>
           <details class="faq"><summary data-i18n="faq_q2">Come si svolge l'acquisto?</summary><p data-i18n="faq_a2">Dopo la visita si fa una proposta scritta. Se viene accettata si firma il contratto preliminare con una caparra; il rogito si fa poi dal notaio scelto da chi compra, di solito entro due o tre mesi (dipende dall'eventuale mutuo). L'appartamento è libero al rogito.</p></details>
@@ -3498,6 +3514,7 @@
         <p data-i18n="trattativa_banner_desc">
 L'appartamento è venduto direttamente dal proprietario, senza agenzia: chi compra non paga la provvigione, che di solito vale il 3–4% + IVA. Rispondo ai messaggi entro 24 ore e a ogni proposta scritta entro 48.
 </p>
+        <p class="faq-link" data-i18n="faq_link"><a href="#domande">Compri dall'estero? 11 risposte pratiche →</a></p>
 
         <div class="trattativa-steps">
           <div class="trattativa-step-card">
@@ -4061,6 +4078,14 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         box.classList.toggle('visible', sel.value === 'offerta');
       }
     }
+    // link «Video-visita» / «Fai un'offerta» del primo schermo: preselezionano la voce giusta del modulo
+    document.addEventListener('click', (e) => {
+      const a = e.target.closest && e.target.closest('a[data-pick]');
+      const sel = document.getElementById('usrType');
+      if (!a || !sel) return;
+      sel.value = a.getAttribute('data-pick');
+      toggleOfferFields();
+    });
 
     // senza indirizzo Formspree il secondo pulsante non compare: resta l'invio su WhatsApp
     document.addEventListener('DOMContentLoaded', () => {
@@ -4249,6 +4274,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         hero_btn_video: "▶ Guarda i video",
         hero_btn_3d: "Esplora lo Spaccato 3D ↓",
         hero_btn_visit: "Prenota una visita",
+        hero_extra: "Abiti lontano? <a href=\"#richiesta\" data-pick=\"videovisita\">Video-visita in diretta</a> su WhatsApp · Hai già deciso? <a href=\"#richiesta\" data-pick=\"offerta\">Fai un'offerta scritta</a>",
 
         cap1_num: "Capitolo 01 • Panoramica",
         cap1_title: "Nove piani sopra la città, con tutto sotto casa.",
@@ -4261,13 +4287,13 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         pil2_title: "Classe energetica B (APE ottobre 2024)",
         pil2_desc: "Fabbisogno non rinnovabile di appena 59,09 kWh/m² anno. Spesa per riscaldamento e acqua calda stimata in ~€ 580–680 l'anno, contro circa € 1.900–2.400 di un alloggio tipico in classe G.",
         pil3_title: "Spazi ampi e due bagni completi",
-        pil3_desc: "Spazi generosi con pavimento uniforme in gres porcellanato sabbia, salone panoramico, cucina abitabile con uscita sul terrazzo in klinker, doppi bagni (bagno grande con vasca + box idromassaggio con radio FM e LED) e tre camere, con soffitti alti 2,70 m.",
+        pil3_desc: "Spazi generosi con pavimento uniforme in gres porcellanato sabbia, salone panoramico, cucina abitabile con uscita sul terrazzo in klinker, due bagni (bagno grande con vasca + box idromassaggio con radio FM e LED) e tre camere, con soffitti alti 2,70 m.",
         pil4_title: "Documenti in regola, pronti per il rogito",
         pil4_desc: "Conformità urbanistica, catastale e tavolare attestata da un architetto (2021); trasformazione in piena proprietà già approvata dal Comune di Trieste e prezzo di vendita libero, senza vincoli PEEP.",
 
         loc_strip_title: "<span><svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-compass\"/></svg></span> Posizione: Servizi Sotto Casa, Mare & Collegamenti Rapidi",
         loc_strip_badge: "VIA GIULIA 77 • TRIESTE",
-        loc_item_1: "<strong>Centro Commerciale \"Il Giulia\" & Bus 6, 9, 35:</strong> supermercato PAM, negozi e farmacia a 30–40 metri dal portone, quasi tutto al coperto (c'è un solo breve tratto all'aperto); la fermata dei bus è a circa 60 metri.",
+        loc_item_1: "<strong>Centro commerciale «Il Giulia» e bus 6, 9, 35:</strong> supermercato PAM, negozi e farmacia a 30–40 metri dal portone, quasi tutto al coperto (c'è un solo breve tratto all'aperto); la fermata dei bus è a circa 60 metri.",
         loc_item_2: "<strong>Giardino Pubblico & Viale XX Settembre:</strong> 4 minuti di bus; viale pedonale, caffè storici e teatri.",
         loc_item_3: "<strong>Piazza Unità d'Italia & Rive:</strong> 9 minuti con il bus 9 e 2 a piedi; il lungomare di Barcola è a 20 minuti con il 6.",
         loc_item_4: "<strong>Altopiano del Carso & raccordo autostradale:</strong> circa 10 minuti in auto; da lì si prosegue verso Slovenia, Austria, Venezia e l'aeroporto di Trieste.",
@@ -4284,7 +4310,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         vid1_caption_sub: "La ripresa parte dal golfo di Trieste all'orizzonte, inquadrato dalla finestra della Camera Mare, e si allarga sulla stanza.",
         vid1_tag: "Camera Mare",
         vid1_title: "Scorcio di mare",
-        vid1_desc: "Dal golfo all'orizzonte alla Camera Mare.",
+        vid1_desc: "Lo scorcio di mare dalla finestra della Camera Mare.",
         vid6_badge: "<span><svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-video\"/></svg></span> Giro completo",
         vid6_caption_title: "Tutta la casa in 75 secondi",
         vid6_caption_sub: "Dall'ingresso al terrazzo, dalle camere ai bagni: riprese e foto vere, con i nomi e le misure delle stanze nei sottotitoli.",
@@ -4363,7 +4389,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         gfil_notte: "Camere e bagni",
         gfil_edificio: "Dotazioni e palazzo",
 
-        cap7_num: "Capitolo 08 • Dati tavolari & Rendita",
+        cap7_num: "Capitolo 08 • Dati tavolari e catastali · Affitto",
         cap7_title: "Dati tavolari e catastali",
         cap7_subtitle: "Documenti tavolari e catastali allineati, conformità urbanistica attestata da un architetto, immobile libero al rogito.",
         cad_card1_title: "Appartamento + posto auto coperto",
@@ -4410,6 +4436,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         tax_second_note: "Registro 9% su 130.251 € (rendita × 1,05 × 120) + 100 € di imposte fisse. Vale per chi compra senza trasferire la residenza.",
         tax_foot: "Rendita catastale: appartamento 945,12 € + posto auto 88,62 €. A parte c'è l'onorario del notaio, di solito a carico di chi compra. Cifre indicative: fanno fede i calcoli del notaio.",
         faq_title: "Domande frequenti",
+        faq_link: "<a href=\"#domande\">Compri dall'estero? 11 risposte pratiche →</a>",
         faq_q1: "Posso comprare se non vivo in Italia?",
         faq_a1: "Sì. Serve un codice fiscale italiano, che si chiede all'Agenzia delle Entrate o a un consolato italiano. Per i cittadini dell'Unione Europea non ci sono limiti; per gli altri vale la reciprocità con il proprio Paese. Se non porti la residenza a Trieste si applicano le imposte della seconda casa. Se sei cittadino italiano iscritto all'AIRE, in alcuni casi puoi avere le agevolazioni prima casa anche senza trasferire la residenza: chiedilo al notaio.",
         faq_q2: "Come si svolge l'acquisto?",
@@ -4540,6 +4567,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         hero_btn_video: "▶ Watch the videos",
         hero_btn_3d: "Explore 3D Cutaway Model ↓",
         hero_btn_visit: "Book a viewing",
+        hero_extra: "Live abroad? <a href=\"#richiesta\" data-pick=\"videovisita\">Live video tour</a> on WhatsApp · Ready to buy? <a href=\"#richiesta\" data-pick=\"offerta\">Make a written offer</a>",
 
         cap1_num: "Chapter 01 • Overview",
         cap1_title: "Nine floors above the city, with everything at your door.",
@@ -4575,7 +4603,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         vid1_caption_sub: "The shot starts on the Gulf of Trieste on the horizon, framed by the Sea Room window, then widens out into the room.",
         vid1_tag: "Sea Room",
         vid1_title: "Sea glimpse",
-        vid1_desc: "From the gulf on the horizon into the Sea Room.",
+        vid1_desc: "The glimpse of the sea from the Sea Room window.",
         vid6_badge: "<span><svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-video\"/></svg></span> Full tour",
         vid6_caption_title: "The whole home in 75 seconds",
         vid6_caption_sub: "From the entrance to the terrace, from the bedrooms to the bathrooms: real footage and photos, with room names and sizes in the subtitles.",
@@ -4654,7 +4682,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         gfil_notte: "Bedrooms & Baths",
         gfil_edificio: "Systems & Building",
 
-        cap7_num: "Chapter 08 • Land Registry (Tavolare) & Rental Yield",
+        cap7_num: "Chapter 08 • Land register & cadastral data · Rent",
         cap7_title: "Land Registry and Cadastral Data",
         cap7_subtitle: "Land Registry and cadastral records aligned, planning compliance certified by an architect, and the property is vacant on completion.",
         cad_card1_title: "Apartment + covered parking space",
@@ -4701,6 +4729,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         tax_second_note: "9% registration tax on €130,251 (cadastral income × 1.05 × 120) + €100 fixed taxes. Applies if you buy without moving your residence.",
         tax_foot: "Cadastral income: apartment €945.12 + parking space €88.62. The notary's fee comes on top and is usually paid by the buyer. Indicative figures: the notary's calculation is binding.",
         faq_title: "Frequently asked questions",
+        faq_link: "<a href=\"#domande\">Buying from abroad? 11 practical answers →</a>",
         faq_q1: "Can I buy if I don't live in Italy?",
         faq_a1: "Yes. You need an Italian tax code (codice fiscale), issued by the Italian Revenue Agency or an Italian consulate. EU citizens face no restrictions; for others, reciprocity with their own country applies. If you don't move your residence to Trieste, the second-home taxes apply. Italian citizens living abroad (registered with AIRE) can in some cases get the first-home rates without moving their residence: ask the notary.",
         faq_q2: "How does the purchase work?",
@@ -4725,12 +4754,12 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         faq_a11: "By bank transfer or banker's draft (assegno circolare): in Italy, payments for a property sale must be traceable and are stated in the deed. The deposit is paid when the preliminary contract is signed, the balance on completion.",
 
         contact_num: "Chapter 09 • Contact",
-        contact_title: "Schedule a Viewing or Request Information",
+        contact_title: "Book a viewing or ask a question",
         contact_sub: "Speak directly with Marco Laurenti to book a viewing or ask for information.",
         seller_tag: "Who is selling",
         seller_text: "My name is Marco Laurenti and this is my home. I show it myself, in person or on video, and I answer every question about the flat, the 2022–2023 works and the documents, which you can see at the viewing. I reply within 24 hours.",
-        ch_wa_tag: "Recommended Instant Channel",
-        ch_wa_title: "Direct WhatsApp Chat (+39 329 073 9936)",
+        ch_wa_tag: "Fastest way to reach me",
+        ch_wa_title: "Chat on WhatsApp (+39 329 073 9936)",
         ch_wa_sub: "Message Marco: reply within 24 hours",
         ch_tel_tag: "Direct Phone Call",
         ch_tel_sub: "Marco Laurenti • Viewings by appointment: weekday afternoons and weekends",
@@ -4738,8 +4767,8 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         ch_pdf_title: "Sales sheet as a PDF (A4) ↗",
         ch_pdf_sub: "4 pages in English with facts, floor plan and photos: save, forward or print",
         ch_loc_tag: "Property Address",
-        ch_loc_sub: "Just steps from Il Giulia Shopping Center (PAM) & Bus Lines 6, 9, 35 (right downstairs)",
-        contact_box_title: "Request Information or Schedule a Viewing",
+        ch_loc_sub: "Il Giulia shopping centre (PAM) and buses 6, 9 and 35 right outside",
+        contact_box_title: "Ask a question or book a viewing",
         contact_name_label: "Full Name *",
         contact_phone_label: "Phone / WhatsApp",
         contact_email_label: "Email Address",
@@ -4753,7 +4782,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         offer_term_mortgage: "Mortgage already approved",
         offer_term_tbd: "To be agreed directly with the owner",
         contact_msg_label: "Preferred Viewing Times or Notes",
-        contact_submit_btn: "<svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-chat\"/></svg> Send Direct Inquiry via WhatsApp to Marco",
+        contact_submit_btn: "<svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-chat\"/></svg> Send on WhatsApp",
         contact_legal_note: "Your details are used only to reply to you: if you choose WhatsApp they go through WhatsApp (Meta); if you use the form they go through Formspree, which forwards them to Marco by e-mail. <a href=\"privacy.html\">Privacy notice</a>",
 
         footer_specs: "9th and top floor with lift • Energy Class B (2024) • Covered parking S1 (13 m²)",
@@ -4831,6 +4860,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         hero_btn_video: "▶ Videos ansehen",
         hero_btn_3d: "Interaktives 3D-Modell öffnen ↓",
         hero_btn_visit: "Besichtigung vereinbaren",
+        hero_extra: "Wohnen Sie im Ausland? <a href=\"#richiesta\" data-pick=\"videovisita\">Live-Videobesichtigung</a> per WhatsApp · Schon entschieden? <a href=\"#richiesta\" data-pick=\"offerta\">Schriftliches Angebot abgeben</a>",
 
         cap1_num: "Kapitel 01 • Überblick",
         cap1_title: "Neun Stockwerke über der Stadt – und alles vor der Haustür.",
@@ -4866,7 +4896,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         vid1_caption_sub: "Die Aufnahme beginnt beim Golf von Triest am Horizont, gesehen aus dem Fenster des Meerzimmers, und öffnet sich dann ins Zimmer.",
         vid1_tag: "Meerzimmer",
         vid1_title: "Fernblick aufs Meer",
-        vid1_desc: "Vom Golf am Horizont ins Meerzimmer.",
+        vid1_desc: "Der Blick bis zum Meer aus dem Fenster des Meerzimmers.",
         vid6_badge: "<span><svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-video\"/></svg></span> Ganzer Rundgang",
         vid6_caption_title: "Die ganze Wohnung in 75 Sekunden",
         vid6_caption_sub: "Vom Eingang zur Terrasse, von den Zimmern zu den Bädern: echte Aufnahmen und Fotos, mit Raumnamen und Größen in den Untertiteln.",
@@ -4945,7 +4975,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         gfil_notte: "Zimmer & Bäder",
         gfil_edificio: "Technik & Gebäude",
 
-        cap7_num: "Kapitel 08 • Grundbuch (Tavolare) & Mietrendite",
+        cap7_num: "Kapitel 08 • Grundbuch- & Katasterdaten · Miete",
         cap7_title: "Grundbuch- und Katasterdaten",
         cap7_subtitle: "Grundbuch- und Katasterunterlagen stimmen überein, die baurechtliche Konformität ist von einem Architekten bestätigt, die Wohnung ist zum Notartermin bezugsfrei.",
         cad_card1_title: "Wohnung + Tiefgaragenstellplatz",
@@ -4992,6 +5022,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         tax_second_note: "9 % Registersteuer auf 130.251 € (Katasterertrag × 1,05 × 120) + 100 € feste Abgaben. Gilt, wenn Sie ohne Wohnsitzverlegung kaufen.",
         tax_foot: "Katasterertrag: Wohnung 945,12 € + Stellplatz 88,62 €. Hinzu kommt das Notarhonorar, das üblicherweise der Käufer trägt. Richtwerte: verbindlich ist die Berechnung des Notars.",
         faq_title: "Häufige Fragen",
+        faq_link: "<a href=\"#domande\">Kauf aus dem Ausland? 11 praktische Antworten →</a>",
         faq_q1: "Kann ich kaufen, wenn ich nicht in Italien lebe?",
         faq_a1: "Ja. Sie brauchen eine italienische Steuernummer (codice fiscale), erhältlich bei der Agenzia delle Entrate oder einem italienischen Konsulat. Für EU-Bürger gibt es keine Einschränkungen; für andere gilt die Gegenseitigkeit mit ihrem Land. Ohne Wohnsitzverlegung nach Triest gelten die Steuern für Zweitwohnungen. Italienische Staatsbürger mit Wohnsitz im Ausland (AIRE) können in manchen Fällen die Erstwohnsitz-Sätze auch ohne Wohnsitzverlegung erhalten: Fragen Sie den Notar.",
         faq_q2: "Wie läuft der Kauf ab?",
@@ -5060,7 +5091,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         contact_form_btn: "<svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-mail\"/></svg> Pošlji prek obrazca (odgovor po e-pošti ali telefonu)",
         v3d_tour: "◉ Vstopite v Loft v 360°",
         v3d_tours_lbl: "◉ V notranjosti idej, v 360°:",
-        kf_12: "<span class=\"kf-l\">Razpoložljivost</span><span class=\"kf-v\">Prosto ob podpisu pogodbe</span>",
+        kf_12: "<span class=\"kf-l\">Razpoložljivost</span><span class=\"kf-v\">Prosto ob podpisu kupoprodajne pogodbe pri notarju</span>",
         kf_14: "<span class=\"kf-l\">Uporabna površina</span><span class=\"kf-v\">~85 m² neto (projektni načrt)</span>",
         kf_15: "<span class=\"kf-l\">Dostop</span><span class=\"kf-v\">Brez stopnic do stanovanja (klančina in dvigalo); 14 notranjih stopnic do garaže</span>",
         kf_16: "<span class=\"kf-l\">Trgovine in avtobusi</span><span class=\"kf-v\">»Il Giulia« (PAM) na 30–40 m, skoraj povsem pod streho; avtobusi 6, 9, 35 na ~60 m</span>",
@@ -5108,7 +5139,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         nav_contatto: "Ogled",
         nav_cta: "<svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-chat\"/></svg> <span class=\"cta-txt\">Pišite Marcu</span>",
         hero_tag: "NAPRODAJ • TRST • VIA GIULIA 77 • 9. IN ZADNJE NADSTROPJE",
-        hero_title: "Zadnje nadstropje v Trstu s pogledom na Kras in pokritim parkiriščem.",
+        hero_title: "Zadnje nadstropje v Trstu s pogledom na Kras in pokritim parkirnim mestom.",
         hero_price: "349.000 € · parkirno mesto vključeno · brez provizije",
         video_fallback: "Vaš brskalnik ne podpira videa HTML5.",
         hero_subtitle: "108 m² (katastrska; ~85 m² neto) v 9. in zadnjem nadstropju: terasa s pogledom na Kras, morje v daljavi iz dveh sob, <strong>energijski razred B</strong> (EPgl,nren 59,09 kWh/m²a) in lastno pokrito parkirno mesto.",
@@ -5120,6 +5151,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         hero_btn_video: "▶ Oglejte si videe",
         hero_btn_3d: "Raziščite 3D-prerez ↓",
         hero_btn_visit: "Dogovorite se za ogled",
+        hero_extra: "Živite v tujini? <a href=\"#richiesta\" data-pick=\"videovisita\">Video ogled v živo</a> prek WhatsAppa · Ste se že odločili? <a href=\"#richiesta\" data-pick=\"offerta\">Oddajte pisno ponudbo</a>",
         cap1_num: "Poglavje 01 • Pregled",
         cap1_title: "Devet nadstropij nad mestom, vse pa pred vrati.",
         cap1_subtitle: "Živeti v 9. in zadnjem nadstropju na Via Giulia 77 pomeni svetlobo z dveh strani, kraško planoto pred sabo in mestni promet daleč spodaj.",
@@ -5151,7 +5183,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         vid1_caption_sub: "Posnetek se začne pri Tržaškem zalivu na obzorju, ujetem v okno Morske sobe, nato pa se razširi na sobo.",
         vid1_tag: "Morska soba",
         vid1_title: "Morje v daljavi",
-        vid1_desc: "Od zaliva na obzorju v Morsko sobo.",
+        vid1_desc: "Pogled na morje v daljavi skozi okno Morske sobe.",
         vid6_badge: "<span><svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-video\"/></svg></span> Celoten ogled",
         vid6_caption_title: "Celotno stanovanje v 75 sekundah",
         vid6_caption_sub: "Od vhoda do terase, od sob do kopalnic: pravi posnetki in fotografije, z imeni in velikostmi prostorov v podnapisih.",
@@ -5225,9 +5257,9 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         gfil_cucina: "Kuhinja",
         gfil_notte: "Sobe in kopalnici",
         gfil_edificio: "Napeljave in stavba",
-        cap7_num: "Poglavje 08 • Zemljiška knjiga (tavolare) in donos",
+        cap7_num: "Poglavje 08 • Zemljiškoknjižni in katastrski podatki · Najem",
         cap7_title: "Zemljiškoknjižni in katastrski podatki",
-        cap7_subtitle: "Zemljiškoknjižni in katastrski podatki so usklajeni, skladnost s prostorskimi predpisi je potrdil arhitekt, stanovanje je prosto ob podpisu pogodbe.",
+        cap7_subtitle: "Zemljiškoknjižni in katastrski podatki so usklajeni, skladnost s prostorskimi predpisi je potrdil arhitekt, stanovanje je prosto ob podpisu kupoprodajne pogodbe pri notarju.",
         cad_card1_title: "Stanovanje + pokrito parkirno mesto",
         cad_card2_title: "Za vlagatelje: ocena najemnine",
         yield_btn_conc: "Dogovorjena najemnina 3+2 (z olajšavami)",
@@ -5271,10 +5303,11 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         tax_second_note: "Registrska taksa 9 % od 130.251 € (katastrski dohodek × 1,05 × 120) + 100 € fiksnih dajatev. Velja, če kupite brez prijave prebivališča.",
         tax_foot: "Katastrski dohodek: stanovanje 945,12 € + parkirno mesto 88,62 €. Dodatno se plača notar, običajno ga plača kupec. Okvirni zneski: velja izračun notarja.",
         faq_title: "Pogosta vprašanja",
+        faq_link: "<a href=\"#domande\">Kupujete iz tujine? 11 praktičnih odgovorov →</a>",
         faq_q1: "Ali lahko kupim, če ne živim v Italiji?",
         faq_a1: "Da. Potrebujete italijansko davčno številko (codice fiscale), ki jo izda italijanska davčna uprava ali italijanski konzulat. Za državljane EU ni omejitev; za druge velja vzajemnost z njihovo državo. Če ne prijavite prebivališča v Trstu, veljajo davki za drugo stanovanje. Italijanski državljani s prebivališčem v tujini (vpisani v AIRE) lahko v nekaterih primerih dobijo davke za prvo stanovanje tudi brez prijave prebivališča: vprašajte notarja.",
         faq_q2: "Kako poteka nakup?",
-        faq_a2: "Po ogledu oddate pisno ponudbo. Ko je sprejeta, podpišete predpogodbo z aro; kupoprodajna pogodba se nato podpiše pri notarju, ki ga izbere kupec, običajno v dveh do treh mesecih (odvisno od morebitnega kredita). Stanovanje je prosto ob podpisu pogodbe.",
+        faq_a2: "Po ogledu oddate pisno ponudbo. Ko je sprejeta, podpišete predpogodbo z aro; kupoprodajna pogodba se nato podpiše pri notarju, ki ga izbere kupec, običajno v dveh do treh mesecih (odvisno od morebitnega kredita). Stanovanje je prosto ob podpisu kupoprodajne pogodbe pri notarju.",
         faq_q3: "Kaj je sistem zemljiške knjige (tavolare)?",
         faq_a3: "V Trstu se, tako kot na drugih območjih nekdanje Avstro-Ogrske, lastnina vpisuje v zemljiško knjigo (Libro Fondiario): na kupca preide z vpisom, ki ga pred odobritvijo preveri sodnik. To je dodatno jamstvo v primerjavi s preostalo Italijo — in sistem, ki ga v Sloveniji dobro poznate.",
         faq_q4: "Stavbna pravica in PEEP: kaj to pomeni za kupca?",
@@ -6375,7 +6408,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
       "Zugang",
       "Dostop"
       ],
-      "Ascensore al piano 9 fino al portone d'ingresso e due rampe interne per l'autorimessa S1": [
+      "L'ascensore porta dal 9° piano al piano terra; da lì due rampe interne scendono al garage S1": [
       "Lift from the 9th floor to the front door, then two internal flights of stairs to the S1 garage",
       "Aufzug vom 9. Stock bis zur Haustür, dann zwei Innentreppen zur Garage S1",
       "Dvigalo iz 9. nadstropja do vhodnih vrat, nato dve notranji stopnišči do garaže S1"
@@ -6473,7 +6506,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
       "Libero al rogito": [
       "Vacant on completion",
       "Bezugsfrei zum Notartermin",
-      "Prosto ob podpisu pogodbe"
+      "Prosto ob podpisu kupoprodajne pogodbe pri notarju"
       ],
       "Sistema tavolare (Libro Fondiario)": [
       "Land Register system (Libro Fondiario)",
@@ -6510,7 +6543,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
       "11 Min.",
       "11 min"
       ],
-      "Centro commerciale \"Il Giulia\" (PAM) a 30–40 metri e fermata dei bus 6, 9, 35 a circa 60": [
+      "Centro commerciale \"Il Giulia\" (PAM) a 30–40 metri e fermata dei bus 6, 9, 35 a circa 60 metri": [
       "“Il Giulia” shopping centre (PAM) 30–40 metres away and the stop for buses 6, 9, 35 about 60 metres away",
       "Einkaufszentrum „Il Giulia“ (PAM) in 30–40 Metern und Haltestelle der Busse 6, 9, 35 in etwa 60 Metern",
       "Nakupovalno središče »Il Giulia« (PAM) na 30–40 metrov in postaja avtobusov 6, 9, 35 na približno 60 metrov"
@@ -6890,10 +6923,10 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
       "Volleigentum bereits zu 0 € genehmigt",
       "Polna lastnina že odobrena za 0 €"
       ],
-      "(Comune di Trieste, lettera P.G. 0090278 del 20/04/2026, accettata il 21/04/2026). Oggi: proprietà superficiaria 1/1 (diritto di superficie PEEP, valido fino al 16/04/2086, rinnovabile). Manca solo la firma della nuova convenzione dal notaio, con data fissata dal Comune: la trasformazione non costa nulla, si paga solo l'onorario del notaio.": [
-      "(City of Trieste, letter ref. P.G. 0090278 of 20/04/2026, accepted on 21/04/2026). Today: surface-right ownership 1/1 (PEEP diritto di superficie, valid until 16/04/2086, renewable). Only the signing of the new agreement before a notary remains, on a date set by the City: the conversion is free, only the notary's fee applies.",
-      "(Stadt Triest, Schreiben P.G. 0090278 vom 20.04.2026, angenommen am 21.04.2026). Derzeit: Baurecht 1/1 (diritto di superficie aus dem geförderten Wohnbau PEEP, gültig bis 16.04.2086, verlängerbar). Es fehlt nur die Unterzeichnung der neuen Vereinbarung beim Notar, den Termin legt die Stadt fest: Die Umwandlung ist kostenlos, es fällt nur das Notarhonorar an.",
-      "(Občina Trst, dopis P.G. 0090278 z dne 20. 4. 2026, sprejet 21. 4. 2026). Danes: stavbna pravica 1/1 (diritto di superficie iz programa PEEP, velja do 16. 4. 2086, podaljšljiva). Manjka le podpis nove pogodbe pri notarju, datum določi občina: preoblikovanje je brezplačno, plača se le notar."
+      "(Comune di Trieste, lettera P.G. 0090278 del 20/04/2026, accettata il 21/04/2026). Oggi: proprietà superficiaria 1/1 (diritto di superficie PEEP, valido fino al 16/04/2086, rinnovabile). Manca solo la firma della nuova convenzione dal notaio, con data fissata dal Comune: la trasformazione non costa nulla, si paga solo l'onorario del notaio. Se la firma non avviene prima del rogito, chi compra ottiene la trasformazione alle stesse condizioni, a costo zero: paga solo il notaio.": [
+      "(City of Trieste, letter ref. P.G. 0090278 of 20/04/2026, accepted on 21/04/2026). Today: surface-right ownership 1/1 (PEEP diritto di superficie, valid until 16/04/2086, renewable). Only the signing of the new agreement before a notary remains, on a date set by the City: the conversion is free, only the notary's fee applies. If it has not been signed before completion, the buyer obtains the conversion on the same terms, free of charge: only the notary's fee applies.",
+      "(Stadt Triest, Schreiben P.G. 0090278 vom 20.04.2026, angenommen am 21.04.2026). Derzeit: Baurecht 1/1 (diritto di superficie aus dem geförderten Wohnbau PEEP, gültig bis 16.04.2086, verlängerbar). Es fehlt nur die Unterzeichnung der neuen Vereinbarung beim Notar, den Termin legt die Stadt fest: Die Umwandlung ist kostenlos, es fällt nur das Notarhonorar an. Ist sie bis zum Notartermin nicht unterzeichnet, erhält der Käufer die Umwandlung zu denselben Bedingungen kostenlos und zahlt nur den Notar.",
+      "(Občina Trst, dopis P.G. 0090278 z dne 20. 4. 2026, sprejet 21. 4. 2026). Danes: stavbna pravica 1/1 (diritto di superficie iz programa PEEP, velja do 16. 4. 2086, podaljšljiva). Manjka le podpis nove pogodbe pri notarju, datum določi občina: preoblikovanje je brezplačno, plača se le notar. Če do podpisa pri notarju še ni podpisana, kupec preoblikovanje dobi pod enakimi pogoji brezplačno: plača le notarja."
       ],
       "Pianta dell'appartamento com'è oggi, con i nomi delle stanze e le superfici": [
       "Floor plan of the flat as it is today, with room names and sizes",
