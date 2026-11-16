@@ -133,7 +133,7 @@
   <line x1="330" y1="128" x2="330" y2="243" stroke="#F3E5AB" stroke-opacity="0.7" stroke-width="0.8" stroke-dasharray="3 3"/>
   <rect x="322.5" y="53.5" width="4" height="71.5" fill="#16181C"/>
 
-  <circle cx="598" cy="141" r="9" fill="#6B8A4E"/><circle cx="595" cy="138" r="4" fill="#8FA77C"/>
+  <!-- 13/11/2026: tolta la pianta alla portafinestra del living (nel 3D non c'è) -->
 
   <!-- Tavolo OVALE in rovere per 6 e lampada in carta di riso -->
   <g filter="url(#sh)">

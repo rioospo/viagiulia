@@ -364,6 +364,43 @@
     .vg3d-preview .hud-3d-top, .vg3d-preview .hud-3d-controls, .vg3d-preview .hud-3d-legend, .vg3d-preview .hud-room-card,
     .vg3d-preview .vgi-card, .vg3d-preview .vgi-mode, .vg3d-preview .nav-home-btn, .vg3d-preview .nav-hint { display: none !important; }
 
+    /* ===== 13/11/2026: comandi raccolti e modello sgombro =====
+       - "Opzioni": un solo pulsante per Quote m², Luce, 360°, Immagine 4K
+       - "Vista intera": sempre visibile, sotto i pulsanti dello zoom
+       - su computer i comandi stanno in due fasce scure ai lati e il modello è inquadrato nello spazio in mezzo */
+    .hud-opts { position: relative; display: inline-flex; }
+    .hud-opts-btn .chev { font-size: 0.65rem; color: #94A3B8; }
+    .hud-opts-menu {
+      display: none; position: absolute; top: calc(100% + 6px); left: 0; z-index: 20; flex-direction: column; gap: 6px;
+      padding: 8px; min-width: 214px; border-radius: 14px; background: rgba(14, 18, 26, 0.97);
+      border: 1px solid rgba(56, 189, 248, 0.32); box-shadow: 0 14px 34px rgba(0, 0, 0, 0.5);
+    }
+    .hud-opts.open .hud-opts-menu { display: flex; }
+    .hud-opts-menu .hud-pill { justify-content: flex-start; box-shadow: none; white-space: nowrap; }
+    .vgi-mode { display: none !important; }   /* lo stato (reale o concept) si legge nel menu dei progetti */
+    .nav-home-btn {
+      left: auto !important; right: 12px; top: calc(40% + 54px); bottom: auto !important; transform: none !important;
+      opacity: 1 !important; pointer-events: auto !important; font-size: 0.7rem; padding: 7px 10px; z-index: 13;
+    }
+    @media (min-width: 769px) { .nav-home-btn { right: 20px; top: calc(50% + 58px); } }
+    @media (max-width: 999px) { .hud-top-actions { justify-content: flex-start; flex-wrap: nowrap; } }
+    @media (min-width: 1000px) {
+      body::before, body::after { content: ""; position: fixed; top: 0; bottom: 0; width: 184px; z-index: 11; pointer-events: none; background: #0B0D11; }
+      body::before { left: 0; border-right: 1px solid rgba(212, 175, 55, 0.22); }
+      body::after { right: 0; border-left: 1px solid rgba(212, 175, 55, 0.22); }
+      .hud-3d-top { left: 12px; right: auto; width: 160px; justify-content: flex-start; }
+      .hud-top-actions { flex-direction: column; align-items: stretch; width: 160px; }
+      .hud-opts, .hud-opts-btn { width: 100%; }
+      .hud-opts-btn { justify-content: space-between; }
+      .hud-3d-controls.hud-fold { left: 12px; max-width: 160px; }
+      .hud-3d-controls.hud-fold .hud-fold-tab, .hud-3d-legend.hud-fold .hud-fold-tab { white-space: normal; }
+      .hud-3d-controls.hud-fold.open, .hud-3d-controls.hud-fold:hover { max-width: none; }
+      .hud-3d-legend.hud-fold { right: 12px; max-width: 160px; }
+      .hud-3d-legend.hud-fold.open, .hud-3d-legend.hud-fold:hover { max-width: 340px; }
+      .zoom-3d { right: 69px; }
+      .nav-home-btn { right: 12px; width: 160px; justify-content: center; top: calc(50% + 62px); }
+    }
+
     @media (max-width: 768px) {
       .hud-3d-legend { display: none; }
       .hud-3d-controls { left: 12px; right: 12px; width: auto; bottom: 12px; padding: 14px; }
@@ -397,21 +434,26 @@
       <button id="btnToggleStaging" onclick="toggleStaging3D()" class="hud-pill" data-t="hud_btn_staging">
         <svg class="ico" aria-hidden="true"><use href="#i-home"/></svg> Stato Reale (Sgombro)
       </button>
-      <button id="btnToggleSqm" onclick="toggleSqm3D()" class="hud-pill" data-t="hud_btn_sqm">
-        <svg class="ico" aria-hidden="true"><use href="#i-ruler"/></svg> Quote m²
-      </button>
-      <button id="btnToggleTheme" onclick="cycleTheme3D()" class="hud-pill active" data-t="theme1">
-        <svg class="ico" aria-hidden="true"><use href="#i-sun"/></svg> Luce: Studio Chiaro
-      </button>
-      <button id="btnToggleSpin" onclick="toggleAutoSpin3D()" class="hud-pill" data-t="hud_btn_spin">
-        <svg class="ico" aria-hidden="true"><use href="#i-rotate"/></svg> 360°
-      </button>
-      <button id="btnDownload4K" onclick="download4K3D()" class="hud-pill gold-pill" data-t="hud_btn_render4k">
-        <svg class="ico" aria-hidden="true"><use href="#i-camera"/></svg> Render 4K
-      </button>
-      <button onclick="resetCam3D()" class="hud-pill" data-t="hud_reset">
-        ↺ Reset Vista
-      </button>
+      <!-- 13/11/2026: le opzioni secondarie stanno in un solo menu; "Vista intera" è accanto allo zoom -->
+      <div class="hud-opts" id="hudOpts">
+        <button type="button" class="hud-pill hud-opts-btn" onclick="toggleOpts3D(event)" aria-haspopup="true" aria-expanded="false">
+          <span data-t="hud_opts">⚙ Opzioni</span> <span class="chev">▾</span>
+        </button>
+        <div class="hud-opts-menu" role="menu">
+          <button id="btnToggleSqm" onclick="toggleSqm3D()" class="hud-pill" data-t="hud_btn_sqm">
+            <svg class="ico" aria-hidden="true"><use href="#i-ruler"/></svg> Quote m²
+          </button>
+          <button id="btnToggleTheme" onclick="cycleTheme3D()" class="hud-pill active" data-t="theme1">
+            <svg class="ico" aria-hidden="true"><use href="#i-sun"/></svg> Luce: Studio Chiaro
+          </button>
+          <button id="btnToggleSpin" onclick="toggleAutoSpin3D()" class="hud-pill" data-t="hud_btn_spin">
+            <svg class="ico" aria-hidden="true"><use href="#i-rotate"/></svg> 360°
+          </button>
+          <button id="btnDownload4K" onclick="download4K3D()" class="hud-pill gold-pill" data-t="hud_btn_render4k">
+            <svg class="ico" aria-hidden="true"><use href="#i-camera"/></svg> Render 4K
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -538,6 +580,11 @@
     future: { it: '✦ Come potrebbe diventare', en: '✦ How it could become', de: '✦ Wie sie werden könnte', sl: '✦ Kakšno bi lahko postalo' },
     enter: { it: 'Entra nell’idea · 360°', en: 'Step inside · 360°', de: 'Eintreten · 360°', sl: 'Vstopite · 360°' },
     walk: { it: 'Video', en: 'Video', de: 'Video', sl: 'Video' },
+    // 13/11/2026: menu unico dei progetti e scheda ridotta
+    ddReal: { it: 'Planimetria di oggi', en: 'Today’s floor plan', de: 'Heutiger Grundriss', sl: 'Današnji tloris' },
+    ddConcept: { it: 'Concept · idee di arredo', en: 'Concepts · furnishing ideas', de: 'Konzepte · Einrichtungsideen', sl: 'Koncepti · ideje opreme' },
+    qFoto: { it: 'Foto', en: 'Photos', de: 'Fotos', sl: 'Foto' },
+    qOpen: { it: 'Apri o chiudi i dettagli', en: 'Show or hide details', de: 'Details ein- oder ausblenden', sl: 'Pokaži ali skrij podrobnosti' },
     pending: { it: 'Dopo in arrivo', en: 'After coming soon', de: 'Nachher folgt', sl: 'Potem kmalu' },
     pendingNote: { it: 'Foto di oggi. Il render del concept da questa stessa inquadratura è in preparazione.', en: 'Today’s photo. The concept render from this same viewpoint is in preparation.', de: 'Heutiges Foto. Das Konzept-Rendering aus derselben Perspektive ist in Vorbereitung.', sl: 'Današnja fotografija. Upodobitev koncepta z istega mesta je v pripravi.' }
   };
@@ -1651,10 +1698,16 @@
     c.tall(B.IW, B.IN, B.IE, B.IN + t, low || 88, m, 0);                 // Nord (nel Loft solo fino al muro basso)
   }
   // scaldasalviette verticale nero sulla parete Ovest, tra la porta e il dente (largo 20 unità ≈ 35 cm)
-  function bgTowel(c) {
-    var x = BG.IW + 1.3, BL = MT.black;
-    c.tall(x, 422, x + 1.4, 423.4, 52, BL, 10); c.tall(x, 440.6, x + 1.4, 442, 52, BL, 10);
-    for (var y = 13; y <= 59; y += 4.6) c.tall(x + 0.1, 423.4, x + 1.3, 440.6, 0.8, BL, y);
+  // 13/11/2026: la versione larga (20 unità) vale solo per La Famiglia (wide); Classica e Loft tornano com'erano (15,6 unità)
+  function bgTowel(c, wide) {
+    var x = BG.IW + 1.3, BL = MT.black, y;
+    if (wide) {
+      c.tall(x, 422, x + 1.4, 423.4, 52, BL, 10); c.tall(x, 440.6, x + 1.4, 442, 52, BL, 10);
+      for (y = 13; y <= 59; y += 4.6) c.tall(x + 0.1, 423.4, x + 1.3, 440.6, 0.8, BL, y);
+      return;
+    }
+    c.bx(x, 424, x + 1.4, 425.2, 52, BL, 10); c.bx(x, 440.8, x + 1.4, 442, 52, BL, 10);
+    for (y = 13; y <= 59; y += 4.6) c.bx(x + 0.1, 425.2, x + 1.2, 440.8, 0.7, BL, y);
   }
 
   // LA CLASSICA · "Pietra chiara" (8/11 sera: il terrazzo a scaglie è stato giudicato troppo vistoso dall'utente):
@@ -1735,7 +1788,7 @@
     c.bx(B.IE - 3.0, 463.4, B.IE - 2.0, 464.6, 1.5, MT.black, 36);
     handShower(c, 'E', B.IE - 1.3, 455.5, 30);
     rug(c, 345, 400, 400, 422, MT.linen);
-    bgTowel(c);
+    bgTowel(c, true);
     // lucernario virtuale: pannello di cielo a filo soffitto con cornice sottile
     if (hq) {
       c.bx(350, 398, 460, 486, 0.4, MT.sky, CE - 0.45);
@@ -2193,10 +2246,13 @@
   // APPLICAZIONE DI UN'IDEA (con animazione demolizioni / costruzioni)
   // ---------------------------------------------------------------------------
   function tween(dur, tok, fn, done) {
-    var t0 = performance.now();
+    // 13/11/2026: un solo orologio. Prima la partenza veniva da performance.now() e l'avanzamento dal tempo dei fotogrammi:
+    // quando i due non coincidono (dispositivo o scheda sospesi) i muri rossi restavano fermi e poi diventavano colonne altissime.
+    var t0 = null;
     function st(now) {
       if (tok !== S.token) return;
-      var p = Math.min(1, (now - t0) / dur), e = p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2;
+      if (t0 === null) t0 = now;
+      var p = Math.max(0, Math.min(1, (now - t0) / dur)), e = p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2;
       fn(e);
       if (p < 1) requestAnimationFrame(st); else if (done) done();
     }
@@ -2348,7 +2404,27 @@
     '.vgi-body{padding:0 16px 16px}',
     '.vgi-collapsed .vgi-body{display:none}',
     '.vgi-card.vgi-collapsed{width:280px}',
-    '@media (hover:hover){.vgi-card.vgi-collapsed:hover{width:332px}.vgi-card.vgi-collapsed:hover .vgi-body{display:block}}',
+    // 13/11/2026: la scheda ridotta non si apre più al passaggio del mouse, solo con un clic; menu unico dei progetti
+    '.vgi-bar{position:relative;display:inline-flex;padding:0;border:0;background:none;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;border-radius:0}',
+    '.vgi-bar .vgi-dd-btn{display:inline-flex;align-items:center;justify-content:space-between;gap:8px;width:100%;padding:9px 14px;border-radius:100px;background:rgba(15,19,28,.94);border:1px solid rgba(56,189,248,.6);color:#BAE6FD;font-size:.78rem}',
+    '.vgi-bar .vgi-dd-btn.idea{border-color:#D4AF37;color:#F3E5AB}',
+    '.vgi-dd-btn .chev{font-style:normal;font-size:.65rem;opacity:.8}',
+    '.vgi-dd-menu{display:none;position:absolute;top:calc(100% + 6px);left:0;z-index:20;min-width:230px;flex-direction:column;gap:4px;padding:8px;border-radius:14px;background:rgba(14,18,26,.97);border:1px solid rgba(212,175,55,.45);box-shadow:0 14px 34px rgba(0,0,0,.5)}',
+    '.vgi-bar.open .vgi-dd-menu{display:flex}',
+    // con la tendina aperta (telefono) la scheda del concept sparisce, altrimenti copre le scelte
+    '@media (max-width:999px){body.vgi-dd-open .vgi-card{display:none!important}}',
+    '.vgi-bar .vgi-dd-menu button{text-align:left;border-radius:10px;padding:9px 12px;white-space:normal}',
+    '.vgi-dd-menu small{display:block;font-size:.66rem;font-weight:500;opacity:.75;margin-top:2px}',
+    '.vgi-dd-lbl{font-family:"Space Grotesk",sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#D4AF37;padding:8px 12px 2px;border-top:1px solid rgba(255,255,255,.1);margin-top:4px}',
+    '.vgi-head{cursor:pointer}',
+    '.vgi-quick{display:none;gap:6px;padding:0 14px 12px}',
+    '.vgi-collapsed .vgi-quick{display:flex}',
+    '.vgi-quick button{font:inherit;font-size:.72rem;font-weight:700;padding:6px 10px;border-radius:100px;border:1px solid rgba(212,175,55,.5);background:rgba(212,175,55,.12);color:#F3E5AB;cursor:pointer}',
+    '.vgi-card.vgi-collapsed{width:230px}',
+    // su computer, nella fascia di sinistra, l'elenco è sempre aperto: Stato Reale e sotto le tre idee, senza dover aprire la tendina
+    '@media (min-width:1000px){.vgi-bar .vgi-dd-btn{display:none}.vgi-dd-menu{display:flex;position:static;min-width:0;width:100%;padding:6px;box-shadow:none;background:rgba(18,22,30,.9)}.vgi-bar .vgi-dd-menu button{padding:10px 10px;font-size:.8rem;border:1px solid rgba(255,255,255,.08)}.vgi-bar .vgi-dd-menu button:not(.on):hover{border-color:rgba(212,175,55,.6)}.vgi-dd-menu small{font-size:.64rem;line-height:1.3}}',
+    '@media (min-width:1000px){.vgi-bar{width:100%}.vgi-card{right:12px}.vgi-card.vgi-collapsed{width:160px}.vgi-collapsed .vgi-head{padding:10px 10px 8px}.vgi-collapsed .vgi-tag{display:none}.vgi-collapsed .vgi-name{font-size:1rem}.vgi-collapsed .vgi-quick{padding:0 10px 10px;flex-wrap:wrap}}',
+    '@media (max-width:768px){.vgi-card.vgi-collapsed{right:auto;width:200px}.vgi-collapsed .vgi-kick,.vgi-collapsed .vgi-tag{display:none}.vgi-collapsed .vgi-head{padding:9px 12px 7px}.vgi-collapsed .vgi-quick{padding:0 12px 10px}}',
     '.vgi-chips{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 12px}',
     '.vgi-chips span{font-size:.72rem;font-weight:600;padding:4px 10px;border-radius:100px;background:rgba(212,175,55,.12);border:1px solid rgba(212,175,55,.32);color:#F3E5AB}',
     '.vgi-pts{list-style:none;margin:0 0 12px;padding:0;display:grid;gap:7px}',
@@ -2374,6 +2450,9 @@
     '.vgi-lang button.on{color:#0B0D11;background:#D4AF37;border-color:#D4AF37}',
     '.vgi-badge{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);z-index:15;pointer-events:none;font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:.8rem;letter-spacing:.16em;color:#0B0D11;background:#38BDF8;padding:8px 16px;border-radius:100px;display:none}',
     '.vgi-hold .vgi-badge,body.vgi-hold .vgi-badge{display:block}',
+    // 13/11/2026: la scritta "PRIMA · stato reale" non sta più in mezzo al modello ma in basso, fuori dalla planimetria
+    '.vgi-badge{top:auto;bottom:calc(18px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);font-size:.72rem;padding:7px 14px;white-space:nowrap}',
+    '@media (max-width:768px){.vgi-badge{bottom:calc(64px + env(safe-area-inset-bottom,0px))}}',
     '.vgi-lb{position:fixed;inset:0;z-index:30;background:rgba(5,7,10,.92);display:none;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}',
     '.vgi-lb.show{display:flex}',
     '.vgi-lb img{max-width:100%;max-height:100%;border-radius:10px;box-shadow:0 20px 60px rgba(0,0,0,.6)}',
@@ -2505,6 +2584,7 @@
     S.ui = { bar: bar, card: card, badge: badge, lb: lb, mode: mode, cbox: cb };
     S.collapsed = true; // 6/11/2026: la scheda parte ridotta (nome dell'idea); si apre al passaggio del mouse o con ▾
     window.addEventListener('resize', placeCard);
+    document.addEventListener('click', function (e) { if (bar.classList.contains('open') && !bar.contains(e.target)) { bar.classList.remove('open'); document.body.classList.remove('vgi-dd-open'); } });
     // Il motore originale si interrompe in updateWallHeight prima di chiamare onWallHeight:
     // ascoltiamo direttamente il cursore e i preset per tenere allineati muri nuovi e arredi alti.
     var resyncSoon = function () { setTimeout(function () { var hh = S.ctx.getWallH(); syncDoorCaps(hh); if (!S.cur) return; S.cur.walls.forEach(function (m) { resyncWall(m, hh); }); syncTall(S.cur, hh); }, 0); };
@@ -2516,6 +2596,7 @@
   function placeCard() {
     var top = document.querySelector('.hud-3d-top');
     var y = top ? top.getBoundingClientRect().bottom + 10 : 70;
+    if (window.innerWidth >= 1000) y = 16;   // su computer la scheda sta nella fascia di destra, in alto
     S.ui.card.style.top = Math.round(y) + 'px';
     var maxH = window.innerHeight - y - 24;
     if (window.innerWidth < 768) {
@@ -2531,12 +2612,19 @@
     if (!S.ui.bar) return;
     var bar = S.ui.bar;
     // le tre idee stanno in un gruppo dorato con l'etichetta "Come potrebbe diventare": si capisce che sono progetti, non lo stato attuale
-    bar.innerHTML = '<button class="vgi-real' + (S.idea ? '' : ' on') + '" data-id=""><svg class="ico" aria-hidden="true"><use href="#i-home"/></svg> ' + esc(tr(TXT.real)) + '</button>' +
-      '<span class="vgi-future"><span class="vgi-future-lbl">' + esc(tr(TXT.future)) + '</span>' +
-      ORDER.map(function (k) { return '<button class="' + (S.idea === k ? 'on' : '') + '" data-id="' + k + '">' + esc(IDEAS[k].name) + '</button>'; }).join('') +
-      '</span>';
-    Array.prototype.forEach.call(bar.querySelectorAll('button'), function (b) {
-      b.addEventListener('click', function () { var id = b.getAttribute('data-id') || null; if (id === S.idea) return; select(id); });
+    // 13/11/2026: un solo menu a tendina, con due sezioni: Stato Reale · Concept (La Classica, La Famiglia, Il Loft)
+    bar.classList.remove('open'); document.body.classList.remove('vgi-dd-open');
+    bar.innerHTML ='<button type="button" class="vgi-dd-btn' + (S.idea ? ' idea' : '') + '" aria-haspopup="true" aria-expanded="false">' +
+      '<span class="vgi-dd-cur">' + (S.idea ? '✦ ' + esc(IDEAS[S.idea].name) : '<svg class="ico" aria-hidden="true"><use href="#i-home"/></svg> ' + esc(tr(TXT.real))) + '</span><i class="chev">▾</i></button>' +
+      '<div class="vgi-dd-menu" role="menu">' +
+      '<button class="vgi-real' + (S.idea ? '' : ' on') + '" data-id="" role="menuitem"><svg class="ico" aria-hidden="true"><use href="#i-home"/></svg> ' + esc(tr(TXT.real)) + '<small>' + esc(tr(TXT.ddReal)) + '</small></button>' +
+      '<div class="vgi-dd-lbl">' + esc(tr(TXT.ddConcept)) + '</div>' +
+      ORDER.map(function (k) { return '<button class="' + (S.idea === k ? 'on' : '') + '" data-id="' + k + '" role="menuitem">' + esc(IDEAS[k].name) + '<small>' + esc(tr(IDEAS[k].tag)) + '</small></button>'; }).join('') +
+      '</div>';
+    var ddBtn = bar.querySelector('.vgi-dd-btn');
+    ddBtn.addEventListener('click', function (e) { e.stopPropagation(); var op = bar.classList.toggle('open'); document.body.classList.toggle('vgi-dd-open', op); ddBtn.setAttribute('aria-expanded', op ? 'true' : 'false'); });
+    Array.prototype.forEach.call(bar.querySelectorAll('button[data-id]'), function (b) {
+      b.addEventListener('click', function () { var id = b.getAttribute('data-id') || null; bar.classList.remove('open'); document.body.classList.remove('vgi-dd-open'); if (id === S.idea) return; select(id); });
     });
     S.ui.badge.textContent = tr(TXT.before);
     S.ui.mode.textContent = S.idea ? '✦ ' + tr(TXT.concept).toUpperCase() + ' · ' + IDEAS[S.idea].name.toUpperCase() : '● ' + tr(TXT.modeReal);
@@ -2550,7 +2638,10 @@
     card.innerHTML =
       '<div class="vgi-head"><div class="vgi-t"><div class="vgi-kick">' + esc(tr(TXT.concept)) + ' · Via Giulia 77</div>' +
       '<div class="vgi-name">' + esc(I.name) + '</div><div class="vgi-tag">' + esc(tr(I.tag)) + '</div></div>' +
-      '<button class="vgi-tog" aria-label="Espandi o riduci">' + (S.collapsed ? '▾' : '▴') + '</button></div>' +
+      '<button class="vgi-tog" aria-label="' + esc(tr(TXT.qOpen)) + '">' + (S.collapsed ? '▾' : '▴') + '</button></div>' +
+      // scheda ridotta: solo il nome e due scorciatoie (Foto prima/dopo, Video); i dettagli si aprono con un tocco
+      '<div class="vgi-quick">' + (I.shots && I.shots.length ? '<button type="button" class="qf"><svg class="ico" aria-hidden="true"><use href="#i-camera"/></svg> ' + esc(tr(TXT.qFoto)) + '</button>' : '') +
+      (window.VG77Tour && VG77Tour.has(S.idea) ? '<button type="button" class="qv">▶ ' + esc(tr(TXT.walk)) + '</button>' : '') + '</div>' +
       '<div class="vgi-body">' +
       '<div class="vgi-chips">' + tr(I.chips).map(function (t) { return '<span>' + esc(t) + '</span>'; }).join('') + '</div>' +
       (window.VG77Tour && VG77Tour.has(S.idea) ? '<div class="vgi-in"><button type="button" class="g">◉ ' + esc(tr(TXT.enter)) + '</button><button type="button" class="v">▶ ' + esc(tr(TXT.walk)) + '</button></div>' : '') +
@@ -2574,7 +2665,11 @@
       ['it', 'en', 'de'].map(function (l) { return '<button data-l="' + l + '" class="' + (S.lang === l ? 'on' : '') + '">' + l.toUpperCase() + '</button>'; }).join('') +
       '</div></div></div>';
     card.classList.toggle('vgi-collapsed', S.collapsed);
-    card.querySelector('.vgi-tog').addEventListener('click', function () { setCollapsed(!S.collapsed); });
+    card.querySelector('.vgi-tog').addEventListener('click', function (e) { e.stopPropagation(); setCollapsed(!S.collapsed); });
+    card.querySelector('.vgi-head').addEventListener('click', function () { setCollapsed(!S.collapsed); });
+    var qf = card.querySelector('.vgi-quick .qf'), qv = card.querySelector('.vgi-quick .qv');
+    if (qf) qf.addEventListener('click', function () { var s0 = I.shots[0]; S.openCompare(shotItem(s0), S.avail[afterSrc(s0)] !== true, I.shots, 0); });
+    if (qv) qv.addEventListener('click', function () { VG77Tour.video(S.idea); });
     card.querySelector('.vgi-plan').addEventListener('click', function () { var im = S.ui.lb.querySelector('img'); im.src = I.plan; im.alt = I.name; S.ui.lb.classList.add('show'); });
     Array.prototype.forEach.call(card.querySelectorAll('.vgi-tours button'), function (b) { b.addEventListener('click', function () { tour(b.getAttribute('data-v')); }); });
     var tin = card.querySelector('.vgi-in .g'), tv = card.querySelector('.vgi-in .v');
@@ -2669,7 +2764,7 @@
       pill: 'Via Giulia 77 (9° Piano) • Rilievo Fedele 108 m²',
       hud_btn_staging: '<svg class="ico" aria-hidden="true"><use href="#i-home"/></svg> Stato Reale (Sgombro)', hud_btn_sqm: '<svg class="ico" aria-hidden="true"><use href="#i-ruler"/></svg> Quote m²',
       theme0: '<svg class="ico" aria-hidden="true"><use href="#i-moon"/></svg> Luce: Dark Studio', theme1: '<svg class="ico" aria-hidden="true"><use href="#i-sun"/></svg> Luce: Studio Chiaro', theme2: '<svg class="ico" aria-hidden="true"><use href="#i-sunset"/></svg> Luce: Atmosfera Sera',
-      hud_btn_spin: '<svg class="ico" aria-hidden="true"><use href="#i-rotate"/></svg> 360°', hud_btn_render4k: '<svg class="ico" aria-hidden="true"><use href="#i-camera"/></svg> Scarica immagine 4K', render_back: '<svg class="ico" aria-hidden="true"><use href="#i-cube"/></svg> Torna al 3D Interattivo', hud_reset: '↺ Reset Vista',
+      hud_btn_spin: '<svg class="ico" aria-hidden="true"><use href="#i-rotate"/></svg> 360°', hud_btn_render4k: '<svg class="ico" aria-hidden="true"><use href="#i-camera"/></svg> Scarica immagine 4K', render_back: '<svg class="ico" aria-hidden="true"><use href="#i-cube"/></svg> Torna al 3D Interattivo', hud_reset: '↺ Reset Vista', hud_opts: '⚙ Opzioni',
       nav_home: '⌂ Vista intera', photo: 'Foto Reale',
       hud_ctl_tab: 'Pareti e inquadrature', hud_wall_height: 'Altezza Spaccato Pareti', hud_wall_low: 'Pianta Bassa', hud_wall_mid: 'Spaccato 3D', hud_wall_full: 'Pareti Piene',
       hud_cam_presets: 'Inquadrature Camera &amp; Ambienti', views: '6 Viste',
@@ -2693,7 +2788,7 @@
       pill: 'Via Giulia 77 (9th Floor) • True Survey 108 m²',
       hud_btn_staging: '<svg class="ico" aria-hidden="true"><use href="#i-home"/></svg> Unfurnished (Real)', hud_btn_sqm: '<svg class="ico" aria-hidden="true"><use href="#i-ruler"/></svg> Areas m²',
       theme0: '<svg class="ico" aria-hidden="true"><use href="#i-moon"/></svg> Light: Dark Studio', theme1: '<svg class="ico" aria-hidden="true"><use href="#i-sun"/></svg> Light: Clear Studio', theme2: '<svg class="ico" aria-hidden="true"><use href="#i-sunset"/></svg> Light: Evening Mood',
-      hud_btn_spin: '<svg class="ico" aria-hidden="true"><use href="#i-rotate"/></svg> 360°', hud_btn_render4k: '<svg class="ico" aria-hidden="true"><use href="#i-camera"/></svg> Download 4K image', render_back: '<svg class="ico" aria-hidden="true"><use href="#i-cube"/></svg> Back to Interactive 3D', hud_reset: '↺ Reset View',
+      hud_btn_spin: '<svg class="ico" aria-hidden="true"><use href="#i-rotate"/></svg> 360°', hud_btn_render4k: '<svg class="ico" aria-hidden="true"><use href="#i-camera"/></svg> Download 4K image', render_back: '<svg class="ico" aria-hidden="true"><use href="#i-cube"/></svg> Back to Interactive 3D', hud_reset: '↺ Reset View', hud_opts: '⚙ Options',
       nav_home: '⌂ Whole home', photo: 'Real Photo',
       hud_ctl_tab: 'Walls & views', hud_wall_height: 'Cutaway Wall Height', hud_wall_low: 'Low Plan', hud_wall_mid: '3D Cutaway', hud_wall_full: 'Full Walls',
       hud_cam_presets: 'Camera Presets &amp; Rooms', views: '6 Views',
@@ -2717,7 +2812,7 @@
       pill: 'Via Giulia 77 (9. Stock) • Maßgetreues Aufmaß 108 m²',
       hud_btn_staging: '<svg class="ico" aria-hidden="true"><use href="#i-home"/></svg> Leerzustand (Original)', hud_btn_sqm: '<svg class="ico" aria-hidden="true"><use href="#i-ruler"/></svg> Flächen m²',
       theme0: '<svg class="ico" aria-hidden="true"><use href="#i-moon"/></svg> Licht: Dark Studio', theme1: '<svg class="ico" aria-hidden="true"><use href="#i-sun"/></svg> Licht: Hell-Studio', theme2: '<svg class="ico" aria-hidden="true"><use href="#i-sunset"/></svg> Licht: Abendstimmung',
-      hud_btn_spin: '<svg class="ico" aria-hidden="true"><use href="#i-rotate"/></svg> 360°', hud_btn_render4k: '<svg class="ico" aria-hidden="true"><use href="#i-camera"/></svg> 4K-Bild herunterladen', render_back: '<svg class="ico" aria-hidden="true"><use href="#i-cube"/></svg> Zurück zum interaktiven 3D', hud_reset: '↺ Ansicht zurücksetzen',
+      hud_btn_spin: '<svg class="ico" aria-hidden="true"><use href="#i-rotate"/></svg> 360°', hud_btn_render4k: '<svg class="ico" aria-hidden="true"><use href="#i-camera"/></svg> 4K-Bild herunterladen', render_back: '<svg class="ico" aria-hidden="true"><use href="#i-cube"/></svg> Zurück zum interaktiven 3D', hud_reset: '↺ Ansicht zurücksetzen', hud_opts: '⚙ Optionen',
       nav_home: '⌂ Ganze Wohnung', photo: 'Originalfoto',
       hud_ctl_tab: 'Wände & Ansichten', hud_wall_height: 'Wandhöhe Schnittmodell', hud_wall_low: 'Flacher Plan', hud_wall_mid: '3D-Schnitt', hud_wall_full: 'Volle Wände',
       hud_cam_presets: 'Kameraperspektiven &amp; Räume', views: '6 Ansichten',
@@ -2740,7 +2835,7 @@
     sl: {
       pill: 'Via Giulia 77 (9. nadstropje) • Natančna izmera 108 m²', hud_btn_staging: '<svg class="ico" aria-hidden="true"><use href="#i-home"/></svg> Prazno (sedanje stanje)', hud_btn_sqm: '<svg class="ico" aria-hidden="true"><use href="#i-ruler"/></svg> Površine m²',
       theme0: '<svg class="ico" aria-hidden="true"><use href="#i-moon"/></svg> Svetloba: temni studio', theme1: '<svg class="ico" aria-hidden="true"><use href="#i-sun"/></svg> Svetloba: svetli studio', theme2: '<svg class="ico" aria-hidden="true"><use href="#i-sunset"/></svg> Svetloba: večerno vzdušje',
-      hud_btn_spin: '<svg class="ico" aria-hidden="true"><use href="#i-rotate"/></svg> 360°', hud_btn_render4k: '<svg class="ico" aria-hidden="true"><use href="#i-camera"/></svg> Prenesi sliko 4K', render_back: '<svg class="ico" aria-hidden="true"><use href="#i-cube"/></svg> Nazaj na interaktivni 3D', hud_reset: '↺ Ponastavi pogled',
+      hud_btn_spin: '<svg class="ico" aria-hidden="true"><use href="#i-rotate"/></svg> 360°', hud_btn_render4k: '<svg class="ico" aria-hidden="true"><use href="#i-camera"/></svg> Prenesi sliko 4K', render_back: '<svg class="ico" aria-hidden="true"><use href="#i-cube"/></svg> Nazaj na interaktivni 3D', hud_reset: '↺ Ponastavi pogled', hud_opts: '⚙ Možnosti',
       nav_home: '⌂ Celo stanovanje', photo: 'Prava fotografija', hud_ctl_tab: 'Stene in pogledi', hud_wall_height: 'Višina sten v prerezu',
       hud_wall_low: 'Nizek tloris', hud_wall_mid: '3D-prerez', hud_wall_full: 'Polne stene', hud_cam_presets: 'Pogledi kamere &amp; prostori',
       views: '6 pogledov', btn_preset_iso: 'Pogled na celoto', btn_preset_top: 'Tloris 2D', btn_preset_living: 'Dnevna soba &amp; terasa',
@@ -2945,7 +3040,7 @@
         { id: 'terrazzo', x: 560, z: 80, yaw: 5, img: 'img/tour/famiglia/terrazzo.jpg', links: ['living', 'cucina'], n: { it: 'Terrazzo', en: 'Terrace', de: 'Terrasse', sl: 'Terasa' } },
         { id: 'lounge', x: 280, z: 150, yaw: 90, img: 'img/tour/famiglia/lounge.jpg', links: ['living', 'galleria'], n: { it: 'Stanza di famiglia', en: 'Family lounge', de: 'Familienlounge', sl: 'Družinski salon' } },
         { id: 'galleria', x: 296, z: 330, yaw: 180, img: 'img/tour/famiglia/galleria.jpg', links: ['living', 'lounge', 'cameretta', 'suite', 'bagno_famiglia'], n: { it: 'Galleria notte', en: 'Night corridor', de: 'Nachtflur', sl: 'Nočni hodnik' } },
-        { id: 'cameretta', x: 170, z: 292, yaw: 100, img: 'img/tour/famiglia/cameretta.jpg', links: ['galleria'], n: { it: 'Cameretta fratelli', en: 'Siblings’ room', de: 'Geschwisterzimmer', sl: 'Otroška soba' } },
+        { id: 'cameretta', x: 225, z: 318, yaw: 100, img: 'img/tour/famiglia/cameretta.jpg', links: ['galleria'], n: { it: 'Cameretta fratelli', en: 'Siblings’ room', de: 'Geschwisterzimmer', sl: 'Otroška soba' } },
         { id: 'suite', x: 200, z: 600, yaw: 20, img: 'img/tour/famiglia/suite.jpg', links: ['galleria', 'bagno_privato'], n: { it: 'Camera dei genitori', en: 'Parents’ bedroom', de: 'Elternschlafzimmer', sl: 'Spalnica staršev' } },
         { id: 'bagno_privato', x: 322, z: 520, yaw: -110, img: 'img/tour/famiglia/bagno_privato.jpg', links: ['suite'], n: { it: 'Bagno privato genitori', en: 'Private ensuite bathroom', de: 'Privates Elternbad', sl: 'Zasebna kopalnica staršev' } },
         { id: 'bagno_famiglia', x: 405, z: 425, yaw: 180, img: 'img/tour/famiglia/bagno_famiglia.jpg', links: ['galleria'], n: { it: 'Bagno famiglia "Il Cielo"', en: 'Family bathroom "Il Cielo"', de: 'Familienbad "Il Cielo"', sl: 'Družinska kopalnica "Il Cielo"' } }
@@ -3296,7 +3391,8 @@
 
       const aspect = window.innerWidth / window.innerHeight;
       const frustumSize = 335;
-      camera3D = new THREE.OrthographicCamera(-frustumSize * aspect, frustumSize * aspect, frustumSize, -frustumSize, -3000, 3000);
+      const bk0 = bandK3D();
+      camera3D = new THREE.OrthographicCamera(-frustumSize * aspect * bk0, frustumSize * aspect * bk0, frustumSize * bk0, -frustumSize * bk0, -3000, 3000);
       camera3D.position.set(520, 640, 620);
 
       controls3D = new THREE.OrbitControls(camera3D, renderer3D.domElement);
@@ -4654,12 +4750,12 @@
       });
 
       window.addEventListener('resize', () => {
-        const a = window.innerWidth / window.innerHeight;
+        const a = window.innerWidth / window.innerHeight, bk = bandK3D();
         renderer3D.setSize(window.innerWidth, window.innerHeight);
-        camera3D.left = -frustumSize * a;
-        camera3D.right = frustumSize * a;
-        camera3D.top = frustumSize;
-        camera3D.bottom = -frustumSize;
+        camera3D.left = -frustumSize * a * bk;
+        camera3D.right = frustumSize * a * bk;
+        camera3D.top = frustumSize * bk;
+        camera3D.bottom = -frustumSize * bk;
         camera3D.updateProjectionMatrix();
       });
 
@@ -5103,9 +5199,11 @@
     function animateCameraTo(pos, target, zoomVal = 1.0, duration = 650) {
       if (camAnimId) cancelAnimationFrame(camAnimId);
       const startPos = camera3D.position.clone(), startTarget = controls3D.target.clone(), startZoom = camera3D.zoom;
-      const endPos = new THREE.Vector3(...pos), endTarget = new THREE.Vector3(...target), t0 = performance.now();
+      const endPos = new THREE.Vector3(...pos), endTarget = new THREE.Vector3(...target);
+      let t0 = null;   // 13/11/2026: un solo orologio (quello dei fotogrammi), altrimenti la camera può schizzare via
       function step(now) {
-        const p = Math.min(1, (now - t0) / duration), ease = 1 - Math.pow(1 - p, 3);
+        if (t0 === null) t0 = now;
+        const p = Math.max(0, Math.min(1, (now - t0) / duration)), ease = 1 - Math.pow(1 - p, 3);
         camera3D.position.lerpVectors(startPos, endPos, ease);
         controls3D.target.lerpVectors(startTarget, endTarget, ease);
         camera3D.zoom = startZoom + (zoomVal - startZoom) * ease;
@@ -5188,6 +5286,20 @@
     }
 
     // pannelli compatti (comandi, legenda): un clic/tocco sulla linguetta li tiene aperti o li richiude
+    // 13/11/2026: menu "Opzioni" (si chiude con un clic fuori o con Esc)
+    function toggleOpts3D(ev) {
+      if (ev) ev.stopPropagation();
+      const box = document.getElementById('hudOpts'), open = box.classList.toggle('open');
+      box.querySelector('.hud-opts-btn').setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+    document.addEventListener('click', (e) => {
+      const box = document.getElementById('hudOpts');
+      if (box && box.classList.contains('open') && !box.contains(e.target)) { box.classList.remove('open'); box.querySelector('.hud-opts-btn').setAttribute('aria-expanded', 'false'); }
+    });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { const box = document.getElementById('hudOpts'); if (box) box.classList.remove('open'); } });
+    // 13/11/2026: su computer i comandi stanno in due fasce laterali (184 px): il modello viene inquadrato nello spazio in mezzo
+    function bandK3D() { const w = window.innerWidth; return w >= 1000 ? w / (w - 2 * 184) : 1; }
+
     function toggleFold3D(el) {
       const open = el.classList.toggle('open');
       const tab = el.querySelector('.hud-fold-tab'); if (tab) tab.setAttribute('aria-expanded', open ? 'true' : 'false');
