@@ -379,17 +379,6 @@
     .hero-first > .hero-price { animation-delay: 0.16s; }
     .hero-content > .hero-subhead { animation-delay: 0.24s; }
     .hero-content > .hero-badges-row { animation-delay: 0.32s; }
-    /* 16/11/2026 (audit 2): video-visita e offerta visibili nel primo schermo, anche sul telefono */
-    .hero-content > .hero-extra { animation: heroTxtIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.4s both; }
-    .hero-extra { margin-top: 18px; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; }
-    .hero-extra a { color: var(--sand-light); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--border-gold); }
-    .hero-extra a:hover, .hero-extra a:focus-visible { color: #fff; text-decoration-color: var(--sand-gold); }
-    @media (max-width: 768px) {
-      /* sul telefono la riga video-visita/offerta sale sopra le etichette, così resta nel primo schermo in tutte le lingue */
-      .hero-content { display: flex; flex-direction: column; align-items: flex-start; }
-      .hero-content > .hero-badges-row { order: 2; }
-      .hero-extra { margin-top: -4px; margin-bottom: 4px; font-size: 0.9rem; line-height: 1.5; }
-    }
     @keyframes heroImgIn { from { opacity: 0; } to { opacity: 1; } }
     #heroSlide0::before { content: ''; position: absolute; inset: 0; background: url(img/web/video/poster_hero_glide.jpg?v=3) center / cover no-repeat; filter: brightness(0.70) contrast(1.04); animation: heroImgIn 3.5s ease-out 0.3s both; }
     #heroSlide0 video { position: relative; }
@@ -1948,17 +1937,25 @@
       .hero-headline { font-size: 1.7rem; margin-bottom: 14px; }
       .hero-subhead { margin-bottom: 16px; }
     }
-    /* 16/11/2026 sera (richiesta di Marco): sul telefono il primo schermo è la vista, con solo titolo e prezzo in basso;
-       descrizione, video-visita/offerta ed etichette arrivano scorrendo. La barra in basso compare quando si scorre. */
+    /* 16/11/2026 sera (richiesta di Marco): il primo schermo è la vista, con solo titolo e prezzo in basso;
+       descrizione, etichette e pulsanti arrivano scorrendo. Vale per telefono e computer.
+       Sul telefono la barra in basso compare quando si scorre. */
+    .hero-cinema { display: block; height: auto; min-height: 0; padding: 0 0 56px; }
+    .cinema-slideshow, .cinema-overlay { bottom: auto; height: 100vh; height: 100svh; }
+    .cinema-overlay { background: linear-gradient(180deg, rgba(11,13,17,0.45) 0%, rgba(11,13,17,0) 16%, rgba(11,13,17,0) 45%, rgba(11,13,17,0.7) 80%, var(--bg-dark) 100%); }
+    .hero-first { display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; position: relative; min-height: 100vh; min-height: 100svh; padding: 120px 0 72px; }
+    .hero-first .hero-headline { margin-bottom: 14px; }
+    .hero-first .hero-price { margin: 0; padding: 0; background: none; border: 0; font-size: 1.2rem; font-weight: 700; line-height: 1.45; text-shadow: 0 2px 12px rgba(0,0,0,0.85); }
+    .hero-scroll-cue { display: block; position: absolute; left: 50%; bottom: 22px; width: 16px; height: 16px; margin-left: -8px; border-right: 2px solid var(--sand-light); border-bottom: 2px solid var(--sand-light); transform: rotate(45deg); opacity: 0.75; animation: heroCue 2.2s ease-in-out 1.5s infinite; }
+    .hero-cinema .slide-indicators { top: calc(100svh - 44px); bottom: auto; }
+    .hero-content > .hero-subhead { margin-top: 16px; }
     @media (max-width: 768px) {
-      .hero-cinema { display: block; height: auto; min-height: 0; padding: 0 0 36px; }
-      .cinema-slideshow, .cinema-overlay { bottom: auto; height: 100vh; height: 100svh; }
-      .cinema-overlay { background: linear-gradient(180deg, rgba(11,13,17,0.45) 0%, rgba(11,13,17,0) 16%, rgba(11,13,17,0) 42%, rgba(11,13,17,0.72) 78%, var(--bg-dark) 100%); }
-      .hero-first { display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; position: relative; min-height: 100vh; min-height: 100svh; padding: 80px 0 50px; }
+      .hero-cinema { padding-bottom: 36px; }
+      .hero-first { padding: 80px 0 50px; }
       .hero-cinema .eyebrow { display: none; }
       .hero-first .hero-headline { font-size: 1.8rem; margin-bottom: 12px; }
-      .hero-first .hero-price { margin: 0; padding: 0; background: none; border: 0; font-size: 0.95rem; font-weight: 700; line-height: 1.45; text-shadow: 0 2px 12px rgba(0,0,0,0.85); }
-      .hero-scroll-cue { display: block; position: absolute; left: 50%; bottom: 14px; width: 14px; height: 14px; margin-left: -7px; border-right: 2px solid var(--sand-light); border-bottom: 2px solid var(--sand-light); transform: rotate(45deg); opacity: 0.75; animation: heroCue 2.2s ease-in-out 1.5s infinite; }
+      .hero-first .hero-price { font-size: 0.95rem; }
+      .hero-scroll-cue { bottom: 14px; width: 14px; height: 14px; margin-left: -7px; }
       .hero-cinema .slide-indicators { display: none; }
       .hero-content > .hero-subhead { margin-top: 8px; }
       .mobile-bottom-bar { transition: transform 0.35s ease, opacity 0.35s ease; }
@@ -2226,7 +2223,6 @@
         <a href="#richiesta" class="btn-cinema btn-gold" data-i18n="hero_btn_visit">Dogovorite se za ogled</a>
         <a href="#videotour" class="btn-cinema btn-ghost" data-i18n="hero_btn_video">▶ Oglejte si videe</a>
       </div>
-      <p class="hero-extra" data-i18n="hero_extra">Živite v tujini? <a href="#richiesta" data-pick="videovisita">Video ogled v živo</a> prek WhatsAppa · Ste se že odločili? <a href="#richiesta" data-pick="offerta">Oddajte pisno ponudbo</a></p>
     </div>
 
     <div class="slide-indicators">
@@ -4085,14 +4081,7 @@
       window.addEventListener('scroll', upd, { passive: true });
     })();
 
-    // link «Video-visita» / «Fai un'offerta» del primo schermo: preselezionano la voce giusta del modulo
-    document.addEventListener('click', (e) => {
-      const a = e.target.closest && e.target.closest('a[data-pick]');
-      const sel = document.getElementById('usrType');
-      if (!a || !sel) return;
-      sel.value = a.getAttribute('data-pick');
-      toggleOfferFields();
-    });
+
 
     // senza indirizzo Formspree il secondo pulsante non compare: resta l'invio su WhatsApp
     document.addEventListener('DOMContentLoaded', () => {
@@ -4281,7 +4270,6 @@
         hero_btn_video: "▶ Guarda i video",
         hero_btn_3d: "Esplora lo Spaccato 3D ↓",
         hero_btn_visit: "Prenota una visita",
-        hero_extra: "Abiti lontano? <a href=\"#richiesta\" data-pick=\"videovisita\">Video-visita in diretta</a> su WhatsApp · Hai già deciso? <a href=\"#richiesta\" data-pick=\"offerta\">Fai un'offerta scritta</a>",
 
         cap1_num: "Capitolo 01 • Panoramica",
         cap1_title: "Nove piani sopra la città, con tutto sotto casa.",
@@ -4574,7 +4562,6 @@
         hero_btn_video: "▶ Watch the videos",
         hero_btn_3d: "Explore 3D Cutaway Model ↓",
         hero_btn_visit: "Book a viewing",
-        hero_extra: "Live abroad? <a href=\"#richiesta\" data-pick=\"videovisita\">Live video tour</a> on WhatsApp · Ready to buy? <a href=\"#richiesta\" data-pick=\"offerta\">Make a written offer</a>",
 
         cap1_num: "Chapter 01 • Overview",
         cap1_title: "Nine floors above the city, with everything at your door.",
@@ -4867,7 +4854,6 @@
         hero_btn_video: "▶ Videos ansehen",
         hero_btn_3d: "Interaktives 3D-Modell öffnen ↓",
         hero_btn_visit: "Besichtigung vereinbaren",
-        hero_extra: "Wohnen Sie im Ausland? <a href=\"#richiesta\" data-pick=\"videovisita\">Live-Videobesichtigung</a> per WhatsApp · Schon entschieden? <a href=\"#richiesta\" data-pick=\"offerta\">Schriftliches Angebot abgeben</a>",
 
         cap1_num: "Kapitel 01 • Überblick",
         cap1_title: "Neun Stockwerke über der Stadt – und alles vor der Haustür.",
@@ -5158,7 +5144,6 @@
         hero_btn_video: "▶ Oglejte si videe",
         hero_btn_3d: "Raziščite 3D-prerez ↓",
         hero_btn_visit: "Dogovorite se za ogled",
-        hero_extra: "Živite v tujini? <a href=\"#richiesta\" data-pick=\"videovisita\">Video ogled v živo</a> prek WhatsAppa · Ste se že odločili? <a href=\"#richiesta\" data-pick=\"offerta\">Oddajte pisno ponudbo</a>",
         cap1_num: "Poglavje 01 • Pregled",
         cap1_title: "Devet nadstropij nad mestom, vse pa pred vrati.",
         cap1_subtitle: "Živeti v 9. in zadnjem nadstropju na Via Giulia 77 pomeni svetlobo z dveh strani, kraško planoto pred sabo in mestni promet daleč spodaj.",
