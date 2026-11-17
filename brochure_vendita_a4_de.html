@@ -305,7 +305,9 @@
     .tb-lang a { color: #cbd5e1; text-decoration: none; font-size: 11px; font-weight: 700; padding: 8px 10px; letter-spacing: 0.04em; }
     .tb-lang a:hover { color: #fff; }
     .tb-lang a[aria-current] { background: var(--gold); color: #0b0d11; }
-    .data-table.kv td:first-child { width: 26%; }
+    .data-table.kv td:first-child { width: 22%; }
+    /* pag. 4: tabella dei dati più compatta, così il piè di pagina resta nel foglio anche in tedesco e sloveno (17/11/2026) */
+    .data-table.kv td { padding: 3.5px 6px; font-size: 10.5px; line-height: 1.4; }
     .offer-card { border: 2px dashed var(--gold); background: #fdfbf7; }
     .offer-title { font-size: 11.5px; font-weight: 800; color: var(--dark); text-transform: uppercase; line-height: 1.3; margin-bottom: 6px; }
     .offer-body { font-size: 10.5px; color: var(--text-muted); line-height: 1.45; }
@@ -354,7 +356,7 @@
     <div>
       <div class="page-header">
         <div class="brand">VIA GIULIA 77 <span>9. UND OBERSTE ETAGE • TRIEST</span></div>
-        <div class="page-tag">S. 01/04 • ÜBERBLICK &amp; LAGE</div>
+        <div class="page-tag">S. 01/04 • DIE WOHNUNG AUF EINEN BLICK</div>
       </div>
 
       <div class="hero-box">
@@ -375,7 +377,7 @@
         <div class="pill green"><svg class="ico" aria-hidden="true"><use href="#i-bolt"/></svg> Klasse B (59,09 kWh/m²a)</div>
         <div class="pill"><svg class="ico" aria-hidden="true"><use href="#i-window"/></svg> IPR-Fenster, Dreifachverglasung (Ug 0,7 • Bora-Klasse 5)</div>
         <div class="pill"><svg class="ico" aria-hidden="true"><use href="#i-bag"/></svg> Einkaufszentrum „Il Giulia“ (PAM) in 30–40 m • Bus 6, 9, 35</div>
-        <div class="pill"><svg class="ico" aria-hidden="true"><use href="#i-cert"/></svg> Umwandlung in Volleigentum bereits zu 0 € genehmigt</div>
+        <div class="pill"><svg class="ico" aria-hidden="true"><use href="#i-cert"/></svg> Volleigentum für 0 €: Betrag von der Stadt festgelegt</div>
       </div>
 
       <div class="grid-2col">
@@ -397,27 +399,27 @@
 
         <div style="display: flex; flex-direction: column; justify-content: space-between;">
           <div class="card" style="height: 100%;">
-            <div class="card-title">Die 5 Stärken der Wohnung</div>
+            <div class="card-title">5 Stärken der Wohnung</div>
             <ul style="list-style: none; font-size: 11px; display: flex; flex-direction: column; gap: 8px;">
               <li>
-                <strong style="color: var(--dark);">1. 9. und oberste Etage (Blick &amp; Licht):</strong><br>
+                <strong style="color: var(--dark);">1. 9. und oberste Etage: Aussicht und Licht</strong><br>
                 <span style="color: var(--text-muted);">Darüber liegt nur die große Gemeinschaftsterrasse mit den Solarmodulen: keine Nachbarn über Ihnen. Der Verkehr bleibt unten, gedämpft durch die Dreifachverglasung.</span>
               </li>
               <li>
-                <strong style="color: var(--dark);">2. Eigener Tiefgaragenplatz S1 (13 m²):</strong><br>
-                <span style="color: var(--text-muted);">Ein eigener Stellplatz, in dieser Gegend selten. Der Aufzug fährt von der 9. Etage bis zum Hauseingang; von dort führen 2 Treppenläufe im Haus (14 Stufen) hinunter in die Garage.</span>
+                <strong style="color: var(--dark);">2. Eigener Tiefgaragenplatz (S1, 13 m²):</strong><br>
+                <span style="color: var(--text-muted);">Im Kaufpreis enthalten. Der Aufzug fährt von der 9. Etage bis zum Hauseingang; von dort führen 2 Treppenläufe im Haus (14 Stufen) hinunter in die Garage.</span>
               </li>
               <li>
-                <strong style="color: var(--dark);">3. Klasse B &amp; Superbonus-Arbeiten schon erledigt:</strong><br>
+                <strong style="color: var(--dark);">3. Klasse B und Superbonus-Arbeiten (110 %) bereits erledigt:</strong><br>
                 <span style="color: var(--text-muted);">Außendämmung rundum, Dreifachverglasung, Sicherheitstür und Brennwerttherme (2022–2023). Schon jetzt unter den effizientesten Klassen der EU-Gebäuderichtlinie; mit Klasse B lässt sich ein grüner Kredit beantragen, zu den Bedingungen der Bank.</span>
               </li>
               <li>
-                <strong style="color: var(--dark);">4. Rampe am Eingang &amp; alles vor der Haustür:</strong><br>
+                <strong style="color: var(--dark);">4. Stufenloser Zugang und Einkaufen vor der Tür:</strong><br>
                 <span style="color: var(--text-muted);">Stufenlos bis in die Wohnung: Rampe am Hauseingang, Aufzug bis in die 9. Etage. Das Einkaufszentrum „Il Giulia“ (Supermarkt PAM) liegt 30–40 m vom Eingang, fast ganz überdacht (nur ein kurzes Stück im Freien); die Bushaltestelle der Linien 6, 9 und 35 (Zentrum, Bahnhof, Meer) ist rund 60 m entfernt.</span>
               </li>
               <li>
-                <strong style="color: var(--dark);">5. Rechtssicherheit:</strong><br>
-                <span style="color: var(--text-muted);">Umwandlung in volles Eigentum von der Stadt Triest bereits zu 0 € genehmigt (notarielle Vereinbarung ausstehend); freier Verkaufspreis ohne PEEP-Bindung; baurechtliche Konformität von einem Architekten bestätigt.</span>
+                <strong style="color: var(--dark);">5. Klare Rechtslage:</strong><br>
+                <span style="color: var(--text-muted);">Umwandlung in Volleigentum für 0 €, wie von der Stadt Triest mitgeteilt (die neue Vereinbarung ist noch beim Notar zu unterzeichnen); freier Verkaufspreis ohne PEEP-Bindung; baurechtliche Konformität von einem Architekten bestätigt.</span>
               </li>
             </ul>
           </div>
@@ -441,8 +443,8 @@
   <div class="a4-page">
     <div>
       <div class="page-header">
-        <div class="brand">RAUMAUFTEILUNG &amp; 3D-SCHNITT <span>108 M² KATASTER (6 RÄUME)</span></div>
-        <div class="page-tag">S. 02/04 • GRUNDRISS &amp; EINRICHTUNGSIDEEN</div>
+        <div class="brand">DIE RAUMAUFTEILUNG <span>108 M² KATASTER (6 RÄUME)</span></div>
+        <div class="page-tag">S. 02/04 • RÄUME UND GRUNDRISS</div>
       </div>
 
       <div class="grid-2col" style="align-items: start; margin-bottom: 12px;">
@@ -470,7 +472,7 @@
         </div>
 
         <div>
-          <div class="card-title">Maßgetreuer isometrischer 3D-Schnitt</div>
+          <div class="card-title">Auf der Website: 3D, 360° und Videos</div>
           <div class="card dark" style="padding: 10px; margin-bottom: 10px;">
             <div style="font-size: 10.5px; color: #a9b3c4; margin-bottom: 8px;">
               Auf der Verkaufswebsite lässt sich das 3D-Modell frei erkunden, mit drei Umbauideen (La Classica, La Famiglia und Il Loft), dem 360°-Rundgang und den Videos.
@@ -513,7 +515,7 @@
           <div class="img-box" style="height: 85px;">
             <img src="img/web/terrazzo_abitabile.jpg" alt="Wohnliche Terrasse mit Klinkerboden">
           </div>
-          <div style="font-size: 10px; font-weight: 700; color: var(--dark);">Terrasse zum Wohnen</div>
+          <div style="font-size: 10px; font-weight: 700; color: var(--dark);">Die Terrasse</div>
           <div style="font-size: 9.5px; color: var(--text-muted);">Klinkerboden in Terrakotta, Pfeiler in Pompejanischrot und Karstblick.</div>
         </div>
       </div>
@@ -531,7 +533,7 @@
   <div class="a4-page">
     <div>
       <div class="page-header">
-        <div class="brand">TECHNIK &amp; VERBRAUCH <span>FENSTER, SICHERHEITSTÜR + KLASSE B</span></div>
+        <div class="brand">ERLEDIGTE ARBEITEN UND VERBRAUCH <span>FENSTER, SICHERHEITSTÜR + KLASSE B</span></div>
         <div class="page-tag">S. 03/04 • ENERGIEEFFIZIENZ &amp; SICHERHEIT</div>
       </div>
 
@@ -549,7 +551,7 @@
               <tr>
                 <td><strong>PVC-Fenster</strong></td>
                 <td>Aluplast Ideal 8000, Dreifachverglasung 41 mm, unsichtbare V-Perfect-Schweißnähte</td>
-                <td class="num" style="color: var(--green); font-size: 10.5px;">Ug 0,7 • Rw 33 dB</td>
+                <td class="num" style="color: var(--green); font-size: 10.5px;">Ug 0,7 • 32 dB</td>
               </tr>
               <tr>
                 <td><strong>Rollladenkästen</strong></td>
@@ -558,8 +560,8 @@
               </tr>
               <tr>
                 <td><strong>Rollläden</strong></td>
-                <td>Gedämmtes Aluminium, Aluprof PA 43 — <strong>Windwiderstandsklasse 5</strong></td>
-                <td class="num" style="color: var(--green); font-size: 10.5px;">Bora-fest, Klasse 5</td>
+                <td>Aluminium mit PU-Dämmung, Kurbel aus Stahl</td>
+                <td class="num" style="color: var(--green); font-size: 10.5px;">IPR-Lieferung</td>
               </tr>
               <tr>
                 <td><strong>Sicherheitstür</strong></td>
@@ -595,7 +597,7 @@
 
           <table class="data-table">
             <thead>
-              <tr><th>Kennwert</th><th>Via Giulia 77 (Klasse B)</th><th>Typische Wohnung der 60er–80er Jahre (Klasse G)</th></tr>
+              <tr><th>Kennwert</th><th>Via Giulia 77 (Klasse B)</th><th>Wohnung der Klasse G (Schätzung)</th></tr>
             </thead>
             <tbody>
               <tr>
@@ -616,7 +618,7 @@
               <tr>
                 <td><strong>Eigener Heizkessel</strong></td>
                 <td><strong>Viessmann Vitodens 100-W 25 kW (2022), WLAN</strong></td>
-                <td>Oft zentral oder veraltet</td>
+                <td>Je nach Anlage</td>
               </tr>
             </tbody>
           </table>
@@ -631,7 +633,7 @@
         <div class="card">
           <div style="font-size: 11px; font-weight: 700; color: var(--dark); margin-bottom: 4px;">Schallschutz &amp; Bora-Festigkeit</div>
           <p style="font-size: 10px; color: var(--text-muted);">
-            Die Verbundglas-Dreifachverglasung 33.1/12Ar/4/12Ar/33.1 sorgt für eine Schalldämmung von <strong>33 dB</strong> und hat Warm-Edge-Abstandhalter. Rollläden und Rahmen sind zertifiziert in <strong>Windlast-Widerstandsklasse 5</strong>: gemacht für die Bora-Böen.
+            Die Verbundglas-Dreifachverglasung 33.1/12Ar/4/12Ar/33.1 sorgt für eine Schalldämmung von <strong>32 dB</strong> und hat Warm-Edge-Abstandhalter. Die Fenster sind zertifiziert in <strong>Windwiderstandsklasse 5 (EN 12210)</strong>: gemacht für die Bora-Böen.
           </p>
         </div>
         <div class="card">
@@ -656,7 +658,7 @@
     <div>
       <div class="page-header">
         <div class="brand">GRUNDBUCH &amp; ANGEBOT <span>ABLAUF DES DIREKTVERKAUFS</span></div>
-        <div class="page-tag">S. 04/04 • RECHTLICHES &amp; KONTAKT</div>
+        <div class="page-tag">S. 04/04 • RECHTLICHES UND KONTAKT</div>
       </div>
 
       <div class="card" style="margin-bottom: 12px;">
@@ -681,7 +683,7 @@
             </tr>
             <tr>
               <td><strong>Rechtslage</strong></td>
-              <td>Umwandlung in Volleigentum bereits zu 0,00 € genehmigt (Stadt Triest, Schreiben P.G. 0090278 vom 20.04.2026, angenommen am 21.04.2026): Es fehlt nur die Unterzeichnung der neuen Vereinbarung beim Notar. Derzeit: Baurecht (diritto di superficie) 1/1, eingetragen auf <strong>LAURENTI Marco</strong>, gültig bis 16.04.2086 (verlängerbar). Ist sie bis zum Notartermin nicht unterzeichnet, tritt der Käufer in dasselbe Verfahren ein: Der von der Stadt mitgeteilte Betrag ist 0 €, es bleibt nur das Notarhonorar.</td>
+              <td>Umwandlung in Volleigentum für 0 € (Stadt Triest, Schreiben P.G. 0090278 vom 20.04.2026, angenommen am 21.04.2026). Derzeit: Baurecht (diritto di superficie) 1/1, eingetragen auf <strong>LAURENTI Marco</strong>, gültig bis 16.04.2086 (verlängerbar). Abgeschlossen wird sie mit einer neuen Vereinbarung beim Notar; es fallen nur die Kosten der Urkunde an. Den Termin legt die Stadt nach einem technischen Schritt beim Grundbuchamt fest. Ist sie bis zum Notartermin nicht unterzeichnet, tritt der Käufer zu denselben Bedingungen in dasselbe Verfahren ein.</td>
             </tr>
             <tr>
               <td><strong>Verkaufspreis</strong></td>
@@ -705,7 +707,7 @@
 
       <div class="grid-2col" style="margin-bottom: 12px;">
         <div class="card">
-          <div class="card-title">Mietrendite für Anleger</div>
+          <div class="card-title">Für Anleger: Mietschätzung</div>
           <div style="font-size: 10.5px; color: var(--text-muted); margin-bottom: 6px;">
             Schätzung nach dem Mietabkommen der Stadt Triest (Zone 3, Unterstufe 2):
           </div>
@@ -748,7 +750,7 @@
               <li><strong>die Zahlungsweise</strong>: Eigenmittel oder bereits bewilligter Kredit;</li>
               <li><strong>der gewünschte Notartermin</strong>.</li>
             </ol>
-            <p>Nach der Annahme folgt der Vorvertrag mit Anzahlung; beurkundet wird dann beim <strong>vom Käufer gewählten Notar in Triest</strong>, der auch das Grundbuch prüft.</p>
+            <p>Nach der Annahme folgt der Vorvertrag mit Anzahlung (auf Wunsch setzt ihn der Notar Ihrer Wahl auf); beurkundet wird dann beim <strong>vom Käufer gewählten Notar in Triest</strong>, der auch das Grundbuch prüft.</p>
           </div>
         </div>
       </div>

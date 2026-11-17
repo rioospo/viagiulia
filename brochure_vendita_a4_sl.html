@@ -305,7 +305,9 @@
     .tb-lang a { color: #cbd5e1; text-decoration: none; font-size: 11px; font-weight: 700; padding: 8px 10px; letter-spacing: 0.04em; }
     .tb-lang a:hover { color: #fff; }
     .tb-lang a[aria-current] { background: var(--gold); color: #0b0d11; }
-    .data-table.kv td:first-child { width: 26%; }
+    .data-table.kv td:first-child { width: 22%; }
+    /* pag. 4: tabella dei dati più compatta, così il piè di pagina resta nel foglio anche in tedesco e sloveno (17/11/2026) */
+    .data-table.kv td { padding: 3.5px 6px; font-size: 10.5px; line-height: 1.4; }
     .offer-card { border: 2px dashed var(--gold); background: #fdfbf7; }
     .offer-title { font-size: 11.5px; font-weight: 800; color: var(--dark); text-transform: uppercase; line-height: 1.3; margin-bottom: 6px; }
     .offer-body { font-size: 10.5px; color: var(--text-muted); line-height: 1.45; }
@@ -354,7 +356,7 @@
     <div>
       <div class="page-header">
         <div class="brand">VIA GIULIA 77 <span>9. IN ZADNJE NADSTROPJE • TRST</span></div>
-        <div class="page-tag">STR. 01/04 • PREGLED IN LOKACIJA</div>
+        <div class="page-tag">STR. 01/04 • STANOVANJE NA KRATKO</div>
       </div>
 
       <div class="hero-box">
@@ -375,7 +377,7 @@
         <div class="pill green"><svg class="ico" aria-hidden="true"><use href="#i-bolt"/></svg> Razred B (59,09 kWh/m²a)</div>
         <div class="pill"><svg class="ico" aria-hidden="true"><use href="#i-window"/></svg> Okna IPR s trojno zasteklitvijo (Ug 0,7 • burja, razred 5)</div>
         <div class="pill"><svg class="ico" aria-hidden="true"><use href="#i-bag"/></svg> Nakupovalno središče »Il Giulia« (PAM) na 30–40 m • avtobusi 6, 9, 35</div>
-        <div class="pill"><svg class="ico" aria-hidden="true"><use href="#i-cert"/></svg> Preoblikovanje v polno lastnino že odobreno za 0 €</div>
+        <div class="pill"><svg class="ico" aria-hidden="true"><use href="#i-cert"/></svg> Polna lastnina za 0 €: znesek določila Občina</div>
       </div>
 
       <div class="grid-2col">
@@ -397,27 +399,27 @@
 
         <div style="display: flex; flex-direction: column; justify-content: space-between;">
           <div class="card" style="height: 100%;">
-            <div class="card-title">5 glavnih prednosti stanovanja</div>
+            <div class="card-title">5 prednosti stanovanja</div>
             <ul style="list-style: none; font-size: 11px; display: flex; flex-direction: column; gap: 8px;">
               <li>
-                <strong style="color: var(--dark);">1. 9. in zadnje nadstropje (razgled in svetloba):</strong><br>
+                <strong style="color: var(--dark);">1. 9. in zadnje nadstropje: razgled in svetloba</strong><br>
                 <span style="color: var(--text-muted);">Nad stanovanjem je le velika skupna strešna terasa s sončnimi paneli: nad vami ni sosedov. Promet ostaja spodaj, utišan s trojno zasteklitvijo.</span>
               </li>
               <li>
-                <strong style="color: var(--dark);">2. Lastno pokrito parkirno mesto S1 (13 m²):</strong><br>
-                <span style="color: var(--text-muted);">Lastno parkirno mesto, v tem delu mesta redkost. Dvigalo pelje iz 9. nadstropja do vhoda; od tam vodita v garažo 2 notranji stopniščni rami (14 stopnic).</span>
+                <strong style="color: var(--dark);">2. Lastno pokrito parkirno mesto (S1, 13 m²):</strong><br>
+                <span style="color: var(--text-muted);">Vključeno v ceno. Dvigalo pelje iz 9. nadstropja do vhoda; od tam vodita v garažo 2 notranji stopniščni rami (14 stopnic).</span>
               </li>
               <li>
-                <strong style="color: var(--dark);">3. Razred B in že izvedena dela s Superbonusom 110 %:</strong><br>
+                <strong style="color: var(--dark);">3. Razred B in dela s Superbonusom 110 % že opravljena:</strong><br>
                 <span style="color: var(--text-muted);">Toplotna izolacija fasade okoli in okoli, okna s trojno zasteklitvijo, protivlomna vrata in kondenzacijski kotel (2022–2023). Že med najučinkovitejšimi razredi po evropski direktivi o stavbah; razred B omogoča zeleni stanovanjski kredit, pod pogoji banke.</span>
               </li>
               <li>
-                <strong style="color: var(--dark);">4. Klančina ob vhodu in vse pred vrati:</strong><br>
+                <strong style="color: var(--dark);">4. Vhod brez stopnic in trgovine pred vrati:</strong><br>
                 <span style="color: var(--text-muted);">Do stanovanja brez stopnic: klančina do vhoda in dvigalo do 9. nadstropja. Nakupovalno središče »Il Giulia« (supermarket PAM) je 30–40 metrov od vhoda, skoraj vse pod streho (le kratek odsek je na prostem); postajališče avtobusov 6, 9 in 35 za center, železniško postajo in morje je približno 60 metrov stran.</span>
               </li>
               <li>
-                <strong style="color: var(--dark);">5. Pravna varnost:</strong><br>
-                <span style="color: var(--text-muted);">Preoblikovanje v polno lastnino je Občina Trst že odobrila za 0 € (notarski dogovor še ni podpisan); prodajna cena je prosta, brez omejitev PEEP; skladnost s prostorskimi predpisi je potrdil arhitekt.</span>
+                <strong style="color: var(--dark);">5. Jasno pravno stanje:</strong><br>
+                <span style="color: var(--text-muted);">Preoblikovanje v polno lastnino za 0 €, kot je sporočila Občina Trst (nova pogodba pri notarju še ni podpisana); prodajna cena je prosta, brez omejitev PEEP; skladnost s prostorskimi predpisi je potrdil arhitekt.</span>
               </li>
             </ul>
           </div>
@@ -441,8 +443,8 @@
   <div class="a4-page">
     <div>
       <div class="page-header">
-        <div class="brand">RAZPOREDITEV IN 3D-PREREZ <span>108 M² KATASTRSKO (6 PROSTOROV)</span></div>
-        <div class="page-tag">STR. 02/04 • TLORIS IN MOŽNOSTI OPREME</div>
+        <div class="brand">RAZPORED PROSTOROV <span>108 M² KATASTRSKO (6 PROSTOROV)</span></div>
+        <div class="page-tag">STR. 02/04 • PROSTORI IN TLORIS</div>
       </div>
 
       <div class="grid-2col" style="align-items: start; margin-bottom: 12px;">
@@ -470,7 +472,7 @@
         </div>
 
         <div>
-          <div class="card-title">Natančen izometrični 3D-prerez</div>
+          <div class="card-title">Na spletni strani: 3D, 360° in videi</div>
           <div class="card dark" style="padding: 10px; margin-bottom: 10px;">
             <div style="font-size: 10.5px; color: #a9b3c4; margin-bottom: 8px;">
               Na prodajni spletni strani lahko 3D-model prosto raziščete, s tremi idejami za prenovo (La Classica, La Famiglia in Il Loft), ogledom 360° in videoposnetki.
@@ -513,7 +515,7 @@
           <div class="img-box" style="height: 85px;">
             <img src="img/web/terrazzo_abitabile.jpg" alt="Bivalna terasa s klinker ploščicami">
           </div>
-          <div style="font-size: 10px; font-weight: 700; color: var(--dark);">Bivalna terasa</div>
+          <div style="font-size: 10px; font-weight: 700; color: var(--dark);">Terasa</div>
           <div style="font-size: 9.5px; color: var(--text-muted);">Tla iz klinker ploščic, steber v pompejanski rdeči in pogled na Kras.</div>
         </div>
       </div>
@@ -531,7 +533,7 @@
   <div class="a4-page">
     <div>
       <div class="page-header">
-        <div class="brand">TEHNIKA IN PORABA <span>OKNA, PROTIVLOMNA VRATA + RAZRED B</span></div>
+        <div class="brand">OPRAVLJENA DELA IN PORABA <span>OKNA, PROTIVLOMNA VRATA + RAZRED B</span></div>
         <div class="page-tag">STR. 03/04 • ENERGIJSKA UČINKOVITOST IN VARNOST</div>
       </div>
 
@@ -549,7 +551,7 @@
               <tr>
                 <td><strong>Okna PVC</strong></td>
                 <td>Aluplast Ideal 8000, trojna zasteklitev 41 mm, nevidni zvari V-Perfect</td>
-                <td class="num" style="color: var(--green); font-size: 10.5px;">Ug 0,7 • Rw 33 dB</td>
+                <td class="num" style="color: var(--green); font-size: 10.5px;">Ug 0,7 • 32 dB</td>
               </tr>
               <tr>
                 <td><strong>Omarice za rolete</strong></td>
@@ -558,8 +560,8 @@
               </tr>
               <tr>
                 <td><strong>Rolete</strong></td>
-                <td>Izoliran aluminij, Aluprof PA 43 — <strong>Odpornost proti vetru, razred 5</strong></td>
-                <td class="num" style="color: var(--green); font-size: 10.5px;">Odporne na burjo, razred 5</td>
+                <td>Aluminij z izolacijo iz poliuretana, jeklena ročica</td>
+                <td class="num" style="color: var(--green); font-size: 10.5px;">Dobava IPR</td>
               </tr>
               <tr>
                 <td><strong>Protivlomna vrata</strong></td>
@@ -595,7 +597,7 @@
 
           <table class="data-table">
             <thead>
-              <tr><th>Kazalnik</th><th>Via Giulia 77 (razred B)</th><th>Tipično stanovanje iz 60. do 80. let (razred G)</th></tr>
+              <tr><th>Kazalnik</th><th>Via Giulia 77 (razred B)</th><th>Stanovanje razreda G (ocena)</th></tr>
             </thead>
             <tbody>
               <tr>
@@ -616,7 +618,7 @@
               <tr>
                 <td><strong>Lasten kotel</strong></td>
                 <td><strong>Viessmann Vitodens 100-W 25 kW (2022), Wi-Fi</strong></td>
-                <td>Pogosto centralni ali zastarel</td>
+                <td>Odvisno od sistema</td>
               </tr>
             </tbody>
           </table>
@@ -631,7 +633,7 @@
         <div class="card">
           <div style="font-size: 11px; font-weight: 700; color: var(--dark); margin-bottom: 4px;">Zvočna izolacija in odpornost proti burji</div>
           <p style="font-size: 10px; color: var(--text-muted);">
-            Lepljena trojna zasteklitev 33.1/12Ar/4/12Ar/33.1 zagotavlja zvočno izolacijo <strong>33 dB</strong> in ima distančnike Warm Edge. Rolete in okvirji imajo certifikat za <strong>razred 5 odpornosti proti vetru</strong>: narejeni za sunke burje.
+            Lepljena trojna zasteklitev 33.1/12Ar/4/12Ar/33.1 zagotavlja zvočno izolacijo <strong>32 dB</strong> in ima distančnike Warm Edge. Okna imajo certifikat za <strong>razred 5 odpornosti proti vetru (EN 12210)</strong>: narejeni za sunke burje.
           </p>
         </div>
         <div class="card">
@@ -656,7 +658,7 @@
     <div>
       <div class="page-header">
         <div class="brand">ZEMLJIŠKA KNJIGA IN PONUDBA <span>POSTOPEK NEPOSREDNE PRODAJE</span></div>
-        <div class="page-tag">STR. 04/04 • PRAVNI PODATKI IN KONTAKT</div>
+        <div class="page-tag">STR. 04/04 • PRAVNI PODATKI IN STIK</div>
       </div>
 
       <div class="card" style="margin-bottom: 12px;">
@@ -681,7 +683,7 @@
             </tr>
             <tr>
               <td><strong>Pravno stanje</strong></td>
-              <td>Preoblikovanje v polno lastnino že odobreno za 0,00 € (Občina Trst, dopis P.G. 0090278 z dne 20. 4. 2026, ponudba sprejeta 21. 4. 2026): manjka le podpis nove pogodbe pri notarju. Danes: stavbna pravica 1/1, imetnik <strong>LAURENTI Marco</strong>, velja do 16. 4. 2086 (z možnostjo podaljšanja). Če do podpisa pri notarju še ni podpisana, kupec vstopi v isti postopek: znesek, ki ga je sporočila občina, je 0 €, ostane le plačilo notarja.</td>
+              <td>Preoblikovanje v polno lastnino za 0 € (Občina Trst, dopis P.G. 0090278 z dne 20. 4. 2026, sprejet 21. 4. 2026). Danes: stavbna pravica 1/1, imetnik <strong>LAURENTI Marco</strong>, velja do 16. 4. 2086 (z možnostjo podaljšanja). Zaključi se z novo pogodbo pri notarju; plačajo se le stroški notarske listine. Datum določi Občina po tehničnem koraku v zemljiški knjigi. Če pogodba do podpisa kupoprodajne pogodbe ne bo podpisana, kupec vstopi v isti postopek pod enakimi pogoji.</td>
             </tr>
             <tr>
               <td><strong>Prodajna cena</strong></td>
@@ -705,7 +707,7 @@
 
       <div class="grid-2col" style="margin-bottom: 12px;">
         <div class="card">
-          <div class="card-title">Donos za vlagatelje (oddajanje)</div>
+          <div class="card-title">Za vlagatelje: ocena najemnine</div>
           <div style="font-size: 10.5px; color: var(--text-muted); margin-bottom: 6px;">
             Ocena po tržaškem lokalnem najemninskem sporazumu (cona 3, podrazred 2):
           </div>
@@ -748,7 +750,7 @@
               <li><strong>način plačila</strong>: gotovina ali že odobren kredit;</li>
               <li><strong>želeni datum podpisa pri notarju</strong>.</li>
             </ol>
-            <p>Ko je ponudba sprejeta, se podpiše predpogodba z aro; pogodbo nato podpišete pri <strong>notarju v Trstu, ki ga izbere kupec</strong>; notar preveri tudi zemljiško knjigo.</p>
+            <p>Ko je ponudba sprejeta, se podpiše predpogodba z aro (če želite, jo pripravi notar po vaši izbiri); pogodbo nato podpišete pri <strong>notarju v Trstu, ki ga izbere kupec</strong>; notar preveri tudi zemljiško knjigo.</p>
           </div>
         </div>
       </div>

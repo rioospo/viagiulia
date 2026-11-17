@@ -305,7 +305,9 @@
     .tb-lang a { color: #cbd5e1; text-decoration: none; font-size: 11px; font-weight: 700; padding: 8px 10px; letter-spacing: 0.04em; }
     .tb-lang a:hover { color: #fff; }
     .tb-lang a[aria-current] { background: var(--gold); color: #0b0d11; }
-    .data-table.kv td:first-child { width: 26%; }
+    .data-table.kv td:first-child { width: 22%; }
+    /* pag. 4: tabella dei dati più compatta, così il piè di pagina resta nel foglio anche in tedesco e sloveno (17/11/2026) */
+    .data-table.kv td { padding: 3.5px 6px; font-size: 10.5px; line-height: 1.4; }
     .offer-card { border: 2px dashed var(--gold); background: #fdfbf7; }
     .offer-title { font-size: 11.5px; font-weight: 800; color: var(--dark); text-transform: uppercase; line-height: 1.3; margin-bottom: 6px; }
     .offer-body { font-size: 10.5px; color: var(--text-muted); line-height: 1.45; }
@@ -354,7 +356,7 @@
     <div>
       <div class="page-header">
         <div class="brand">VIA GIULIA 77 <span>9° E ULTIMO PIANO • TRIESTE</span></div>
-        <div class="page-tag">PAG. 01/04 • SCHEDA IDENTITÀ &amp; POSIZIONAMENTO</div>
+        <div class="page-tag">PAG. 01/04 • LA CASA IN BREVE</div>
       </div>
 
       <div class="hero-box">
@@ -375,7 +377,7 @@
         <div class="pill green"><svg class="ico" aria-hidden="true"><use href="#i-bolt"/></svg> Classe B (59,09 kWh/m²a)</div>
         <div class="pill"><svg class="ico" aria-hidden="true"><use href="#i-window"/></svg> Serramenti Triplo Vetro IPR (Ug 0,7 • Bora Cat. 5)</div>
         <div class="pill"><svg class="ico" aria-hidden="true"><use href="#i-bag"/></svg> Centro "Il Giulia" (PAM) a 30–40 m • Bus 6, 9, 35</div>
-        <div class="pill"><svg class="ico" aria-hidden="true"><use href="#i-cert"/></svg> Trasformazione in piena proprietà già approvata a 0 €</div>
+        <div class="pill"><svg class="ico" aria-hidden="true"><use href="#i-cert"/></svg> Piena proprietà a 0 €: corrispettivo fissato dal Comune</div>
       </div>
 
       <div class="grid-2col">
@@ -397,27 +399,27 @@
 
         <div style="display: flex; flex-direction: column; justify-content: space-between;">
           <div class="card" style="height: 100%;">
-            <div class="card-title">I 5 Punti di Forza dell'Immobile</div>
+            <div class="card-title">I 5 punti di forza</div>
             <ul style="list-style: none; font-size: 11px; display: flex; flex-direction: column; gap: 8px;">
               <li>
-                <strong style="color: var(--dark);">1. 9° e Ultimo Piano (Vista &amp; Luce):</strong><br>
+                <strong style="color: var(--dark);">1. 9° e ultimo piano: vista e luce</strong><br>
                 <span style="color: var(--text-muted);">Sopra c'è solo la grande terrazza condominiale con i pannelli fotovoltaici: nessun vicino al piano di sopra. Il traffico resta in basso, attutito dai tripli vetri.</span>
               </li>
               <li>
-                <strong style="color: var(--dark);">2. Posto Auto Coperto S1 in Proprietà (13 m²):</strong><br>
-                <span style="color: var(--text-muted);">Un posto auto di proprietà, raro in questa zona. L'ascensore porta dal 9° piano al portone; da lì 2 rampe di scale interne (14 gradini) scendono al garage.</span>
+                <strong style="color: var(--dark);">2. Posto auto coperto di proprietà (S1, 13 m²):</strong><br>
+                <span style="color: var(--text-muted);">Compreso nel prezzo. L'ascensore porta dal 9° piano al portone; da lì 2 rampe di scale interne (14 gradini) scendono al garage.</span>
               </li>
               <li>
-                <strong style="color: var(--dark);">3. Classe B &amp; Lavori Superbonus 110% Già Fatti:</strong><br>
+                <strong style="color: var(--dark);">3. Classe B e lavori Superbonus 110% già fatti:</strong><br>
                 <span style="color: var(--text-muted);">Cappotto termico tutto intorno alla casa, infissi a triplo vetro, porta blindata e caldaia a condensazione (2022–2023). Già tra le classi più efficienti per la direttiva europea sulle case green; la Classe B permette di chiedere un mutuo green, alle condizioni della banca.</span>
               </li>
               <li>
-                <strong style="color: var(--dark);">4. Ingresso con Rampa &amp; Servizi Sotto Casa:</strong><br>
+                <strong style="color: var(--dark);">4. Ingresso con rampa e servizi sotto casa:</strong><br>
                 <span style="color: var(--text-muted);">Senza gradini fino all'appartamento: rampa d'accesso al portone e ascensore fino al 9° piano. Il centro commerciale "Il Giulia" (PAM) è a 30–40 metri dal portone, quasi tutto al coperto (c'è un solo breve tratto all'aperto); la fermata dei bus 6, 9 e 35, per il centro, la stazione e il mare, è a circa 60 metri.</span>
               </li>
               <li>
-                <strong style="color: var(--dark);">5. Sicurezza Giuridica:</strong><br>
-                <span style="color: var(--text-muted);">Trasformazione in piena proprietà già approvata a 0 € dal Comune di Trieste (in attesa della convenzione notarile); prezzo di vendita libero, senza vincoli PEEP; conformità urbanistica attestata da un architetto.</span>
+                <strong style="color: var(--dark);">5. Situazione giuridica chiara:</strong><br>
+                <span style="color: var(--text-muted);">Passaggio alla piena proprietà a 0 €, come comunicato dal Comune di Trieste (resta da firmare la nuova convenzione dal notaio); prezzo di vendita libero, senza vincoli PEEP; conformità urbanistica attestata da un architetto.</span>
               </li>
             </ul>
           </div>
@@ -441,8 +443,8 @@
   <div class="a4-page">
     <div>
       <div class="page-header">
-        <div class="brand">DISTRIBUZIONE SPAZI &amp; SPACCATO 3D <span>108 M² CATASTALI (6 VANI)</span></div>
-        <div class="page-tag">PAG. 02/04 • ARCHITETTURA &amp; POTENZIALE D'ARREDO</div>
+        <div class="brand">LA DISTRIBUZIONE DEGLI SPAZI <span>108 M² CATASTALI (6 VANI)</span></div>
+        <div class="page-tag">PAG. 02/04 • SPAZI E PIANTA</div>
       </div>
 
       <div class="grid-2col" style="align-items: start; margin-bottom: 12px;">
@@ -470,7 +472,7 @@
         </div>
 
         <div>
-          <div class="card-title">Spaccato Isometrico 3D Fedele</div>
+          <div class="card-title">Sul sito: 3D, 360° e video</div>
           <div class="card dark" style="padding: 10px; margin-bottom: 10px;">
             <div style="font-size: 10.5px; color: #a9b3c4; margin-bottom: 8px;">
               Sul sito di vendita il modello 3D si esplora liberamente, con tre idee di ristrutturazione (la Classica, la Famiglia e il Loft), il tour a 360° e i video.
@@ -484,7 +486,7 @@
           </div>
 
           <div class="card" style="border-left: 4px solid var(--gold);">
-            <div style="font-size: 11px; font-weight: 700; color: var(--dark); margin-bottom: 4px;">Abitabile Subito, o da Trasformare</div>
+            <div style="font-size: 11px; font-weight: 700; color: var(--dark); margin-bottom: 4px;">Abitabile subito, o da trasformare</div>
             <p style="font-size: 10.5px; color: var(--text-muted); line-height: 1.45;">
               L'alloggio è <strong>abitabile subito</strong>. Chi vuole può trasformarlo: lo spaccato 3D sul sito mostra tre idee, dalla più classica al loft. Per i lavori valgono le detrazioni fiscali in vigore al momento dell'intervento.
             </p>
@@ -513,7 +515,7 @@
           <div class="img-box" style="height: 85px;">
             <img src="img/web/terrazzo_abitabile.jpg" alt="Terrazzo vivibile con klinker">
           </div>
-          <div style="font-size: 10px; font-weight: 700; color: var(--dark);">Terrazzo Vivibile</div>
+          <div style="font-size: 10px; font-weight: 700; color: var(--dark);">Il terrazzo</div>
           <div style="font-size: 9.5px; color: var(--text-muted);">Pavimento in klinker cotto, colonna pompeiana e vista Carso.</div>
         </div>
       </div>
@@ -531,7 +533,7 @@
   <div class="a4-page">
     <div>
       <div class="page-header">
-        <div class="brand">CAPITALE TECNICO &amp; CONSUMI <span>INFISSI, PORTA BLINDATA + CLASSE B</span></div>
+        <div class="brand">LAVORI FATTI E CONSUMI <span>INFISSI, PORTA BLINDATA + CLASSE B</span></div>
         <div class="page-tag">PAG. 03/04 • PRESTAZIONE ENERGETICA &amp; SICUREZZA</div>
       </div>
 
@@ -549,7 +551,7 @@
               <tr>
                 <td><strong>Serramenti PVC</strong></td>
                 <td>Aluplast Ideal 8000 Triplo Vetro 41 mm con saldature invisibili V-Perfect</td>
-                <td class="num" style="color: var(--green); font-size: 10.5px;">Ug 0,7 • Rw 33 dB</td>
+                <td class="num" style="color: var(--green); font-size: 10.5px;">Ug 0,7 • 32 dB</td>
               </tr>
               <tr>
                 <td><strong>Cassonetti</strong></td>
@@ -558,8 +560,8 @@
               </tr>
               <tr>
                 <td><strong>Tapparelle</strong></td>
-                <td>Alluminio coibentato Aluprof PA 43 — <strong>Resistenza Vento Classe 5</strong></td>
-                <td class="num" style="color: var(--green); font-size: 10.5px;">Tenuta alla Bora Cat. 5</td>
+                <td>Alluminio coibentato in poliuretano, arganello in acciaio</td>
+                <td class="num" style="color: var(--green); font-size: 10.5px;">Fornitura IPR</td>
               </tr>
               <tr>
                 <td><strong>Blindata</strong></td>
@@ -595,7 +597,7 @@
 
           <table class="data-table">
             <thead>
-              <tr><th>Parametro Energetico</th><th>Via Giulia 77 (Classe B)</th><th>Appartamento tipico anni '60–'80 (Classe G)</th></tr>
+              <tr><th>Parametro Energetico</th><th>Via Giulia 77 (Classe B)</th><th>Alloggio in classe G (stima)</th></tr>
             </thead>
             <tbody>
               <tr>
@@ -616,7 +618,7 @@
               <tr>
                 <td><strong>Caldaia Autonoma</strong></td>
                 <td><strong>Viessmann Vitodens 100-W 25 kW (2022), Wi-Fi</strong></td>
-                <td>Spesso centralizzato o vetusto</td>
+                <td>Dipende dall'impianto</td>
               </tr>
             </tbody>
           </table>
@@ -631,7 +633,7 @@
         <div class="card">
           <div style="font-size: 11px; font-weight: 700; color: var(--dark); margin-bottom: 4px;">Isolamento Acustico &amp; Tenuta alla Bora</div>
           <p style="font-size: 10px; color: var(--text-muted);">
-            Il triplo vetro stratificato 33.1/12Ar/4/12Ar/33.1 assicura un abbattimento acustico di <strong>33 dB</strong> e canalina Warm Edge. Le tapparelle e i telai sono certificati in <strong>Classe 5 di resistenza al carico del vento</strong>: pensati per le raffiche di Bora.
+            Il triplo vetro stratificato 33.1/12Ar/4/12Ar/33.1 assicura un abbattimento acustico di <strong>32 dB</strong> e canalina Warm Edge. I serramenti sono certificati in <strong>classe 5 di resistenza al vento (EN 12210)</strong>: pensati per le raffiche di Bora.
           </p>
         </div>
         <div class="card">
@@ -656,7 +658,7 @@
     <div>
       <div class="page-header">
         <div class="brand">DATI TAVOLARI &amp; MODALITÀ D'OFFERTA <span>PROCEDURA DI VENDITA DIRETTA</span></div>
-        <div class="page-tag">PAG. 04/04 • TRASPARENZA GIURIDICA &amp; CONTATTI</div>
+        <div class="page-tag">PAG. 04/04 • DATI LEGALI E CONTATTI</div>
       </div>
 
       <div class="card" style="margin-bottom: 12px;">
@@ -681,7 +683,7 @@
             </tr>
             <tr>
               <td><strong>Situazione giuridica</strong></td>
-              <td>Trasformazione in piena proprietà già approvata a 0,00 € (Comune di Trieste, lettera P.G. 0090278 del 20/04/2026, accettata il 21/04/2026): resta da firmare la nuova convenzione dal notaio. Oggi: proprietà superficiaria 1/1 intestata a <strong>LAURENTI Marco</strong>, valida fino al 16/04/2086 (rinnovabile). Se non è firmata prima del rogito, chi compra subentra nella stessa pratica: il corrispettivo comunicato dal Comune è 0 € e resta solo l'onorario del notaio.</td>
+              <td>Passaggio alla piena proprietà a 0 € (Comune di Trieste, lettera P.G. 0090278 del 20/04/2026, accettata il 21/04/2026). Oggi: proprietà superficiaria 1/1 intestata a <strong>LAURENTI Marco</strong>, valida fino al 16/04/2086 (rinnovabile). Si completa con una nuova convenzione dal notaio, con le sole spese dell'atto; la data la fissa il Comune, dopo un passaggio tecnico al Tavolare. Se la firma non avviene prima del rogito, chi compra subentra nella stessa pratica, alle stesse condizioni.</td>
             </tr>
             <tr>
               <td><strong>Prezzo di Vendita</strong></td>
@@ -705,7 +707,7 @@
 
       <div class="grid-2col" style="margin-bottom: 12px;">
         <div class="card">
-          <div class="card-title">Rendimento per Investitori (Buy-to-Let)</div>
+          <div class="card-title">Per chi investe: stima dell'affitto</div>
           <div style="font-size: 10.5px; color: var(--text-muted); margin-bottom: 6px;">
             Stima secondo l'Accordo Territoriale di Trieste (zona 3, sub-fascia 2):
           </div>
@@ -739,7 +741,7 @@
         </div>
 
         <div class="card offer-card">
-          <div class="offer-title"><svg class="ico" aria-hidden="true"><use href="#i-key"/></svg> Vendita Diretta tra Privati: Come Fare un'Offerta</div>
+          <div class="offer-title"><svg class="ico" aria-hidden="true"><use href="#i-key"/></svg> Vendita diretta tra privati: come fare un'offerta</div>
           <div class="offer-body">
             <p>La vendita si svolge <strong>direttamente con il proprietario, Marco Laurenti</strong>, senza agenzia: nessuna provvigione, né per chi vende né per chi compra.</p>
             <p>Nella proposta scritta basta indicare:</p>
@@ -748,7 +750,7 @@
               <li><strong>come si paga</strong>: liquidità o mutuo già deliberato;</li>
               <li><strong>quando si vorrebbe il rogito</strong>.</li>
             </ol>
-            <p>Se la proposta viene accettata, si firma il preliminare con la caparra; il rogito si fa poi dal <strong>notaio scelto da chi compra, a Trieste</strong>, che verifica anche il Libro Fondiario.</p>
+            <p>Se la proposta viene accettata, si firma il preliminare con la caparra (se preferisci, lo prepara il notaio che scegli tu); il rogito si fa poi dal <strong>notaio scelto da chi compra, a Trieste</strong>, che verifica anche il Libro Fondiario.</p>
           </div>
         </div>
       </div>

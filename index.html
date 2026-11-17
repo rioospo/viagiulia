@@ -11,7 +11,7 @@
     window.addEventListener('error', function (e) { if (window.console) console.warn('[via-giulia-77]', e.message); });
   </script>
   <title>Appartamento in vendita a Trieste, 3 camere, ultimo piano – Via Giulia 77</title>
-  <meta name="description" content="Trieste, Via Giulia 77: 108 m² catastali (~85 m² calpestabili) al 9° e ultimo piano, terrazzo con vista sul Carso, scorcio di mare da due camere, posto auto coperto, Classe B. Cappotto, infissi e caldaia già rifatti con il Superbonus. Prezzo 349.000 €." />
+  <meta name="description" content="349.000 € con posto auto coperto · Trieste, Via Giulia 77: 9° e ultimo piano, 3 camere, terrazzo con vista sul Carso, Classe B. Vendita diretta dal proprietario." />
   <meta name="theme-color" content="#0B0D11" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="favicon.ico" sizes="32x32" />
@@ -1452,7 +1452,7 @@
       color: #fff;
     }
     .mosaic-tag {
-      font-size: 0.68rem;
+      font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 0.15em;
       color: var(--sand-gold);
@@ -1460,6 +1460,7 @@
       margin-bottom: 4px;
     }
     .mosaic-caption { font-size: 0.88rem; font-weight: 600; }
+    .mosaic-item picture { display: contents; }   /* anteprime WebP: l'immagine resta figlia diretta del riquadro */
     /* planimetria: intera (non ritagliata), su fondo bianco, con spazio per la didascalia */
     .mosaic-item.plan { background: #fff; }
     .mosaic-item.plan img { object-fit: contain; padding: 10px 10px 54px; }
@@ -1901,6 +1902,8 @@
     /* blocchi a due colonne: una colonna sola su telefono (prima testo e tabelle uscivano dallo schermo) */
     .vg-2col { display: grid; grid-template-columns: var(--cols, 1fr 1fr); gap: 30px; }
     .vg-2col > * { min-width: 0; }
+    /* etichette piccole: almeno 12 px anche sul computer (audit 17/11/2026) */
+    .comp-pill, .eyebrow, .kf-head, .seller-tag, .step-num, .sub-pill, .tax-l, .vgt-kick, .vgt-group-label, .vgt-dest-unit, .video-card-duration, .video-card-tag, .nav-links a { font-size: 12px; }
     @media (max-width: 768px) {
       .vg-2col { grid-template-columns: 1fr; gap: 20px; }
       .interactive-dossier-box table, .energy-dossier-box table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; }
@@ -2314,7 +2317,7 @@
           <img width="1600" height="901" loading="lazy" decoding="async" src="img/web/living_room.jpg?v=2" alt="Soggiorno luminoso al 9° piano di Via Giulia 77" class="story-main-img" />
           <div class="story-badge-floating">
             <h3 class="hx4" data-i18n="cap1_float_title">Infissi a triplo vetro 2022–2023</h3>
-            <p data-i18n="cap1_float_desc">Fornitura serramenti IPR triplo vetro con tenuta certificata alla Bora fino a Cat. 5 e abbattimento acustico 33 dB.</p>
+            <p data-i18n="cap1_float_desc">Fornitura serramenti IPR triplo vetro con tenuta certificata alla Bora fino a Cat. 5 e abbattimento acustico 32 dB.</p>
           </div>
         </div>
 
@@ -2350,7 +2353,7 @@
               <span class="pillar-num">04.</span>
               <div class="pillar-content">
                 <strong data-i18n="pil4_title">Documenti in regola, pronti per il rogito</strong>
-                <span data-i18n="pil4_desc">Conformità urbanistica, catastale e tavolare attestata da un architetto (2021); trasformazione in piena proprietà già approvata dal Comune di Trieste e prezzo di vendita libero, senza vincoli PEEP.</span>
+                <span data-i18n="pil4_desc">Conformità urbanistica, catastale e tavolare attestata da un architetto (2021); passaggio alla piena proprietà a 0 €, come comunicato dal Comune di Trieste; prezzo di vendita libero, senza vincoli PEEP.</span>
               </div>
             </li>
           </ul>
@@ -2371,7 +2374,7 @@
           <div class="chapter-num" data-i18n="cap6_num">Capitolo 02 • Foto</div>
           <h2 class="chapter-title" data-i18n="cap6_title">Scatti reali degli ambienti</h2>
           <p class="chapter-subtitle" data-i18n="cap6_subtitle">
-            Tutte le fotografie sono autentiche, realizzate direttamente sul posto al 9° piano con luce naturale. Clicca su qualsiasi foto per lo zoom interattivo.
+            Foto reali della casa e del palazzo, con luce naturale. Apri una foto per ingrandirla.
           </p>
         </div>
 
@@ -2386,15 +2389,15 @@
 
       <div class="mosaic-grid" id="galleryGrid">
         <div class="mosaic-item col-8 row-2" data-cat="living" onclick="openLightbox('img/web/hero_panorama.jpg')">
-          <img width="1600" height="1034" loading="lazy" decoding="async" src="img/web/hero_panorama.jpg" alt="Vista panoramica aperta sul Carso dal terrazzo al 9° piano" />
+          <picture><source type="image/webp" srcset="img/web/w/hero_panorama.webp" /><img width="1600" height="1034" loading="lazy" decoding="async" src="img/web/hero_panorama.jpg" alt="Vista panoramica aperta sul Carso dal terrazzo al 9° piano" /></picture>
           <div class="mosaic-overlay">
             <span class="mosaic-tag">Vista Panoramica • 9° Piano</span>
-            <span class="mosaic-caption">Apertura dominante sul verde del Carso e sui tetti di Trieste dal terrazzo</span>
+            <span class="mosaic-caption">Dal terrazzo, il verde del Carso e i tetti di Trieste</span>
           </div>
         </div>
 
         <div class="mosaic-item col-4" data-cat="living" onclick="openLightbox('img/web/living_room.jpg?v=2')">
-          <img width="1600" height="901" loading="lazy" decoding="async" src="img/web/living_room.jpg?v=2" alt="Soggiorno luminoso al 9° piano" />
+          <picture><source type="image/webp" srcset="img/web/w/living_room.webp" /><img width="1600" height="901" loading="lazy" decoding="async" src="img/web/living_room.jpg?v=2" alt="Soggiorno luminoso al 9° piano" /></picture>
           <div class="mosaic-overlay">
             <span class="mosaic-tag">Zona Giorno</span>
             <span class="mosaic-caption">Soggiorno spazioso, pareti bianche e luce naturale</span>
@@ -2402,7 +2405,7 @@
         </div>
 
         <div class="mosaic-item col-4" data-cat="living" onclick="openLightbox('img/web/terrazzo_abitabile.jpg')">
-          <img width="1600" height="459" loading="lazy" decoding="async" src="img/web/terrazzo_abitabile.jpg" alt="Terrazzo abitabile al 9° piano" />
+          <picture><source type="image/webp" srcset="img/web/w/terrazzo_abitabile.webp" /><img width="1600" height="459" loading="lazy" decoding="async" src="img/web/terrazzo_abitabile.jpg" alt="Terrazzo abitabile al 9° piano" /></picture>
           <div class="mosaic-overlay">
             <span class="mosaic-tag">Spazio Esterno</span>
             <span class="mosaic-caption">Terrazzo abitabile, al 9° e ultimo piano</span>
@@ -2410,7 +2413,7 @@
         </div>
 
         <div class="mosaic-item col-4" data-cat="living" onclick="openLightbox('img/web/living_wide.jpg?v=2')">
-          <img width="1600" height="901" loading="lazy" decoding="async" src="img/web/living_wide.jpg?v=2" alt="Zona giorno con tavolo da pranzo e vista aperta" />
+          <picture><source type="image/webp" srcset="img/web/w/living_wide.webp" /><img width="1600" height="901" loading="lazy" decoding="async" src="img/web/living_wide.jpg?v=2" alt="Zona giorno con tavolo da pranzo e vista aperta" /></picture>
           <div class="mosaic-overlay">
             <span class="mosaic-tag">Zona Giorno</span>
             <span class="mosaic-caption">Zona pranzo e salone con grande superficie finestrata</span>
@@ -2418,7 +2421,7 @@
         </div>
 
         <div class="mosaic-item col-4" data-cat="living" onclick="openLightbox('img/web/terrazzo_vista.jpg')">
-          <img width="1600" height="901" loading="lazy" decoding="async" src="img/web/terrazzo_vista.jpg" alt="Apertura panoramica dal terrazzo sul Carso" />
+          <picture><source type="image/webp" srcset="img/web/w/terrazzo_vista.webp" /><img width="1600" height="901" loading="lazy" decoding="async" src="img/web/terrazzo_vista.jpg" alt="Apertura panoramica dal terrazzo sul Carso" /></picture>
           <div class="mosaic-overlay">
             <span class="mosaic-tag">Vista Aperta</span>
             <span class="mosaic-caption">Apertura panoramica dal terrazzo sul Carso triestino</span>
@@ -2426,7 +2429,7 @@
         </div>
 
         <div class="mosaic-item col-4" data-cat="cucina" onclick="openLightbox('img/web/cucina.jpg')">
-          <img width="1600" height="901" loading="lazy" decoding="async" src="img/web/cucina.jpg" alt="Cucina abitabile con porta-finestra sul terrazzo" />
+          <picture><source type="image/webp" srcset="img/web/w/cucina.webp" /><img width="1600" height="901" loading="lazy" decoding="async" src="img/web/cucina.jpg" alt="Cucina abitabile con porta-finestra sul terrazzo" /></picture>
           <div class="mosaic-overlay">
             <span class="mosaic-tag">Cucina</span>
             <span class="mosaic-caption">Cucina completa con porta-finestra e accesso diretto al terrazzo</span>
@@ -2434,15 +2437,15 @@
         </div>
 
         <div class="mosaic-item col-4" data-cat="cucina" onclick="openLightbox('img/web/cucina_dettaglio.jpg')">
-          <img width="1600" height="901" loading="lazy" decoding="async" src="img/web/cucina_dettaglio.jpg" alt="Dettaglio piano cottura e pensili cucina" />
+          <picture><source type="image/webp" srcset="img/web/w/cucina_dettaglio.webp" /><img width="1600" height="901" loading="lazy" decoding="async" src="img/web/cucina_dettaglio.jpg" alt="Dettaglio piano cottura e pensili cucina" /></picture>
           <div class="mosaic-overlay">
             <span class="mosaic-tag">Cucina</span>
-            <span class="mosaic-caption">Dettaglio arredi e piano cottura lineare funzionale</span>
+            <span class="mosaic-caption">Pensili e piano cottura della cucina</span>
           </div>
         </div>
 
         <div class="mosaic-item col-4" data-cat="notte" onclick="openLightbox('img/web/camera_salvia.jpg')">
-          <img width="1600" height="901" loading="lazy" decoding="async" src="img/web/camera_salvia.jpg" alt="Camera Carso, con armadio verde salvia" />
+          <picture><source type="image/webp" srcset="img/web/w/camera_salvia.webp" /><img width="1600" height="901" loading="lazy" decoding="async" src="img/web/camera_salvia.jpg" alt="Camera Carso, con armadio verde salvia" /></picture>
           <div class="mosaic-overlay">
             <span class="mosaic-tag">Camera Carso</span>
             <span class="mosaic-caption">Camera matrimoniale da 14,5 m², armadio verde salvia e finestra sul Carso</span>
@@ -2450,7 +2453,7 @@
         </div>
 
         <div class="mosaic-item col-4" data-cat="notte" onclick="openLightbox('img/web/camera_matrimoniale.jpg')">
-          <img width="1600" height="901" loading="lazy" decoding="async" src="img/web/camera_matrimoniale.jpg" alt="Studio con armadiatura bianca" />
+          <picture><source type="image/webp" srcset="img/web/w/camera_matrimoniale.webp" /><img width="1600" height="901" loading="lazy" decoding="async" src="img/web/camera_matrimoniale.jpg" alt="Studio con armadiatura bianca" /></picture>
           <div class="mosaic-overlay">
             <span class="mosaic-tag">Studio</span>
             <span class="mosaic-caption">Camera singola o studio da 9,5 m², armadiatura a tutta altezza e scorcio di mare dalla finestra</span>
@@ -2458,7 +2461,7 @@
         </div>
 
         <div class="mosaic-item col-4" data-cat="notte" onclick="openLightbox('img/web/camera_studio.jpg')">
-          <img width="1600" height="901" loading="lazy" decoding="async" src="img/web/camera_studio.jpg" alt="Camera Mare, luminosa e libera" />
+          <picture><source type="image/webp" srcset="img/web/w/camera_studio.webp" /><img width="1600" height="901" loading="lazy" decoding="async" src="img/web/camera_studio.jpg" alt="Camera Mare, luminosa e libera" /></picture>
           <div class="mosaic-overlay">
             <span class="mosaic-tag">Camera Mare</span>
             <span class="mosaic-caption">Camera matrimoniale o per due, 14,3 m², con scorcio di mare dalla finestra</span>
@@ -2466,7 +2469,7 @@
         </div>
 
         <div class="mosaic-item col-4" data-cat="notte" onclick="openLightbox('img/web/bagno_idromassaggio.jpg')">
-          <img width="901" height="1600" loading="lazy" decoding="async" src="img/web/bagno_idromassaggio.jpg" alt="Bagno piccolo con cabina doccia idromassaggio, radio e cromoterapia" />
+          <picture><source type="image/webp" srcset="img/web/w/bagno_idromassaggio.webp" /><img width="901" height="1600" loading="lazy" decoding="async" src="img/web/bagno_idromassaggio.jpg" alt="Bagno piccolo con cabina doccia idromassaggio, radio e cromoterapia" /></picture>
           <div class="mosaic-overlay">
             <span class="mosaic-tag">Bagno piccolo</span>
             <span class="mosaic-caption">Doccia multifunzione con idromassaggio dorsale, radio FM integrata e cromoterapia LED</span>
@@ -2474,7 +2477,7 @@
         </div>
 
         <div class="mosaic-item col-4" data-cat="notte" onclick="openLightbox('img/web/bagno_vasca.jpg')">
-          <img width="1600" height="901" loading="lazy" decoding="async" src="img/web/bagno_vasca.jpg" alt="Bagno grande con vasca e specchiera" />
+          <picture><source type="image/webp" srcset="img/web/w/bagno_vasca.webp" /><img width="1600" height="901" loading="lazy" decoding="async" src="img/web/bagno_vasca.jpg" alt="Bagno grande con vasca e specchiera" /></picture>
           <div class="mosaic-overlay">
             <span class="mosaic-tag">Bagno grande</span>
             <span class="mosaic-caption">Bagno completo con vasca e grande specchiera a parete</span>
@@ -2482,7 +2485,7 @@
         </div>
 
         <div class="mosaic-item col-4" data-cat="edificio" onclick="openLightbox('img/web/caldaia_viessmann.jpg')">
-          <img width="1600" height="901" loading="lazy" decoding="async" src="img/web/caldaia_viessmann.jpg" alt="Caldaia a condensazione Viessmann touch WiFi" />
+          <picture><source type="image/webp" srcset="img/web/w/caldaia_viessmann.webp" /><img width="1600" height="901" loading="lazy" decoding="async" src="img/web/caldaia_viessmann.jpg" alt="Caldaia a condensazione Viessmann touch WiFi" /></picture>
           <div class="mosaic-overlay">
             <span class="mosaic-tag">Impianti • Classe B</span>
             <span class="mosaic-caption">Caldaia Viessmann a condensazione digitale touch e bollino FVG</span>
@@ -2490,7 +2493,7 @@
         </div>
 
         <div class="mosaic-item col-4" data-cat="edificio" onclick="openLightbox('img/web/blindata_stark.jpg')">
-          <img width="901" height="1600" loading="lazy" decoding="async" src="img/web/blindata_stark.jpg" alt="Porta blindata Stark Style7 Nettuno" />
+          <picture><source type="image/webp" srcset="img/web/w/blindata_stark.webp" /><img width="901" height="1600" loading="lazy" decoding="async" src="img/web/blindata_stark.jpg" alt="Porta blindata Stark Style7 Nettuno" /></picture>
           <div class="mosaic-overlay">
             <span class="mosaic-tag">Sicurezza</span>
             <span class="mosaic-caption">Porta blindata Stark Style7 Nettuno con carenatura inox e Mottura CM5+1</span>
@@ -2498,7 +2501,7 @@
         </div>
 
         <div class="mosaic-item col-4" data-cat="edificio" onclick="openLightbox('img/web/infissi_dettaglio.jpg')">
-          <img width="901" height="1600" loading="lazy" decoding="async" src="img/web/infissi_dettaglio.jpg" alt="Ferramenta scorrevole GU infissi triplo vetro" />
+          <picture><source type="image/webp" srcset="img/web/w/infissi_dettaglio.webp" /><img width="901" height="1600" loading="lazy" decoding="async" src="img/web/infissi_dettaglio.jpg" alt="Ferramenta scorrevole GU infissi triplo vetro" /></picture>
           <div class="mosaic-overlay">
             <span class="mosaic-tag">Serramenti</span>
             <span class="mosaic-caption">Meccanica e carrelli scorrevoli GU ad alto isolamento acustico/termico</span>
@@ -2506,7 +2509,7 @@
         </div>
 
         <div class="mosaic-item col-4" data-cat="edificio" onclick="openLightbox('img/web/palazzo_ingresso.jpg')">
-          <img width="1600" height="901" loading="lazy" decoding="async" src="img/web/palazzo_ingresso.jpg" alt="Ingresso condominiale Civico 77 con telecamera" />
+          <picture><source type="image/webp" srcset="img/web/w/palazzo_ingresso.webp" /><img width="1600" height="901" loading="lazy" decoding="async" src="img/web/palazzo_ingresso.jpg" alt="Ingresso condominiale Civico 77 con telecamera" /></picture>
           <div class="mosaic-overlay">
             <span class="mosaic-tag">Stabile</span>
             <span class="mosaic-caption">Ingresso del civico 77 con videosorveglianza e rampa d'accesso</span>
@@ -2514,7 +2517,7 @@
         </div>
 
         <div class="mosaic-item col-4" data-cat="edificio" onclick="openLightbox('img/web/ascensore_piano9.jpg')">
-          <img width="901" height="1600" loading="lazy" decoding="async" src="img/web/ascensore_piano9.jpg" alt="Pulsantiera ascensore piano 9" />
+          <picture><source type="image/webp" srcset="img/web/w/ascensore_piano9.webp" /><img width="901" height="1600" loading="lazy" decoding="async" src="img/web/ascensore_piano9.jpg" alt="Pulsantiera ascensore piano 9" /></picture>
           <div class="mosaic-overlay">
             <span class="mosaic-tag">Accessibilità</span>
             <span class="mosaic-caption">L'ascensore porta dal 9° piano al piano terra; da lì due rampe interne scendono al garage S1</span>
@@ -2522,7 +2525,7 @@
         </div>
 
         <div class="mosaic-item col-4" data-cat="edificio" onclick="openLightbox('img/web/quartiere_servizi.jpg')">
-          <img width="1600" height="901" loading="lazy" decoding="async" src="img/web/quartiere_servizi.jpg" alt="Fermata Bus 9 e Centro Commerciale Il Giulia" />
+          <picture><source type="image/webp" srcset="img/web/w/quartiere_servizi.webp" /><img width="1600" height="901" loading="lazy" decoding="async" src="img/web/quartiere_servizi.jpg" alt="Fermata Bus 9 e Centro Commerciale Il Giulia" /></picture>
           <div class="mosaic-overlay">
             <span class="mosaic-tag">Servizi & Trasporti</span>
             <span class="mosaic-caption">Centro commerciale "Il Giulia" (PAM) a 30–40 metri e fermata dei bus 6, 9, 35 a circa 60 metri</span>
@@ -2530,7 +2533,7 @@
         </div>
 
         <div class="mosaic-item col-4 plan" data-cat="edificio" onclick="openLightbox('img/web/planimetria.jpg')">
-          <img width="916" height="682" loading="lazy" decoding="async" src="img/web/planimetria.jpg" alt="Planimetria catastale 6 vani" />
+          <picture><source type="image/webp" srcset="img/web/w/planimetria.webp" /><img width="916" height="682" loading="lazy" decoding="async" src="img/web/planimetria.jpg" alt="Planimetria catastale 6 vani" /></picture>
           <div class="mosaic-overlay">
             <span class="mosaic-tag">Planimetria</span>
             <span class="mosaic-caption">Planimetria ufficiale catastale</span>
@@ -2867,7 +2870,7 @@
             </tr>
             <tr>
               <td>Stato giuridico e proprietà</td>
-              <td><strong style="color: #fff;">Trasformazione in piena proprietà già approvata a 0 €</strong> (Comune di Trieste, lettera P.G. 0090278 del 20/04/2026, accettata il 21/04/2026). Oggi: proprietà superficiaria 1/1 (diritto di superficie PEEP, valido fino al 16/04/2086, rinnovabile). Manca solo la firma della nuova convenzione dal notaio, con data fissata dal Comune: la trasformazione non costa nulla, si paga solo l'onorario del notaio. Se la firma non avviene prima del rogito, chi compra subentra nella stessa pratica: il corrispettivo comunicato dal Comune è 0 € e resta solo l'onorario del notaio.</td>
+              <td><strong style="color: #fff;">Piena proprietà a 0 €</strong> (Comune di Trieste, lettera P.G. 0090278 del 20/04/2026, accettata il 21/04/2026). Oggi: proprietà superficiaria 1/1 (diritto di superficie PEEP, valido fino al 16/04/2086, rinnovabile). Il passaggio si completa firmando una nuova convenzione dal notaio, con le sole spese dell'atto; la data la fissa il Comune, dopo una questione tecnica all'Ufficio Tavolare sull'annotazione delle nuove convenzioni. Se la firma non avviene prima del rogito, chi compra subentra nella stessa pratica, alle stesse condizioni.</td>
             </tr>
             <tr>
               <td>Vincoli sul prezzo</td>
@@ -2945,7 +2948,7 @@
           <details class="faq"><summary data-i18n="faq_q1">Posso comprare se non vivo in Italia?</summary><p data-i18n="faq_a1">Sì. Serve un codice fiscale italiano, che si chiede all'Agenzia delle Entrate o a un consolato italiano. Per i cittadini dell'Unione Europea non ci sono limiti; per gli altri vale la reciprocità con il proprio Paese. Se non porti la residenza a Trieste si applicano le imposte della seconda casa. Se sei cittadino italiano iscritto all'AIRE, in alcuni casi puoi avere le agevolazioni prima casa anche senza trasferire la residenza: chiedilo al notaio.</p></details>
           <details class="faq"><summary data-i18n="faq_q2">Come si svolge l'acquisto?</summary><p data-i18n="faq_a2">Dopo la visita si fa una proposta scritta. Se viene accettata si firma il contratto preliminare con una caparra; il rogito si fa poi dal notaio scelto da chi compra, di solito entro due o tre mesi (dipende dall'eventuale mutuo). L'appartamento è libero al rogito.</p></details>
           <details class="faq"><summary data-i18n="faq_q3">Che cos'è il sistema tavolare?</summary><p data-i18n="faq_a3">A Trieste, come in altre zone dell'ex Impero austro-ungarico, la proprietà si registra nel Libro Fondiario: passa a chi compra con l'iscrizione, che un giudice controlla prima di disporla. È una garanzia in più rispetto al resto d'Italia.</p></details>
-          <details class="faq"><summary data-i18n="faq_q4">Diritto di superficie e PEEP: cosa cambia per chi compra?</summary><p data-i18n="faq_a4">La trasformazione in piena proprietà è già approvata: il Comune di Trieste l'ha concessa a costo zero (lettera P.G. 0090278 del 20/04/2026). Il palazzo è nato in un programma di edilizia convenzionata (PEEP) e oggi l'appartamento è in diritto di superficie, valido fino al 16 aprile 2086 e rinnovabile. Manca solo la firma della nuova convenzione dal notaio; la data la fissa il Comune. Se non è ancora firmata al momento del rogito, chi compra subentra nella stessa pratica: il corrispettivo comunicato dal Comune è 0 € e resta solo l'onorario del notaio. Il prezzo di vendita è libero, senza vincoli.</p></details>
+          <details class="faq"><summary data-i18n="faq_q4">Diritto di superficie e PEEP: cosa cambia per chi compra?</summary><p data-i18n="faq_a4">Il passaggio alla piena proprietà costa 0 €: lo ha comunicato il Comune di Trieste con la lettera P.G. 0090278 del 20/04/2026, e il proprietario lo ha accettato il 21/04/2026. Il palazzo è nato in un programma di edilizia convenzionata (PEEP) e oggi l'appartamento è in diritto di superficie, valido fino al 16 aprile 2086 e rinnovabile. Il passaggio si completa firmando una nuova convenzione dal notaio, con le sole spese dell'atto. La data la fissa il Comune, che prima deve risolvere con l'Ufficio Tavolare una questione tecnica sull'annotazione delle nuove convenzioni. Se al rogito la firma non è ancora avvenuta, chi compra subentra nella stessa pratica, alle stesse condizioni. Il prezzo di vendita è libero, senza vincoli.</p></details>
           <details class="faq"><summary data-i18n="faq_q5">Chi paga il notaio?</summary><p data-i18n="faq_a5">Per consuetudine il notaio lo sceglie e lo paga chi compra: conviene chiederne un preventivo prima della proposta.</p></details>
           <details class="faq"><summary data-i18n="faq_q6">Quanto costa tenerla?</summary><p data-i18n="faq_a6">Spese condominiali circa 1.100–1.200 € l'anno, acqua compresa; riscaldamento e acqua calda stimati in 580–680 € l'anno. Come prima casa non si paga l'imposta sugli immobili (ILIA, l'IMU del Friuli Venezia Giulia); come seconda casa sì, secondo l'aliquota del Comune.</p></details>
           <details class="faq"><summary data-i18n="faq_q7">Posso vedere la casa a distanza?</summary><p data-i18n="faq_a7">Sì: Marco fa video-visite in diretta su WhatsApp o FaceTime. Pianta e dati dell'APE sono già su questo sito; i documenti completi li consegna dopo la visita a chi è interessato all'acquisto.</p></details>
@@ -2980,12 +2983,12 @@
         <div class="tech-summary-card">
           <div class="icon"><svg class="ico" aria-hidden="true"><use href="#i-wind"/></svg></div>
           <h3 class="hx4" data-i18n="tech_c1_title">Tenuta alla bora, classe 5</h3>
-          <p data-i18n="tech_c1_desc">Tapparelle e serramenti certificati in <strong>classe 5 di resistenza al vento</strong>: fatti per le raffiche di bora.</p>
+          <p data-i18n="tech_c1_desc">Serramenti certificati in <strong>classe 5 di resistenza al vento</strong> (EN 12210): fatti per le raffiche di bora.</p>
         </div>
 
         <div class="tech-summary-card">
           <div class="icon"><svg class="ico" aria-hidden="true"><use href="#i-quiet"/></svg></div>
-          <h3 class="hx4" data-i18n="tech_c2_title">Isolamento acustico 33 dB</h3>
+          <h3 class="hx4" data-i18n="tech_c2_title">Isolamento acustico 32 dB</h3>
           <p data-i18n="tech_c2_desc">Triplo vetro stratificato da 41 mm: il rumore della strada resta fuori.</p>
         </div>
 
@@ -3111,7 +3114,7 @@
                 <td><strong>1</strong></td>
                 <td>Serramenti Aluplast Ideal 8000 Triplo Vetro con saldature invisibili V-Perfect</td>
                 <td>5 Vani Luce (16,30 m²)</td>
-                <td>Ug 0,7 W/m²K • Rw 33 dB</td>
+                <td>Ug 0,7 W/m²K • 32 dB</td>
                 <td class="num" style="color: var(--accent-green);">Posa UNI 11673-2 • Garanzia 10 Anni</td>
               </tr>
               <tr>
@@ -3125,8 +3128,8 @@
                 <td><strong>3</strong></td>
                 <td>Avvolgibili Alluminio coibentato Aluprof PA 43 con arganello in acciaio e snodo bianco</td>
                 <td>2 Pz</td>
-                <td>Resistenza al vento Bora Classe 5</td>
-                <td class="num" style="color: var(--accent-green);">Norma PN-EN 13561 Collaudata</td>
+                <td>Coibentazione in poliuretano</td>
+                <td class="num" style="color: var(--accent-green);">Fornitura IPR (ordine C824-21)</td>
               </tr>
               <tr>
                 <td><strong>4</strong></td>
@@ -3343,7 +3346,7 @@
 
             <div class="comp-col-card">
               <h4 class="hx5">
-                <span>Alloggio Tipico Trieste ('60-'80)</span>
+                <span>Un alloggio in classe G (stima)</span>
                 <span class="comp-pill red">CLASSE G (190+ kWh/m²a)</span>
               </h4>
               <div class="comp-item-row">
@@ -3360,7 +3363,7 @@
               </div>
               <div class="comp-item-row">
                 <span>Mutui green:</span>
-                <strong style="color: #888;">Di norma esclusi</strong>
+                <strong style="color: #888;">Dipende dalla banca</strong>
               </div>
               <div class="comp-item-row">
                 <span>Trasmittanza degli infissi (Uw):</span>
@@ -3588,7 +3591,7 @@
       <div class="trattativa-callout">
         <h2 data-i18n="trattativa_banner_title"><svg class="ico" aria-hidden="true"><use href="#i-key"/></svg> Vendita diretta tra privati</h2>
         <p data-i18n="trattativa_banner_desc">
-L'appartamento è venduto direttamente dal proprietario, senza agenzia: chi compra non paga la provvigione, che di solito vale il 3–4% + IVA. Rispondo ai messaggi entro 24 ore e a ogni proposta scritta entro 48.
+L'appartamento è venduto direttamente dal proprietario, senza agenzia: chi compra non paga la provvigione, che di solito vale il 3–4% + IVA. Rispondo ai messaggi entro 24 ore e a ogni proposta scritta entro 48. Se preferisci, il preliminare lo prepara il notaio che scegli tu.
 </p>
         <p class="faq-link" data-i18n="faq_link"><a href="#domande">Compri dall'estero? 14 risposte pratiche →</a></p>
 
@@ -3899,6 +3902,8 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
       }
     }
     if (heroVideoUni) {
+      // telefono: il secondo video non parte, quindi la sua copertina è l'ultimo fotogramma (la vista), non il soggiorno
+      if (heroMobile || heroLite) heroVideoUni.poster = 'img/web/video/poster_hero_uni_vista.jpg';
       heroVideoUni.addEventListener('ended', () => {
         if (currentHeroIndex === 1) jumpToHeroSlide(2);
       });
@@ -4351,7 +4356,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         wa_name: "Nome",
         wa_hello: "Buongiorno Marco, ti contatto dal sito di Via Giulia 77 (Trieste, 9° piano).",
         wa_text: "Buongiorno Marco, ti contatto dal sito per l'appartamento in Via Giulia 77 a Trieste.",
-        meta_desc: "Trieste, Via Giulia 77: 108 m² catastali (~85 m² calpestabili) al 9° e ultimo piano, terrazzo con vista sul Carso, scorcio di mare da due camere, posto auto coperto, Classe B. Cappotto, infissi e caldaia già rifatti con il Superbonus. Prezzo 349.000 €.",
+        meta_desc: "349.000 € con posto auto coperto · Trieste, Via Giulia 77: 9° e ultimo piano, 3 camere, terrazzo con vista sul Carso, Classe B. Vendita diretta dal proprietario.",
         meta_title: "Appartamento in vendita a Trieste, 3 camere, ultimo piano – Via Giulia 77",
         brand_floor: "9° Piano",
         nav_residenza: "Residenza",
@@ -4384,7 +4389,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         cap1_title: "Nove piani sopra la città, con tutto sotto casa.",
         cap1_subtitle: "Vivere al 9° e ultimo piano di Via Giulia 77 significa avere luce da due lati, l'altopiano del Carso davanti e il traffico della città lontano, nove piani più in basso.",
         cap1_float_title: "Infissi a triplo vetro 2022–2023",
-        cap1_float_desc: "Fornitura IPR con tenuta certificata alla Bora fino a Cat. 5 e isolamento acustico 33 dB.",
+        cap1_float_desc: "Fornitura IPR con tenuta certificata alla Bora fino a Cat. 5 e isolamento acustico 32 dB.",
         cap1_intro: "Palazzo di fine anni '80 (abitabilità 1990) con un appartamento già rinnovato dove conta: con il Superbonus 110% sono stati fatti il cappotto termico tutto intorno alla casa, gli infissi a triplo vetro, la porta blindata e la caldaia a condensazione (2022). I lavori energetici più costosi sono già fatti. Sopra c'è solo la grande terrazza condominiale con i pannelli fotovoltaici: nessun vicino al piano di sopra.",
         pil1_title: "Posto auto coperto di proprietà (C/6, 13 m²)",
         pil1_desc: "Al piano interrato S1 dello stabile: l'ascensore arriva al portone d'ingresso al piano terra, da cui due rampe di scale interne (14 gradini) scendono all'autorimessa.",
@@ -4393,7 +4398,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         pil3_title: "Spazi ampi e due bagni completi",
         pil3_desc: "Spazi generosi con pavimento uniforme in gres porcellanato sabbia, salone panoramico, cucina abitabile con uscita sul terrazzo in klinker, due bagni (bagno grande con vasca + box idromassaggio con radio FM e LED) e tre camere, con soffitti alti 2,70 m.",
         pil4_title: "Documenti in regola, pronti per il rogito",
-        pil4_desc: "Conformità urbanistica, catastale e tavolare attestata da un architetto (2021); trasformazione in piena proprietà già approvata dal Comune di Trieste e prezzo di vendita libero, senza vincoli PEEP.",
+        pil4_desc: "Conformità urbanistica, catastale e tavolare attestata da un architetto (2021); passaggio alla piena proprietà a 0 €, come comunicato dal Comune di Trieste; prezzo di vendita libero, senza vincoli PEEP.",
 
         loc_strip_title: "<span><svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-compass\"/></svg></span> Posizione: Servizi Sotto Casa, Mare & Collegamenti Rapidi",
         loc_strip_badge: "VIA GIULIA 77 • TRIESTE",
@@ -4458,8 +4463,8 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         cap4_subtitle: "Nel 2022–2023 la casa ha avuto infissi nuovi in PVC a <strong>triplo vetro</strong>, tapparelle coibentate che reggono la bora e una <strong>porta blindata di classe 3</strong>, montati a regola d'arte con <strong>10 anni di garanzia sulla posa</strong>. Marche e dati tecnici sono nella scheda qui sotto.",
         more_tech: "Scheda tecnica completa: misure degli infissi, prestazioni, porta blindata e collaudo",
         tech_c1_title: "Tenuta alla bora, classe 5",
-        tech_c1_desc: "Tapparelle e serramenti certificati in <strong>classe 5 di resistenza al vento</strong>: fatti per le raffiche di bora.",
-        tech_c2_title: "Isolamento acustico 33 dB",
+        tech_c1_desc: "Serramenti certificati in <strong>classe 5 di resistenza al vento</strong> (EN 12210): fatti per le raffiche di bora.",
+        tech_c2_title: "Isolamento acustico 32 dB",
         tech_c2_desc: "Triplo vetro stratificato da 41 mm: il rumore della strada resta fuori.",
         tech_c3_title: "Porta blindata a 11 punti",
         tech_c3_desc: "Classe 3 antieffrazione, 11 punti di chiusura e cilindro di sicurezza Mottura. La serratura è già stata ricifrata: le chiavi usate in passato non aprono più.",
@@ -4485,7 +4490,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
 
         cap6_num: "Capitolo 02 • Foto",
         cap6_title: "Scatti reali degli ambienti",
-        cap6_subtitle: "Tutte le fotografie sono autentiche, realizzate direttamente sul posto al 9° piano con luce naturale. Clicca su qualsiasi foto per lo zoom interattivo.",
+        cap6_subtitle: "Foto reali della casa e del palazzo, con luce naturale. Apri una foto per ingrandirla.",
         gfil_all: "Tutti gli scatti (19)",
         gal_more: "Mostra tutte le 19 foto",
         gfil_living: "Soggiorno e terrazzo",
@@ -4520,7 +4525,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         val_lib_net: "~ 11.230 € / anno",
 
         trattativa_banner_title: "<svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-key\"/></svg> Vendita diretta tra privati",
-        trattativa_banner_desc: "L'appartamento è venduto direttamente dal proprietario, senza agenzia: chi compra non paga la provvigione, che di solito vale il 3–4% + IVA. Rispondo ai messaggi entro 24 ore e a ogni proposta scritta entro 48.",
+        trattativa_banner_desc: "L'appartamento è venduto direttamente dal proprietario, senza agenzia: chi compra non paga la provvigione, che di solito vale il 3–4% + IVA. Rispondo ai messaggi entro 24 ore e a ogni proposta scritta entro 48. Se preferisci, il preliminare lo prepara il notaio che scegli tu.",
         tstep1_num: "Passo 01 • Visita",
         tstep1_title: "Visita privata",
         tstep1_desc: "Visita dell'appartamento al 9° piano insieme al proprietario. Su richiesta si possono consultare visure, APE 2024, fatture dei serramenti, pratiche del Superbonus e planimetrie.",
@@ -4548,7 +4553,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         faq_q3: "Che cos'è il sistema tavolare?",
         faq_a3: "A Trieste, come in altre zone dell'ex Impero austro-ungarico, la proprietà si registra nel Libro Fondiario: passa a chi compra con l'iscrizione, che un giudice controlla prima di disporla. È una garanzia in più rispetto al resto d'Italia.",
         faq_q4: "Diritto di superficie e PEEP: cosa cambia per chi compra?",
-        faq_a4: "La trasformazione in piena proprietà è già approvata: il Comune di Trieste l'ha concessa a costo zero (lettera P.G. 0090278 del 20/04/2026). Il palazzo è nato in un programma di edilizia convenzionata (PEEP) e oggi l'appartamento è in diritto di superficie, valido fino al 16 aprile 2086 e rinnovabile. Manca solo la firma della nuova convenzione dal notaio; la data la fissa il Comune. Se non è ancora firmata al momento del rogito, chi compra subentra nella stessa pratica: il corrispettivo comunicato dal Comune è 0 € e resta solo l'onorario del notaio. Il prezzo di vendita è libero, senza vincoli.",
+        faq_a4: "Il passaggio alla piena proprietà costa 0 €: lo ha comunicato il Comune di Trieste con la lettera P.G. 0090278 del 20/04/2026, e il proprietario lo ha accettato il 21/04/2026. Il palazzo è nato in un programma di edilizia convenzionata (PEEP) e oggi l'appartamento è in diritto di superficie, valido fino al 16 aprile 2086 e rinnovabile. Il passaggio si completa firmando una nuova convenzione dal notaio, con le sole spese dell'atto. La data la fissa il Comune, che prima deve risolvere con l'Ufficio Tavolare una questione tecnica sull'annotazione delle nuove convenzioni. Se al rogito la firma non è ancora avvenuta, chi compra subentra nella stessa pratica, alle stesse condizioni. Il prezzo di vendita è libero, senza vincoli.",
         faq_q5: "Chi paga il notaio?",
         faq_a5: "Per consuetudine il notaio lo sceglie e lo paga chi compra: conviene chiederne un preventivo prima della proposta.",
         faq_q6: "Quanto costa tenerla?",
@@ -4670,7 +4675,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         wa_name: "Name",
         wa_hello: "Hello Marco, I'm contacting you from the Via Giulia 77 website (Trieste, 9th floor).",
         wa_text: "Hello Marco, I'm contacting you from the website about the apartment at Via Giulia 77 in Trieste.",
-        meta_desc: "Trieste, Via Giulia 77: 108 m² (cadastral; ~85 m² net) on the 9th and top floor, terrace with Karst views, a glimpse of the sea from two bedrooms, covered parking, Energy Class B. Insulation, windows and boiler already renewed. Price €349,000.",
+        meta_desc: "€349,000 incl. covered parking · Trieste, Via Giulia 77: 9th and top floor, 3 bedrooms, terrace with Karst views, Energy Class B. Sold directly by the owner.",
         meta_title: "3-bedroom apartment for sale in Trieste – top floor, Via Giulia 77",
         brand_floor: "9th Floor",
         nav_residenza: "Overview",
@@ -4703,7 +4708,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         cap1_title: "Nine floors above the city, with everything at your door.",
         cap1_subtitle: "Living on the 9th and top floor of Via Giulia 77 means light from two sides, the Karst plateau in front of you and the city traffic far below.",
         cap1_float_title: "Triple-glazed windows (2022–2023)",
-        cap1_float_desc: "Certified Category 5 Bora wind resistance with 33 dB acoustic insulation.",
+        cap1_float_desc: "Certified Category 5 Bora wind resistance with 32 dB acoustic insulation.",
         cap1_intro: "A late-1980s building (occupancy permit 1990) with an apartment already upgraded where it matters: Italy's 110% Superbonus scheme paid for thermal insulation all around the home, triple-glazed windows, a security door and a condensing boiler (2022). The costly energy works are already done. Above it there is only the building's large roof terrace with its solar panels: no neighbours upstairs.",
         pil1_title: "Private covered parking space (C/6, 13 m²)",
         pil1_desc: "Located on basement level S1: the lift reaches the main ground-floor entrance hall, from which two sheltered internal flights of stairs (14 steps) lead directly to the garage.",
@@ -4712,7 +4717,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         pil3_title: "Generous rooms and two full bathrooms",
         pil3_desc: "Generous layout with uniform sand-tone porcelain stoneware floors, panoramic living room, eat-in kitchen opening onto the clinker-tiled terrace, two bathrooms (bathtub + hydromassage cabin with FM radio & LED) and three bedrooms, with 2.70 m ceilings.",
         pil4_title: "Paperwork in order, ready to complete",
-        pil4_desc: "Planning, cadastral and Land Register compliance certified by an architect (2021); conversion to full ownership already approved by the Municipality of Trieste, and no PEEP price restriction.",
+        pil4_desc: "Planning, cadastral and Land Register compliance certified by an architect (2021); conversion to full ownership at €0, as notified by the City of Trieste; free sale price, with no PEEP restrictions.",
 
         loc_strip_title: "<span><svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-compass\"/></svg></span> Location: Doorstep Amenities, Sea & Fast Connections",
         loc_strip_badge: "VIA GIULIA 77 • TRIESTE",
@@ -4777,8 +4782,8 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         cap4_subtitle: "In 2022–2023 the flat got new PVC <strong>triple-glazed</strong> windows, insulated shutters that stand up to the Bora and a <strong>class 3 security door</strong>, professionally installed with a <strong>10-year installation warranty</strong>. Brands and technical data are in the sheet below.",
         more_tech: "Full technical sheet: window sizes, performance, security door and acceptance test",
         tech_c1_title: "Bora-proof, class 5",
-        tech_c1_desc: "Shutters and window frames certified to <strong>wind resistance class 5</strong>: built for the Bora gusts.",
-        tech_c2_title: "33 dB sound insulation",
+        tech_c1_desc: "Windows certified to <strong>wind resistance class 5</strong> (EN 12210): built for the Bora gusts.",
+        tech_c2_title: "32 dB sound insulation",
         tech_c2_desc: "41 mm laminated triple glazing: street noise stays outside.",
         tech_c3_title: "11-point security door",
         tech_c3_desc: "Burglar resistance class 3, 11 locking points and a Mottura security cylinder. The lock has already been re-coded: keys used in the past no longer open it.",
@@ -4804,7 +4809,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
 
         cap6_num: "Chapter 02 • Photos",
         cap6_title: "Real photos of every room",
-        cap6_subtitle: "All photographs are authentic and shot on-site on the 9th floor in natural daylight. Click any photo to open the interactive lightbox.",
+        cap6_subtitle: "Real photos of the flat and the building, in natural light. Open any photo to enlarge it.",
         gfil_all: "All Photos (19)",
         gal_more: "Show all 19 photos",
         gfil_living: "Living room & terrace",
@@ -4839,7 +4844,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         val_lib_net: "~€11,230 / year",
 
         trattativa_banner_title: "<svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-key\"/></svg> Direct private sale",
-        trattativa_banner_desc: "The apartment is sold directly by the owner, with no agency: the buyer pays no brokerage fee, which is usually 3–4% + VAT. I reply to messages within 24 hours and to every written offer within 48.",
+        trattativa_banner_desc: "The apartment is sold directly by the owner, with no agency: the buyer pays no brokerage fee, which is usually 3–4% + VAT. I reply to messages within 24 hours and to every written offer within 48. If you prefer, the preliminary contract can be drawn up by the notary of your choice.",
         tstep1_num: "Step 01 • Viewing",
         tstep1_title: "Private viewing",
         tstep1_desc: "Tour of the 9th-floor apartment with the owner. Land Register records, 2024 Energy Certificate, window invoices, Superbonus paperwork and floor plans are available on request.",
@@ -4867,7 +4872,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         faq_q3: "What is the Land Register (tavolare) system?",
         faq_a3: "In Trieste, as in other former Austro-Hungarian areas, property is recorded in the Land Register (Libro Fondiario): ownership passes to the buyer on registration, which a judge checks before ordering it. It is an extra safeguard compared with the rest of Italy.",
         faq_q4: "Surface right and PEEP: what does it mean for the buyer?",
-        faq_a4: "The conversion to full ownership is already approved: the City of Trieste has granted it free of charge (letter ref. P.G. 0090278 of 20/04/2026). The building was built under a subsidised housing scheme (PEEP) and the apartment is currently held as a surface right (diritto di superficie), valid until 16 April 2086 and renewable. Only the signing of the new agreement before a notary remains; the City sets the date. If it has not been signed by completion, the buyer takes over the same procedure: the amount notified by the City is €0 and only the notary's fee remains. The sale price is unrestricted.",
+        faq_a4: "Conversion to full ownership costs €0: the City of Trieste notified this in its letter ref. P.G. 0090278 of 20/04/2026, and the owner accepted on 21/04/2026. The building was built under a subsidised housing scheme (PEEP), and the flat is currently held as a surface right (diritto di superficie), valid until 16 April 2086 and renewable. The conversion is completed by signing a new agreement before a notary, paying only the costs of the deed. The City sets the date once a technical matter at the Land Registry on recording the new agreements is resolved. If it has not been signed by completion, the buyer takes over the same procedure on the same terms. The sale price is unrestricted.",
         faq_q5: "Who pays the notary?",
         faq_a5: "By custom the buyer chooses and pays the notary: it is worth asking for a quote before making an offer.",
         faq_q6: "What are the running costs?",
@@ -4989,7 +4994,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         wa_name: "Name",
         wa_hello: "Guten Tag Marco, ich melde mich über die Website der Via Giulia 77 (Triest, 9. Etage).",
         wa_text: "Guten Tag Marco, ich melde mich über die Website wegen der Wohnung in der Via Giulia 77 in Triest.",
-        meta_desc: "Triest, Via Giulia 77: 108 m² (Kataster; ca. 85 m² Wohnfläche) in der 9. und obersten Etage, Terrasse mit Karstblick, Fernblick aufs Meer aus zwei Zimmern, Tiefgaragenplatz, Energieklasse B. Dämmung, Fenster und Therme bereits erneuert. Kaufpreis 349.000 €.",
+        meta_desc: "349.000 € inkl. Tiefgaragenplatz · Triest, Via Giulia 77: 9. und oberste Etage, 4 Zimmer, Terrasse mit Karstblick, Energieklasse B. Direkt vom Eigentümer.",
         meta_title: "4-Zimmer-Wohnung in Triest kaufen – oberste Etage, Via Giulia 77",
         brand_floor: "9. Stock",
         nav_residenza: "Übersicht",
@@ -5022,7 +5027,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         cap1_title: "Neun Stockwerke über der Stadt – und alles vor der Haustür.",
         cap1_subtitle: "In der 9. und obersten Etage der Via Giulia 77 zu wohnen heißt: Licht von zwei Seiten, das Karstplateau vor Augen und der Stadtverkehr weit unten.",
         cap1_float_title: "Dreifachverglasung (2022–2023)",
-        cap1_float_desc: "Zertifizierter Bora-Windwiderstand Klasse 5 und 33 dB Schallschutz.",
+        cap1_float_desc: "Zertifizierter Bora-Windwiderstand Klasse 5 und 32 dB Schallschutz.",
         cap1_intro: "Ein Gebäude aus den späten 1980er-Jahren (Bezugsgenehmigung 1990) mit einer Wohnung, die dort bereits saniert ist, wo es zählt: Über den italienischen Superbonus 110 % wurden Wärmedämmung rund um die Wohnung, Dreifachverglasung, Sicherheitstür und Brennwerttherme (2022) erneuert. Die teuren energetischen Arbeiten sind bereits erledigt. Darüber liegt nur die große Gemeinschaftsdachterrasse mit Photovoltaikanlage: keine Nachbarn über Ihnen.",
         pil1_title: "Eigener Tiefgaragenstellplatz (C/6, 13 m²)",
         pil1_desc: "Im Untergeschoss S1 des Hauses: Der Aufzug fährt bis zum Haupteingang im Erdgeschoss; von dort führen zwei geschützte interne Treppenläufe (14 Stufen) direkt zur Tiefgarage.",
@@ -5031,7 +5036,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         pil3_title: "Großzügige Räume und zwei vollwertige Bäder",
         pil3_desc: "Großzügige Raumaufteilung mit durchgehendem sandfarbenem Feinsteinzeugboden, Panorama-Wohnzimmer, Wohnküche mit Terrassenzugang, zwei Bädern (Wannenbad + Hydromassage-Dusche mit UKW-Radio & LED) und drei Schlaf-/Arbeitszimmern, Raumhöhe 2,70 m.",
         pil4_title: "Unterlagen in Ordnung, bereit für den Notar",
-        pil4_desc: "Bau-, Kataster- und Grundbuchkonformität von einem Architekten bestätigt (2021); Umwandlung in volles Eigentum von der Stadt Triest bereits genehmigt, keine PEEP-Preisbindung.",
+        pil4_desc: "Bau-, Kataster- und Grundbuchkonformität von einem Architekten bestätigt (2021); Umwandlung in Volleigentum für 0 €, wie von der Stadt Triest mitgeteilt; freier Verkaufspreis ohne PEEP-Bindung.",
 
         loc_strip_title: "<span><svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-compass\"/></svg></span> Lage: Nahversorgung vor der Tür, Meer & schnelle Verbindungen",
         loc_strip_badge: "VIA GIULIA 77 • TRIEST",
@@ -5096,8 +5101,8 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         cap4_subtitle: "2022–2023 erhielt die Wohnung neue PVC-Fenster mit <strong>Dreifachverglasung</strong>, gedämmte, borafeste Rollläden und eine <strong>Sicherheitstür der Klasse 3</strong>, fachgerecht eingebaut mit <strong>10 Jahren Garantie auf die Montage</strong>. Marken und technische Daten stehen im Datenblatt unten.",
         more_tech: "Vollständiges Datenblatt: Fenstermaße, Leistungswerte, Sicherheitstür und Abnahme",
         tech_c1_title: "Borafest, Klasse 5",
-        tech_c1_desc: "Rollläden und Fensterrahmen zertifiziert in <strong>Windwiderstandsklasse 5</strong>: gemacht für die Bora-Böen.",
-        tech_c2_title: "Schalldämmung 33 dB",
+        tech_c1_desc: "Fenster zertifiziert in <strong>Windwiderstandsklasse 5</strong> (EN 12210): gemacht für die Bora-Böen.",
+        tech_c2_title: "Schalldämmung 32 dB",
         tech_c2_desc: "41 mm Verbund-Dreifachverglasung: der Straßenlärm bleibt draußen.",
         tech_c3_title: "Sicherheitstür mit 11 Riegeln",
         tech_c3_desc: "Einbruchschutz Klasse 3, 11 Verriegelungspunkte und Mottura-Sicherheitszylinder. Das Schloss wurde bereits umcodiert: früher benutzte Schlüssel öffnen nicht mehr.",
@@ -5123,7 +5128,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
 
         cap6_num: "Kapitel 02 • Fotos",
         cap6_title: "Echte Fotos aller Räume",
-        cap6_subtitle: "Alle Fotografien sind echte Originalaufnahmen bei Tageslicht im 9. Stock. Klicken Sie auf ein Bild für die Vollbildansicht.",
+        cap6_subtitle: "Echte Fotos der Wohnung und des Hauses, bei Tageslicht. Öffnen Sie ein Foto, um es zu vergrößern.",
         gfil_all: "Alle Fotos (19)",
         gal_more: "Alle 19 Fotos anzeigen",
         gfil_living: "Wohnzimmer & Terrasse",
@@ -5158,7 +5163,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         val_lib_net: "~ 11.230 € / Jahr",
 
         trattativa_banner_title: "<svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-key\"/></svg> Direktverkauf von Privat",
-        trattativa_banner_desc: "Die Wohnung wird direkt vom Eigentümer verkauft, ohne Makler: Der Käufer zahlt keine Provision, die üblicherweise 3–4 % + MwSt. beträgt. Nachrichten beantworte ich innerhalb von 24 Stunden, schriftliche Angebote innerhalb von 48.",
+        trattativa_banner_desc: "Die Wohnung wird direkt vom Eigentümer verkauft, ohne Makler: Der Käufer zahlt keine Provision, die üblicherweise 3–4 % + MwSt. beträgt. Nachrichten beantworte ich innerhalb von 24 Stunden, schriftliche Angebote innerhalb von 48. Auf Wunsch setzt der Notar Ihrer Wahl auch den Vorvertrag auf.",
         tstep1_num: "Schritt 01 • Besichtigung",
         tstep1_title: "Privatbesichtigung",
         tstep1_desc: "Besichtigung der Wohnung im 9. Stock mit dem Eigentümer. Grundbuchauszüge, Energieausweis 2024, Fensterrechnungen, Superbonus-Unterlagen und Grundrisse auf Anfrage.",
@@ -5186,7 +5191,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         faq_q3: "Was ist das Grundbuchsystem (tavolare)?",
         faq_a3: "In Triest wird – wie in anderen Gebieten des früheren Österreich-Ungarn – das Eigentum im Grundbuch (Libro Fondiario) eingetragen: Es geht mit der Eintragung auf den Käufer über, die ein Richter vorher prüft. Das ist eine zusätzliche Sicherheit gegenüber dem übrigen Italien.",
         faq_q4: "Baurecht (diritto di superficie) und PEEP: Was bedeutet das für den Käufer?",
-        faq_a4: "Die Umwandlung in Volleigentum ist bereits genehmigt: Die Stadt Triest hat sie kostenlos bewilligt (Schreiben P.G. 0090278 vom 20.04.2026). Das Gebäude entstand im Rahmen eines geförderten Wohnbauprogramms (PEEP); die Wohnung steht derzeit im Baurecht (diritto di superficie), gültig bis zum 16. April 2086 und verlängerbar. Es fehlt nur die Unterzeichnung der neuen Vereinbarung beim Notar; den Termin legt die Stadt fest. Ist sie beim Kauf noch nicht unterzeichnet, tritt der Käufer in dasselbe Verfahren ein: Der von der Stadt mitgeteilte Betrag ist 0 €, es bleibt nur das Notarhonorar. Der Verkaufspreis ist frei, ohne Preisbindung.",
+        faq_a4: "Die Umwandlung in Volleigentum kostet 0 €: Das hat die Stadt Triest mit Schreiben P.G. 0090278 vom 20.04.2026 mitgeteilt; der Eigentümer hat am 21.04.2026 angenommen. Das Gebäude entstand im Rahmen eines geförderten Wohnbauprogramms (PEEP); die Wohnung steht derzeit im Baurecht (diritto di superficie), gültig bis zum 16. April 2086 und verlängerbar. Abgeschlossen wird die Umwandlung mit einer neuen Vereinbarung beim Notar; es fallen nur die Kosten der Urkunde an. Den Termin legt die Stadt fest, sobald beim Grundbuchamt eine technische Frage zur Eintragung der neuen Vereinbarungen geklärt ist. Ist sie beim Kauf noch nicht unterzeichnet, tritt der Käufer zu denselben Bedingungen in dasselbe Verfahren ein. Der Verkaufspreis ist frei, ohne Preisbindung.",
         faq_q5: "Wer bezahlt den Notar?",
         faq_a5: "Üblicherweise wählt und bezahlt der Käufer den Notar: Es lohnt sich, vor dem Angebot einen Kostenvoranschlag einzuholen.",
         faq_q6: "Welche laufenden Kosten fallen an?",
@@ -5308,7 +5313,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         wa_name: "Ime",
         wa_hello: "Pozdravljeni, Marco, pišem vam s spletne strani Via Giulia 77 (Trst, 9. nadstropje).",
         wa_text: "Pozdravljeni, Marco, pišem vam s spletne strani zaradi stanovanja na Via Giulia 77 v Trstu.",
-        meta_desc: "Trst, Via Giulia 77: 108 m² (katastrska; ~85 m² neto) v 9. in zadnjem nadstropju, terasa s pogledom na Kras, morje v daljavi iz dveh sob, pokrito parkirno mesto, energijski razred B. Izolacija, okna in kotel že obnovljeni. Cena 349.000 €.",
+        meta_desc: "349.000 € s pokritim parkirnim mestom · Trst, Via Giulia 77: 9. in zadnje nadstropje, 4 sobe, terasa s pogledom na Kras, energijski razred B. Neposredno od lastnika.",
         meta_title: "Stanovanje v Trstu naprodaj, 4 sobe, zadnje nadstropje – Via Giulia 77",
         brand_floor: "9. nadstropje",
         nav_residenza: "Pregled",
@@ -5338,7 +5343,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         cap1_title: "Devet nadstropij nad mestom, vse pa pred vrati.",
         cap1_subtitle: "Živeti v 9. in zadnjem nadstropju na Via Giulia 77 pomeni svetlobo z dveh strani, kraško planoto pred sabo in mestni promet daleč spodaj.",
         cap1_float_title: "Okna s trojno zasteklitvijo (2022–2023)",
-        cap1_float_desc: "Certificirana odpornost proti burji razreda 5 in zvočna izolacija 33 dB.",
+        cap1_float_desc: "Certificirana odpornost proti burji razreda 5 in zvočna izolacija 32 dB.",
         cap1_intro: "Stavba s konca 80. let (uporabno dovoljenje 1990) s stanovanjem, ki je že obnovljeno tam, kjer je pomembno: z italijanskim Superbonusom 110 % so bili plačani toplotna izolacija okoli celotnega stanovanja, troslojna okna, protivlomna vrata in kondenzacijski kotel (2022). Najdražja energetska dela so že opravljena. Nad stanovanjem je le velika skupna strešna terasa s sončnimi paneli: brez sosedov nad vami.",
         pil1_title: "Lastno pokrito parkirno mesto (C/6, 13 m²)",
         pil1_desc: "V kletni etaži S1: dvigalo pripelje do glavnega vhoda v pritličju, od tam pa dve notranji stopnišči (14 stopnic) vodita v garažo.",
@@ -5347,7 +5352,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         pil3_title: "Velike sobe in dve popolni kopalnici",
         pil3_desc: "Prostorna razporeditev z enotnimi tlemi iz porcelanaste keramike v peščenem odtenku, panoramska dnevna soba, bivalna kuhinja z izhodom na teraso s klinkerjem, dve kopalnici (kad + masažna tuš kabina z radiem FM in LED) in tri sobe, s stropi visokimi 2,70 m.",
         pil4_title: "Dokumentacija urejena, pripravljeno za podpis",
-        pil4_desc: "Skladnost z gradbenimi, katastrskimi in zemljiškoknjižnimi podatki potrdil arhitekt (2021); preoblikovanje v polno lastnino je Občina Trst že odobrila, cena prodaje pa ni omejena s pogoji programa PEEP.",
+        pil4_desc: "Skladnost z gradbenimi, katastrskimi in zemljiškoknjižnimi podatki potrdil arhitekt (2021); preoblikovanje v polno lastnino za 0 €, kot je sporočila Občina Trst; prodajna cena ni omejena s pogoji programa PEEP.",
         loc_strip_title: "<span><svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-compass\"/></svg></span> Lokacija: trgovine pred vrati, morje in hitre povezave",
         loc_strip_badge: "VIA GIULIA 77 • TRST",
         loc_item_1: "<strong>Nakupovalno središče »Il Giulia« in avtobusi 6, 9, 35:</strong> supermarket PAM, okoli dvajset trgovin, lekarna brez recepta, banka in fitnes 30–40 metrov od vhodnih vrat, skoraj povsem pod streho (le kratek odsek na prostem); avtobusna postaja je približno 60 metrov stran, najbližja lekarna približno 250.",
@@ -5407,8 +5412,8 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         cap4_subtitle: "V letih 2022–2023 je stanovanje dobilo nova okna PVC s <strong>trojno zasteklitvijo</strong>, izolirane rolete, ki kljubujejo burji, in <strong>protivlomna vrata razreda 3</strong>, strokovno vgrajena z <strong>10-letno garancijo na vgradnjo</strong>. Znamke in tehnični podatki so v spodnjem listu.",
         more_tech: "Celoten tehnični list: mere oken, lastnosti, protivlomna vrata in prevzem",
         tech_c1_title: "Odporno proti burji, razred 5",
-        tech_c1_desc: "Rolete in okenski okvirji s certifikatom <strong>razreda 5 odpornosti proti vetru</strong>: narejeni za sunke burje.",
-        tech_c2_title: "Zvočna izolacija 33 dB",
+        tech_c1_desc: "Okna s certifikatom <strong>razreda 5 odpornosti proti vetru</strong> (EN 12210): narejena za sunke burje.",
+        tech_c2_title: "Zvočna izolacija 32 dB",
         tech_c2_desc: "Lepljena trojna zasteklitev 41 mm: hrup ulice ostane zunaj.",
         tech_c3_title: "Protivlomna vrata z 11 točkami",
         tech_c3_desc: "Protivlomni razred 3, 11 zapornih točk in varnostni cilinder Mottura. Ključavnica je že prekodirana: prej uporabljeni ključi je ne odprejo več.",
@@ -5432,7 +5437,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         etab_4: "<span><svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-layers\"/></svg></span> Gradbena fizika in podatki EC700",
         cap6_num: "Poglavje 02 • Fotografije",
         cap6_title: "Prave fotografije prostorov",
-        cap6_subtitle: "Vse fotografije so pristne, posnete na kraju samem v 9. nadstropju ob dnevni svetlobi. Kliknite fotografijo za povečavo.",
+        cap6_subtitle: "Prave fotografije stanovanja in stavbe, ob dnevni svetlobi. Odprite fotografijo za povečavo.",
         gfil_all: "Vse fotografije (19)",
         gal_more: "Pokaži vseh 19 fotografij",
         gfil_living: "Dnevna soba in terasa",
@@ -5465,7 +5470,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         val_lib_ilia: "Redna deželna stopnja",
         val_lib_net: "~ 11.230 € / leto",
         trattativa_banner_title: "<svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-key\"/></svg> Neposredna prodaja med zasebniki",
-        trattativa_banner_desc: "Stanovanje prodaja lastnik sam, brez agencije: kupec ne plača provizije, ki običajno znaša 3–4 % + DDV. Na sporočila odgovorim v 24 urah, na vsako pisno ponudbo v 48.",
+        trattativa_banner_desc: "Stanovanje prodaja lastnik sam, brez agencije: kupec ne plača provizije, ki običajno znaša 3–4 % + DDV. Na sporočila odgovorim v 24 urah, na vsako pisno ponudbo v 48. Če želite, predpogodbo pripravi notar po vaši izbiri.",
         tstep1_num: "Korak 01 • Ogled",
         tstep1_title: "Zasebni ogled",
         tstep1_desc: "Ogled stanovanja v 9. nadstropju skupaj z lastnikom. Na željo si lahko ogledate zemljiškoknjižne izpiske, energetsko izkaznico 2024, račune za okna, dokumentacijo Superbonusa in tlorise.",
@@ -5493,7 +5498,7 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
         faq_q3: "Kaj je sistem zemljiške knjige (tavolare)?",
         faq_a3: "V Trstu se, tako kot na drugih območjih nekdanje Avstro-Ogrske, lastnina vpisuje v zemljiško knjigo (Libro Fondiario): na kupca preide z vpisom, ki ga pred odobritvijo preveri sodnik. To je dodatno jamstvo v primerjavi s preostalo Italijo — in sistem, ki ga v Sloveniji dobro poznate.",
         faq_q4: "Stavbna pravica in PEEP: kaj to pomeni za kupca?",
-        faq_a4: "Preoblikovanje v polno lastnino je že odobreno: Občina Trst ga je odobrila brezplačno (dopis P.G. 0090278 z dne 20. 4. 2026). Stavba je bila zgrajena v okviru programa subvencionirane gradnje (PEEP), stanovanje pa je zdaj v stavbni pravici (diritto di superficie), ki velja do 16. aprila 2086 in jo je mogoče podaljšati. Manjka le podpis nove pogodbe pri notarju; datum določi občina. Če do nakupa še ni podpisana, kupec vstopi v isti postopek: znesek, ki ga je sporočila občina, je 0 €, ostane le plačilo notarja. Prodajna cena je prosta, brez omejitev.",
+        faq_a4: "Preoblikovanje v polno lastnino stane 0 €: Občina Trst je to sporočila z dopisom P.G. 0090278 z dne 20. 4. 2026, lastnik pa je ponudbo sprejel 21. 4. 2026. Stavba je bila zgrajena v okviru programa subvencionirane gradnje (PEEP), stanovanje pa je zdaj v stavbni pravici (diritto di superficie), ki velja do 16. aprila 2086 in jo je mogoče podaljšati. Preoblikovanje se zaključi s podpisom nove pogodbe pri notarju; plačajo se le stroški notarske listine. Datum določi Občina, ko bo v zemljiški knjigi rešeno tehnično vprašanje glede vpisa novih pogodb. Če ob nakupu pogodba še ne bo podpisana, kupec vstopi v isti postopek pod enakimi pogoji. Prodajna cena je prosta, brez omejitev.",
         faq_q5: "Kdo plača notarja?",
         faq_a5: "Po navadi notarja izbere in plača kupec: pred ponudbo se splača pridobiti predračun.",
         faq_q6: "Koliko stane vzdrževanje?",
@@ -5770,10 +5775,10 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
       "5 Öffnungen (16,30 m²)",
       "5 odprtin (16,30 m²)"
       ],
-      "Ug 0,7 W/m²K • Rw 33 dB": [
-      "Ug 0.7 W/m²K • Rw 33 dB",
-      "Ug 0,7 W/m²K • Rw 33 dB",
-      "Ug 0,7 W/m²K • Rw 33 dB"
+      "Ug 0,7 W/m²K • 32 dB": [
+      "Ug 0.7 W/m²K • 32 dB",
+      "Ug 0,7 W/m²K • 32 dB",
+      "Ug 0,7 W/m²K • 32 dB"
       ],
       "Posa UNI 11673-2 • Garanzia 10 Anni": [
       "UNI 11673-2 installation • 10-year warranty",
@@ -5805,15 +5810,15 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
       "Gedämmte Aluprof PA 43 Aluminium-Rollläden mit Stahlkurbel und weißem Gelenk",
       "Izolirane aluminijaste rolete Aluprof PA 43 z jeklenim navijalnim mehanizmom in belim zgibom"
       ],
-      "Resistenza al vento Bora Classe 5": [
-      "Bora wind resistance class 5",
-      "Windwiderstand (Bora) Klasse 5",
-      "Odpornost proti burji razreda 5"
+      "Coibentazione in poliuretano": [
+      "Polyurethane insulation",
+      "PU-Dämmung",
+      "Izolacija s poliuretanom"
       ],
-      "Norma PN-EN 13561 Collaudata": [
-      "Tested to PN-EN 13561",
-      "Geprüft nach PN-EN 13561",
-      "Preizkušeno po PN-EN 13561"
+      "Fornitura IPR (ordine C824-21)": [
+      "IPR supply (order C824-21)",
+      "IPR-Lieferung (Auftrag C824-21)",
+      "Dobava IPR (naročilo C824-21)"
       ],
       "Porta Blindata Stark Style7 Nettuno con carenatura perimetrale INOX e cilindro Mottura CM5+1": [
       "Stark Style7 Nettuno security door with stainless-steel perimeter trim and Mottura CM5+1 cylinder",
@@ -6115,10 +6120,10 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
       "0,85 – 0,94 W/m²K (Dreifachverglasung)",
       "0,85 – 0,94 W/m²K (troslojna zasteklitev)"
       ],
-      "Alloggio Tipico Trieste ('60-'80)": [
-      "Typical Trieste flat (1960s–80s)",
-      "Typische Triester Wohnung (1960er–80er)",
-      "Tipično tržaško stanovanje (60.–80. leta)"
+      "Un alloggio in classe G (stima)": [
+      "A Class G flat (estimate)",
+      "Eine Wohnung der Klasse G (Schätzung)",
+      "Stanovanje razreda G (ocena)"
       ],
       "CLASSE G (190+ kWh/m²a)": [
       "CLASS G (190+ kWh/m²a)",
@@ -6140,10 +6145,10 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
       "Unter den zuerst zu sanierenden Gebäuden",
       "Med prvimi stavbami za prenovo"
       ],
-      "Di norma esclusi": [
-      "Usually not available",
-      "In der Regel nicht möglich",
-      "Običajno niso dostopni"
+      "Dipende dalla banca": [
+      "Depends on the bank",
+      "Hängt von der Bank ab",
+      "Odvisno od banke"
       ],
       "2,80 – 3,50 W/m²K (Vetro singolo datato)": [
       "2.80 – 3.50 W/m²K (old single glazing)",
@@ -6495,10 +6500,10 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
       "Panoramablick • 9. Etage",
       "Razgled • 9. nadstropje"
       ],
-      "Apertura dominante sul verde del Carso e sui tetti di Trieste dal terrazzo": [
-      "Sweeping view of the green Karst and the rooftops of Trieste from the terrace",
-      "Weiter Blick von der Terrasse auf den grünen Karst und die Dächer von Triest",
-      "Širok razgled na zeleni Kras in tržaške strehe s terase"
+      "Dal terrazzo, il verde del Carso e i tetti di Trieste": [
+      "From the terrace: the green Karst and the rooftops of Trieste",
+      "Von der Terrasse: der grüne Karst und die Dächer von Triest",
+      "S terase: zeleni Kras in strehe Trsta"
       ],
       "Zona Giorno": [
       "Living area",
@@ -6545,10 +6550,10 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
       "Komplette Küche mit Fenstertür und direktem Zugang zur Terrasse",
       "Popolnoma opremljena kuhinja z balkonskimi vrati in neposrednim izhodom na teraso"
       ],
-      "Dettaglio arredi e piano cottura lineare funzionale": [
-      "Detail of the units and the straight-line hob",
-      "Detail der Küchenzeile mit Kochfeld",
-      "Detajl kuhinjskih elementov in kuhalne plošče"
+      "Pensili e piano cottura della cucina": [
+      "Kitchen wall units and hob",
+      "Hängeschränke und Kochfeld der Küche",
+      "Viseče omarice in kuhalna plošča"
       ],
       "Bagno piccolo": [
       "Small bathroom",
@@ -7120,15 +7125,15 @@ Parla direttamente con Marco Laurenti per fissare una visita o chiedere informaz
       "Rechtssicherheit in Triest",
       "Pravna varnost v Trstu"
       ],
-      "Trasformazione in piena proprietà già approvata a 0 €": [
-      "Conversion to full ownership already approved at €0",
-      "Umwandlung in Volleigentum bereits zu 0 € genehmigt",
-      "Preoblikovanje v polno lastnino že odobreno za 0 €"
+      "Piena proprietà a 0 €": [
+      "Full ownership at €0",
+      "Volleigentum für 0 €",
+      "Polna lastnina za 0 €"
       ],
-      "(Comune di Trieste, lettera P.G. 0090278 del 20/04/2026, accettata il 21/04/2026). Oggi: proprietà superficiaria 1/1 (diritto di superficie PEEP, valido fino al 16/04/2086, rinnovabile). Manca solo la firma della nuova convenzione dal notaio, con data fissata dal Comune: la trasformazione non costa nulla, si paga solo l'onorario del notaio. Se la firma non avviene prima del rogito, chi compra subentra nella stessa pratica: il corrispettivo comunicato dal Comune è 0 € e resta solo l'onorario del notaio.": [
-      "(City of Trieste, letter ref. P.G. 0090278 of 20/04/2026, accepted on 21/04/2026). Today: surface-right ownership 1/1 (PEEP diritto di superficie, valid until 16/04/2086, renewable). Only the signing of the new agreement before a notary remains, on a date set by the City: the conversion is free, only the notary's fee applies. If it has not been signed before completion, the buyer takes over the same procedure: the amount notified by the City is €0 and only the notary's fee remains.",
-      "(Stadt Triest, Schreiben P.G. 0090278 vom 20.04.2026, angenommen am 21.04.2026). Derzeit: Baurecht 1/1 (diritto di superficie aus dem geförderten Wohnbau PEEP, gültig bis 16.04.2086, verlängerbar). Es fehlt nur die Unterzeichnung der neuen Vereinbarung beim Notar, den Termin legt die Stadt fest: Die Umwandlung ist kostenlos, es fällt nur das Notarhonorar an. Ist sie bis zum Notartermin nicht unterzeichnet, tritt der Käufer in dasselbe Verfahren ein: Der von der Stadt mitgeteilte Betrag ist 0 €, es bleibt nur das Notarhonorar.",
-      "(Občina Trst, dopis P.G. 0090278 z dne 20. 4. 2026, ponudba sprejeta 21. 4. 2026). Danes: stavbna pravica 1/1 (diritto di superficie iz programa PEEP, velja do 16. 4. 2086, z možnostjo podaljšanja). Manjka le podpis nove pogodbe pri notarju, datum določi občina: preoblikovanje je brezplačno, plača se le notar. Če do podpisa pri notarju še ni podpisana, kupec vstopi v isti postopek: znesek, ki ga je sporočila občina, je 0 €, ostane le plačilo notarja."
+      "(Comune di Trieste, lettera P.G. 0090278 del 20/04/2026, accettata il 21/04/2026). Oggi: proprietà superficiaria 1/1 (diritto di superficie PEEP, valido fino al 16/04/2086, rinnovabile). Il passaggio si completa firmando una nuova convenzione dal notaio, con le sole spese dell'atto; la data la fissa il Comune, dopo una questione tecnica all'Ufficio Tavolare sull'annotazione delle nuove convenzioni. Se la firma non avviene prima del rogito, chi compra subentra nella stessa pratica, alle stesse condizioni.": [
+      "(City of Trieste, letter ref. P.G. 0090278 of 20/04/2026, accepted on 21/04/2026). Today: surface-right ownership 1/1 (PEEP diritto di superficie, valid until 16/04/2086, renewable). The conversion is completed by signing a new agreement before a notary, paying only the costs of the deed; the City sets the date once a technical matter at the Land Registry on recording the new agreements is resolved. If it has not been signed before completion, the buyer takes over the same procedure on the same terms.",
+      "(Stadt Triest, Schreiben P.G. 0090278 vom 20.04.2026, angenommen am 21.04.2026). Derzeit: Baurecht 1/1 (diritto di superficie aus dem geförderten Wohnbau PEEP, gültig bis 16.04.2086, verlängerbar). Abgeschlossen wird die Umwandlung mit einer neuen Vereinbarung beim Notar; es fallen nur die Kosten der Urkunde an. Den Termin legt die Stadt fest, sobald beim Grundbuchamt eine technische Frage zur Eintragung der neuen Vereinbarungen geklärt ist. Ist sie bis zum Notartermin nicht unterzeichnet, tritt der Käufer zu denselben Bedingungen in dasselbe Verfahren ein.",
+      "(Občina Trst, dopis P.G. 0090278 z dne 20. 4. 2026, sprejet 21. 4. 2026). Danes: stavbna pravica 1/1 (diritto di superficie iz programa PEEP, velja do 16. 4. 2086, z možnostjo podaljšanja). Preoblikovanje se zaključi s podpisom nove pogodbe pri notarju; plačajo se le stroški notarske listine. Datum določi Občina, ko bo v zemljiški knjigi rešeno tehnično vprašanje glede vpisa novih pogodb. Če pogodba do podpisa kupoprodajne pogodbe ne bo podpisana, kupec vstopi v isti postopek pod enakimi pogoji."
       ],
       "Pianta dell'appartamento com'è oggi, con i nomi delle stanze e le superfici": [
       "Floor plan of the flat as it is today, with room names and sizes",
