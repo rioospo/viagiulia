@@ -701,6 +701,9 @@
     SH('OPT3_06', 'OPT3_06_Bagno_SPA', 'img/prima/BAGNO_B_140606.jpg', 'Bagno SPA', 'Spa bathroom', 'Spa-Bad', true),
     SH('OPT3_07', 'OPT3_07_Bagno_Ospiti', 'img/prima/OPT1_05_Bagno_vasca.jpg', 'Bagno ospiti', 'Guest bathroom', 'Gästebad')
   ];
+  // etichette slovene degli scatti Prima/Dopo (audit 17/11/2026): senza, su /sl/ ricadevano in italiano
+  var SL_SHOT = { OPT1_01:'Dnevna soba', OPT1_02:'Bivalna kuhinja', OPT1_03:'Zakonska spalnica', OPT1_04:'Otroška soba', OPT1_05:'Velika kopalnica', OPT1_06:'Terasa', OPT2_01:'Dnevni prostor s kuhinjo', OPT2_02:'Lounge', OPT2_03:'Soba za sorojenca', OPT2_04:'Spalnica staršev', OPT2_05:'Družinska kopalnica', OPT2_06:'Zasebna kopalnica', OPT3_01:'Kuhinja z otokom', OPT3_02:'Odprt dnevni prostor', OPT3_03:'Lounge', OPT3_04:'Garderoba', OPT3_05:'Suita', OPT3_06:'Kopalnica spa', OPT3_07:'Kopalnica za goste' };
+  IDEAS.classica.shots.concat(IDEAS.famiglia.shots, IDEAS.loft.shots).forEach(function (s) { if (SL_SHOT[s.id]) s.label.sl = SL_SHOT[s.id]; });
   function afterSrc(s) { return 'img/render/' + s.render + '.jpg'; }
   function hiSrc(s) { return 'img/render/' + s.render + '_2400.jpg'; }
   function shotItem(s) { return { before: s.before, after: afterSrc(s), hi: S.avail[hiSrc(s)] === true ? hiSrc(s) : null, label: s.label, tall: s.tall }; }
@@ -3353,8 +3356,8 @@
 
     const ROOM_LABELS_DATA = [
       { key: 'Camera 1', x: 195, y: 150, sqm: '14,5 m²', img: '../img/web/camera_salvia.jpg', camPos: [-360, 440, 260], camTarget: [-255, 0, -200], zoom: 1.48, desc: 'Camera Carso, la matrimoniale (la più ampia, Nord-Ovest): finestra triplo vetro Aluplast a 3 ante con vista Carso, calorifero e pavimento in ceramica beige-tortora nuvolato.' },
-      { key: 'Camera 2', x: 160, y: 330, sqm: '9,5 m²', img: '../img/web/camera_matrimoniale.jpg', camPos: [-430, 440, 320], camTarget: [-290, 0, -20], zoom: 1.52, desc: 'Studio sul lato Ovest, camera singola o studio: finestra a 3 ante triplo vetro con calorifero sottostante, pareti crema pulite e battiscopa in legno testa di moro.' },
-      { key: 'Camera 3', x: 160, y: 535, sqm: '14,3 m²', img: '../img/web/camera_studio.jpg', camPos: [-420, 450, 480], camTarget: [-290, 0, 185], zoom: 1.46, desc: 'Camera Mare, doppia e ampia (angolo Sud-Ovest): finestra a 3 ante a Ovest con scorcio di mare, calorifero, pavimento uniforme in piastrelle beige-tortora posate in griglia.' },
+      { key: 'Camera 2', x: 160, y: 330, sqm: '9,5 m²', img: '../img/web/studio.jpg', camPos: [-430, 440, 320], camTarget: [-290, 0, -20], zoom: 1.52, desc: 'Studio sul lato Ovest, camera singola o studio: finestra a 3 ante triplo vetro con calorifero sottostante, pareti crema pulite e battiscopa in legno testa di moro.' },
+      { key: 'Camera 3', x: 160, y: 535, sqm: '14,3 m²', img: '../img/web/camera_mare.jpg', camPos: [-420, 450, 480], camTarget: [-290, 0, 185], zoom: 1.46, desc: 'Camera Mare, doppia e ampia (angolo Sud-Ovest): finestra a 3 ante a Ovest con scorcio di mare, calorifero, pavimento uniforme in piastrelle beige-tortora posate in griglia.' },
       { key: 'Corridoio', x: 296, y: 390, sqm: '4,8 m²', img: '../img/web/living_wide.jpg', camPos: [-260, 480, 380], camTarget: [-154, 0, 40], zoom: 1.55, desc: 'Corridoio centrale zona notte con calorifero a elementi sulla parete Ovest e porte interne bianche con stipiti in legno marrone scuro.' },
       { key: 'Soggiorno', x: 475, y: 265, sqm: '20,2 m²', img: '../img/web/living_room.jpg', camPos: [280, 430, -340], camTarget: [45, 0, -90], zoom: 1.45, desc: 'Soggiorno a L centro-nord: grande portafinestra scorrevole a 2 ante sul terrazzo a Nord, calorifero e portoncino blindato Stark sul lato Sud.' },
       { key: 'Cucina', x: 705, y: 235, sqm: '10,5 m²', img: '../img/web/cucina.jpg', camPos: [560, 430, 260], camTarget: [255, 0, -105], zoom: 1.58, desc: 'Cucina abitabile Nord-Est: mobili attrezzati su una sola parete (Sud) e mobiletto basso stand-alone con mensola marmo e calorifero sulla parete Est.' },
