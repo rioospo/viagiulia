@@ -2179,11 +2179,14 @@
 
     /* ---- primo schermo: la vista intera, senza velo; testi sotto, su fondo chiaro ---- */
     .hero-cinema { display: block !important; height: auto !important; min-height: 0 !important; padding: 0 !important; background: var(--bg); }
-    .cinema-slideshow { position: relative !important; inset: auto !important; height: min(76vh, 780px) !important; bottom: auto !important;
+    .cinema-slideshow { position: relative !important; inset: auto !important; height: min(58vh, 640px) !important; bottom: auto !important;
       background: var(--pietra); }
     /* 18/11 sera: nessuna foto ferma sotto il video (nelle dissolvenze si vedevano due immagini sovrapposte) */
     .cinema-slide.is-video { background: var(--pietra); }
     .cinema-slide.is-video video { filter: none !important; }
+    /* 19/11 (audit 7): inquadratura più alta, più Carso e meno tetto-parcheggio del Giulia */
+    #heroSlideVideo { object-position: center 28%; }
+    .mosaic-item:focus-visible, .indicator-bar:focus-visible { outline: 3px solid var(--mare); outline-offset: 3px; }
     .cinema-overlay { display: none !important; }
     .hero-content { position: static !important; padding-top: 34px; padding-bottom: 8px; }
     .hero-first { display: block !important; position: static !important; min-height: 0 !important; padding: 0 !important; }
@@ -2198,15 +2201,16 @@
     .hero-badge-pill { background: #fff; color: var(--ink); border-color: var(--border-subtle); backdrop-filter: none; }
     .hero-badge-pill span { color: var(--mare); }
     .hero-badge-pill.interactive:hover { background: var(--mare-chiaro); color: var(--ink); box-shadow: none; }
-    .hero-cinema .slide-indicators { top: calc(min(76vh, 780px) - 26px) !important; bottom: auto !important; }
+    .hero-cinema .slide-indicators { top: calc(min(58vh, 640px) - 26px) !important; bottom: auto !important; }
     .indicator-bar { background: rgba(255,255,255,0.6); box-shadow: 0 0 0 1px rgba(0,0,0,0.08); }
     .indicator-bar.active { background: #fff; }
-    .hero-pause { position: absolute; top: calc(min(76vh, 780px) - 56px) !important; bottom: auto !important; left: 16px;
+    .hero-pause { position: absolute; top: calc(min(58vh, 640px) - 56px) !important; bottom: auto !important; left: 16px;
       background: rgba(0,0,0,0.35); color: #fff; border-color: rgba(255,255,255,0.4); }
     @media (max-width: 768px) {
       /* sul telefono il video, ritagliato in verticale, mostra soprattutto il telaio in ombra: si apre con la panoramica */
       #heroSlideVideo { display: none !important; }
-      #heroSlide0 { background: url('img/web/hero_panorama.jpg') 42% center / cover no-repeat !important; }
+      /* 19/11 (audit 7): panoramica ingrandita e spostata in alto a sinistra: Carso, palazzi e alberi; il tetto con i camper resta fuori */
+      #heroSlide0 { background: url('img/web/hero_panorama.jpg') 32% 30% / auto 125% no-repeat !important; }
       .cinema-slideshow { height: 58vh !important; height: 58svh !important; }
       .hero-cinema .slide-indicators { display: none; }
       .hero-pause { top: calc(58svh - 54px) !important; }
@@ -3187,11 +3191,11 @@
             </div>
             <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(29,42,51,0.06);">
               <span style="color: var(--text-secondary);" data-i18n="yield_row_tax">Pauschalsteuer (Cedolare Secca):</span>
-              <strong id="yTax" data-i18n="val_conc_tax" style="color: var(--accent-green);">10% Ermäßigte Pauschalsteuer (statt 21%)</strong>
+              <strong id="yTax" data-i18n="val_conc_tax" style="color: var(--accent-green);">10 % ermäßigte Pauschalsteuer (statt 21 %)</strong>
             </div>
             <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(29,42,51,0.06);">
               <span style="color: var(--text-secondary);" data-i18n="yield_row_ilia">Regionaler Grundsteuerrabatt (ILIA):</span>
-              <strong id="yIlia" data-i18n="val_conc_ilia" style="color: var(--accent-green);">-25% Gesetzlicher FVG-Rabatt</strong>
+              <strong id="yIlia" data-i18n="val_conc_ilia" style="color: var(--accent-green);">−25 %, gesetzlicher Rabatt in FVG</strong>
             </div>
             <div style="display: flex; justify-content: space-between; padding: 14px 0; background: rgba(16, 185, 129, 0.08); border-radius: 6px; margin-top: 10px; padding: 12px 14px;">
               <span style="font-weight: 700; color: var(--ink);" data-i18n="yield_row_net">Geschätzt netto nach Pauschalsteuer und ILIA:</span>
@@ -3773,7 +3777,7 @@
           </div>
         </div>
 
-        <!-- Tab 4: Termofisica Involucro & EC700 -->
+        <!-- Tab 4: Involucro (calcolo EC 700) -->
         <div class="energy-tab-content" id="etab-termofisica">
           <h3 class="hx4" style="font-family: 'Plus Jakarta Sans', sans-serif; color: var(--accent-green); font-size: 1.15rem; margin-bottom: 14px;">
             Kennwerte der Gebäudehülle (zertifizierte Software Edilclima EC 700 V.11)
@@ -4266,6 +4270,20 @@
       mainVideoEl.addEventListener('ended', () => videoBoxEl.classList.remove('is-playing'));
     }
 
+    // 19/11 (audit 7): galleria e trattini del primo schermo usabili anche da tastiera e con il lettore di schermo
+    document.querySelectorAll('.mosaic-item[onclick], .indicator-bar[onclick]').forEach(function (el) {
+      el.setAttribute('role', 'button');
+      el.setAttribute('tabindex', '0');
+      if (!el.hasAttribute('aria-label')) {
+        var im = el.querySelector('img');
+        var lab = (im && im.getAttribute('alt')) || el.getAttribute('title') || '';
+        if (lab) el.setAttribute('aria-label', lab);
+      }
+      el.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); }
+      });
+    });
+
     // 3. Scheda serramenti: Interactive Tabs
     function switchDossierTab(tabId, btn) {
       document.querySelectorAll('.dossier-tab-btn').forEach(b => b.classList.remove('active'));
@@ -4325,7 +4343,7 @@
         btnL.classList.remove('active');
         yM.textContent = dict ? dict.val_conc_monthly : '1.081 € / mese';
         yG.textContent = dict ? dict.val_conc_gross : '12.973 € / anno';
-        yT.textContent = dict ? dict.val_conc_tax : '10% Agevolata (anziché 21%)';
+        yT.textContent = dict ? dict.val_conc_tax : '10% agevolata (anziché 21%)';
         yI.textContent = dict ? dict.val_conc_ilia : '-25% Sconto ILIA FVG';
         yN.textContent = dict ? dict.val_conc_net : '~ 10.838 € / anno';
       } else {
@@ -4654,7 +4672,7 @@
         hero_title: "Trieste, ultimo piano con vista sul Carso e posto auto coperto.",
         hero_price: "349.000 € · posto auto compreso · Classe B · nessuna provvigione",
         video_fallback: "Il tuo browser non supporta la riproduzione video HTML5.",
-        hero_subtitle: "108 m² catastali al 9° e ultimo piano: terrazzo con vista sul Carso, scorcio di mare da due camere, <strong>Classe B</strong> (EPgl,nren 59,09 kWh/m²a) e posto auto coperto di proprietà.",
+        hero_subtitle: "108 m² catastali (~85 m² calpestabili) al 9° e ultimo piano: terrazzo con vista sul Carso, scorcio di mare da due camere, <strong>Classe B</strong> (EPgl,nren 59,09 kWh/m²a) e posto auto coperto di proprietà.",
         hero_pill_carso: "<span><svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-mountain\"/></svg></span> Vista sul Carso",
         hero_pill_mare: "<span><svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-sea\"/></svg></span> Scorcio di mare",
         hero_pill_mq: "<span><svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-plan\"/></svg></span> Pianta e 3D",
@@ -4768,7 +4786,7 @@
         etab_1: "<span><svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-chart\"/></svg></span> Confronto con un alloggio tipico in classe G",
         etab_2: "<span><svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-flame\"/></svg></span> Caldaia a Condensazione 2022",
         etab_3: "<span><svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-cert\"/></svg></span> Attestato APE Deposito FVG",
-        etab_4: "<span><svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-layers\"/></svg></span> Termofisica Involucro & EC700",
+        etab_4: "<span><svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-layers\"/></svg></span> Involucro (calcolo EC 700)",
 
         cap6_num: "Capitolo 02 • Foto",
         cap6_title: "Scatti reali degli ambienti",
@@ -4788,16 +4806,16 @@
         yield_btn_conc: "Canone Concordato 3+2",
         yield_btn_lib: "Canone Libero 4+4",
         yield_sub_header: "Stima secondo l'Accordo Territoriale di Trieste (zona 3, sub-fascia 2)",
-        yield_row_monthly: "Canone Mensile Applicabile:",
-        yield_row_gross: "Canone Lordo Annuo:",
-        yield_row_tax: "Aliquota Cedolare Secca:",
-        yield_row_ilia: "Sconto ILIA FVG:",
+        yield_row_monthly: "Canone mensile:",
+        yield_row_gross: "Canone lordo annuo:",
+        yield_row_tax: "Cedolare secca:",
+        yield_row_ilia: "Sconto ILIA in FVG:",
         yield_row_net: "Netto stimato dopo cedolare e ILIA:",
         yield_note: "Rendimento lordo sul prezzo: circa 3,7% con il canone concordato, 4,5% con il libero. Stima prima di manutenzione, assicurazione, eventuali mesi sfitti e della parte di spese condominiali che resta al proprietario (le spese ordinarie di norma le paga l'inquilino). Da verificare con un commercialista.",
         yield_open: "Mostra la stima",
         val_conc_monthly: "1.081 € / mese",
         val_conc_gross: "12.973 € / anno",
-        val_conc_tax: "10% Agevolata (anziché 21%)",
+        val_conc_tax: "10% agevolata (anziché 21%)",
         val_conc_ilia: "-25% Sconto ILIA FVG",
         val_conc_net: "~ 10.838 € / anno",
         val_lib_monthly: "1.300 € / mese",
@@ -5439,8 +5457,8 @@
         yield_open: "Schätzung anzeigen",
         val_conc_monthly: "1.081 € / Monat",
         val_conc_gross: "12.973 € / Jahr",
-        val_conc_tax: "10% Ermäßigte Pauschalsteuer (statt 21%)",
-        val_conc_ilia: "-25% Gesetzlicher FVG-Rabatt",
+        val_conc_tax: "10 % ermäßigte Pauschalsteuer (statt 21 %)",
+        val_conc_ilia: "−25 %, gesetzlicher Rabatt in FVG",
         val_conc_net: "~ 10.838 € / Jahr",
         val_lib_monthly: "1.300 € / Monat",
         val_lib_gross: "15.600 € / Jahr",
@@ -6143,7 +6161,7 @@
       "ABNAHME BESTANDEN • 10 JAHRE MONTAGEGARANTIE",
       "PREVZEM OPRAVLJEN • 10 LET GARANCIJE NA VGRADNJO"
       ],
-      "Nota Tecnica:": [
+      "Nota tecnica:": [
       "Technical note:",
       "Technischer Hinweis:",
       "Tehnična opomba:"
@@ -6173,7 +6191,7 @@
       "in Einbruchschutzklasse 3 nach UNI EN 1627:",
       "za protivlomni razred 3 po UNI EN 1627:"
       ],
-      "Carenatura in Acciaio INOX": [
+      "Carenatura in acciaio inox": [
       "Stainless-steel trim",
       "Edelstahl-Verkleidung",
       "Obroba iz nerjavnega jekla"
@@ -6183,7 +6201,7 @@
       "umlaufend, mit eingraviertem Stark-Logo.",
       "okoli podboja, z vgraviranim logotipom Stark."
       ],
-      "11 Punti di Ancoraggio:": [
+      "11 punti di ancoraggio:": [
       "11 anchoring points:",
       "11 Verankerungspunkte:",
       "11 sidrnih točk:"
@@ -6193,7 +6211,7 @@
       "7 bewegliche Riegel (Falle + 4 Mittelriegel + Umlenkungen) + 4 feste bandseitige Sicherungen.",
       "7 premičnih zapahov (zapah + 4 osrednji zapahi + preusmerjevalniki) + 4 fiksni kavlji na strani tečajev."
       ],
-      "Limitatore di Apertura:": [
+      "Limitatore di apertura:": [
       "Door limiter:",
       "Türspaltsperre:",
       "Omejevalnik odpiranja:"
@@ -6203,7 +6221,7 @@
       "starre Innenkette, mit Knauf zu bedienen.",
       "toga notranja veriga, ki se upravlja z gumbom."
       ],
-      "Defender Sagomato:": [
+      "Defender sagomato:": [
       "Shaped defender:",
       "Profil-Schutzbeschlag:",
       "Oblikovana zaščitna rozeta:"
@@ -6223,7 +6241,7 @@
       "mit automatischer absenkbarer Bodendichtung.",
       "z avtomatskim spuščajočim tesnilom proti prepihu."
       ],
-      "Finiture Eleganti:": [
+      "Finiture:": [
       "Elegant finishes:",
       "Elegante Ausführung:",
       "Elegantna izvedba:"
@@ -6233,7 +6251,7 @@
       "außen bronzefarbene Beschläge, innen Chrom satiniert, Zarge anthrazit 20/10.",
       "zunaj kljuke v bronasti barvi, znotraj satiniran krom, podboj antracit 20/10."
       ],
-      "Cilindro di Massima Sicurezza": [
+      "Cilindro di massima sicurezza": [
       "High-security cylinder",
       "Hochsicherheitszylinder",
       "Cilinder visoke varnosti"
@@ -6263,7 +6281,7 @@
       "• Benannte Stelle NB0757 / NB1390",
       "• Priglašeni organ NB0757 / NB1390"
       ],
-      "Trasmittanza Termica Media Uw:": [
+      "Trasmittanza termica media Uw:": [
       "Average thermal transmittance Uw:",
       "Mittlerer Wärmedurchgang Uw:",
       "Povprečna toplotna prehodnost Uw:"
@@ -6283,7 +6301,7 @@
       "0,7 W/m²K (41 mm)",
       "0,7 W/m²K (41 mm)"
       ],
-      "Tenuta all'Acqua:": [
+      "Tenuta all'acqua:": [
       "Watertightness:",
       "Schlagregendichtheit:",
       "Vodotesnost:"
@@ -6293,17 +6311,17 @@
       "Klasse 7A (EN 12208)",
       "Razred 7A (EN 12208)"
       ],
-      "Permeabilità all'Aria:": [
+      "Permeabilità all'aria:": [
       "Air permeability:",
       "Luftdurchlässigkeit:",
       "Zrakotesnost:"
       ],
-      "Classe 4 (Massima possibile)": [
+      "Classe 4 (la più alta)": [
       "Class 4 (highest)",
       "Klasse 4 (höchste)",
       "Razred 4 (najvišji)"
       ],
-      "Resistenza al Vento:": [
+      "Resistenza al vento:": [
       "Wind resistance:",
       "Windwiderstand:",
       "Odpornost proti vetru:"
@@ -6313,7 +6331,7 @@
       "Klasse 5 (Kat. 5)",
       "Razred 5 (kat. 5)"
       ],
-      "Verbale di Collaudo Positivo (14/03/2023)": [
+      "Verbale di collaudo positivo (14/03/2023)": [
       "Passed acceptance test report (14/03/2023)",
       "Abnahmeprotokoll bestanden (14.03.2023)",
       "Zapisnik o uspešnem prevzemu (14. 3. 2023)"
@@ -6448,7 +6466,7 @@
       "2,80 – 3,50 W/m²K (Isolierverglasung der 1980er)",
       "2,80 – 3,50 W/m²K (dvojna zasteklitev iz 80. let)"
       ],
-      "Caldaia Viessmann Vitodens 100-W da 25 kW (Installata a Giugno 2022)": [
+      "Caldaia Viessmann Vitodens 100-W da 25 kW (installata a giugno 2022)": [
       "Viessmann Vitodens 100-W 25 kW boiler (installed June 2022)",
       "Viessmann Vitodens 100-W, 25 kW (eingebaut im Juni 2022)",
       "Kotel Viessmann Vitodens 100-W 25 kW (vgrajen junija 2022)"
@@ -7293,12 +7311,12 @@
       "Keine: kein Höchstverkaufspreis aus der PEEP-Vereinbarung",
       "Nobenih: v dogovoru PEEP ni najvišje prodajne cene"
       ],
-      "Garanzia di 10 Anni:": [
+      "Garanzia di 10 anni:": [
       "10-year warranty:",
       "10 Jahre Garantie:",
       "10 let garancije:"
       ],
-      "1 Registrazione Gratuita Inclusa:": [
+      "1 registrazione gratuita inclusa:": [
       "1 free adjustment included:",
       "1 kostenlose Nachjustierung inklusive:",
       "1 brezplačna nastavitev vključena:"
