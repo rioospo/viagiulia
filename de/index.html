@@ -14,7 +14,7 @@
   </script>
   <title>4-Zimmer-Wohnung in Triest kaufen – oberste Etage, Via Giulia 77</title>
   <meta name="description" content="349.000 € inkl. Tiefgaragenplatz · Triest, Via Giulia 77: 9. und oberste Etage, 4 Zimmer, Terrasse mit Karstblick, Energieklasse B. Direkt vom Eigentümer." />
-  <meta name="theme-color" content="#0B0D11" />
+  <meta name="theme-color" content="#F7F4EE" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="favicon.ico" sizes="32x32" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
@@ -73,29 +73,35 @@
        CINEMATIC DESIGN TOKENS (Editorial Luxury Real Estate)
     ======================================================== */
     :root {
-      --bg-dark:        #0B0D11;
-      --bg-elevated:    #11151D;
-      --bg-surface:     #161B25;
-      --bg-card:        rgba(22, 27, 37, 0.78);
-      --sand-gold:      #D4AF37;
-      --sand-light:     #F3E5AB;
-      --sand-dim:       rgba(212, 175, 55, 0.18);
-      --text-primary:   #F5F6F9;
-      --text-secondary: #9FA7B6;
-      --text-tertiary:  #858E9F;
-      --accent-green:   #10B981;
-      --accent-green-bg:rgba(16, 185, 129, 0.12);
-      --accent-cyan:    #38BDF8;
-      --accent-cyan-bg: rgba(56, 189, 248, 0.12);
-      --border-subtle:  rgba(255, 255, 255, 0.08);
-      --border-gold:    rgba(212, 175, 55, 0.32);
-      --border-green:   rgba(16, 185, 129, 0.35);
-      --border-cyan:    rgba(56, 189, 248, 0.35);
-      --font-mono:      'JetBrains Mono', monospace;
-      --radius-sm:      6px;
+      --bg-dark:        #F7F4EE;
+      --bg-elevated:    #EFEBE3;
+      --bg-surface:     #FFFFFF;
+      --bg-card:        rgba(29,42,51, 0.92);
+      --sand-gold:      #1F6E8C;
+      --sand-light:     #17566E;
+      --sand-dim:       rgba(31, 110, 140, 0.14);
+      --text-primary:   #1D2A33;
+      --text-secondary: #46535C;
+      --text-tertiary:  #66727A;
+      --accent-green:   #0E8A5F;
+      --accent-green-bg:rgba(14, 138, 95, 0.10);
+      --accent-cyan:    #1F6E8C;
+      --accent-cyan-bg: rgba(31, 110, 140, 0.10);
+      --border-subtle:  rgba(29, 42, 51, 0.12);
+      --border-gold:    rgba(31, 110, 140, 0.30);
+      --border-green:   rgba(14, 138, 95, 0.35);
+      --border-cyan:    rgba(31, 110, 140, 0.35);
+      --font-mono:      'Plus Jakarta Sans', sans-serif;
+      --radius-sm:      8px;
       --radius-md:      14px;
       --radius-lg:      22px;
       --transition-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+      --ink:            #1D2A33;
+      --bg:             #F7F4EE;
+      --mare:           #1F6E8C;
+      --mare-scuro:     #17566E;
+      --mare-chiaro:    #E3EFF3;
+      --pietra:         #EFEBE3;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -125,7 +131,7 @@
     ::-webkit-scrollbar-thumb { background: #262B37; border-radius: 3px; }
     ::-webkit-scrollbar-thumb:hover { background: var(--sand-gold); }
 
-    .font-cinzel { font-family: 'Cinzel', serif; letter-spacing: 0.04em; }
+    .font-cinzel { font-family: 'Plus Jakarta Sans', sans-serif; letter-spacing: 0.04em; }
     .font-num { font-family: 'Space Grotesk', sans-serif; }
     .font-code { font-family: var(--font-mono); }
 
@@ -165,23 +171,23 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: linear-gradient(180deg, rgba(11, 13, 17, 0.95) 0%, rgba(11, 13, 17, 0.6) 80%, transparent 100%);
+      background: linear-gradient(180deg, rgba(247,244,238, 0.95) 0%, rgba(247,244,238, 0.6) 80%, transparent 100%);
       backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border-subtle);
       transition: all 0.4s ease;
     }
     .header.scrolled {
       padding: 12px 40px;
-      background: rgba(11, 13, 17, 0.98);
+      background: rgba(247,244,238, 0.98);
       border-bottom-color: var(--sand-dim);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     }
 
     .brand-title {
-      font-family: 'Cinzel', serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 1.15rem;
       font-weight: 700;
-      color: #fff;
+      color: var(--ink);
       letter-spacing: 0.1em;
       text-decoration: none;
       display: flex;
@@ -232,7 +238,7 @@
       gap: 8px;
       padding: 9px 20px;
       background: #25D366;
-      color: #0B0D11;
+      color: var(--ink);
       border-radius: var(--radius-sm);
       font-size: 0.82rem;
       font-weight: 700;
@@ -250,7 +256,7 @@
     .lang-switcher {
       display: inline-flex;
       align-items: center;
-      background: rgba(18, 22, 30, 0.85);
+      background: rgba(29,42,51, 0.85);
       border: 1px solid var(--border-subtle);
       border-radius: 100px;
       padding: 3px;
@@ -271,12 +277,12 @@
       letter-spacing: 0.05em;
     }
     .lang-btn:hover {
-      color: #fff;
+      color: var(--ink);
     }
     .lang-btn.active {
       background: var(--sand-gold);
-      color: #0B0D11;
-      box-shadow: 0 2px 10px rgba(212, 175, 55, 0.35);
+      color: var(--ink);
+      box-shadow: 0 2px 10px rgba(31,110,140, 0.35);
     }
 
     /* ========================================================
@@ -305,9 +311,9 @@
       background: currentColor;
     }
     .chapter-title {
-      font-family: 'Cinzel', serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 2.5rem;
-      color: #fff;
+      color: var(--ink);
       line-height: 1.2;
       margin-bottom: 14px;
     }
@@ -335,7 +341,7 @@
       inset: 0;
       z-index: 0;
       overflow: hidden;
-      background: #0B0D11;
+      background: var(--bg);
     }
     .cinema-slide {
       position: absolute;
@@ -354,7 +360,7 @@
     }
     .cinema-slide.is-video {
       transform: none !important;
-      background: #0B0D11;
+      background: var(--bg);
     }
     .cinema-slide.is-video video {
       width: 100%;
@@ -390,7 +396,7 @@
       position: absolute;
       inset: 0;
       z-index: 1;
-      background: linear-gradient(180deg, rgba(11, 13, 17, 0.35) 0%, rgba(11, 13, 17, 0.6) 60%, var(--bg-dark) 100%);
+      background: linear-gradient(180deg, rgba(247,244,238, 0.35) 0%, rgba(247,244,238, 0.6) 60%, var(--bg-dark) 100%);
     }
 
     .hero-badge-pill.interactive {
@@ -400,15 +406,15 @@
     }
     .hero-badge-pill.interactive:hover {
       transform: translateY(-3px) scale(1.03);
-      background: rgba(212, 175, 55, 0.22);
+      background: rgba(31,110,140, 0.22);
       border-color: var(--sand-gold);
-      color: #fff;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.4), 0 0 12px rgba(212, 175, 55, 0.25);
+      color: var(--ink);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12), 0 0 12px rgba(31,110,140, 0.25);
     }
     .hero-badge-pill.interactive.green:hover {
       background: rgba(16, 185, 129, 0.25);
-      border-color: #34D399;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.4), 0 0 12px rgba(16, 185, 129, 0.3);
+      border-color: #0E8A5F;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12), 0 0 12px rgba(16, 185, 129, 0.3);
     }
 
     .hero-content {
@@ -417,23 +423,23 @@
       width: 100%;
     }
     .hero-headline {
-      font-family: 'Cinzel', serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 3.8rem;
       line-height: 1.1;
-      color: #fff;
+      color: var(--ink);
       max-width: 950px;
       margin-bottom: 22px;
       font-weight: 700;
-      text-shadow: 0 10px 40px rgba(0,0,0,0.8);
+      text-shadow: none;
     }
     .hero-subhead {
       font-size: 1.2rem;
-      color: #D1D7E2;
+      color: var(--text-secondary);
       max-width: 780px;
       margin-bottom: 34px;
       font-weight: 300;
       line-height: 1.7;
-      text-shadow: 0 4px 15px rgba(0,0,0,0.7);
+      text-shadow: none;
     }
 
     .hero-badges-row {
@@ -443,14 +449,14 @@
       margin-bottom: 36px;
     }
     .hero-badge-pill {
-      background: rgba(18, 22, 30, 0.75);
+      background: rgba(29,42,51, 0.75);
       border: 1px solid var(--border-gold);
       backdrop-filter: blur(12px);
       padding: 10px 18px;
       border-radius: 100px;
       font-size: 0.82rem;
       font-weight: 600;
-      color: #fff;
+      color: var(--ink);
       display: flex;
       align-items: center;
       gap: 8px;
@@ -481,23 +487,23 @@
       border: none;
     }
     .btn-gold {
-      background: linear-gradient(135deg, var(--sand-gold), #B8860B);
-      color: #0B0D11;
-      box-shadow: 0 10px 25px rgba(212, 175, 55, 0.35);
+      background: linear-gradient(135deg, var(--sand-gold), #17566E);
+      color: var(--ink);
+      box-shadow: 0 10px 25px rgba(31,110,140, 0.35);
     }
     .btn-gold:hover {
-      background: linear-gradient(135deg, #E5C158, var(--sand-gold));
+      background: linear-gradient(135deg, #2A7FA0, var(--sand-gold));
       transform: translateY(-3px);
-      box-shadow: 0 14px 35px rgba(212, 175, 55, 0.5);
+      box-shadow: 0 14px 35px rgba(31,110,140, 0.5);
     }
     .btn-ghost {
-      background: rgba(255, 255, 255, 0.06);
-      color: #fff;
+      background: rgba(29,42,51, 0.06);
+      color: var(--ink);
       border: 1px solid var(--border-subtle);
       backdrop-filter: blur(10px);
     }
     .btn-ghost:hover {
-      background: rgba(255, 255, 255, 0.12);
+      background: rgba(29,42,51, 0.12);
       border-color: var(--sand-gold);
       color: var(--sand-light);
       transform: translateY(-3px);
@@ -514,7 +520,7 @@
     .indicator-bar {
       width: 32px;
       height: 3px;
-      background: rgba(255, 255, 255, 0.25);
+      background: rgba(29,42,51, 0.25);
       border-radius: 2px;
       cursor: pointer;
       transition: all 0.3s;
@@ -544,8 +550,8 @@
       background: #000;
       border-radius: var(--radius-lg);
       overflow: hidden;
-      border: 1px solid rgba(212, 175, 55, 0.35);
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 35px rgba(212, 175, 55, 0.12);
+      border: 1px solid rgba(31,110,140, 0.35);
+      box-shadow: 0 25px 60px rgba(0, 0, 0,0.21), 0 0 35px rgba(31,110,140, 0.12);
       aspect-ratio: 16 / 9;
     }
     .video-player-container video {
@@ -581,7 +587,7 @@
     .video-badge-tech {
       background: rgba(16, 185, 129, 0.15);
       border: 1px solid rgba(16, 185, 129, 0.4);
-      color: #34D399;
+      color: #0E8A5F;
       padding: 4px 10px;
       border-radius: 6px;
       font-size: 0.75rem;
@@ -592,7 +598,7 @@
     .video-caption-bar {
       margin: 14px 0 22px;
       padding: 14px 20px;
-      background: rgba(11, 13, 17, 0.6);
+      background: rgba(247,244,238, 0.6);
       border: 1px solid var(--border-subtle);
       border-left: 3px solid var(--sand-gold);
       border-radius: var(--radius-md);
@@ -603,16 +609,16 @@
       width: 92px; height: 92px; margin: -46px 0 0 -46px; padding: 0 0 0 6px;
       display: flex; align-items: center; justify-content: center;
       border-radius: 50%; border: 2px solid rgba(243, 229, 171, 0.85);
-      background: rgba(11, 13, 17, 0.5); color: #fff; cursor: pointer;
-      backdrop-filter: blur(6px); box-shadow: 0 12px 34px rgba(0, 0, 0, 0.45);
+      background: rgba(247,244,238, 0.5); color: var(--ink); cursor: pointer;
+      backdrop-filter: blur(6px); box-shadow: 0 12px 34px rgba(0, 0, 0,0.135);
       transition: opacity 0.25s ease, transform 0.25s ease, background 0.2s ease;
     }
-    .video-big-play:hover, .video-big-play:focus-visible { background: rgba(212, 175, 55, 0.78); color: #0B0D11; transform: scale(1.06); outline: none; }
+    .video-big-play:hover, .video-big-play:focus-visible { background: rgba(31,110,140, 0.78); color: var(--ink); transform: scale(1.06); outline: none; }
     .video-player-container.is-playing .video-big-play { opacity: 0; transform: scale(0.85); pointer-events: none; }
     @media (max-width: 768px) { .video-big-play { width: 72px; height: 72px; margin: -36px 0 0 -36px; } }
     .video-caption-title {
-      font-family: 'Cinzel', serif;
-      color: #fff;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--ink);
       font-size: 1.15rem;
       margin-bottom: 4px;
     }
@@ -638,12 +644,12 @@
     .video-card-item:hover {
       transform: translateY(-4px);
       border-color: var(--sand-gold);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.4), 0 0 15px rgba(212, 175, 55, 0.15);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12), 0 0 15px rgba(31,110,140, 0.15);
     }
     .video-card-item.active {
       border-color: var(--sand-gold);
-      background: rgba(212, 175, 55, 0.08);
-      box-shadow: 0 0 0 1px var(--sand-gold), 0 10px 25px rgba(0,0,0,0.4);
+      background: rgba(31,110,140, 0.08);
+      box-shadow: 0 0 0 1px var(--sand-gold), 0 10px 25px rgba(0,0,0,0.12);
     }
     .video-card-thumb-wrapper {
       position: relative;
@@ -664,8 +670,8 @@
       position: absolute;
       bottom: 8px;
       right: 8px;
-      background: rgba(0, 0, 0, 0.8);
-      color: #fff;
+      background: var(--bg);
+      color: var(--ink);
       font-size: 0.7rem;
       font-family: var(--font-mono);
       padding: 2px 6px;
@@ -679,14 +685,14 @@
       transform: translate(-50%, -50%);
       width: 36px;
       height: 36px;
-      background: rgba(212, 175, 55, 0.85);
+      background: rgba(31,110,140, 0.85);
       color: #0B0F19;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 0.9rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       transition: transform 0.2s ease, background 0.2s ease;
     }
     .video-card-item:hover .video-card-play-icon {
@@ -710,7 +716,7 @@
     .video-card-title {
       font-size: 0.88rem;
       font-weight: 600;
-      color: #fff;
+      color: var(--ink);
       line-height: 1.35;
     }
     .video-card-desc {
@@ -751,7 +757,7 @@
       height: 520px;
       object-fit: cover;
       border-radius: var(--radius-md);
-      box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.18);
       border: 1px solid var(--border-subtle);
     }
     .story-badge-floating {
@@ -762,11 +768,11 @@
       border: 1px solid var(--border-gold);
       padding: 22px 28px;
       border-radius: var(--radius-md);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.21);
       max-width: 280px;
     }
     .story-badge-floating h4, .story-badge-floating h3.hx4 {
-      font-family: 'Cinzel', serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 1.1rem;
       color: var(--sand-gold);
       margin-bottom: 6px;
@@ -798,7 +804,7 @@
     .pillar-item:hover {
       border-color: var(--sand-gold);
       transform: translateX(6px);
-      background: rgba(212, 175, 55, 0.04);
+      background: rgba(31,110,140, 0.04);
     }
     .pillar-num {
       font-family: var(--font-mono);
@@ -806,17 +812,17 @@
       font-weight: 700;
       color: var(--sand-gold);
     }
-    .pillar-content strong { color: #fff; display: block; margin-bottom: 3px; font-size: 0.98rem; }
+    .pillar-content strong { color: var(--ink); display: block; margin-bottom: 3px; font-size: 0.98rem; }
     .pillar-content span { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.55; }
 
     /* Strategic Micro-Location Strip */
     .location-strip {
       margin-top: 48px;
       padding: 26px 30px;
-      background: linear-gradient(135deg, rgba(22, 27, 37, 0.92), rgba(17, 21, 29, 0.96));
+      background: linear-gradient(135deg, rgba(29,42,51, 0.92), rgba(17, 21, 29, 0.96));
       border: 1px solid var(--border-gold);
       border-radius: var(--radius-md);
-      box-shadow: 0 20px 45px rgba(0,0,0,0.45);
+      box-shadow: 0 20px 45px rgba(0,0,0,0.135);
     }
     .location-strip-header {
       display: flex;
@@ -829,7 +835,7 @@
       border-bottom: 1px solid var(--border-subtle);
     }
     .location-strip-title {
-      font-family: 'Cinzel', serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 1.08rem;
       color: var(--sand-gold);
       display: flex;
@@ -840,7 +846,7 @@
       font-family: var(--font-mono);
       font-size: 0.75rem;
       color: var(--sand-light);
-      background: rgba(212, 175, 55, 0.14);
+      background: rgba(31,110,140, 0.14);
       border: 1px solid var(--border-gold);
       padding: 4px 12px;
       border-radius: 100px;
@@ -851,7 +857,7 @@
       gap: 16px;
     }
     .location-item {
-      background: rgba(0, 0, 0, 0.28);
+      background: var(--bg);
       border: 1px solid var(--border-subtle);
       border-radius: var(--radius-sm);
       padding: 14px 16px;
@@ -864,7 +870,7 @@
       font-family: 'Space Grotesk', sans-serif;
       font-size: 1.2rem;
       font-weight: 700;
-      color: #fff;
+      color: var(--ink);
       margin-bottom: 2px;
       display: flex;
       align-items: center;
@@ -889,52 +895,52 @@
       background: linear-gradient(135deg, rgba(18, 23, 33, 0.95), rgba(12, 16, 24, 0.98));
       border: 1px solid var(--border-gold);
       border-radius: var(--radius-md);
-      box-shadow: 0 20px 45px rgba(0,0,0,0.45);
+      box-shadow: 0 20px 45px rgba(0,0,0,0.135);
     }
     .vgt-head { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 26px; align-items: end; margin-bottom: 20px; }
     .vgt-kick { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sand-gold); margin-bottom: 6px; }
-    .vgt-title { font-family: 'Cinzel', serif; font-size: 1.45rem; line-height: 1.25; color: #fff; margin-bottom: 10px; font-weight: 600; }
+    .vgt-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.45rem; line-height: 1.25; color: var(--ink); margin-bottom: 10px; font-weight: 600; }
     .vgt-sub { font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; }
     .vgt-facts { list-style: none; display: grid; gap: 8px; }
-    .vgt-facts li { font-size: 0.84rem; color: var(--text-secondary); line-height: 1.45; padding: 10px 14px; border-radius: var(--radius-sm); background: rgba(0,0,0,0.28); border: 1px solid var(--border-subtle); }
+    .vgt-facts li { font-size: 0.84rem; color: var(--text-secondary); line-height: 1.45; padding: 10px 14px; border-radius: var(--radius-sm); background: var(--bg); border: 1px solid var(--border-subtle); }
     .vgt-facts li b { color: var(--sand-light); font-weight: 700; }
 
     .vgt-toolbar { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 16px; align-items: center; margin-bottom: 12px; }
     .vgt-group { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
     .vgt-group-label { font-size: 0.74rem; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.1em; margin-right: 2px; }
     .vgt-chip, .vgt-btn, .vgt-seg button {
-      font: inherit; font-size: 0.84rem; font-weight: 600; color: #E2E8F0; cursor: pointer;
+      font: inherit; font-size: 0.84rem; font-weight: 600; color: var(--text-secondary); cursor: pointer;
       min-height: 40px; padding: 8px 15px; border-radius: 100px;
-      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(29,42,51,0.04); border: 1px solid rgba(29,42,51,0.16);
       display: inline-flex; align-items: center; gap: 8px; transition: background .2s, border-color .2s, color .2s;
     }
-    .vgt-chip:hover, .vgt-btn:hover, .vgt-seg button:hover { border-color: var(--sand-gold); color: #fff; }
+    .vgt-chip:hover, .vgt-btn:hover, .vgt-seg button:hover { border-color: var(--sand-gold); color: var(--ink); }
     .vgt-chip:focus-visible, .vgt-btn:focus-visible, .vgt-seg button:focus-visible, .vgt-zoom button:focus-visible, .vgt-line:focus-visible, .vgt-dest:focus-visible { outline: 2px solid var(--sand-light); outline-offset: 2px; }
-    .vgt-chip[aria-pressed="true"] { background: var(--sand-gold); border-color: var(--sand-gold); color: #0B0D11; }
+    .vgt-chip[aria-pressed="true"] { background: var(--sand-gold); border-color: var(--sand-gold); color: var(--ink); }
     .vgt-chip-line { font-family: 'Space Grotesk', sans-serif; font-weight: 700; min-width: 64px; justify-content: center; }
-    .vgt-chip-line i { width: 12px; height: 12px; border-radius: 50%; background: var(--c); box-shadow: 0 0 0 2px rgba(255,255,255,0.15); }
-    .vgt-chip-line[aria-pressed="true"] { background: var(--c); border-color: var(--c); color: #0B0D11; }
-    .vgt-chip-line[aria-pressed="true"] i { background: #0B0D11; }
-    .vgt-seg { display: inline-flex; border-radius: 100px; padding: 3px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.12); }
+    .vgt-chip-line i { width: 12px; height: 12px; border-radius: 50%; background: var(--c); box-shadow: 0 0 0 2px rgba(29,42,51,0.15); }
+    .vgt-chip-line[aria-pressed="true"] { background: var(--c); border-color: var(--c); color: var(--ink); }
+    .vgt-chip-line[aria-pressed="true"] i { background: var(--bg); }
+    .vgt-seg { display: inline-flex; border-radius: 100px; padding: 3px; background: var(--bg); border: 1px solid rgba(29,42,51,0.12); }
     .vgt-seg button { border: 0; background: transparent; min-height: 34px; padding: 6px 14px; }
-    .vgt-seg button[aria-pressed="true"] { background: rgba(255,255,255,0.14); color: #fff; }
+    .vgt-seg button[aria-pressed="true"] { background: rgba(29,42,51,0.14); color: var(--ink); }
 
-    .vgt-mapwrap { position: relative; isolation: isolate; z-index: 0; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-subtle); background: #0f141d; }
+    .vgt-mapwrap { position: relative; isolation: isolate; z-index: 0; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-subtle); background: #EEF2F3; }
     .vgt-map { width: 100%; height: 580px; background: #E8E6E1; }
-    .vgt-zoom { position: absolute; top: 14px; right: 14px; z-index: 500; display: flex; flex-direction: column; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.35); }
-    .vgt-zoom button { width: 48px; height: 48px; font-size: 1.6rem; line-height: 1; font-weight: 600; color: #0B0D11; background: #fff; border: 0; cursor: pointer; }
+    .vgt-zoom { position: absolute; top: 14px; right: 14px; z-index: 500; display: flex; flex-direction: column; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.105); }
+    .vgt-zoom button { width: 48px; height: 48px; font-size: 1.6rem; line-height: 1; font-weight: 600; color: var(--ink); background: #fff; border: 0; cursor: pointer; }
     .vgt-zoom button + button { border-top: 1px solid #E2E8F0; }
     .vgt-zoom button:hover { background: var(--sand-light); }
-    .vgt-help { position: absolute; left: 12px; bottom: 12px; z-index: 500; max-width: calc(100% - 24px); font-size: 0.78rem; color: #E2E8F0; background: rgba(11,13,17,0.86); border: 1px solid rgba(255,255,255,0.14); border-radius: 100px; padding: 7px 14px; pointer-events: none; backdrop-filter: blur(8px); }
+    .vgt-help { position: absolute; left: 12px; bottom: 12px; z-index: 500; max-width: calc(100% - 24px); font-size: 0.78rem; color: var(--text-secondary); background: rgba(247,244,238,0.86); border: 1px solid rgba(29,42,51,0.14); border-radius: 100px; padding: 7px 14px; pointer-events: none; backdrop-filter: blur(8px); }
     .vgt-help b { color: var(--sand-light); }
     .vgt-overlay {
       position: absolute; inset: 0; z-index: 600; display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px;
-      background: rgba(11,13,17,0.62); color: #fff; font-size: 1.15rem; font-weight: 600; line-height: 1.5;
+      background: rgba(247,244,238,0.62); color: var(--ink); font-size: 1.15rem; font-weight: 600; line-height: 1.5;
       opacity: 0; pointer-events: none; transition: opacity .25s;
     }
     .vgt-overlay.show { opacity: 1; }
     .vgt-overlay b { color: var(--sand-light); }
-    .vgt-overlay span { font-size: 0.88rem; font-weight: 500; color: #CBD5E1; }
+    .vgt-overlay span { font-size: 0.88rem; font-weight: 500; color: var(--text-secondary); }
 
     /* segnaposto casa: goccia rossa con impulso + etichetta */
     .vgt-pin-wrap { background: none; border: 0; }
@@ -942,67 +948,67 @@
     .vgt-pin svg { position: relative; z-index: 2; display: block; }
     .vgt-pin-pulse { position: absolute; left: 50%; bottom: -6px; width: 22px; height: 22px; margin-left: -11px; border-radius: 50%; background: rgba(234,67,53,0.55); z-index: 1; animation: vgtPulse 2s ease-out infinite; }
     @keyframes vgtPulse { 0% { transform: scale(0.4); opacity: 0.9; } 100% { transform: scale(3.2); opacity: 0; } }
-    .vgt-pin-label { position: absolute; left: 50%; bottom: 52px; transform: translateX(-50%); white-space: nowrap; z-index: 3; font-family: 'Space Grotesk', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.02em; color: #fff; background: #B31412; padding: 4px 10px; border-radius: 100px; box-shadow: 0 4px 12px rgba(0,0,0,0.35); }
+    .vgt-pin-label { position: absolute; left: 50%; bottom: 52px; transform: translateX(-50%); white-space: nowrap; z-index: 3; font-family: 'Space Grotesk', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.02em; color: var(--ink); background: #B31412; padding: 4px 10px; border-radius: 100px; box-shadow: 0 4px 12px rgba(0,0,0,0.105); }
     .vgt-stop-wrap { background: none; border: 0; }
-    .vgt-stop { width: 26px; height: 26px; border-radius: 50%; background: #fff; border: 2px solid #0B0D11; display: flex; align-items: center; justify-content: center; font-size: 13px; box-shadow: 0 3px 8px rgba(0,0,0,0.35); }
+    .vgt-stop { width: 26px; height: 26px; border-radius: 50%; background: #fff; border: 2px solid var(--bg); display: flex; align-items: center; justify-content: center; font-size: 13px; box-shadow: 0 3px 8px rgba(0,0,0,0.105); }
     @media (prefers-reduced-motion: reduce) { .vgt-pin-pulse { animation: none; opacity: 0.35; transform: scale(1.6); } }
 
     /* popup e tooltip */
-    .vgt-popup .leaflet-popup-content-wrapper { background: #151C28; color: #fff; border: 1px solid var(--border-gold); border-radius: 12px; box-shadow: 0 12px 32px rgba(0,0,0,0.6); }
-    .vgt-popup .leaflet-popup-tip { background: #151C28; border: 1px solid var(--border-gold); }
+    .vgt-popup .leaflet-popup-content-wrapper { background: #FFFFFF; color: var(--ink); border: 1px solid var(--border-gold); border-radius: 12px; box-shadow: 0 12px 32px rgba(0,0,0,0.18); }
+    .vgt-popup .leaflet-popup-tip { background: #FFFFFF; border: 1px solid var(--border-gold); }
     .vgt-popup .leaflet-popup-content { margin: 12px 14px; line-height: 1.45; font-family: 'Plus Jakarta Sans', sans-serif; }
-    .vgt-popup a.leaflet-popup-close-button { color: #CBD5E1; }
+    .vgt-popup a.leaflet-popup-close-button { color: var(--text-secondary); }
     .vgt-pop img { display: block; width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 10px; }
     .vgt-pop-fig { margin: 0 0 10px; position: relative; }
     .vgt-pop-fig img { height: 140px; margin-bottom: 0; }
-    .vgt-pop-fig figcaption { position: absolute; right: 6px; bottom: 5px; max-width: calc(100% - 12px); font-size: 0.58rem; line-height: 1.2; color: rgba(255,255,255,0.88); background: rgba(11,13,17,0.62); padding: 2px 6px; border-radius: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .vgt-pop-fig figcaption { position: absolute; right: 6px; bottom: 5px; max-width: calc(100% - 12px); font-size: 0.58rem; line-height: 1.2; color: rgba(29,42,51,0.88); background: rgba(247,244,238,0.62); padding: 2px 6px; border-radius: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     .vgt-pop-k { font-family: var(--font-mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--sand-gold); margin-bottom: 2px; }
-    .vgt-pop-t { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 4px; }
-    .vgt-pop-d { font-size: 0.82rem; color: #CBD5E1; margin-bottom: 4px; }
-    .vgt-pop-d b { color: #fff; }
+    .vgt-pop-t { font-size: 1rem; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+    .vgt-pop-d { font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 4px; }
+    .vgt-pop-d b { color: var(--ink); }
     .vgt-pop-s { font-size: 0.74rem; color: var(--text-secondary); }
-    .vgt-pop-btn { display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 10px; padding: 10px 12px; border-radius: 8px; background: #EA4335; color: #fff !important; font-weight: 700; font-size: 0.84rem; text-decoration: none; }
+    .vgt-pop-btn { display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 10px; padding: 10px 12px; border-radius: 8px; background: #EA4335; color: var(--ink) !important; font-weight: 700; font-size: 0.84rem; text-decoration: none; }
     .vgt-pop-btn:hover { background: #C5221F; }
-    .leaflet-tooltip.vgt-tip { background: #0B0D11; color: #fff; border: 1px solid rgba(255,255,255,0.18); border-radius: 8px; font-size: 0.76rem; font-weight: 600; padding: 4px 9px; box-shadow: 0 6px 16px rgba(0,0,0,0.4); }
+    .leaflet-tooltip.vgt-tip { background: var(--bg); color: var(--ink); border: 1px solid rgba(29,42,51,0.18); border-radius: 8px; font-size: 0.76rem; font-weight: 600; padding: 4px 9px; box-shadow: 0 6px 16px rgba(0,0,0,0.12); }
     .leaflet-tooltip.vgt-tip::before { display: none; }
-    .vgt .leaflet-control-attribution { font-size: 10px; background: rgba(255,255,255,0.78); }
+    .vgt .leaflet-control-attribution { font-size: 10px; background: rgba(29,42,51,0.78); }
     .vgt-satmode .vgt-map { background: #1b2230; }
 
     /* schede linee e mete */
-    .vgt-h4 { font-family: 'Cinzel', serif; font-size: 1.02rem; color: var(--sand-gold); margin: 26px 0 12px; font-weight: 600; }
+    .vgt-h4 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.02rem; color: var(--sand-gold); margin: 26px 0 12px; font-weight: 600; }
     .vgt-note-sm { font-size: 0.82rem; color: var(--text-secondary); margin: -6px 0 12px; }
     .vgt-lines { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
     .vgt-line {
       font: inherit; text-align: left; color: inherit; cursor: pointer;
       display: flex; flex-direction: column; gap: 8px; padding: 16px 18px; border-radius: var(--radius-sm);
-      background: rgba(0,0,0,0.32); border: 1px solid var(--border-subtle); border-top: 3px solid var(--c);
+      background: var(--bg); border: 1px solid var(--border-subtle); border-top: 3px solid var(--c);
       transition: border-color .25s, background .25s, transform .25s;
     }
     .vgt-line:hover { transform: translateY(-2px); border-color: var(--c); }
     .vgt-line[aria-pressed="true"] { background: color-mix(in srgb, var(--c) 14%, transparent); border-color: var(--c); }
     .vgt-line-top { display: flex; align-items: center; gap: 10px; }
-    .vgt-badge { font-family: 'Space Grotesk', sans-serif; font-weight: 800; font-size: 1rem; color: #0B0D11; background: var(--c); min-width: 40px; height: 30px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; padding: 0 8px; }
-    .vgt-line-tag { font-size: 0.92rem; font-weight: 700; color: #fff; }
+    .vgt-badge { font-family: 'Space Grotesk', sans-serif; font-weight: 800; font-size: 1rem; color: var(--ink); background: var(--c); min-width: 40px; height: 30px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; padding: 0 8px; }
+    .vgt-line-tag { font-size: 0.92rem; font-weight: 700; color: var(--ink); }
     .vgt-line-route { font-size: 0.8rem; color: var(--text-secondary); line-height: 1.5; }
-    .vgt-line-route b { color: #E2E8F0; font-weight: 600; }
+    .vgt-line-route b { color: var(--text-secondary); font-weight: 600; }
     .vgt-line-times { font-size: 0.8rem; color: var(--sand-light); font-weight: 600; }
     .vgt-line-freq { font-size: 0.76rem; color: var(--text-tertiary); }
     .vgt-dest-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
     .vgt-dest {
       font: inherit; text-align: left; color: inherit; cursor: pointer;
       display: flex; flex-direction: column; gap: 2px; padding: 14px 16px; border-radius: var(--radius-sm);
-      background: rgba(0,0,0,0.28); border: 1px solid var(--border-subtle); transition: border-color .25s, transform .25s;
+      background: var(--bg); border: 1px solid var(--border-subtle); transition: border-color .25s, transform .25s;
     }
     .vgt-dest:hover { border-color: var(--sand-gold); transform: translateY(-2px); }
     .vgt-dest-min { font-family: 'Space Grotesk', sans-serif; font-size: 0.85rem; color: var(--text-secondary); }
-    .vgt-dest-min b { font-size: 1.7rem; color: #fff; font-weight: 700; margin-right: 2px; }
+    .vgt-dest-min b { font-size: 1.7rem; color: var(--ink); font-weight: 700; margin-right: 2px; }
     .vgt-dest-unit { font-size: 0.74rem; color: var(--sand-gold); font-weight: 600; margin-bottom: 6px; }
     .vgt-dest-unit small { color: var(--text-secondary); font-size: 0.75rem; font-weight: 500; }
-    .vgt-dest-name { font-size: 0.9rem; font-weight: 700; color: #fff; line-height: 1.3; }
+    .vgt-dest-name { font-size: 0.9rem; font-weight: 700; color: var(--ink); line-height: 1.3; }
     .vgt-dest-x { font-size: 0.76rem; color: var(--text-secondary); line-height: 1.4; }
     .vgt-dest-lines { display: flex; gap: 5px; margin-top: 8px; }
-    .vgt-dest-lines i { font-style: normal; font-family: 'Space Grotesk', sans-serif; font-size: 0.75rem; font-weight: 800; color: #0B0D11; min-width: 28px; height: 20px; border-radius: 5px; display: inline-flex; align-items: center; justify-content: center; padding: 0 5px; }
-    .vgt-dest-lines i.walk { background: rgba(255,255,255,0.12); color: #fff; }
+    .vgt-dest-lines i { font-style: normal; font-family: 'Space Grotesk', sans-serif; font-size: 0.75rem; font-weight: 800; color: var(--ink); min-width: 28px; height: 20px; border-radius: 5px; display: inline-flex; align-items: center; justify-content: center; padding: 0 5px; }
+    .vgt-dest-lines i.walk { background: rgba(29,42,51,0.12); color: var(--ink); }
     .vgt-source { margin-top: 18px; font-size: 0.74rem; color: var(--text-tertiary); line-height: 1.55; }
     .vgt-source a { color: var(--text-secondary); }
 
@@ -1039,7 +1045,7 @@
       border: 1px solid var(--border-cyan);
       border-radius: var(--radius-lg);
       overflow: hidden;
-      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.75);
+      box-shadow: 0 30px 80px rgba(0, 0, 0,0.225);
     }
     .viewer-3d-box iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; background: #ECEEF1; }
     .viewer-3d-box:fullscreen { height: 100vh; min-height: 0; border: 0; border-radius: 0; }
@@ -1048,49 +1054,49 @@
     .v3d-gate {
       position: absolute; inset: 0; z-index: 2; display: none;
       align-items: center; justify-content: center; flex-direction: column; gap: 12px; padding: 20px;
-      background: linear-gradient(180deg, rgba(11, 13, 17, 0.10), rgba(11, 13, 17, 0.42));
+      background: linear-gradient(180deg, rgba(247,244,238, 0.10), rgba(247,244,238, 0.42));
     }
     .viewer-3d-box.v3d-gated .v3d-gate { display: flex; }
     .v3d-gate button {
       font: inherit; font-size: 0.95rem; font-weight: 700; cursor: pointer;
       padding: 13px 22px; border-radius: 100px; min-height: 48px;
-      color: #0B0D11; background: var(--sand-light); border: 1px solid var(--sand-gold);
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+      color: var(--ink); background: var(--sand-light); border: 1px solid var(--sand-gold);
+      box-shadow: 0 10px 28px rgba(0, 0, 0,0.135);
     }
-    .v3d-gate button.ghost { color: #fff; background: rgba(11, 13, 17, 0.82); border-color: rgba(255, 255, 255, 0.3); font-size: 0.85rem; }
+    .v3d-gate button.ghost { color: var(--ink); background: rgba(247,244,238, 0.82); border-color: rgba(29,42,51, 0.3); font-size: 0.85rem; }
     .v3d-bar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px 16px; margin-top: 14px; }
     .v3d-help { font-size: 0.84rem; color: var(--text-secondary); line-height: 1.5; }
     .v3d-help b { color: var(--sand-light); }
     .v3d-help .t { display: none; }
     .v3d-btns { display: flex; gap: 8px; flex-wrap: wrap; }
     .v3d-btn {
-      font: inherit; font-size: 0.84rem; font-weight: 600; color: #E2E8F0; cursor: pointer; text-decoration: none;
+      font: inherit; font-size: 0.84rem; font-weight: 600; color: var(--text-secondary); cursor: pointer; text-decoration: none;
       min-height: 40px; padding: 8px 16px; border-radius: 100px; display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.16); transition: border-color .2s, color .2s;
+      background: rgba(29,42,51, 0.04); border: 1px solid rgba(29,42,51, 0.16); transition: border-color .2s, color .2s;
     }
-    .v3d-btn:hover { border-color: var(--sand-gold); color: #fff; }
+    .v3d-btn:hover { border-color: var(--sand-gold); color: var(--ink); }
     .v3d-btn:focus-visible, .v3d-gate button:focus-visible { outline: 2px solid var(--sand-light); outline-offset: 2px; }
     .v3d-btn[hidden] { display: none; }
     .v3d-btn.primary {
       font-size: 0.92rem; font-weight: 700; min-height: 46px; padding: 10px 22px;
-      color: #0B0D11; background: linear-gradient(135deg, #E5C158, var(--sand-gold)); border-color: var(--sand-gold);
-      box-shadow: 0 8px 22px rgba(212, 175, 55, 0.28);
+      color: var(--ink); background: linear-gradient(135deg, #2A7FA0, var(--sand-gold)); border-color: var(--sand-gold);
+      box-shadow: 0 8px 22px rgba(31,110,140, 0.28);
     }
-    .v3d-btn.primary:hover { color: #0B0D11; background: #F3D46B; }
+    .v3d-btn.primary:hover { color: var(--ink); background: #F3D46B; }
     .v3d-esc { align-self: center; font-size: 0.78rem; color: var(--text-secondary); }
     .v3d-esc b, .v3d-fs-hint b { color: var(--sand-light); font-family: var(--font-mono); padding: 1px 6px; border: 1px solid var(--border-gold); border-radius: 5px; }
     /* a schermo intero: avviso iniziale al centro e pulsante per uscire sempre visibile */
     .v3d-fs-hint {
       position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 5;
-      padding: 18px 28px; border-radius: 16px; background: rgba(11, 13, 17, 0.9); border: 1px solid var(--border-gold);
-      color: #fff; font-size: 1.2rem; font-weight: 700; text-align: center; white-space: nowrap;
-      opacity: 0; pointer-events: none; transition: opacity .4s; box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+      padding: 18px 28px; border-radius: 16px; background: rgba(247,244,238, 0.9); border: 1px solid var(--border-gold);
+      color: var(--ink); font-size: 1.2rem; font-weight: 700; text-align: center; white-space: nowrap;
+      opacity: 0; pointer-events: none; transition: opacity .4s; box-shadow: 0 18px 40px rgba(0, 0, 0,0.15);
     }
     .v3d-fs-hint.show { opacity: 1; }
     .v3d-fs-exit {
       display: none; position: absolute; z-index: 5; left: 50%; transform: translateX(-50%); bottom: 72px;
       font: inherit; font-size: 0.84rem; font-weight: 700; cursor: pointer; padding: 9px 18px; border-radius: 100px;
-      color: #0B0D11; background: var(--sand-light); border: 1px solid var(--sand-gold); box-shadow: 0 8px 22px rgba(0, 0, 0, 0.45);
+      color: var(--ink); background: var(--sand-light); border: 1px solid var(--sand-gold); box-shadow: 0 8px 22px rgba(0, 0, 0,0.135);
     }
     .viewer-3d-box:fullscreen .v3d-fs-exit, .viewer-3d-box:-webkit-full-screen .v3d-fs-exit { display: inline-flex; }
     @media (hover: none) and (pointer: coarse) { .v3d-esc { display: none; } }
@@ -1125,7 +1131,7 @@
       transform: translateY(-4px);
     }
     .tech-summary-card .icon { font-size: 1.8rem; margin-bottom: 12px; }
-    .tech-summary-card h4, .tech-summary-card h3.hx4 { font-size: 1.05rem; color: #fff; margin-bottom: 8px; }
+    .tech-summary-card h4, .tech-summary-card h3.hx4 { font-size: 1.05rem; color: var(--ink); margin-bottom: 8px; }
     .tech-summary-card p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; }
 
     /* Interactive Tab System (Più clicchi, più informazioni compaiono) */
@@ -1134,12 +1140,12 @@
       border: 1px solid var(--border-gold);
       border-radius: var(--radius-lg);
       overflow: hidden;
-      box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.15);
     }
     .dossier-nav-tabs {
       display: flex;
       border-bottom: 1px solid var(--border-subtle);
-      background: rgba(0, 0, 0, 0.35);
+      background: var(--bg);
       overflow-x: auto;
     }
     .dossier-tab-btn {
@@ -1159,11 +1165,11 @@
       align-items: center;
       gap: 10px;
     }
-    .dossier-tab-btn:hover { color: #fff; background: rgba(255, 255, 255, 0.03); }
+    .dossier-tab-btn:hover { color: var(--ink); background: rgba(29,42,51, 0.03); }
     .dossier-tab-btn.active {
       color: var(--sand-gold);
       border-bottom-color: var(--sand-gold);
-      background: rgba(212, 175, 55, 0.06);
+      background: rgba(31,110,140, 0.06);
     }
     .dossier-tab-content {
       padding: 36px;
@@ -1184,7 +1190,7 @@
     .data-table-clean th {
       text-align: left;
       padding: 14px 16px;
-      background: rgba(0,0,0,0.3);
+      background: var(--bg);
       color: var(--sand-gold);
       text-transform: uppercase;
       font-size: 0.74rem;
@@ -1193,15 +1199,15 @@
     }
     .data-table-clean td {
       padding: 13px 16px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-      color: #E2E8F0;
+      border-bottom: 1px solid rgba(29,42,51, 0.04);
+      color: var(--text-secondary);
     }
-    .data-table-clean tr:hover td { background: rgba(255, 255, 255, 0.02); }
+    .data-table-clean tr:hover td { background: rgba(29,42,51, 0.02); }
     .data-table-clean td.num { text-align: right; font-family: 'Space Grotesk', sans-serif; font-weight: 600; }
     .data-table-clean tfoot td {
-      background: rgba(0,0,0,0.5);
+      background: var(--bg);
       font-weight: 700;
-      color: #fff;
+      color: var(--ink);
       border-top: 1px solid var(--border-gold);
     }
 
@@ -1244,9 +1250,9 @@
       box-shadow: 0 0 35px rgba(16, 185, 129, 0.6);
     }
     .badge-meta-block h3, .badge-meta-block .badge-title {
-      font-family: 'Cinzel', serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 1.6rem;
-      color: #fff;
+      color: var(--ink);
       margin-bottom: 4px;
     }
     .badge-meta-block p {
@@ -1261,12 +1267,12 @@
       border: 1px solid var(--border-green);
       border-radius: var(--radius-lg);
       overflow: hidden;
-      box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.18);
     }
     .energy-nav-tabs {
       display: flex;
       border-bottom: 1px solid var(--border-subtle);
-      background: rgba(0, 0, 0, 0.4);
+      background: var(--bg);
       overflow-x: auto;
     }
     .energy-tab-btn {
@@ -1286,7 +1292,7 @@
       align-items: center;
       gap: 8px;
     }
-    .energy-tab-btn:hover { color: #fff; background: rgba(16, 185, 129, 0.04); }
+    .energy-tab-btn:hover { color: var(--ink); background: rgba(16, 185, 129, 0.04); }
     .energy-tab-btn.active {
       color: var(--accent-green);
       border-bottom-color: var(--accent-green);
@@ -1308,7 +1314,7 @@
     .comp-col-card {
       padding: 24px;
       border-radius: var(--radius-md);
-      background: rgba(0,0,0,0.25);
+      background: var(--bg);
       border: 1px solid var(--border-subtle);
     }
     .comp-col-card.winner {
@@ -1320,7 +1326,7 @@
       justify-content: space-between;
       align-items: center;
       font-size: 1.1rem;
-      color: #fff;
+      color: var(--ink);
       margin-bottom: 16px;
     }
     .comp-pill {
@@ -1330,13 +1336,13 @@
       font-weight: 700;
     }
     .comp-pill.green { background: var(--accent-green); color: #000; }
-    .comp-pill.red { background: #DC2626; color: #fff; }
+    .comp-pill.red { background: #DC2626; color: var(--ink); }
 
     .comp-item-row {
       display: flex;
       justify-content: space-between;
       padding: 10px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid rgba(29,42,51, 0.05);
       font-size: 0.88rem;
     }
     .comp-item-row:last-child { border-bottom: none; }
@@ -1365,7 +1371,7 @@
       display: flex;
       align-items: center;
       padding-left: 10px;
-      color: #fff;
+      color: var(--ink);
       font-size: 0.75rem;
     }
     .scale-bar.current {
@@ -1379,7 +1385,7 @@
       left: 102%;
       white-space: nowrap;
       background: #000;
-      color: #fff;
+      color: var(--ink);
       padding: 2px 8px;
       border-radius: 4px;
       font-size: 0.75rem;
@@ -1433,7 +1439,7 @@
     .mosaic-item:hover {
       border-color: var(--sand-gold);
       transform: translateY(-4px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.18);
     }
     .mosaic-item img {
       width: 100%;
@@ -1446,12 +1452,12 @@
     .mosaic-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, transparent 50%, rgba(11, 13, 17, 0.9) 100%);
+      background: linear-gradient(180deg, transparent 50%, rgba(247,244,238, 0.9) 100%);
       padding: 20px;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      color: #fff;
+      color: var(--ink);
     }
     .mosaic-tag {
       font-size: 0.75rem;
@@ -1466,7 +1472,7 @@
     /* planimetria: intera (non ritagliata), su fondo bianco, con spazio per la didascalia */
     .mosaic-item.plan { background: #fff; }
     .mosaic-item.plan img { object-fit: contain; padding: 10px 10px 54px; }
-    .mosaic-item.plan .mosaic-overlay { background: linear-gradient(180deg, transparent 70%, rgba(11, 13, 17, 0.88) 100%); }
+    .mosaic-item.plan .mosaic-overlay { background: linear-gradient(180deg, transparent 70%, rgba(247,244,238, 0.88) 100%); }
 
     .col-8 { grid-column: span 8; }
     .col-4 { grid-column: span 4; }
@@ -1493,9 +1499,9 @@
       padding: 34px;
     }
     .cadastral-card h4, .cadastral-card h3.hx4 {
-      font-family: 'Cinzel', serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 1.3rem;
-      color: #fff;
+      color: var(--ink);
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -1506,7 +1512,7 @@
     .sub-pill {
       font-size: 0.75rem;
       font-family: var(--font-mono);
-      background: rgba(212, 175, 55, 0.12);
+      background: rgba(31,110,140, 0.12);
       color: var(--sand-gold);
       border: 1px solid var(--border-gold);
       padding: 3px 10px;
@@ -1516,7 +1522,7 @@
     /* Calculator Toggle */
     .yield-toggle-btns {
       display: flex;
-      background: rgba(0,0,0,0.3);
+      background: var(--bg);
       padding: 4px;
       border-radius: 8px;
       margin-bottom: 20px;
@@ -1547,21 +1553,21 @@
       background: var(--bg-dark);
     }
     .trattativa-callout {
-      background: linear-gradient(135deg, rgba(212, 175, 55, 0.14) 0%, rgba(22, 27, 37, 0.92) 60%, rgba(16, 185, 129, 0.08) 100%);
+      background: linear-gradient(135deg, rgba(31,110,140, 0.14) 0%, rgba(29,42,51, 0.92) 60%, rgba(16, 185, 129, 0.08) 100%);
       border: 1px solid var(--border-gold);
       border-radius: var(--radius-lg);
       padding: 32px 40px;
       margin-bottom: 36px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.45), 0 0 30px rgba(212, 175, 55, 0.08);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.135), 0 0 30px rgba(31,110,140, 0.08);
     }
     .trattativa-callout h3, .trattativa-callout h2 {
-      font-family: 'Cinzel', serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 1.45rem;
       color: var(--sand-gold);
       margin-bottom: 10px;
     }
     .trattativa-callout p {
-      color: #D1D7E2;
+      color: var(--text-secondary);
       font-size: 0.95rem;
       line-height: 1.65;
       max-width: 960px;
@@ -1572,10 +1578,10 @@
       gap: 16px;
       margin-top: 22px;
       padding-top: 20px;
-      border-top: 1px solid rgba(212, 175, 55, 0.2);
+      border-top: 1px solid rgba(31,110,140, 0.2);
     }
     .trattativa-step-card {
-      background: rgba(11, 13, 17, 0.65);
+      background: rgba(247,244,238, 0.65);
       border: 1px solid var(--border-subtle);
       border-radius: var(--radius-sm);
       padding: 14px 18px;
@@ -1591,7 +1597,7 @@
     }
     .trattativa-step-card strong {
       display: block;
-      color: #fff;
+      color: var(--ink);
       font-size: 0.9rem;
       margin-bottom: 3px;
     }
@@ -1610,25 +1616,25 @@
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
       gap: 50px;
-      box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+      box-shadow: 0 30px 80px rgba(0,0,0,0.18);
     }
     .contact-channel-btn {
       display: flex;
       align-items: center;
       gap: 16px;
       padding: 18px 22px;
-      background: rgba(0,0,0,0.3);
+      background: var(--bg);
       border: 1px solid var(--border-subtle);
       border-radius: var(--radius-sm);
       text-decoration: none;
-      color: #fff;
+      color: var(--ink);
       margin-bottom: 14px;
       transition: all 0.3s;
     }
     .contact-channel-btn:hover {
       border-color: var(--sand-gold);
       transform: translateX(6px);
-      background: rgba(212, 175, 55, 0.05);
+      background: rgba(31,110,140, 0.05);
     }
     .contact-channel-btn.wa:hover { border-color: #25D366; }
     .channel-icon {
@@ -1638,7 +1644,7 @@
       align-items: center;
       justify-content: center;
       font-size: 1.3rem;
-      background: rgba(212, 175, 55, 0.15);
+      background: rgba(31,110,140, 0.15);
       color: var(--sand-gold);
       flex-shrink: 0;
     }
@@ -1657,26 +1663,26 @@
     }
     .form-group-cin input, .form-group-cin textarea, .form-group-cin select {
       width: 100%;
-      background: rgba(0,0,0,0.45);
+      background: var(--bg);
       border: 1px solid var(--border-subtle);
       border-radius: var(--radius-sm);
       padding: 12px 14px;
-      color: #fff;
+      color: var(--ink);
       font-family: inherit;
       font-size: 0.92rem;
       outline: none;
       transition: border-color 0.3s;
     }
     .form-group-cin select option {
-      background: #11151D;
-      color: #fff;
+      background: var(--pietra);
+      color: var(--ink);
     }
     .form-group-cin input:focus, .form-group-cin textarea:focus, .form-group-cin select:focus {
       border-color: var(--sand-gold);
     }
     .offer-dynamic-fields {
       display: none;
-      background: rgba(212, 175, 55, 0.07);
+      background: rgba(31,110,140, 0.07);
       border: 1px solid var(--border-gold);
       border-radius: var(--radius-sm);
       padding: 14px;
@@ -1722,7 +1728,7 @@
       max-height: 78vh;
       object-fit: contain;
       border-radius: var(--radius-sm);
-      box-shadow: 0 25px 70px rgba(0,0,0,0.85);
+      box-shadow: 0 25px 70px rgba(0,0,0,0.255);
       border: 1px solid var(--border-gold);
       transition: transform 0.25s ease;
     }
@@ -1732,8 +1738,8 @@
       width: 44px; height: 44px;
       border-radius: 50%;
       font-size: 1.8rem;
-      color: #fff;
-      background: rgba(255,255,255,0.08);
+      color: var(--ink);
+      background: rgba(29,42,51,0.08);
       border: 1px solid var(--border-subtle);
       cursor: pointer;
       display: flex;
@@ -1753,7 +1759,7 @@
       transform: translateY(-50%);
       width: 48px; height: 48px;
       border-radius: 50%;
-      background: rgba(18, 22, 30, 0.85);
+      background: rgba(29,42,51, 0.85);
       border: 1px solid var(--border-gold);
       color: var(--sand-gold);
       font-size: 1.5rem;
@@ -1766,7 +1772,7 @@
     }
     .lightbox-nav:hover {
       background: var(--sand-gold);
-      color: #0B0D11;
+      color: var(--ink);
       transform: translateY(-50%) scale(1.08);
     }
     .lightbox-nav.prev { left: 20px; }
@@ -1776,7 +1782,7 @@
       bottom: 20px;
       left: 50%;
       transform: translateX(-50%);
-      background: rgba(18, 22, 30, 0.9);
+      background: rgba(29,42,51, 0.9);
       border: 1px solid var(--border-subtle);
       padding: 10px 22px;
       border-radius: 100px;
@@ -1796,7 +1802,7 @@
     }
     .lightbox-caption-text {
       font-size: 0.86rem;
-      color: #fff;
+      color: var(--ink);
       overflow: hidden;
       text-overflow: ellipsis;
     }
@@ -1853,14 +1859,14 @@
         position: fixed;
         bottom: 0; left: 0; right: 0;
         z-index: 1500;
-        background: rgba(11, 13, 17, 0.96);
+        background: rgba(247,244,238, 0.96);
         backdrop-filter: blur(16px);
         border-top: 1px solid var(--border-gold);
         padding: 8px 10px calc(8px + env(safe-area-inset-bottom, 0px));
         justify-content: space-around;
         align-items: center;
         gap: 6px;
-        box-shadow: 0 -8px 25px rgba(0,0,0,0.6);
+        box-shadow: 0 -8px 25px rgba(0,0,0,0.18);
       }
       .mob-nav-item {
         flex: 1;
@@ -1879,7 +1885,7 @@
       .mob-nav-item span:first-child { font-size: 1.05rem; }
       .mob-nav-item.wa-cta {
         background: #25D366;
-        color: #0B0D11;
+        color: var(--ink);
         font-weight: 700;
         padding: 7px 8px;
         border-radius: 8px;
@@ -1891,14 +1897,14 @@
     /* In breve */
     h3.hx4 { font-size: 1em; }
     h4.hx5 { font-size: 0.83em; }
-    .hero-price { display: inline-block; margin: 0 0 14px; padding: 7px 16px; border-radius: 999px; background: rgba(11,13,17,0.62); border: 1px solid var(--border-gold); color: var(--sand-gold); font-weight: 800; font-size: clamp(1.02rem, 2.6vw, 1.3rem); letter-spacing: 0.01em; }
+    .hero-price { display: inline-block; margin: 0 0 14px; padding: 7px 16px; border-radius: 999px; background: rgba(247,244,238,0.62); border: 1px solid var(--border-gold); color: var(--sand-gold); font-weight: 800; font-size: clamp(1.02rem, 2.6vw, 1.3rem); letter-spacing: 0.01em; }
     .kf-price .kf-v { color: var(--sand-gold); font-weight: 800; font-size: 1.12em; }
-    .kf-box { margin: 0 0 46px; padding: 22px 24px; background: rgba(22, 27, 37, 0.72); border: 1px solid var(--border-gold); border-radius: var(--radius-md); }
+    .kf-box { margin: 0 0 46px; padding: 22px 24px; background: rgba(29,42,51, 0.72); border: 1px solid var(--border-gold); border-radius: var(--radius-md); }
     .kf-head { font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sand-gold); margin-bottom: 14px; }
     .kf-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px 24px; }
-    .kf { display: flex; flex-direction: column; gap: 3px; padding-left: 12px; border-left: 2px solid rgba(212, 175, 55, 0.35); }
+    .kf { display: flex; flex-direction: column; gap: 3px; padding-left: 12px; border-left: 2px solid rgba(31,110,140, 0.35); }
     .kf-l { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-tertiary); font-weight: 700; }
-    .kf-v { font-size: 0.95rem; color: #fff; font-weight: 600; line-height: 1.35; }
+    .kf-v { font-size: 0.95rem; color: var(--ink); font-weight: 600; line-height: 1.35; }
     @media (max-width: 900px) { .kf-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 420px) { .kf-box { padding: 18px 16px; } .kf-grid { gap: 14px 16px; } .kf-v { font-size: 0.9rem; } }
     /* blocchi a due colonne: una colonna sola su telefono (prima testo e tabelle uscivano dallo schermo) */
@@ -1913,8 +1919,8 @@
       .hero-badge-pill { font-size: 12.5px; }
     }
     /* invito al tour 360° del Loft */
-    .v3d-btn.tour { border-color: rgba(212, 175, 55, 0.75); color: #F3E5AB; }
-    .v3d-btn.tour:hover { background: rgba(212, 175, 55, 0.18); }
+    .v3d-btn.tour { border-color: rgba(31,110,140, 0.75); color: var(--mare-scuro); }
+    .v3d-btn.tour:hover { background: rgba(31,110,140, 0.18); }
     /* modulo contatti */
     .vg-hp { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
     .vg-form-btn { width: 100%; justify-content: center; padding: 13px; margin-top: 10px; }
@@ -1946,10 +1952,10 @@
        Sul telefono la barra in basso compare quando si scorre. */
     .hero-cinema { display: block; height: auto; min-height: 0; padding: 0 0 56px; }
     .cinema-slideshow, .cinema-overlay { bottom: auto; height: 100vh; height: 100svh; }
-    .cinema-overlay { background: linear-gradient(180deg, rgba(11,13,17,0.45) 0%, rgba(11,13,17,0) 16%, rgba(11,13,17,0) 45%, rgba(11,13,17,0.7) 80%, var(--bg-dark) 100%); }
+    .cinema-overlay { background: linear-gradient(180deg, rgba(247,244,238,0.45) 0%, rgba(247,244,238,0) 16%, rgba(247,244,238,0) 45%, rgba(247,244,238,0.7) 80%, var(--bg-dark) 100%); }
     .hero-first { display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; position: relative; min-height: 100vh; min-height: 100svh; padding: 120px 0 72px; }
     .hero-first .hero-headline { margin-bottom: 14px; }
-    .hero-first .hero-price { margin: 0; padding: 0; background: none; border: 0; font-size: 1.2rem; font-weight: 700; line-height: 1.45; text-shadow: 0 2px 12px rgba(0,0,0,0.85); }
+    .hero-first .hero-price { margin: 0; padding: 0; background: none; border: 0; font-size: 1.2rem; font-weight: 700; line-height: 1.45; text-shadow: none; }
     .hero-scroll-cue { display: block; position: absolute; left: 50%; bottom: 22px; width: 16px; height: 16px; margin-left: -8px; border-right: 2px solid var(--sand-light); border-bottom: 2px solid var(--sand-light); transform: rotate(45deg); opacity: 0.75; animation: heroCue 2.2s ease-in-out 1.5s infinite; }
     .hero-cinema .slide-indicators { top: calc(100svh - 44px); bottom: auto; }
     .hero-content > .hero-subhead { margin-top: 16px; }
@@ -1969,7 +1975,7 @@
 
     /* schede tecniche e stima d'affitto: si aprono con un tocco */
     .tech-more { margin-top: 28px; }
-    .tech-more > summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 10px; padding: 13px 20px; border: 1px solid var(--border-gold); border-radius: var(--radius-sm); background: rgba(212, 175, 55, 0.08); color: var(--sand-light); font-weight: 700; font-size: 0.9rem; line-height: 1.4; }
+    .tech-more > summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 10px; padding: 13px 20px; border: 1px solid var(--border-gold); border-radius: var(--radius-sm); background: rgba(31,110,140, 0.08); color: var(--sand-light); font-weight: 700; font-size: 0.9rem; line-height: 1.4; }
     .tech-more > summary::-webkit-details-marker { display: none; }
     .tech-more > summary::before { content: '+'; color: var(--sand-gold); font-size: 1.15rem; font-weight: 700; }
     .tech-more[open] > summary { margin-bottom: 18px; }
@@ -1983,16 +1989,16 @@
       .tech-more .dossier-nav-tabs, .tech-more .energy-nav-tabs { display: none !important; }
     }
     /* audit 17/11/2026 (B6): l'occhiello dorato del primo schermo resta leggibile anche sul cielo chiaro */
-    .hero-cinema .eyebrow { text-shadow: 0 1px 3px rgba(0,0,0,.7); }
+    .hero-cinema .eyebrow { text-shadow: none; }
     .yield-card > summary { list-style: none; cursor: pointer; }
     .yield-card > summary::-webkit-details-marker { display: none; }
     .yield-open { display: inline-flex; align-items: center; gap: 8px; margin-top: -8px; font-size: 0.86rem; font-weight: 700; color: var(--sand-light); }
     .yield-open::before { content: '+'; color: var(--sand-gold); font-size: 1.1rem; }
     .yield-card[open] .yield-open { display: none; }
     .yield-note { margin-top: 12px; font-size: 0.8rem; color: var(--text-secondary); line-height: 1.55; }
-    .kf-rooms { margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(212, 175, 55, 0.2); }
+    .kf-rooms { margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(31,110,140, 0.2); }
     .kf-room-list { display: flex; flex-wrap: wrap; gap: 8px; }
-    .kf-room-list span { padding: 6px 12px; border: 1px solid var(--border-subtle); border-radius: 100px; font-size: 0.82rem; color: var(--text-secondary); background: rgba(255, 255, 255, 0.04); }
+    .kf-room-list span { padding: 6px 12px; border: 1px solid var(--border-subtle); border-radius: 100px; font-size: 0.82rem; color: var(--text-secondary); background: rgba(29,42,51, 0.04); }
     .kf-room-list b { color: var(--sand-light); font-weight: 700; margin-left: 2px; }
     .kf-note { margin-top: 10px; font-size: 0.78rem; color: var(--text-secondary); line-height: 1.5; }
     /* ===== 8/11/2026: parole lunghe (tedesco, sloveno) che non devono allargare la pagina sul telefono ===== */
@@ -2015,32 +2021,32 @@
     }
     /* comprare a Trieste: imposte e domande frequenti */
     /* 17/11/2026: salta al contenuto, pausa video, "Cosa c'è intorno", bersagli più grandi */
-    .skip-link { position: absolute; left: -9999px; top: 12px; z-index: 10000; padding: 10px 16px; background: var(--sand-gold); color: #0B0D11; font-weight: 700; border-radius: 8px; }
+    .skip-link { position: absolute; left: -9999px; top: 12px; z-index: 10000; padding: 10px 16px; background: var(--sand-gold); color: var(--ink); font-weight: 700; border-radius: 8px; }
     .skip-link:focus { left: 16px; }
     .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
-    .hero-pause { position: absolute; left: 16px; bottom: 18px; z-index: 6; width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.25); background: rgba(0,0,0,0.35); color: rgba(255,255,255,0.75); font-size: 0.7rem; letter-spacing: -1px; cursor: pointer; }
+    .hero-pause { position: absolute; left: 16px; bottom: 18px; z-index: 6; width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(29,42,51,0.25); background: var(--bg); color: rgba(29,42,51,0.75); font-size: 0.7rem; letter-spacing: -1px; cursor: pointer; }
     .hero-pause[aria-pressed="true"] span[aria-hidden] { font-size: 0; }
     .hero-pause[aria-pressed="true"] span[aria-hidden]::before { content: "▶"; font-size: 0.8rem; }
     .near-box { margin-top: 28px; padding: 28px 30px; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); }
-    .near-title { font-size: 1.2rem; margin: 0 0 6px; color: #fff; }
+    .near-title { font-size: 1.2rem; margin: 0 0 6px; color: var(--ink); }
     .near-intro, .near-foot { font-size: 0.86rem; color: var(--text-secondary); margin: 0 0 16px; }
     .near-foot { margin: 16px 0 0; }
     .near-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
-    .near-card { padding: 16px 18px; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); background: rgba(0,0,0,0.22); min-width: 0; }
+    .near-card { padding: 16px 18px; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); background: var(--bg); min-width: 0; }
     .near-card h4 { font-size: 0.95rem; color: var(--sand-gold); margin: 0 0 8px; }
     .near-card ul { margin: 0; padding-left: 1.1em; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.55; }
     .near-card li { margin: 0 0 5px; }
-    .near-card b { color: #fff; font-weight: 600; }
+    .near-card b { color: var(--ink); font-weight: 600; }
     .filter-btn { min-height: 44px; }
     .faq-link a { display: inline-block; padding: 10px 0; }
     @media (max-width: 768px) { .near-box { padding: 22px 16px; } }
     .buy-box { margin-top: 30px; padding: 32px 34px; background: var(--bg-surface); border: 1px solid var(--border-gold); border-radius: var(--radius-md); }
-    .buy-title { font-family: 'Cinzel', serif; font-size: 1.3rem; color: #fff; margin-bottom: 10px; overflow-wrap: anywhere; hyphens: auto; }
+    .buy-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.3rem; color: var(--ink); margin-bottom: 10px; overflow-wrap: anywhere; hyphens: auto; }
     .buy-intro { color: var(--text-secondary); line-height: 1.65; margin-bottom: 18px; max-width: 860px; }
     .tax-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .tax-card { padding: 18px 20px; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); background: rgba(255, 255, 255, 0.03); min-width: 0; }
+    .tax-card { padding: 18px 20px; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); background: rgba(29,42,51, 0.03); min-width: 0; }
     .tax-l { font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--sand-gold); font-weight: 700; }
-    .tax-v { font-family: 'Space Grotesk', sans-serif; font-size: 1.9rem; font-weight: 700; color: #fff; margin: 4px 0 8px; }
+    .tax-v { font-family: 'Space Grotesk', sans-serif; font-size: 1.9rem; font-weight: 700; color: var(--ink); margin: 4px 0 8px; }
     .tax-n { font-size: 0.86rem; color: var(--text-secondary); line-height: 1.55; }
     .tax-foot { margin-top: 14px; font-size: 0.82rem; color: var(--text-tertiary); line-height: 1.55; }
     .faq-title { margin-top: 30px; }
@@ -2049,7 +2055,7 @@
     .faq-link a { color: var(--sand-light); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--border-gold); }
     .faq { border-top: 1px solid var(--border-subtle); }
     .faq:last-child { border-bottom: 1px solid var(--border-subtle); }
-    .faq > summary { list-style: none; cursor: pointer; padding: 15px 0 15px 26px; position: relative; color: #fff; font-weight: 700; line-height: 1.45; }
+    .faq > summary { list-style: none; cursor: pointer; padding: 15px 0 15px 26px; position: relative; color: var(--ink); font-weight: 700; line-height: 1.45; }
     .faq > summary::-webkit-details-marker { display: none; }
     .faq > summary::before { content: '+'; position: absolute; left: 0; top: 13px; color: var(--sand-gold); font-size: 1.15rem; }
     .faq[open] > summary::before { content: '−'; }
@@ -2061,7 +2067,7 @@
     .trattativa-callout h3 .ico, .channel-icon:not(.wa), .video-active-badge .ico, .mob-nav-item:not(.wa-cta) .ico, .vgt-pop .ico { color: var(--sand-gold); }
     .tech-summary-card .icon .ico { width: 1.6em; height: 1.6em; stroke-width: 1.4; }
     .channel-icon .ico { width: 1.45em; height: 1.45em; }
-    .vgt-stop .ico { width: 16px; height: 16px; color: #0B0D11; stroke-width: 2; }
+    .vgt-stop .ico { width: 16px; height: 16px; color: var(--ink); stroke-width: 2; }
     .vgt-dest-lines i.walk .ico { width: 15px; height: 15px; }
     /* intestazione su schermi medi (tablet, portatili piccoli): niente a capo */
     .brand-title, .nav-cta, .nav-links a { white-space: nowrap; }
@@ -2081,7 +2087,7 @@
     @media (max-width: 1200px) { .location-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 768px) { .location-grid { grid-template-columns: 1fr; } }
     /* sottotitoli del giro completo */
-    #mainVideoPlayer::cue { background: rgba(11, 13, 17, 0.78); color: #fff; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-size: 0.95em; }
+    #mainVideoPlayer::cue { background: rgba(247,244,238, 0.78); color: var(--ink); font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-size: 0.95em; }
     /* telefoni (8/11/2026): con la quarta lingua i pulsanti IT EN DE SL uscivano dallo schermo */
     @media (max-width: 480px) {
       .brand-title span { display: none; }
@@ -2096,30 +2102,30 @@
     /* 360° di tutte le idee sotto il 3D */
     /* 15/11/2026: i tre pulsanti delle idee sotto il riquadro erano un doppione del menu a sinistra: tolti (il 360° si apre dalla scheda dell'idea) */
     .v3d-tours { display: none !important; }
-    .v3d-tours-lbl { font-size: 0.84rem; font-weight: 700; color: #F3E5AB; margin-right: 2px; }
+    .v3d-tours-lbl { font-size: 0.84rem; font-weight: 700; color: var(--mare-scuro); margin-right: 2px; }
     @media (max-width: 768px) { .v3d-tours { width: 100%; } .v3d-tours .v3d-btn { flex: 1 1 auto; justify-content: center; padding: 8px 10px; } }
     /* modulo: il pulsante dell'invio via e-mail compare solo con Formspree attivo */
     .vg-form-btn[hidden] { display: none !important; }
     /* planimetria a tutto schermo: si chiude con un clic ovunque, Esc o il tasto Indietro */
-    .plan-zoom { position: fixed; inset: 0; z-index: 9000; background: rgba(8, 10, 14, 0.96); overflow: auto; overscroll-behavior: contain;
+    .plan-zoom { position: fixed; inset: 0; z-index: 9000; background: rgba(247,244,238, 0.96); overflow: auto; overscroll-behavior: contain;
       cursor: zoom-out; opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0s linear 0.3s; -webkit-overflow-scrolling: touch; }
     .plan-zoom.open { opacity: 1; visibility: visible; transition: opacity 0.3s ease; }
     /* più grande che nella pagina: sul computer alla misura vera (1820 px), sul telefono il doppio dello schermo; si scorre e si parte dal centro */
     .plan-zoom img { display: block; width: 1820px; max-width: none; height: auto; margin: 72px auto 64px;
-      background: #fff; border-radius: 6px; box-shadow: 0 20px 60px rgba(0,0,0,0.6); }
+      background: #fff; border-radius: 6px; box-shadow: 0 20px 60px rgba(0,0,0,0.18); }
     @media (max-width: 900px) { .plan-zoom img { width: min(200vw, 1820px); margin: 72px 16px 64px; } }
     .plan-zoom-bar { position: fixed; top: 0; left: 0; right: 0; display: flex; justify-content: flex-end; align-items: center; gap: 10px; padding: 12px 16px;
-      background: linear-gradient(180deg, rgba(8,10,14,0.9), rgba(8,10,14,0)); pointer-events: none; }
+      background: linear-gradient(180deg, rgba(247,244,238,0.9), rgba(247,244,238,0)); pointer-events: none; }
     .plan-zoom-bar > * { pointer-events: auto; }
-    .plan-zoom-dl { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 100px; background: var(--sand-gold, #D4AF37); color: #111;
+    .plan-zoom-dl { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 100px; background: var(--sand-gold, #1F6E8C); color: #111;
       font-weight: 600; font-size: 0.85rem; text-decoration: none; cursor: pointer; }
-    .plan-zoom-hint { position: fixed; left: 0; right: 0; bottom: 0; padding: 14px 16px; text-align: center; color: #D1D7E2; font-size: 0.85rem; letter-spacing: 0.03em;
-      background: linear-gradient(0deg, rgba(8,10,14,0.9), rgba(8,10,14,0)); pointer-events: none; }
-    .plan-zoom-x { width: 44px; height: 44px; border: 0; border-radius: 50%; background: rgba(255,255,255,0.14); color: #fff; font-size: 1.6rem; line-height: 1; cursor: pointer; }
+    .plan-zoom-hint { position: fixed; left: 0; right: 0; bottom: 0; padding: 14px 16px; text-align: center; color: var(--text-secondary); font-size: 0.85rem; letter-spacing: 0.03em;
+      background: linear-gradient(0deg, rgba(247,244,238,0.9), rgba(247,244,238,0)); pointer-events: none; }
+    .plan-zoom-x { width: 44px; height: 44px; border: 0; border-radius: 50%; background: rgba(29,42,51,0.14); color: var(--ink); font-size: 1.6rem; line-height: 1; cursor: pointer; }
     #planLink { cursor: zoom-in; }
     /* chi vende */
-    .seller-card { display: flex; gap: 16px; align-items: flex-start; padding: 18px 20px; margin: 0 0 22px; border: 1px solid var(--border-gold); border-radius: var(--radius-md); background: rgba(212, 175, 55, 0.06); }
-    .seller-avatar { flex: none; width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; font-family: 'Cinzel', serif; font-weight: 700; font-size: 1.05rem; color: #0B0D11; background: linear-gradient(135deg, #F3E5AB, #D4AF37); }
+    .seller-card { display: flex; gap: 16px; align-items: flex-start; padding: 18px 20px; margin: 0 0 22px; border: 1px solid var(--border-gold); border-radius: var(--radius-md); background: rgba(31,110,140, 0.06); }
+    .seller-avatar { flex: none; width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 1.05rem; color: var(--ink); background: linear-gradient(135deg, #17566E, #1F6E8C); }
     .seller-tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; color: var(--sand-gold); margin-bottom: 4px; }
     .seller-card p { margin: 0; color: var(--text-secondary); line-height: 1.65; font-size: 0.95rem; }
     /* pianta dello stato attuale */
@@ -2133,6 +2139,196 @@
     .mob-nav-item span:first-child { font-size: 1.05rem !important; }
     /* audit 17/11/2026 (B5): il pulsante di pausa del video va in alto a sinistra, lontano da titolo e prezzo */
     .hero-pause { top: 88px; bottom: auto; }
+  </style>
+
+  <style id="tema-chiaro">
+    /* ===== TEMA CHIARO 18/11/2026 (strumenti/crea_anteprima_chiara.py) ===== */
+    html { font-size: 17px; }
+    body { background: var(--bg); color: var(--ink); letter-spacing: 0; }
+    p, li, td { color: inherit; }
+
+    /* titoli: carattere sobrio, minuscolo, niente oro */
+    .chapter-title, .hero-headline, .buy-title, .vgt-title, .brand-title, .near-title, h3.hx4, .hx4 {
+      font-family: 'Plus Jakarta Sans', sans-serif !important; letter-spacing: -0.02em !important; text-transform: none !important; }
+    .chapter-title { font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 700; color: var(--ink); }
+    .chapter-num { display: none !important; }          /* via le etichette "Capitolo 0X" */
+    .chapter-divider { padding: 72px 0 28px; }
+    .chapter-subtitle { color: var(--text-secondary); font-size: 1.08rem; }
+    .eyebrow { text-transform: none; letter-spacing: 0.02em; font-size: 0.9rem !important; }
+    .eyebrow::before { display: none; }
+    .brand-title { color: var(--ink); font-weight: 800; letter-spacing: -0.01em; }
+    .brand-title span { text-transform: none; letter-spacing: 0.02em; }
+    .nav-links a { text-transform: none; letter-spacing: 0; font-size: 0.95rem !important; color: var(--text-secondary); }
+    .nav-links a:hover, .nav-links a.active { color: var(--mare); }
+    .kf-head, .kf-l, .vgt-kick, .vgt-group-label, .mosaic-tag, .video-card-tag, .sub-pill, .tax-l, .step-num, .comp-pill {
+      text-transform: none !important; letter-spacing: 0.01em !important; }
+    .kf-head { font-size: 0.95rem !important; font-weight: 700; color: var(--ink); }
+    .kf-l { font-size: 0.82rem; }
+    .btn-cinema { text-transform: none; letter-spacing: 0; font-size: 1rem; }
+    .btn-gold { background: var(--mare) !important; color: #fff !important; box-shadow: none; }
+    .btn-gold:hover { background: var(--mare-scuro) !important; }
+    .btn-ghost { color: var(--ink); border: 1px solid var(--border-subtle); background: #fff; }
+
+    /* intestazione chiara */
+    .header, .header.scrolled { background: rgba(247,244,238,0.94); border-bottom: 1px solid var(--border-subtle); box-shadow: none; }
+    .lang-switcher { background: #fff; }
+    .lang-btn { color: var(--text-secondary); }
+    .lang-btn.active { background: var(--mare); color: #fff; }
+
+    /* ---- primo schermo: la vista intera, senza velo; testi sotto, su fondo chiaro ---- */
+    .hero-cinema { display: block !important; height: auto !important; min-height: 0 !important; padding: 0 !important; background: var(--bg); }
+    .cinema-slideshow { position: relative !important; inset: auto !important; height: min(76vh, 780px) !important; bottom: auto !important;
+      background: #DCE8EE url('img/web/video/poster_hero_glide.jpg?v=3') center / cover no-repeat; }
+    .cinema-slide.is-video { background: transparent; }
+    .cinema-slide.is-video video { filter: none !important; }
+    .cinema-overlay { display: none !important; }
+    .hero-content { position: static !important; padding-top: 34px; padding-bottom: 8px; }
+    .hero-first { display: block !important; position: static !important; min-height: 0 !important; padding: 0 !important; }
+    .hero-scroll-cue { display: none !important; }
+    .hero-headline { color: var(--ink); font-size: clamp(1.9rem, 4.2vw, 3.1rem) !important; font-weight: 800; line-height: 1.12; text-shadow: none; max-width: 980px; }
+    .hero-cinema .eyebrow { display: inline-flex !important; color: var(--mare); text-shadow: none; }
+    .hero-price, .hero-first .hero-price { display: inline-block; margin: 2px 0 0 !important; padding: 8px 16px !important; border-radius: 999px;
+      background: var(--mare-chiaro) !important; border: 1px solid var(--border-gold) !important; color: var(--mare-scuro) !important;
+      font-size: clamp(1rem, 2.4vw, 1.2rem) !important; font-weight: 800; text-shadow: none !important; }
+    .hero-subhead { color: var(--text-secondary); text-shadow: none; font-weight: 400; font-size: 1.12rem; }
+    .hero-subhead strong { color: var(--ink); }
+    .hero-badge-pill { background: #fff; color: var(--ink); border-color: var(--border-subtle); backdrop-filter: none; }
+    .hero-badge-pill span { color: var(--mare); }
+    .hero-badge-pill.interactive:hover { background: var(--mare-chiaro); color: var(--ink); box-shadow: none; }
+    .hero-cinema .slide-indicators { top: calc(min(76vh, 780px) - 26px) !important; bottom: auto !important; }
+    .indicator-bar { background: rgba(255,255,255,0.6); box-shadow: 0 0 0 1px rgba(0,0,0,0.08); }
+    .indicator-bar.active { background: #fff; }
+    .hero-pause { position: absolute; top: calc(min(76vh, 780px) - 56px) !important; bottom: auto !important; left: 16px;
+      background: rgba(0,0,0,0.35); color: #fff; border-color: rgba(255,255,255,0.4); }
+    @media (max-width: 768px) {
+      /* sul telefono il video, ritagliato in verticale, mostra soprattutto il telaio in ombra: si apre con la panoramica */
+      #heroSlideVideo { display: none !important; }
+      .cinema-slideshow { background-image: url('img/web/hero_panorama.jpg') !important; background-position: 42% center !important; }
+      .cinema-slideshow { height: 58vh !important; height: 58svh !important; }
+      .hero-cinema .slide-indicators { display: none; }
+      .hero-pause { top: calc(58svh - 54px) !important; }
+      .hero-content { padding-top: 22px; }
+      .hero-actions { display: none; }
+    }
+
+    /* ---- sezioni: avorio e pietra alternati, schede bianche ---- */
+    section[id] { background: var(--bg); }
+    #galleria, #residenza, #specifiche, #energia { background: var(--pietra); }
+    .kf-box, .cadastral-card, .buy-box, .near-box, .tech-summary-card, .vgt, .location-strip, .tax-card,
+    .video-card-item, .pillar-item, .energy-hero-strip, .interactive-dossier-box, .energy-dossier-box, .contact-wrapper {
+      background: #fff !important; border-color: var(--border-subtle) !important; }
+    .kf-v { color: var(--ink); font-size: 1rem; }
+    .kf-price .kf-v { color: var(--mare-scuro); }
+    .kf-room-list span { background: var(--bg); color: var(--text-secondary); }
+    .kf-room-list b { color: var(--ink); }
+    .kf-note, .near-intro, .near-foot, .vgt-source, .tax-foot, .yield-note { font-size: 0.9rem !important; color: var(--text-secondary) !important; }
+    .location-desc, .pillar-content span, .near-card li, .faq p, .buy-intro, .tax-n, .tech-summary-card p, .video-card-desc { font-size: 1rem; color: var(--text-secondary); }
+    .story-badge-floating { background: rgba(255,255,255,0.95) !important; }
+
+    /* ---- tendine ---- */
+    details.piu { margin: 18px 0 0; }
+    details.piu > summary { cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      padding: 16px 20px; background: #fff; border: 1px solid var(--border-subtle); border-radius: var(--radius-md);
+      font-weight: 700; font-size: 1.02rem; color: var(--ink); }
+    details.piu > summary::-webkit-details-marker { display: none; }
+    details.piu > summary::after { content: '+'; font-size: 1.4rem; line-height: 1; color: var(--mare); }
+    details.piu[open] > summary::after { content: '−'; }
+    details.piu[open] > summary { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+    details.piu > :not(summary) { margin-top: 0; }
+    details.piu.kf-more { margin-top: 16px; }
+    details.piu.kf-more > summary { background: var(--bg); }
+    details.piu.kf-more .kf-grid { padding: 16px 4px 4px; }
+    details.piu-grande > summary { font-size: 1.1rem; padding: 18px 22px; }
+    details.piu-grande .near-box, details.piu-grande .vgt { margin-top: 0; border-top-left-radius: 0; border-top-right-radius: 0; }
+    details.cad-more > summary { cursor: pointer; list-style: none; }
+    details.cad-more > summary::-webkit-details-marker { display: none; }
+
+    /* ---- riquadri da aprire (foto, video, pianta) ---- */
+    details.gruppo { margin-top: 4px; }
+    details.gruppo > summary.teaser { list-style: none; cursor: pointer; display: block; overflow: hidden; background: #fff;
+      border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); transition: box-shadow .25s, transform .25s; }
+    details.gruppo > summary.teaser::-webkit-details-marker { display: none; }
+    details.gruppo > summary.teaser:hover { box-shadow: 0 14px 34px rgba(29,42,51,0.12); transform: translateY(-2px); }
+    .teaser-img { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 4px; height: clamp(240px, 34vw, 400px); background: var(--pietra); }
+    .teaser-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s var(--transition-smooth); }
+    .t-foto img:first-child { grid-row: span 2; }
+    summary.teaser:hover .teaser-img img { transform: scale(1.03); }
+    .t-video, .t-pianta { display: block; position: relative; }
+    .t-pianta { height: clamp(200px, 26vw, 300px); background: #F7F4EE; }
+    .t-pianta img { object-fit: contain; padding: 14px; }
+    .teaser-play { position: absolute; left: 50%; top: 50%; width: 78px; height: 78px; margin: -39px 0 0 -39px; border-radius: 50%;
+      background: rgba(255,255,255,0.92); color: var(--mare); display: grid; place-items: center; box-shadow: 0 8px 24px rgba(0,0,0,0.25); }
+    .teaser-play svg { margin-left: 4px; }
+    .teaser-bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 20px; }
+    .teaser-bar b { display: block; font-size: 1.18rem; color: var(--ink); }
+    .teaser-bar small { display: block; font-size: 0.95rem; color: var(--text-secondary); margin-top: 2px; }
+    .teaser-btn { flex: none; background: var(--mare); color: #fff; border-radius: 999px; padding: 11px 20px; font-weight: 700; font-size: 0.95rem; }
+    .teaser-btn .chiudi { display: none; }
+    details.gruppo[open] > summary.teaser { border-radius: var(--radius-md); margin-bottom: 18px; }
+    details.gruppo[open] > summary.teaser .teaser-img { display: none; }
+    details.gruppo[open] > summary.teaser .teaser-btn { background: #fff; color: var(--mare); border: 1px solid var(--border-gold); }
+    details.gruppo[open] > summary.teaser .teaser-btn .apri { display: none; }
+    details.gruppo[open] > summary.teaser .teaser-btn .chiudi { display: inline; }
+    .gallery-more-wrap { display: none !important; }
+    .gallery-filter-tabs { margin-bottom: 18px; }
+    .video-tour-wrapper { margin-top: 0; }
+    @media (max-width: 768px) {
+      .t-foto { grid-template-columns: 1fr 1fr; grid-template-rows: 2fr 1fr; height: 300px; }
+      .t-foto img:first-child { grid-row: auto; grid-column: span 2; }
+      .t-foto img:nth-child(n+4) { display: none; }
+      .teaser-bar { flex-direction: column; align-items: stretch; }
+      .teaser-btn { text-align: center; }
+    }
+
+    /* "In breve": cinque dati in riga, il resto si apre */
+    .kf-box > .kf-grid { grid-template-columns: repeat(4, 1fr); }
+    @media (max-width: 900px) { .kf-box > .kf-grid { grid-template-columns: repeat(2, 1fr); } .kf-box > .kf-grid .kf-price { grid-column: span 2; } }
+    .kf-rooms { border-top: 0 !important; padding-top: 0 !important; margin-top: 12px !important; }
+    .kf-rooms details.piu { margin-top: 0; }
+    .kf-rooms details.piu > .kf-head { display: none; }
+    .kf-rooms details.piu > .kf-room-list { padding: 16px 4px 4px; }
+    .kf-rooms .faq-link { margin: 14px 0; }
+    /* pianta a grandezza media: si tocca per ingrandirla */
+    .plan-fig { text-align: center; }
+    .plan-fig a { display: inline-block; cursor: zoom-in; }
+    .plan-fig a { width: min(100%, 590px); }
+    .plan-fig img { width: 100% !important; height: auto; }
+    .plan-fig figcaption { text-align: center; }
+    #costi { background: none !important; border: 0 !important; padding: 0 !important; margin-top: 20px; }
+    #costi details.piu > .buy-title { display: none; }
+    #costi details.piu > :not(summary) { background: #fff; }
+    #costi details.piu[open] > .buy-intro, #costi details.piu[open] > .tax-grid, #costi details.piu[open] > .tax-foot, #costi details.piu[open] > .faq-list { padding: 14px 20px; margin: 0; }
+    details.piu-grande > .location-strip, details.piu-grande > .tech-summary-grid, details.piu-grande > .story-grid, details.piu > .trattativa-steps { margin-top: 0; padding: 18px; background: #fff; border: 1px solid var(--border-subtle); border-top: 0; border-radius: 0 0 var(--radius-md) var(--radius-md); }
+    .trattativa-callout details.piu > summary { background: rgba(255,255,255,0.7); }
+
+    /* ---- dove il buio serve: foto ingrandite, video, 3D ---- */
+    .mosaic-overlay { background: linear-gradient(180deg, transparent 48%, rgba(10,22,30,0.78) 100%) !important; color: #fff !important; }
+    .mosaic-item.plan .mosaic-overlay { background: linear-gradient(180deg, transparent 70%, rgba(10,22,30,0.8) 100%) !important; }
+    .mosaic-tag { color: #CFE6EF !important; }
+    .mosaic-caption { color: #fff !important; text-shadow: 0 1px 4px rgba(0,0,0,0.5); }
+    .lightbox { background: rgba(10,14,18,0.96) !important; }
+    .lightbox, .lightbox * { color: #fff; }
+    .lightbox-close, .lightbox-nav { background: rgba(255,255,255,0.14) !important; border-color: rgba(255,255,255,0.25) !important; color: #fff !important; }
+    .lightbox-caption-text, .lightbox-counter { color: #E6ECEF !important; }
+    .video-player-container, .viewer-3d-box { background: #0E1418 !important; }
+    .video-card-play-icon, .video-card-duration { color: #fff !important; background: rgba(0,0,0,0.55) !important; }
+    .video-big-play { color: #fff; }
+    .video-caption-title { color: var(--ink); }
+    .video-caption-sub { color: var(--text-secondary); }
+
+    .trattativa-callout { background: var(--mare-chiaro) !important; border-color: var(--border-gold) !important; box-shadow: none !important; }
+    .trattativa-callout p { color: var(--text-secondary) !important; font-size: 1rem; }
+    .trattativa-step-card { background: #fff !important; }
+    .seller-card, .contact-channel-btn { background: #fff !important; }
+
+    /* barra mobile e piè di pagina */
+    .mobile-bottom-bar { background: rgba(255,255,255,0.97) !important; border-top: 1px solid var(--border-subtle); }
+    .site-footer { background: var(--pietra); color: var(--text-secondary); }
+
+    /* etichetta dell'anteprima */
+    .anteprima-tag { position: fixed; right: 14px; bottom: 14px; z-index: 5000; background: #1D2A33; color: #fff; font: 600 12px/1 'Plus Jakarta Sans', sans-serif;
+      padding: 8px 12px; border-radius: 999px; opacity: 0.85; pointer-events: none; }
+    @media (max-width: 768px) { .anteprima-tag { bottom: 92px; right: 10px; } }
   </style>
 </head>
 <body>
@@ -2190,7 +2386,7 @@
   <!-- STICKY HEADER -->
     <header class="header" id="mainHeader">
     <a href="#hero" class="brand-title">
-      VIA GIULIA 77
+      Via Giulia 77
       <span data-i18n="brand_floor">9. Stock</span>
     </a>
 
@@ -2276,113 +2472,16 @@
     </div>
   </section>
 
-  <!-- ========================================================
-       CAPITOLO 01: LA RESIDENZA E I 4 PILASTRI ESCLUSIVI
-  ======================================================== -->
-  <section data-tx class="section-editorial" id="residenza">
-    <div class="container">
-      
-      <div class="chapter-divider">
-        <div class="chapter-num" data-i18n="cap1_num">Kapitel 01 • Überblick</div>
-        <h2 class="chapter-title" data-i18n="cap1_title">Neun Stockwerke über der Stadt – und alles vor der Haustür.</h2>
-        <p class="chapter-subtitle" data-i18n="cap1_subtitle">In der 9. und obersten Etage der Via Giulia 77 zu wohnen heißt: Licht von zwei Seiten, das Karstplateau vor Augen und der Stadtverkehr weit unten.</p>
-      </div>
+  
 
-      <!-- In breve (7/11/2026): i dati essenziali subito, come nelle schede dei portali. Prezzo 349.000 € dal 16/11/2026 (posto auto compreso) -->
-      <div class="kf-box">
-        <div class="kf-head" data-i18n="kf_title">Auf einen Blick</div>
-        <div class="kf-grid">
-          <div class="kf kf-price" data-i18n="kf_price"><span class="kf-l">Kaufpreis</span><span class="kf-v">349.000 € · Stellplatz inklusive</span></div>
-          <div class="kf" data-i18n="kf_1"><span class="kf-l">Fläche</span><span class="kf-v">108 m² (Kataster)</span></div>
-          <div class="kf" data-i18n="kf_14"><span class="kf-l">Wohnfläche</span><span class="kf-v">ca. 85 m² (Bauplan) · 93 m² beheizte Fläche laut Energieausweis</span></div>
-          <div class="kf" data-i18n="kf_2"><span class="kf-l">Zimmer</span><span class="kf-v">4 Zimmer (Wohnzimmer + 3 Schlafzimmer) · 2 Bäder · 6 Räume laut Kataster</span></div>
-          <div class="kf" data-i18n="kf_bagni"><span class="kf-l">Bäder</span><span class="kf-v">2, innenliegend ohne Fenster, beide mit Abluftventilator: eines mit Badewanne, eines mit Massagedusche</span></div>
-          <div class="kf" data-i18n="kf_3"><span class="kf-l">Etage</span><span class="kf-v">9. und oberste Etage, mit Aufzug</span></div>
-          <div class="kf" data-i18n="kf_13"><span class="kf-l">Ausrichtung</span><span class="kf-v">Norden (Terrasse, Wohnzimmer, Küche, Karstzimmer) und Westen (Meerzimmer und Arbeitszimmer). Im Sommer liegt die Terrasse im Schatten, mit dem sonnenbeschienenen Karst gegenüber. Im Winter ist das Licht diffus, ohne direkte Sonne.</span></div>
-          <div class="kf" data-i18n="kf_4"><span class="kf-l">Außen</span><span class="kf-v">~11 m² Terrasse, Karstblick</span></div>
-          <div class="kf" data-i18n="kf_5"><span class="kf-l">Stellplatz</span><span class="kf-v">Eigener Tiefgaragenplatz, S1 (13 m²)</span></div>
-          <div class="kf" data-i18n="kf_15"><span class="kf-l">Zugang</span><span class="kf-v">Stufenlos bis zur Wohnung (Rampe und Aufzug); 14 Stufen innen zur Garage</span></div>
-          <div class="kf" data-i18n="kf_16"><span class="kf-l">Einkauf & Bus</span><span class="kf-v">„Il Giulia“ (PAM) in 30–40 m, fast durchgehend überdacht; Busse 6, 9, 35 in ~60 m</span></div>
-          <div class="kf" data-i18n="kf_6"><span class="kf-l">Energie</span><span class="kf-v">Klasse B · EPgl,nren 59,09 · EPgl,ren 1,09 kWh/m²a · Gebäudehülle: im Winter mittel, im Sommer hoch</span></div>
-          <div class="kf" data-i18n="kf_7"><span class="kf-l">Heizung</span><span class="kf-v">Eigene Brennwerttherme (2022)</span></div>
-          <div class="kf" data-i18n="kf_8"><span class="kf-l">Superbonus 110 %</span><span class="kf-v">Dämmung, Fenster, Sicherheitstür, Therme</span></div>
-          <div class="kf" data-i18n="kf_9"><span class="kf-l">Hausgeld (Betriebskosten)</span><span class="kf-v">ca. 1.100–1.200 €/Jahr, inkl. Wasser</span></div>
-          <div class="kf" data-i18n="kf_10"><span class="kf-l">Baujahr</span><span class="kf-v">Ende der 1980er (Bezugsgenehmigung 1990)</span></div>
-          <div class="kf" data-i18n="kf_palazzo"><span class="kf-l">Gebäude</span><span class="kf-v">27 Einheiten, mit Aufzug und gemeinsamer Photovoltaikanlage auf dem Dach; keine außerordentlichen Arbeiten beschlossen</span></div>
-          <div class="kf" data-i18n="kf_dotazioni"><span class="kf-l">Internet & Klima</span><span class="kf-v">Glasfaser bis in die Wohnung; keine Klimaanlage</span></div>
-          <div class="kf" data-i18n="kf_11"><span class="kf-l">Raumhöhe</span><span class="kf-v">2,70 m</span></div>
-          <div class="kf" data-i18n="kf_12"><span class="kf-l">Verfügbarkeit</span><span class="kf-v">Bezugsfrei zum Notartermin</span></div>
-          <div class="kf" data-i18n="kf_stato"><span class="kf-l">Zustand</span><span class="kf-v">Sofort bezugsfertig, Verkauf wie besichtigt. Dämmung, Fenster und Therme 2022–2023 erneuert; Bäder, Küche und Elektrik stammen aus der Bauzeit (1990), funktionstüchtig, mit FI-Schutzschalter. Möbel nach Absprache bei der Besichtigung.</span></div>
-        </div>
-        <div class="kf-rooms">
-          <div class="kf-head" data-i18n="kf_rooms_title">Raumgrößen</div>
-          <div class="kf-room-list" data-i18n="kf_rooms"><span>Wohnzimmer: <b>20,2 m²</b></span><span>Karstzimmer: <b>14,5 m²</b></span><span>Meerzimmer: <b>14,3 m²</b></span><span>Küche: <b>10,5 m²</b></span><span>Arbeitszimmer: <b>9,5 m²</b></span><span>Terrasse: <b>11,0 m²</b></span><span>Großes Bad: <b>5,2 m²</b></span><span>Flur: <b>4,8 m²</b></span><span>Kleines Bad: <b>4,4 m²</b></span><span>Abstellraum: <b>1,8 m²</b></span></div>
-          <p class="kf-note" data-i18n="kf_rooms_note">Nettoflächen laut Bauplan (insgesamt 85,19 m² Wohnfläche). Die 108 m² Katasterfläche enthalten auch die Wände und einen Teil der Terrasse. Die 93 m² im Energieausweis (APE) sind die beheizte Nutzfläche nach den Regeln der Energieberechnung. Die Terrasse ist etwa 8,5 m lang und 1,5 m tief.</p>
-          <p class="kf-note faq-link" data-i18n="faq_link"><a href="#domande">Kauf aus dem Ausland? 14 praktische Antworten →</a></p>
-          <figure class="plan-fig">
-            <a id="planLink" href="img/web/pianta_stato_attuale_de.svg" target="_blank" rel="noopener" data-plan-it="img/web/pianta_stato_attuale_it.svg" data-plan-en="img/web/pianta_stato_attuale_en.svg" data-plan-de="img/web/pianta_stato_attuale_de.svg" data-plan-sl="img/web/pianta_stato_attuale_sl.svg" data-png-it="img/web/pianta_via_giulia_77_it.png" data-png-en="img/web/pianta_via_giulia_77_en.png" data-png-de="img/web/pianta_via_giulia_77_de.png" data-png-sl="img/web/pianta_via_giulia_77_sl.png">
-              <img id="planImg" src="img/web/pianta_stato_attuale_de.svg" width="1820" height="1480" loading="lazy" decoding="async" alt="Grundriss der Wohnung im heutigen Zustand, mit Raumnamen und Flächen" />
-            </a>
-            <figcaption data-i18n="plan_caption">Der Grundriss im heutigen Zustand, mit Raumnamen und Größen: zum Vergrößern antippen.</figcaption>
-          </figure>
-        </div>
-      </div>
+  
 
-      <div class="story-grid">
-        <div class="story-media">
-          <img width="1600" height="901" loading="lazy" decoding="async" src="img/web/living_room.jpg?v=2" alt="Helles Wohnzimmer im 9. Stock der Via Giulia 77" class="story-main-img" />
-          <div class="story-badge-floating">
-            <h3 class="hx4" data-i18n="cap1_float_title">Dreifachverglasung (2022–2023)</h3>
-            <p data-i18n="cap1_float_desc">Zertifizierter Bora-Windwiderstand Klasse 5 und 32 dB Schallschutz.</p>
-          </div>
-        </div>
-
-        <div class="story-text">
-          <p style="color: var(--text-secondary); font-size: 1.05rem; margin-bottom: 24px;" data-i18n="cap1_intro">Ein Gebäude aus den späten 1980er-Jahren (Bezugsgenehmigung 1990) mit einer Wohnung, die dort bereits saniert ist, wo es zählt: Über den italienischen Superbonus 110 % wurden Wärmedämmung rund um die Wohnung, Dreifachverglasung, Sicherheitstür und Brennwerttherme (2022) erneuert. Die teuren energetischen Arbeiten sind bereits erledigt. Darüber liegt nur die große Gemeinschaftsdachterrasse mit Photovoltaikanlage: keine Nachbarn über Ihnen.</p>
-
-          <ul class="pillar-list">
-            <li class="pillar-item" onclick="document.getElementById('specifiche').scrollIntoView({behavior:'smooth'})">
-              <span class="pillar-num">01.</span>
-              <div class="pillar-content">
-                <strong data-i18n="pil1_title">Eigener Tiefgaragenstellplatz (C/6, 13 m²)</strong>
-                <span data-i18n="pil1_desc">Im Untergeschoss S1 des Hauses: Der Aufzug fährt bis zum Haupteingang im Erdgeschoss; von dort führen zwei geschützte interne Treppenläufe (14 Stufen) direkt zur Tiefgarage.</span>
-              </div>
-            </li>
-
-            <li class="pillar-item" onclick="document.getElementById('energia').scrollIntoView({behavior:'smooth'})">
-              <span class="pillar-num">02.</span>
-              <div class="pillar-content">
-                <strong data-i18n="pil2_title">Energieklasse B (Energieausweis Oktober 2024)</strong>
-                <span data-i18n="pil2_desc">Primärenergiebedarf von nur 59,09 kWh/m² im Jahr. Heizung und Warmwasser geschätzt ~580–680 € im Jahr, gegenüber etwa 1.900–2.400 € bei einer typischen Wohnung der Klasse G.</span>
-              </div>
-            </li>
-
-            <li class="pillar-item" onclick="document.getElementById('spaccato3d').scrollIntoView({behavior:'smooth'})">
-              <span class="pillar-num">03.</span>
-              <div class="pillar-content">
-                <strong data-i18n="pil3_title">Großzügige Räume und zwei vollwertige Bäder</strong>
-                <span data-i18n="pil3_desc">Großzügige Raumaufteilung mit durchgehendem sandfarbenem Feinsteinzeugboden, Panorama-Wohnzimmer, Wohnküche mit Terrassenzugang, zwei Bädern (Wannenbad + Hydromassage-Dusche mit UKW-Radio & LED) und drei Schlaf-/Arbeitszimmern, Raumhöhe 2,70 m.</span>
-              </div>
-            </li>
-
-            <li class="pillar-item" onclick="document.getElementById('specifiche').scrollIntoView({behavior:'smooth'})">
-              <span class="pillar-num">04.</span>
-              <div class="pillar-content">
-                <strong data-i18n="pil4_title">Unterlagen in Ordnung, bereit für den Notar</strong>
-                <span data-i18n="pil4_desc">Bau-, Kataster- und Grundbuchkonformität von einem Architekten bestätigt (2021); Umwandlung in Volleigentum für 0 €, wie von der Stadt Triest mitgeteilt; freier Verkaufspreis ohne PEEP-Bindung.</span>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-  </section>
+  
 
   <!-- ========================================================
        CAPITOLO 06: GALLERIA FOTOGRAFICA EDITORIALE
   ======================================================== -->
-  <section data-tx class="section-gallery g-collapsed" id="galleria">
+  <section data-tx class="section-gallery g-collapsed" id="galleria" data-apri="gruppoFoto">
     <div class="container">
       
       <div class="chapter-divider" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px;">
@@ -2392,6 +2491,20 @@
           <p class="chapter-subtitle" data-i18n="cap6_subtitle">Echte Fotos der Wohnung und des Hauses, bei Tageslicht. Öffnen Sie ein Foto, um es zu vergrößern.</p>
         </div>
 
+      </div>
+
+      <details class="gruppo gruppo-foto" id="gruppoFoto">
+        <summary class="teaser">
+          <span class="teaser-img t-foto" aria-hidden="true">
+            <img src="img/web/w/hero_panorama.webp" alt="" loading="lazy" decoding="async" />
+            <img src="img/web/w/living_room.webp" alt="" loading="lazy" decoding="async" />
+            <img src="img/web/w/cucina.webp" alt="" loading="lazy" decoding="async" />
+            <img src="img/web/w/camera_mare.webp" alt="" loading="lazy" decoding="async" />
+            <img src="img/web/w/terrazzo_vista.webp" alt="" loading="lazy" decoding="async" />
+          </span>
+          <span class="teaser-bar"><span><b>Alle 19 Fotos ansehen</b><small>Wohnzimmer und Terrasse, Küche, Schlafzimmer und Bäder, Gebäude</small></span>
+          <span class="teaser-btn"><span class="apri">Fotos öffnen</span><span class="chiudi">Fotos schließen</span></span></span>
+        </summary>
         <div class="gallery-filter-tabs">
           <button class="filter-btn active" onclick="filterGallery('all', this)" data-i18n="gfil_all">Alle Fotos (19)</button>
           <button class="filter-btn" data-target="living" onclick="filterGallery('living', this)" data-i18n="gfil_living">Wohnzimmer & Terrasse</button>
@@ -2399,7 +2512,6 @@
           <button class="filter-btn" onclick="filterGallery('notte', this)" data-i18n="gfil_notte">Zimmer & Bäder</button>
           <button class="filter-btn" onclick="filterGallery('edificio', this)" data-i18n="gfil_edificio">Technik & Gebäude</button>
         </div>
-      </div>
 
       <div class="mosaic-grid" id="galleryGrid">
         <div class="mosaic-item col-8 row-2" data-cat="living" onclick="openLightbox('img/web/hero_panorama.jpg')">
@@ -2555,6 +2667,7 @@
         </div>
       </div>
       <div class="gallery-more-wrap"><button type="button" class="filter-btn gallery-more" data-i18n="gal_more" onclick="showAllPhotos()">Alle 19 Fotos anzeigen</button></div>
+      </details>
 
     </div>
   </section>
@@ -2562,7 +2675,7 @@
   <!-- ========================================================
        CAPITOLO 02: VIDEO TOUR AUTENTICO (5 CLIP ORIGINALI HD)
   ======================================================== -->
-  <section data-tx class="video-tour-section" id="videotour">
+  <section data-tx class="video-tour-section" id="videotour" data-apri="gruppoVideo">
     <div class="container">
       
       <div class="chapter-divider" style="text-align: center;">
@@ -2571,6 +2684,15 @@
         <p class="chapter-subtitle" style="margin: 0 auto; max-width: 750px;" data-i18n="cap2_subtitle">Vor Ort gefilmt: ein 75-Sekunden-Rundgang und vier kurze Clips, mit dem Licht, dem Fernblick aufs Meer und den Räumen, wie sie heute sind.</p>
       </div>
 
+      <details class="gruppo gruppo-video" id="gruppoVideo">
+        <summary class="teaser">
+          <span class="teaser-img t-video" aria-hidden="true">
+            <img src="img/web/video/poster_giro_completo.jpg" alt="" loading="lazy" decoding="async" />
+            <span class="teaser-play"><svg viewBox="0 0 24 24" width="34" height="34"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span>
+          </span>
+          <span class="teaser-bar"><span><b>Die 5 Videos ansehen</b><small>Die ganze Wohnung in 75 Sekunden, dazu der Meeresblick, das Karstzimmer, die Terrasse und die Küche</small></span>
+          <span class="teaser-btn"><span class="apri">Videos öffnen</span><span class="chiudi">Videos schließen</span></span></span>
+        </summary>
       <div class="video-tour-wrapper">
         <div class="video-player-container" id="videoPlayerBox">
           <video id="mainVideoPlayer" controls playsinline preload="metadata" poster="img/web/video/poster_giro_completo.jpg">
@@ -2668,6 +2790,118 @@
           </div>
         </div>
       </div>
+      </details>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       CAPITOLO 01: LA RESIDENZA E I 4 PILASTRI ESCLUSIVI
+  ======================================================== -->
+  <section data-tx class="section-editorial" id="residenza">
+    <div class="container">
+      
+      <div class="chapter-divider">
+        <div class="chapter-num" data-i18n="cap1_num">Kapitel 01 • Überblick</div>
+        <h2 class="chapter-title" data-i18n="cap1_title">Neun Stockwerke über der Stadt – und alles vor der Haustür.</h2>
+        <p class="chapter-subtitle" data-i18n="cap1_subtitle">In der 9. und obersten Etage der Via Giulia 77 zu wohnen heißt: Licht von zwei Seiten, das Karstplateau vor Augen und der Stadtverkehr weit unten.</p>
+      </div>
+
+      <!-- In breve (7/11/2026): i dati essenziali subito, come nelle schede dei portali. Prezzo 349.000 € dal 16/11/2026 (posto auto compreso) -->
+      <div class="kf-box">
+        <div class="kf-head" data-i18n="kf_title">Auf einen Blick</div>
+        <div class="kf-grid">
+          <div class="kf kf-price" data-i18n="kf_price"><span class="kf-l">Kaufpreis</span><span class="kf-v">349.000 € · Stellplatz inklusive</span></div>
+          <div class="kf" data-i18n="kf_1"><span class="kf-l">Fläche</span><span class="kf-v">108 m² (Kataster)</span></div>
+          <div class="kf" data-i18n="kf_2"><span class="kf-l">Zimmer</span><span class="kf-v">4 Zimmer (Wohnzimmer + 3 Schlafzimmer) · 2 Bäder · 6 Räume laut Kataster</span></div>
+          <div class="kf" data-i18n="kf_3"><span class="kf-l">Etage</span><span class="kf-v">9. und oberste Etage, mit Aufzug</span></div>
+          <div class="kf" data-i18n="kf_4"><span class="kf-l">Außen</span><span class="kf-v">~11 m² Terrasse, Karstblick</span></div>
+          <div class="kf" data-i18n="kf_5"><span class="kf-l">Stellplatz</span><span class="kf-v">Eigener Tiefgaragenplatz, S1 (13 m²)</span></div>
+          <div class="kf" data-i18n="kf_6"><span class="kf-l">Energie</span><span class="kf-v">Klasse B · EPgl,nren 59,09 · EPgl,ren 1,09 kWh/m²a · Gebäudehülle: im Winter mittel, im Sommer hoch</span></div>
+        </div>
+        <details class="piu kf-more"><summary>Alle Daten (14 weitere)</summary>
+        <div class="kf-grid">
+          <div class="kf" data-i18n="kf_14"><span class="kf-l">Wohnfläche</span><span class="kf-v">ca. 85 m² (Bauplan) · 93 m² beheizte Fläche laut Energieausweis</span></div>
+          <div class="kf" data-i18n="kf_bagni"><span class="kf-l">Bäder</span><span class="kf-v">2, innenliegend ohne Fenster, beide mit Abluftventilator: eines mit Badewanne, eines mit Massagedusche</span></div>
+          <div class="kf" data-i18n="kf_13"><span class="kf-l">Ausrichtung</span><span class="kf-v">Norden (Terrasse, Wohnzimmer, Küche, Karstzimmer) und Westen (Meerzimmer und Arbeitszimmer). Im Sommer liegt die Terrasse im Schatten, mit dem sonnenbeschienenen Karst gegenüber. Im Winter ist das Licht diffus, ohne direkte Sonne.</span></div>
+          <div class="kf" data-i18n="kf_15"><span class="kf-l">Zugang</span><span class="kf-v">Stufenlos bis zur Wohnung (Rampe und Aufzug); 14 Stufen innen zur Garage</span></div>
+          <div class="kf" data-i18n="kf_16"><span class="kf-l">Einkauf & Bus</span><span class="kf-v">„Il Giulia“ (PAM) in 30–40 m, fast durchgehend überdacht; Busse 6, 9, 35 in ~60 m</span></div>
+          <div class="kf" data-i18n="kf_7"><span class="kf-l">Heizung</span><span class="kf-v">Eigene Brennwerttherme (2022)</span></div>
+          <div class="kf" data-i18n="kf_8"><span class="kf-l">Superbonus 110 %</span><span class="kf-v">Dämmung, Fenster, Sicherheitstür, Therme</span></div>
+          <div class="kf" data-i18n="kf_9"><span class="kf-l">Hausgeld (Betriebskosten)</span><span class="kf-v">ca. 1.100–1.200 €/Jahr, inkl. Wasser</span></div>
+          <div class="kf" data-i18n="kf_10"><span class="kf-l">Baujahr</span><span class="kf-v">Ende der 1980er (Bezugsgenehmigung 1990)</span></div>
+          <div class="kf" data-i18n="kf_palazzo"><span class="kf-l">Gebäude</span><span class="kf-v">27 Einheiten, mit Aufzug und gemeinsamer Photovoltaikanlage auf dem Dach; keine außerordentlichen Arbeiten beschlossen</span></div>
+          <div class="kf" data-i18n="kf_dotazioni"><span class="kf-l">Internet & Klima</span><span class="kf-v">Glasfaser bis in die Wohnung; keine Klimaanlage</span></div>
+          <div class="kf" data-i18n="kf_11"><span class="kf-l">Raumhöhe</span><span class="kf-v">2,70 m</span></div>
+          <div class="kf" data-i18n="kf_12"><span class="kf-l">Verfügbarkeit</span><span class="kf-v">Bezugsfrei zum Notartermin</span></div>
+          <div class="kf" data-i18n="kf_stato"><span class="kf-l">Zustand</span><span class="kf-v">Sofort bezugsfertig, Verkauf wie besichtigt. Dämmung, Fenster und Therme 2022–2023 erneuert; Bäder, Küche und Elektrik stammen aus der Bauzeit (1990), funktionstüchtig, mit FI-Schutzschalter. Möbel nach Absprache bei der Besichtigung.</span></div>
+        </div>
+        </details>
+        <div class="kf-rooms">
+          <details class="piu"><summary>Raumflächen im Einzelnen</summary>
+          <div class="kf-head" data-i18n="kf_rooms_title">Raumgrößen</div>
+          <div class="kf-room-list" data-i18n="kf_rooms"><span>Wohnzimmer: <b>20,2 m²</b></span><span>Karstzimmer: <b>14,5 m²</b></span><span>Meerzimmer: <b>14,3 m²</b></span><span>Küche: <b>10,5 m²</b></span><span>Arbeitszimmer: <b>9,5 m²</b></span><span>Terrasse: <b>11,0 m²</b></span><span>Großes Bad: <b>5,2 m²</b></span><span>Flur: <b>4,8 m²</b></span><span>Kleines Bad: <b>4,4 m²</b></span><span>Abstellraum: <b>1,8 m²</b></span></div>
+          <p class="kf-note" data-i18n="kf_rooms_note">Nettoflächen laut Bauplan (insgesamt 85,19 m² Wohnfläche). Die 108 m² Katasterfläche enthalten auch die Wände und einen Teil der Terrasse. Die 93 m² im Energieausweis (APE) sind die beheizte Nutzfläche nach den Regeln der Energieberechnung. Die Terrasse ist etwa 8,5 m lang und 1,5 m tief.</p>
+          </details>
+          <p class="kf-note faq-link" data-i18n="faq_link"><a href="#domande">Kauf aus dem Ausland? 14 praktische Antworten →</a></p>
+          <figure class="plan-fig">
+            <a id="planLink" href="img/web/pianta_stato_attuale_de.svg" target="_blank" rel="noopener" data-plan-it="img/web/pianta_stato_attuale_it.svg" data-plan-en="img/web/pianta_stato_attuale_en.svg" data-plan-de="img/web/pianta_stato_attuale_de.svg" data-plan-sl="img/web/pianta_stato_attuale_sl.svg" data-png-it="img/web/pianta_via_giulia_77_it.png" data-png-en="img/web/pianta_via_giulia_77_en.png" data-png-de="img/web/pianta_via_giulia_77_de.png" data-png-sl="img/web/pianta_via_giulia_77_sl.png">
+              <img id="planImg" src="img/web/pianta_stato_attuale_de.svg" width="1820" height="1480" loading="lazy" decoding="async" alt="Grundriss der Wohnung im heutigen Zustand, mit Raumnamen und Flächen" />
+            </a>
+            <figcaption data-i18n="plan_caption">Der Grundriss im heutigen Zustand, mit Raumnamen und Größen: zum Vergrößern antippen.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <details class="piu piu-grande"><summary>Bereits erledigte Arbeiten und Stärken: Stellplatz, Klasse B, Platz, Unterlagen</summary>
+      <div class="story-grid">
+        <div class="story-media">
+          <img width="1600" height="901" loading="lazy" decoding="async" src="img/web/living_room.jpg?v=2" alt="Helles Wohnzimmer im 9. Stock der Via Giulia 77" class="story-main-img" />
+          <div class="story-badge-floating">
+            <h3 class="hx4" data-i18n="cap1_float_title">Dreifachverglasung (2022–2023)</h3>
+            <p data-i18n="cap1_float_desc">Zertifizierter Bora-Windwiderstand Klasse 5 und 32 dB Schallschutz.</p>
+          </div>
+        </div>
+
+        <div class="story-text">
+          <p style="color: var(--text-secondary); font-size: 1.05rem; margin-bottom: 24px;" data-i18n="cap1_intro">Ein Gebäude aus den späten 1980er-Jahren (Bezugsgenehmigung 1990) mit einer Wohnung, die dort bereits saniert ist, wo es zählt: Über den italienischen Superbonus 110 % wurden Wärmedämmung rund um die Wohnung, Dreifachverglasung, Sicherheitstür und Brennwerttherme (2022) erneuert. Die teuren energetischen Arbeiten sind bereits erledigt. Darüber liegt nur die große Gemeinschaftsdachterrasse mit Photovoltaikanlage: keine Nachbarn über Ihnen.</p>
+
+          <ul class="pillar-list">
+            <li class="pillar-item" onclick="document.getElementById('specifiche').scrollIntoView({behavior:'smooth'})">
+              <span class="pillar-num">01.</span>
+              <div class="pillar-content">
+                <strong data-i18n="pil1_title">Eigener Tiefgaragenstellplatz (C/6, 13 m²)</strong>
+                <span data-i18n="pil1_desc">Im Untergeschoss S1 des Hauses: Der Aufzug fährt bis zum Haupteingang im Erdgeschoss; von dort führen zwei geschützte interne Treppenläufe (14 Stufen) direkt zur Tiefgarage.</span>
+              </div>
+            </li>
+
+            <li class="pillar-item" onclick="document.getElementById('energia').scrollIntoView({behavior:'smooth'})">
+              <span class="pillar-num">02.</span>
+              <div class="pillar-content">
+                <strong data-i18n="pil2_title">Energieklasse B (Energieausweis Oktober 2024)</strong>
+                <span data-i18n="pil2_desc">Primärenergiebedarf von nur 59,09 kWh/m² im Jahr. Heizung und Warmwasser geschätzt ~580–680 € im Jahr, gegenüber etwa 1.900–2.400 € bei einer typischen Wohnung der Klasse G.</span>
+              </div>
+            </li>
+
+            <li class="pillar-item" onclick="document.getElementById('spaccato3d').scrollIntoView({behavior:'smooth'})">
+              <span class="pillar-num">03.</span>
+              <div class="pillar-content">
+                <strong data-i18n="pil3_title">Großzügige Räume und zwei vollwertige Bäder</strong>
+                <span data-i18n="pil3_desc">Großzügige Raumaufteilung mit durchgehendem sandfarbenem Feinsteinzeugboden, Panorama-Wohnzimmer, Wohnküche mit Terrassenzugang, zwei Bädern (Wannenbad + Hydromassage-Dusche mit UKW-Radio & LED) und drei Schlaf-/Arbeitszimmern, Raumhöhe 2,70 m.</span>
+              </div>
+            </li>
+
+            <li class="pillar-item" onclick="document.getElementById('specifiche').scrollIntoView({behavior:'smooth'})">
+              <span class="pillar-num">04.</span>
+              <div class="pillar-content">
+                <strong data-i18n="pil4_title">Unterlagen in Ordnung, bereit für den Notar</strong>
+                <span data-i18n="pil4_desc">Bau-, Kataster- und Grundbuchkonformität von einem Architekten bestätigt (2021); Umwandlung in Volleigentum für 0 €, wie von der Stadt Triest mitgeteilt; freier Verkaufspreis ohne PEEP-Bindung.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </details>
 
     </div>
   </section>
@@ -2723,6 +2957,7 @@
       </div>
 
       <!-- Strategic Micro-Location -->
+      <details class="piu piu-grande" open><summary>Vor der Haustür und wenige Minuten entfernt: Einkaufen, Bus, Zentrum, Meer, Autobahn</summary>
       <div class="location-strip">
         <div class="location-grid">
           <div class="location-item">
@@ -2743,8 +2978,10 @@
           </div>
         </div>
       </div>
+      </details>
 
       <!-- Cosa c'è intorno (17/11/2026): negozi del Giulia da ilgiulia.it, il resto da Google Maps (distanze in linea d'aria) -->
+      <details class="piu piu-grande"><summary>Was es in der Nähe gibt: Geschäfte, Schulen, Gesundheit, Grün</summary>
       <div class="near-box" id="vicino">
         <h3 class="near-title" data-i18n="near_title">Was es rund ums Haus gibt</h3>
         <p class="near-intro" data-i18n="near_intro">Luftlinie ab der Haustür, gemessen mit Google Maps im November 2026; zu Fuß kann der Weg etwas länger sein.</p>
@@ -2759,6 +2996,9 @@
         <p class="near-foot" data-i18n="near_foot">Geschäfte im Il Giulia laut der offiziellen Website ilgiulia.it; übrige Angaben und Fahrzeiten laut Google Maps (November 2026). Sie können sich ändern.</p>
       </div>
 
+      </details>
+
+      <details class="piu piu-grande"><summary>Interaktive Karte und Busse 6, 9, 35</summary>
       <!-- Mappa interattiva & collegamenti bus (linee 6, 9, 35): percorsi reali OpenStreetMap, tempi dagli orari Trieste Trasporti.
            Logica in js/transit_map.js, dati in js/transit_routes.js; testi IT/EN/DE dentro transit_map.js (attributi data-vgt). -->
       <section class="vgt" id="trasporti" aria-labelledby="vgtTitle">
@@ -2812,6 +3052,7 @@
 
         <p class="vgt-source" data-vgt="note">Echte Linienverläufe aus OpenStreetMap. Richtzeiten berechnet aus den offiziellen Fahrplänen von Trieste Trasporti (Winterfahrplan ab 14.09.2026, werktags tagsüber): vor der Fahrt auf <a href="https://www.triestetrasporti.it/it/trasporto-pubblico/linee-orari" target="_blank" rel="noopener">triestetrasporti.it</a> prüfen.</p>
       </section>
+      </details>
 
     </div>
   </section>
@@ -2827,11 +3068,11 @@
 
       <div class="cadastral-grid">
         <!-- Scheda Appartamento & Posto Auto -->
-        <div class="cadastral-card">
-          <h3 class="hx4">
+        <details class="cadastral-card cad-more">
+          <summary><h3 class="hx4">
             <span data-i18n="cad_card1_title">Wohnung + Tiefgaragenstellplatz</span>
             <span class="sub-pill">SUB. 50 + SUB. 189</span>
-          </h3>
+          </h3><span class="yield-open">Alle Daten anzeigen</span></summary>
 
           <table class="data-table-clean">
             <tr>
@@ -2899,7 +3140,7 @@
               <td><strong>Grundbuchsystem (Libro Fondiario)</strong>: das Eigentum geht mit der vom Richter geprüften Eintragung über – eine zusätzliche Sicherheit für den Käufer</td>
             </tr>
           </table>
-        </div>
+        </details>
 
         <!-- Per chi investe (8/11/2026): stima dell'affitto, chiusa finché non la si apre -->
         <details class="cadastral-card yield-card">
@@ -2919,24 +3160,24 @@
           <div id="yieldDisplayBox">
             <div style="font-size: 0.78rem; text-transform: uppercase; color: var(--sand-gold); font-weight: 700; margin-bottom: 10px;" data-i18n="yield_sub_header">Schätzung nach dem örtlichen Mietabkommen von Triest (Zone 3, Stufe 2)</div>
             
-            <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.06);">
+            <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(29,42,51,0.06);">
               <span style="color: var(--text-secondary);" data-i18n="yield_row_monthly">Ansetzbare Monatsmiete:</span>
-              <strong id="yMonthly" data-i18n="val_conc_monthly" style="color: #fff; font-size: 1.15rem; font-family: 'Space Grotesk', sans-serif;">1.081 € / Monat</strong>
+              <strong id="yMonthly" data-i18n="val_conc_monthly" style="color: var(--ink); font-size: 1.15rem; font-family: 'Space Grotesk', sans-serif;">1.081 € / Monat</strong>
             </div>
-            <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.06);">
+            <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(29,42,51,0.06);">
               <span style="color: var(--text-secondary);" data-i18n="yield_row_gross">Brutto-Jahresmiete:</span>
-              <strong id="yGross" data-i18n="val_conc_gross" style="color: #fff; font-family: 'Space Grotesk', sans-serif;">12.973 € / Jahr</strong>
+              <strong id="yGross" data-i18n="val_conc_gross" style="color: var(--ink); font-family: 'Space Grotesk', sans-serif;">12.973 € / Jahr</strong>
             </div>
-            <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.06);">
+            <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(29,42,51,0.06);">
               <span style="color: var(--text-secondary);" data-i18n="yield_row_tax">Pauschalsteuer (Cedolare Secca):</span>
               <strong id="yTax" data-i18n="val_conc_tax" style="color: var(--accent-green);">10% Ermäßigte Pauschalsteuer (statt 21%)</strong>
             </div>
-            <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.06);">
+            <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(29,42,51,0.06);">
               <span style="color: var(--text-secondary);" data-i18n="yield_row_ilia">Regionaler Grundsteuerrabatt (ILIA):</span>
               <strong id="yIlia" data-i18n="val_conc_ilia" style="color: var(--accent-green);">-25% Gesetzlicher FVG-Rabatt</strong>
             </div>
             <div style="display: flex; justify-content: space-between; padding: 14px 0; background: rgba(16, 185, 129, 0.08); border-radius: 6px; margin-top: 10px; padding: 12px 14px;">
-              <span style="font-weight: 700; color: #fff;" data-i18n="yield_row_net">Geschätzt netto nach Pauschalsteuer und ILIA:</span>
+              <span style="font-weight: 700; color: var(--ink);" data-i18n="yield_row_net">Geschätzt netto nach Pauschalsteuer und ILIA:</span>
               <strong id="yNet" data-i18n="val_conc_net" style="color: var(--accent-green); font-size: 1.3rem; font-family: 'Space Grotesk', sans-serif;">~ 10.838 € / Jahr</strong>
             </div>
           </div>
@@ -2946,6 +3187,7 @@
 
       <!-- Comprare a Trieste (8/11/2026): imposte calcolate col sistema prezzo-valore + domande di chi compra dall'estero -->
       <div class="buy-box" id="costi">
+        <details class="piu piu-grande" open><summary>Was der Kauf kostet: die Steuern stehen schon fest</summary>
         <h3 class="buy-title" data-i18n="tax_title">Erwerbskosten: die Steuern stehen schon fest</h3>
         <p class="buy-intro" data-i18n="tax_intro">Wer als Privatperson von privat kauft, zahlt die italienischen Erwerbsteuern auf den Katasterwert, nicht auf den Kaufpreis (Regel „prezzo-valore“): Sie lassen sich daher schon jetzt genau angeben. Für Gesellschaften gelten andere Regeln.</p>
         <div class="tax-grid">
@@ -2953,6 +3195,8 @@
           <div class="tax-card"><div class="tax-l" data-i18n="tax_second_label">Zweitwohnung</div><div class="tax-v" data-i18n="tax_second_value">~11.820 €</div><p class="tax-n" data-i18n="tax_second_note">9 % Registersteuer auf 130.251 € (Katasterertrag × 1,05 × 120) + 100 € feste Abgaben. Gilt, wenn Sie Ihren Wohnsitz nicht fristgerecht nach Triest verlegen oder die Voraussetzungen für den Erstwohnsitz nicht erfüllen (z. B. wenn Sie noch eine mit der Erstwohnsitz-Vergünstigung erworbene Wohnung besitzen und diese nicht fristgerecht verkaufen).</p></div>
         </div>
         <p class="tax-foot" data-i18n="tax_foot">Katasterertrag: Wohnung 945,12 € + Stellplatz 88,62 €. Hinzu kommt das Notarhonorar, das üblicherweise der Käufer trägt. Richtwerte: verbindlich ist die Berechnung des Notars.</p>
+        </details>
+        <details class="piu piu-grande"><summary>Häufige Fragen: 14 praktische Antworten</summary>
         <h2 class="buy-title faq-title" id="domande" data-i18n="faq_title">Häufige Fragen</h2>
         <div class="faq-list">
           <details class="faq"><summary data-i18n="faq_q1">Kann ich kaufen, wenn ich nicht in Italien lebe?</summary><p data-i18n="faq_a1">Ja. Sie brauchen eine italienische Steuernummer (codice fiscale), erhältlich bei der Agenzia delle Entrate oder einem italienischen Konsulat. Für EU-Bürger gibt es keine Einschränkungen; für andere gilt die Gegenseitigkeit mit ihrem Land. Ohne Wohnsitzverlegung nach Triest gelten die Steuern für Zweitwohnungen. Italienische Staatsbürger mit Wohnsitz im Ausland (AIRE) können in manchen Fällen die Erstwohnsitz-Sätze auch ohne Wohnsitzverlegung erhalten: Fragen Sie den Notar.</p></details>
@@ -2970,6 +3214,7 @@
           <details class="faq"><summary data-i18n="faq_q13">Internet und Klimaanlage?</summary><p data-i18n="faq_a13">Glasfaser liegt bis in die Wohnung. Eine Klimaanlage gibt es nicht: Terrasse, Wohnzimmer, Küche und Karstzimmer liegen nach Norden und bleiben im Sommer im Schatten. Wer möchte, kann Geräte nach der Hausordnung einbauen.</p></details>
           <details class="faq"><summary data-i18n="faq_q14">Wie weit ist es nach Slowenien, Österreich und Deutschland?</summary><p data-i18n="faq_a14">Mit dem Auto, laut Google Maps: Ljubljana etwa 1 Std. 15, Villach und Klagenfurt etwa 2 Std., Graz etwa 3 Std. 30, Salzburg etwa 4 Std., München etwa 5 Std. 30, Wien 5–6 Std. Der Flughafen Triest ist etwa 40 Minuten entfernt, der Autobahnzubringer 10.</p></details>
         </div>
+        </details>
       </div>
 
     </div>
@@ -2989,6 +3234,7 @@
       </div>
 
       <!-- Livello 1: 4 Schede Sintetiche -->
+      <details class="piu piu-grande" open><summary>Kurz gesagt: Bora, Lärm, Sicherheitstür, Garantie auf den Einbau</summary>
       <div class="tech-summary-grid">
         <div class="tech-summary-card">
           <div class="icon"><svg class="ico" aria-hidden="true"><use href="#i-wind"/></svg></div>
@@ -3015,6 +3261,7 @@
         </div>
       </div>
 
+      </details>
       <details class="tech-more">
         <summary data-i18n="more_tech">Vollständiges technisches Datenblatt</summary>
       <!-- Livello 2: scheda tecnica con Tab a Espansione Progressiva -->
@@ -3030,7 +3277,7 @@
         <div class="dossier-tab-content active" id="tab-distinta">
           <div class="vg-2col" style="--cols: 1.15fr 0.85fr; align-items: start;">
             <div>
-              <h3 class="hx4" style="font-family: 'Cinzel', serif; color: var(--sand-gold); margin-bottom: 14px; font-size: 1.15rem;">
+              <h3 class="hx4" style="font-family: 'Plus Jakarta Sans', sans-serif; color: var(--sand-gold); margin-bottom: 14px; font-size: 1.15rem;">
                 Fensterkonfiguration je Öffnung (insgesamt 16,30 m²)
               </h3>
               <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 20px;">
@@ -3073,12 +3320,12 @@
               </table>
 
               <div style="margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; font-size: 0.82rem;">
-                <div style="background: rgba(0,0,0,0.25); padding: 12px; border-radius: 6px; border: 1px solid var(--border-subtle);">
-                  <strong style="color: #fff;">ROTO-Mikrolüftung:</strong><br />
+                <div style="background: var(--bg); padding: 12px; border-radius: 6px; border: 1px solid var(--border-subtle);">
+                  <strong style="color: var(--ink);">ROTO-Mikrolüftung:</strong><br />
                   <span style="color: var(--text-secondary);">Kontrollierte 4-stufige Spaltöffnung zum Lüften gegen Kondenswasser ohne Wärmeverlust.</span>
                 </div>
-                <div style="background: rgba(0,0,0,0.25); padding: 12px; border-radius: 6px; border: 1px solid var(--border-subtle);">
-                  <strong style="color: #fff;">V-Perfect-Schweißnähte:</strong><br />
+                <div style="background: var(--bg); padding: 12px; border-radius: 6px; border: 1px solid var(--border-subtle);">
+                  <strong style="color: var(--ink);">V-Perfect-Schweißnähte:</strong><br />
                   <span style="color: var(--text-secondary);">Robotertechnik ohne sichtbare Fräsnaht: perfekt flächenbündige Ecken.</span>
                 </div>
               </div>
@@ -3096,7 +3343,7 @@
         <!-- Tab 2: Scheda Prestazionale & Posa Certificata -->
         <div class="dossier-tab-content" id="tab-prezzi">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-            <h3 class="hx4" style="font-family: 'Cinzel', serif; color: var(--sand-gold); font-size: 1.15rem;">
+            <h3 class="hx4" style="font-family: 'Plus Jakarta Sans', sans-serif; color: var(--sand-gold); font-size: 1.15rem;">
               IPR-Lieferung: technisches Datenblatt &amp; Leistungswerte (Auftrag C824-21)
             </h3>
           </div>
@@ -3142,14 +3389,14 @@
               </tr>
             </tbody>
             <tfoot>
-              <tr style="background: rgba(212, 175, 55, 0.12); font-size: 1rem;">
+              <tr style="background: rgba(31,110,140, 0.12); font-size: 1rem;">
                 <td colspan="3"><strong>LIEFERSTATUS, ABNAHME UND IPR-BESTÄTIGUNG</strong></td>
                 <td colspan="2" class="num font-num" style="color: var(--sand-gold); text-align: right;">ABNAHME BESTANDEN • 10 JAHRE MONTAGEGARANTIE</td>
               </tr>
             </tfoot>
           </table>
 
-          <div style="margin-top: 18px; padding: 14px 18px; background: rgba(0,0,0,0.25); border-left: 3px solid var(--sand-gold); font-size: 0.84rem; color: #D1D7E2;">
+          <div style="margin-top: 18px; padding: 14px 18px; background: var(--bg); border-left: 3px solid var(--sand-gold); font-size: 0.84rem; color: var(--text-secondary);">
             <strong>Technischer Hinweis:</strong> Lieferung im Rahmen der Superbonus-110-%-Arbeiten bestätigt (IPR-Auftrag C824-21). Die gesamte Arbeit hat die Abnahme bestanden und hat 10 Jahre Garantie auf die zertifizierte Montage. Über denselben Superbonus 110 % wurden auch die Wärmedämmung rund um die Wohnung, die Sicherheitstür und die neue Brennwerttherme finanziert.
           </div>
         </div>
@@ -3158,14 +3405,14 @@
         <div class="dossier-tab-content" id="tab-stark">
           <div class="vg-2col" style="--cols: 1fr 1fr;">
             <div>
-              <h3 class="hx4" style="font-family: 'Cinzel', serif; color: var(--sand-gold); margin-bottom: 12px; font-size: 1.15rem;">
+              <h3 class="hx4" style="font-family: 'Plus Jakarta Sans', sans-serif; color: var(--sand-gold); margin-bottom: 12px; font-size: 1.15rem;">
                 Sicherheitstür Stark Style7 Nettuno (Ud 1,3 W/m²K)
               </h3>
               <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin-bottom: 18px;">
                 Geprüft vom<strong>Istituto Giordano S.p.A. (Bericht Nr. 340016)</strong> in Einbruchschutzklasse 3 nach UNI EN 1627:
               </p>
 
-              <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.85rem; color: #E2E8F0;">
+              <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.85rem; color: var(--text-secondary);">
                 <li><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg> <strong>Edelstahl-Verkleidung</strong> umlaufend, mit eingraviertem Stark-Logo.</li>
                 <li><svg class="ico" aria-hidden="true"><use href="#i-lock"/></svg> <strong>11 Verankerungspunkte:</strong> 7 bewegliche Riegel (Falle + 4 Mittelriegel + Umlenkungen) + 4 feste bandseitige Sicherungen.</li>
                 <li><svg class="ico" aria-hidden="true"><use href="#i-link"/></svg> <strong>Türspaltsperre:</strong> starre Innenkette, mit Knauf zu bedienen.</li>
@@ -3176,19 +3423,19 @@
             </div>
 
             <div style="display: flex; flex-direction: column; gap: 16px;">
-              <div style="background: rgba(0,0,0,0.3); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 20px;">
+              <div style="background: var(--bg); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 20px;">
                 <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--sand-gold); font-weight: 700; letter-spacing: 0.1em; margin-bottom: 8px;">
                   Hochsicherheitszylinder
                 </div>
-                <h4 class="hx5" style="font-size: 1.05rem; color: #fff; margin-bottom: 10px;">Mottura Champions CM5+1 mit Freilauf</h4>
+                <h4 class="hx5" style="font-size: 1.05rem; color: var(--ink); margin-bottom: 10px;">Mottura Champions CM5+1 mit Freilauf</h4>
                 <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 12px;">
                   Europäischer Hochsicherheitszylinder gegen Bumping und Picking, mit geschützter Schlüsselkopie. Übergeben werden:
                 </p>
                 
                 <div style="display: flex; flex-direction: column; gap: 5px; font-size: 0.8rem; font-family: var(--font-mono);">
-                  <div style="color: #38BDF8;">✓ 1 versiegelter Originalschlüssel</div>
-                  <div style="color: #fff;">✓ 2 gebrauchsfertige Kopien</div>
-                  <div style="color: #10B981;">✓ „Second Life“-Umcodierung bereits erfolgt: frühere Schlüssel öffnen nicht mehr</div>
+                  <div style="color: #1F6E8C;">✓ 1 versiegelter Originalschlüssel</div>
+                  <div style="color: var(--ink);">✓ 2 gebrauchsfertige Kopien</div>
+                  <div style="color: #0E8A5F;">✓ „Second Life“-Umcodierung bereits erfolgt: frühere Schlüssel öffnen nicht mehr</div>
                   <div style="color: var(--sand-gold);">✓ 1 Eigentümerkarte: mit dem Originalschlüssel für Nachschlüssel nötig</div>
                 </div>
               </div>
@@ -3237,7 +3484,7 @@
             </div>
 
             <div>
-              <h3 class="hx4" style="font-family: 'Cinzel', serif; color: var(--sand-gold); font-size: 1.15rem; margin-bottom: 12px;">
+              <h3 class="hx4" style="font-family: 'Plus Jakarta Sans', sans-serif; color: var(--sand-gold); font-size: 1.15rem; margin-bottom: 12px;">
                 Abnahmeprotokoll bestanden (14.03.2023)
               </h3>
               <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin-bottom: 18px;">
@@ -3245,10 +3492,10 @@
               </p>
 
               <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem;">
-                <div style="padding: 12px 16px; background: rgba(16, 185, 129, 0.1); border: 1px solid var(--border-green); border-radius: 6px; color: #fff;">
+                <div style="padding: 12px 16px; background: rgba(16, 185, 129, 0.1); border: 1px solid var(--border-green); border-radius: 6px; color: var(--ink);">
                   <strong><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg> 10 Jahre Garantie:</strong> Vertragliche IPR-Garantie auf die Montage, ausgeführt nach <strong>UNI 11673-1 und UNI 11673-2</strong>.
                 </div>
-                <div style="padding: 12px 16px; background: rgba(0,0,0,0.3); border: 1px solid var(--border-subtle); border-radius: 6px; color: #D1D7E2;">
+                <div style="padding: 12px 16px; background: var(--bg); border: 1px solid var(--border-subtle); border-radius: 6px; color: var(--text-secondary);">
                   <strong><svg class="ico" aria-hidden="true"><use href="#i-wrench"/></svg> 1 kostenlose Nachjustierung inklusive:</strong> Vertraglicher Anspruch auf eine zusätzliche Einstellung von Bändern und Beschlägen innerhalb von 12 Monaten nach der Montage.
                 </div>
               </div>
@@ -3287,11 +3534,11 @@
         <div style="display: flex; gap: 20px; flex-wrap: wrap;">
           <div style="text-align: right;">
             <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-tertiary); letter-spacing: 0.1em;" data-i18n="ape_gas_label">Geschätzter Gasbedarf</div>
-            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700; color: #fff;">486 Sm³ / Jahr</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--ink);">486 Sm³ / Jahr</div>
           </div>
           <div style="text-align: right;">
             <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-tertiary); letter-spacing: 0.1em;" data-i18n="ape_cost_label">Heizung & Warmwasser geschätzt</div>
-            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700; color: #fff;">~580–680 € / Jahr</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--ink);">~580–680 € / Jahr</div>
           </div>
         </div>
       </div>
@@ -3309,7 +3556,7 @@
 
         <!-- Tab 1: Confronto vs Classe G -->
         <div class="energy-tab-content active" id="etab-confronto">
-          <h3 class="hx4" style="font-family: 'Cinzel', serif; color: var(--accent-green); font-size: 1.2rem; margin-bottom: 8px;">
+          <h3 class="hx4" style="font-family: 'Plus Jakarta Sans', sans-serif; color: var(--accent-green); font-size: 1.2rem; margin-bottom: 8px;">
             Was Klasse B spart
           </h3>
           <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
@@ -3328,7 +3575,7 @@
               </div>
               <div class="comp-item-row">
                 <span>Jährliche Kosten Heizung &amp; Warmwasser:</span>
-                <strong style="color: #fff;">~580–680 € / Jahr</strong>
+                <strong style="color: var(--ink);">~580–680 € / Jahr</strong>
               </div>
               <div class="comp-item-row">
                 <span>EU-Gebäuderichtlinie (EPBD):</span>
@@ -3336,11 +3583,11 @@
               </div>
               <div class="comp-item-row">
                 <span>Grüne Baufinanzierung:</span>
-                <strong style="color: #38BDF8;">Möglich (Klassen A und B, je nach Bank)</strong>
+                <strong style="color: #1F6E8C;">Möglich (Klassen A und B, je nach Bank)</strong>
               </div>
               <div class="comp-item-row">
                 <span>Wärmedurchgang Fenster (Uw):</span>
-                <strong style="color: #fff;">0,85 – 0,94 W/m²K (Dreifachverglasung)</strong>
+                <strong style="color: var(--ink);">0,85 – 0,94 W/m²K (Dreifachverglasung)</strong>
               </div>
             </div>
 
@@ -3378,7 +3625,7 @@
         <div class="energy-tab-content" id="etab-caldaia">
           <div class="vg-2col" style="--cols: 1.15fr 0.85fr; align-items: start;">
             <div>
-              <h3 class="hx4" style="font-family: 'Cinzel', serif; color: var(--accent-green); font-size: 1.2rem; margin-bottom: 12px;">
+              <h3 class="hx4" style="font-family: 'Plus Jakarta Sans', sans-serif; color: var(--accent-green); font-size: 1.2rem; margin-bottom: 12px;">
                 Viessmann Vitodens 100-W, 25 kW (eingebaut im Juni 2022)
               </h3>
               <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin-bottom: 18px;">
@@ -3434,7 +3681,7 @@
         <div class="energy-tab-content" id="etab-attestato">
           <div class="vg-2col" style="--cols: 1fr 1fr; align-items: start;">
             <div class="ape-scale-block">
-              <div style="display: flex; justify-content: space-between; border-bottom: 2px solid #10B981; padding-bottom: 8px; margin-bottom: 14px;">
+              <div style="display: flex; justify-content: space-between; border-bottom: 2px solid #0E8A5F; padding-bottom: 8px; margin-bottom: 14px;">
                 <div>
                   <strong style="font-size: 0.9rem;">AUTONOME REGION FVG</strong><br />
                   <span style="font-size: 0.75rem; color: #64748B;">Energieregister CENEDfvg</span>
@@ -3490,20 +3737,20 @@
             </div>
 
             <div>
-              <h3 class="hx4" style="font-family: 'Cinzel', serif; color: var(--accent-green); font-size: 1.15rem; margin-bottom: 12px;">
+              <h3 class="hx4" style="font-family: 'Plus Jakarta Sans', sans-serif; color: var(--accent-green); font-size: 1.15rem; margin-bottom: 12px;">
                 Registrierung des Energieausweises (APE) im Energiekataster FVG
               </h3>
               <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin-bottom: 16px;">
                 Der Ausweis ist digital signiert und im Energieregister der Autonomen Region Friaul-Julisch Venetien registriert:
               </p>
 
-              <div style="background: rgba(0,0,0,0.3); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 18px; font-size: 0.82rem; font-family: var(--font-mono);">
-                <div style="margin-bottom: 6px;"><span style="color: var(--text-tertiary);">APE-Code:</span> <strong style="color: #fff;">3200600981824</strong></div>
+              <div style="background: var(--bg); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 18px; font-size: 0.82rem; font-family: var(--font-mono);">
+                <div style="margin-bottom: 6px;"><span style="color: var(--text-tertiary);">APE-Code:</span> <strong style="color: var(--ink);">3200600981824</strong></div>
                 <div style="margin-bottom: 6px;"><span style="color: var(--text-tertiary);">Insiel-Protokoll:</span> <strong style="color: var(--accent-green);">TS1-REGAPE-2024-0037290-A</strong></div>
-                <div style="margin-bottom: 6px;"><span style="color: var(--text-tertiary);">Hinterlegt am:</span> <strong style="color: #fff;">21.10.2024, 09:14 Uhr</strong></div>
-                <div style="margin-bottom: 6px;"><span style="color: var(--text-tertiary);">Gültig bis:</span> <strong style="color: #38BDF8;">21.10.2034 (10 Jahre)</strong></div>
-                <div style="margin-bottom: 6px;"><span style="color: var(--text-tertiary);">Aussteller:</span> <strong style="color: #fff;">Diego PIAZZOLLA, Industrietechniker (Reg.-Nr. 855)</strong></div>
-                <div><span style="color: var(--text-tertiary);">Ingenieurbüro:</span> <strong style="color: #fff;">System Mind S.r.l. Trieste</strong></div>
+                <div style="margin-bottom: 6px;"><span style="color: var(--text-tertiary);">Hinterlegt am:</span> <strong style="color: var(--ink);">21.10.2024, 09:14 Uhr</strong></div>
+                <div style="margin-bottom: 6px;"><span style="color: var(--text-tertiary);">Gültig bis:</span> <strong style="color: #1F6E8C;">21.10.2034 (10 Jahre)</strong></div>
+                <div style="margin-bottom: 6px;"><span style="color: var(--text-tertiary);">Aussteller:</span> <strong style="color: var(--ink);">Diego PIAZZOLLA, Industrietechniker (Reg.-Nr. 855)</strong></div>
+                <div><span style="color: var(--text-tertiary);">Ingenieurbüro:</span> <strong style="color: var(--ink);">System Mind S.r.l. Trieste</strong></div>
               </div>
             </div>
           </div>
@@ -3511,7 +3758,7 @@
 
         <!-- Tab 4: Termofisica Involucro & EC700 -->
         <div class="energy-tab-content" id="etab-termofisica">
-          <h3 class="hx4" style="font-family: 'Cinzel', serif; color: var(--accent-green); font-size: 1.15rem; margin-bottom: 14px;">
+          <h3 class="hx4" style="font-family: 'Plus Jakarta Sans', sans-serif; color: var(--accent-green); font-size: 1.15rem; margin-bottom: 14px;">
             Kennwerte der Gebäudehülle (zertifizierte Software Edilclima EC 700 V.11)
           </h3>
 
@@ -3588,6 +3835,7 @@
         <p data-i18n="trattativa_banner_desc">Die Wohnung wird direkt vom Eigentümer verkauft, ohne Makler: Der Käufer zahlt keine Provision, die üblicherweise 3–4 % + MwSt. beträgt. Nachrichten beantworte ich innerhalb von 24 Stunden, schriftliche Angebote innerhalb von 48. Auf Wunsch setzt der Notar Ihrer Wahl auch den Vorvertrag auf.</p>
         <p class="faq-link" data-i18n="faq_link"><a href="#domande">Kauf aus dem Ausland? 14 praktische Antworten →</a></p>
 
+        <details class="piu"><summary>So kaufen Sie, in 3 Schritten: Besichtigung, Angebot, Notartermin</summary>
         <div class="trattativa-steps">
           <div class="trattativa-step-card">
             <div class="step-num" data-i18n="tstep1_num">Schritt 01 • Besichtigung</div>
@@ -3605,6 +3853,7 @@
             <span data-i18n="tstep3_desc">Der Kaufvertrag wird beim vom Käufer gewählten Notar in Triest beurkundet: Bau-, Kataster- und Grundbuchkonformität sind bereits geprüft.</span>
           </div>
         </div>
+        </details>
       </div>
 
       <div class="contact-wrapper">
@@ -3640,7 +3889,7 @@
           </a>
 
           <a href="pdf/via-giulia-77-trieste_de.pdf" id="pdfLink" data-pdf-it="pdf/via-giulia-77-trieste_it.pdf" data-pdf-en="pdf/via-giulia-77-trieste_en.pdf" data-pdf-de="pdf/via-giulia-77-trieste_de.pdf" data-pdf-sl="pdf/via-giulia-77-trieste_sl.pdf" target="_blank" rel="noopener" class="contact-channel-btn" style="border-color: var(--border-gold);">
-            <div class="channel-icon" style="background: rgba(212,175,55,0.15); color: var(--sand-gold);"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg></div>
+            <div class="channel-icon" style="background: rgba(31,110,140,0.15); color: var(--sand-gold);"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg></div>
             <div>
               <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--sand-gold); font-weight: 700; letter-spacing: 0.1em;" data-i18n="ch_pdf_tag">Verkaufsexposé</div>
               <div style="font-size: 1.05rem; font-weight: 700;" data-i18n="ch_pdf_title">Verkaufsexposé als PDF (A4) ↗</div>
@@ -3658,8 +3907,8 @@
           </div>
         </div>
 
-        <div style="background: rgba(0,0,0,0.35); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 34px;">
-          <h3 class="hx4" style="font-family: 'Cinzel', serif; font-size: 1.2rem; color: #fff; margin-bottom: 20px;" data-i18n="contact_box_title">Informationen anfragen oder Besichtigung vereinbaren</h3>
+        <div style="background: var(--bg); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 34px;">
+          <h3 class="hx4" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.2rem; color: var(--ink); margin-bottom: 20px;" data-i18n="contact_box_title">Informationen anfragen oder Besichtigung vereinbaren</h3>
 
           <form id="richiesta" name="richiesta-contatto" method="POST" data-endpoint="https://formspree.io/f/xdegeqkv" onsubmit="handleDirectContact(event)">
             <!-- data-endpoint: indirizzo Formspree scritto da aggiorna_sito.py (FORMSPREE_ID); vuoto = solo WhatsApp -->
@@ -3725,8 +3974,8 @@
   <footer class="site-footer">
     <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
       <div>
-        <div style="font-family: 'Cinzel', serif; color: #fff; font-size: 1.05rem; letter-spacing: 0.08em; margin-bottom: 4px;">
-          VIA GIULIA 77 — TRIESTE
+        <div style="font-family: 'Plus Jakarta Sans', sans-serif; color: var(--ink); font-size: 1.05rem; letter-spacing: 0.08em; margin-bottom: 4px;">
+          Via Giulia 77 — Trieste
         </div>
         <p data-i18n="footer_specs">9. und oberste Etage mit Aufzug • Energieklasse B (2024) • Tiefgaragenplatz S1 (13 m²)</p>
       </div>
@@ -7132,6 +7381,101 @@
       "Floor plan of the flat as it is today, with room names and sizes",
       "Grundriss der Wohnung im heutigen Zustand, mit Raumnamen und Flächen",
       "Tloris stanovanja v sedanjem stanju, z imeni prostorov in površinami"
+      ],
+      "Guarda tutte le 19 foto": [
+      "See all 19 photos",
+      "Alle 19 Fotos ansehen",
+      "Oglejte si vseh 19 fotografij"
+      ],
+      "Soggiorno e terrazzo, cucina, camere e bagni, palazzo": [
+      "Living room and terrace, kitchen, bedrooms and bathrooms, building",
+      "Wohnzimmer und Terrasse, Küche, Schlafzimmer und Bäder, Gebäude",
+      "Dnevna soba in terasa, kuhinja, sobe in kopalnici, stavba"
+      ],
+      "Apri le foto": [
+      "Open the photos",
+      "Fotos öffnen",
+      "Odpri fotografije"
+      ],
+      "Chiudi le foto": [
+      "Close the photos",
+      "Fotos schließen",
+      "Zapri fotografije"
+      ],
+      "Guarda i 5 video": [
+      "Watch the 5 videos",
+      "Die 5 Videos ansehen",
+      "Oglejte si 5 videoposnetkov"
+      ],
+      "Tutta la casa in 75 secondi, più scorcio di mare, Camera Carso, terrazzo e cucina": [
+      "The whole flat in 75 seconds, plus the glimpse of the sea, the Karst Room, the terrace and the kitchen",
+      "Die ganze Wohnung in 75 Sekunden, dazu der Meeresblick, das Karstzimmer, die Terrasse und die Küche",
+      "Celotno stanovanje v 75 sekundah, poleg tega pogled na morje, Kraška soba, terasa in kuhinja"
+      ],
+      "Apri i video": [
+      "Open the videos",
+      "Videos öffnen",
+      "Odpri videoposnetke"
+      ],
+      "Chiudi i video": [
+      "Close the videos",
+      "Videos schließen",
+      "Zapri videoposnetke"
+      ],
+      "Lavori già fatti e punti forti: posto auto, Classe B, spazi, documenti": [
+      "Work already done and strong points: parking space, Class B, space, documents",
+      "Bereits erledigte Arbeiten und Stärken: Stellplatz, Klasse B, Platz, Unterlagen",
+      "Že opravljena dela in prednosti: parkirno mesto, razred B, prostor, dokumenti"
+      ],
+      "Superfici delle stanze, una per una": [
+      "Room sizes, one by one",
+      "Raumflächen im Einzelnen",
+      "Površine prostorov, ena za drugo"
+      ],
+      "Sotto casa e a pochi minuti: spesa, bus, centro, mare, autostrada": [
+      "On the doorstep and a few minutes away: shopping, buses, centre, sea, motorway",
+      "Vor der Haustür und wenige Minuten entfernt: Einkaufen, Bus, Zentrum, Meer, Autobahn",
+      "Pred hišo in nekaj minut stran: trgovine, avtobus, center, morje, avtocesta"
+      ],
+      "Quanto costa comprare: le imposte si sanno già": [
+      "What buying costs: the taxes are already known",
+      "Was der Kauf kostet: die Steuern stehen schon fest",
+      "Koliko stane nakup: davki so že znani"
+      ],
+      "Domande frequenti: 14 risposte pratiche": [
+      "Frequently asked questions: 14 practical answers",
+      "Häufige Fragen: 14 praktische Antworten",
+      "Pogosta vprašanja: 14 praktičnih odgovorov"
+      ],
+      "In breve: bora, rumore, porta blindata, garanzia sulla posa": [
+      "In short: bora wind, noise, security door, installation warranty",
+      "Kurz gesagt: Bora, Lärm, Sicherheitstür, Garantie auf den Einbau",
+      "Na kratko: burja, hrup, protivlomna vrata, garancija na vgradnjo"
+      ],
+      "Come si compra, in 3 passi: visita, proposta, rogito": [
+      "How to buy, in 3 steps: viewing, offer, completion",
+      "So kaufen Sie, in 3 Schritten: Besichtigung, Angebot, Notartermin",
+      "Kako kupiti, v 3 korakih: ogled, ponudba, podpis pogodbe"
+      ],
+      "Cosa c'è intorno: negozi, scuole, salute, verde": [
+      "What's around: shops, schools, healthcare, green spaces",
+      "Was es in der Nähe gibt: Geschäfte, Schulen, Gesundheit, Grün",
+      "Kaj je v bližini: trgovine, šole, zdravstvo, zelenje"
+      ],
+      "Mappa interattiva e autobus 6, 9, 35": [
+      "Interactive map and buses 6, 9, 35",
+      "Interaktive Karte und Busse 6, 9, 35",
+      "Interaktivni zemljevid in avtobusi 6, 9, 35"
+      ],
+      "Mostra i dati completi": [
+      "Show the full details",
+      "Alle Daten anzeigen",
+      "Prikaži vse podatke"
+      ],
+      "Tutti i dati (altri 14)": [
+      "All the details (14 more)",
+      "Alle Daten (14 weitere)",
+      "Vsi podatki (še 14)"
       ]
       };
     const TX_COL = { en: 0, de: 1, sl: 2 };
@@ -7330,6 +7674,20 @@
         else { var p = vs[0].play(); if (p && p.catch) p.catch(function () {}); }
         b.setAttribute('aria-pressed', String(playing));
       });
+    })();
+  </script>
+
+  <script>
+    /* anteprima 18/11: un link verso una parte chiusa la apre prima di arrivarci */
+    (function () {
+      function apri(el) { for (var d = el; d; d = d.parentElement) if (d.tagName === 'DETAILS' && !d.open) d.open = true; }
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest && e.target.closest('a[href^="#"]'); if (!a) return;
+        var t = document.getElementById(a.getAttribute('href').slice(1)); if (!t) return;
+        var g = t.getAttribute('data-apri'); apri(g ? document.getElementById(g) : t);
+      }, true);
+      var gf = document.getElementById('gruppoFoto');
+      if (gf) gf.addEventListener('toggle', function () { var s = document.getElementById('galleria'); if (s) s.classList.remove('g-collapsed'); });
     })();
   </script>
 </body>
