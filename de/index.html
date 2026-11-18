@@ -44,7 +44,7 @@
   <meta name="twitter:image" content="https://rioospo.github.io/viagiulia/img/web/og_via_giulia_77.jpg" />
   <!-- SEO-URL:end -->
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "RealEstateListing", "name": "4-Zimmer-Wohnung in Triest kaufen – oberste Etage, Via Giulia 77", "description": "349.000 € inkl. Tiefgaragenplatz · Triest, Via Giulia 77: 9. und oberste Etage, 4 Zimmer, Terrasse mit Karstblick, Energieklasse B. Direkt vom Eigentümer.", "inLanguage": ["it", "en", "de", "sl"], "image": ["https://rioospo.github.io/viagiulia/img/web/og_via_giulia_77.jpg", "https://rioospo.github.io/viagiulia/img/web/hero_panorama.jpg"], "about": {"@type": "Apartment", "name": "Appartamento al 9° piano, Via Giulia 77, Trieste", "address": {"@type": "PostalAddress", "streetAddress": "Via Giulia 77", "postalCode": "34126", "addressLocality": "Trieste", "addressRegion": "Friuli Venezia Giulia", "addressCountry": "IT"}, "floorSize": {"@type": "QuantitativeValue", "value": 108, "unitCode": "MTK"}, "numberOfRooms": 6, "numberOfBedrooms": 3, "numberOfBathroomsTotal": 2, "floorLevel": "9", "yearBuilt": 1990, "amenityFeature": [{"@type": "LocationFeatureSpecification", "name": "Terrasse", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Eigener Tiefgaragenstellplatz", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Aufzug", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Eigene Heizung", "value": true}], "geo": {"@type": "GeoCoordinates", "latitude": 45.655062, "longitude": 13.795209}}, "url": "https://rioospo.github.io/viagiulia/de/", "offers": {"@type": "Offer", "price": 349000, "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "businessFunction": "http://purl.org/goodrelations/v1#Sell", "description": "Preis inklusive Tiefgaragenstellplatz (Sub. 189)"}, "datePosted": "2026-11-16"}
+  {"@context": "https://schema.org", "@type": "RealEstateListing", "name": "4-Zimmer-Wohnung in Triest kaufen – oberste Etage, Via Giulia 77", "description": "349.000 € inkl. Tiefgaragenplatz · Triest, Via Giulia 77: 9. und oberste Etage, 4 Zimmer, Terrasse mit Karstblick, Energieklasse B. Direkt vom Eigentümer.", "inLanguage": ["it", "en", "de", "sl"], "image": ["https://rioospo.github.io/viagiulia/img/web/og_via_giulia_77.jpg", "https://rioospo.github.io/viagiulia/img/web/hero_panorama.jpg"], "about": {"@type": "Apartment", "name": "Appartamento al 9° piano, Via Giulia 77, Trieste", "address": {"@type": "PostalAddress", "streetAddress": "Via Giulia 77", "postalCode": "34126", "addressLocality": "Trieste", "addressRegion": "Friuli Venezia Giulia", "addressCountry": "IT"}, "floorSize": {"@type": "QuantitativeValue", "value": 108, "unitCode": "MTK"}, "numberOfRooms": 6, "numberOfBedrooms": 3, "numberOfBathroomsTotal": 2, "floorLevel": "9", "yearBuilt": 1990, "amenityFeature": [{"@type": "LocationFeatureSpecification", "name": "Terrasse", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Eigener Tiefgaragenstellplatz", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Aufzug", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Eigene Heizung", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Classe energetica (APE 2024)", "value": "B · EPgl,nren 59,09 kWh/m²a"}], "geo": {"@type": "GeoCoordinates", "latitude": 45.655062, "longitude": 13.795209}}, "url": "https://rioospo.github.io/viagiulia/de/", "offers": {"@type": "Offer", "price": 349000, "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "businessFunction": "http://purl.org/goodrelations/v1#Sell", "description": "Preis inklusive Tiefgaragenstellplatz (Sub. 189)"}, "datePosted": "2026-11-16"}
   </script>
 
   <!-- Caratteri ospitati sul sito (7/11/2026): nessuna richiesta ai server di Google (privacy dei visitatori, GDPR) -->
@@ -2210,12 +2210,21 @@
       /* sul telefono il video, ritagliato in verticale, mostra soprattutto il telaio in ombra: si apre con la panoramica */
       #heroSlideVideo { display: none !important; }
       /* 19/11 (audit 7): panoramica ingrandita e spostata in alto a sinistra: Carso, palazzi e alberi; il tetto con i camper resta fuori */
-      #heroSlide0 { background: url('img/web/hero_panorama.jpg') 32% 30% / auto 125% no-repeat !important; }
-      .cinema-slideshow { height: 58vh !important; height: 58svh !important; }
+      /* 19/11 sera (audit 8): con la foto più bassa serve più ingrandimento, sennò rientrano il tetto con i camper e il parcheggio */
+      #heroSlide0 { background: url('img/web/hero_panorama.jpg') 26% 22% / auto 175% no-repeat !important; }
+      /* 19/11 (audit 8): foto più bassa, così titolo e prezzo stanno sopra la barra in basso anche su un telefono da 375×667 */
+      .cinema-slideshow { height: 40vh !important; height: 40svh !important; }
       .hero-cinema .slide-indicators { display: none; }
-      .hero-pause { top: calc(58svh - 54px) !important; }
+      .hero-pause { top: calc(40svh - 54px) !important; }
       .hero-content { padding-top: 22px; }
       .hero-actions { display: none; }
+    }
+    /* 19/11 (audit 8): sui telefoni stretti (360 px) in DE/SL/EN titolo e prezzo andavano a 4 e 3 righe, sotto la barra */
+    @media (max-width: 400px) {
+      .hero-cinema .eyebrow { font-size: 0.78rem; letter-spacing: 0.04em; }
+      .hero-headline, .hero-first .hero-headline { font-size: 1.55rem !important; line-height: 1.15; margin-bottom: 10px; }
+      .hero-price, .hero-first .hero-price { font-size: 0.92rem !important; padding: 6px 12px !important; line-height: 1.35; }
+      .hero-content { padding-top: 16px; }
     }
 
     /* ---- sezioni: avorio e pietra alternati, schede bianche ---- */
@@ -3012,7 +3021,7 @@
           <div class="near-card"><h4 data-i18n="near_h3">Gesundheit</h4><ul data-i18n="near_l3"><li><b>Apotheke</b> (Rotonda del Boschetto) · ~250 m</li><li><b>Hausärzte</b> und Kinderberatungsstelle des Gesundheitsdienstes (Via Sai) · ~550 m</li><li><b>Krankenhaus Ospedale Maggiore</b> · ~1,1 km</li><li><b>Kinderklinik Burlo Garofolo</b> · ~2,3 km</li><li><b>Krankenhaus Cattinara</b> mit Notaufnahme · ~3,4 km</li></ul></div>
           <div class="near-card"><h4 data-i18n="near_h4">Schulen</h4><ul data-i18n="near_l4"><li><b>Kinderkrippen:</b> Zucchero Filato · ~430 m; Via Archi · ~470 m</li><li><b>Kindergärten:</b> Ferrante Aporti · ~350 m; Giardino Incantato · ~500 m</li><li><b>Staatlich anerkannte Privatschule</b> Collegio delle Dimesse · ~250 m</li><li><b>Grundschulen:</b> Luigi Mauro · ~400 m; Aldo Padoa · ~470 m; Suvich und Filzi-Grego · ~500 m</li><li><b>Mittelschule</b> Mario Codermatz · ~200 m</li><li><b>Gymnasien:</b> France Prešeren und Anton Martin Slomšek, mit slowenischer Unterrichtssprache · ~650–900 m; Petrarca, humanistisch und sprachlich · ~1,3 km</li></ul></div>
           <div class="near-card"><h4 data-i18n="near_h5">Grün und Freizeit</h4><ul data-i18n="near_l5"><li><b>Giardino Perini</b> · ~300 m</li><li><b>Bosco del Farneto</b>, der große Stadtwald · ~350 m</li><li><b>Park San Giovanni</b> mit Rosengarten · ~700 m</li><li><b>Stadtpark (Giardino Pubblico)</b> und Viale XX Settembre · ~1 km</li><li><b>Fitness und Bouldern</b> im Il Giulia · 30–40 m</li></ul></div>
-          <div class="near-card"><h4 data-i18n="near_h6">Mit dem Auto nach Slowenien, Österreich und Deutschland</h4><ul data-i18n="near_l6"><li><b>Autobahnzubringer</b> · ~10 Min.</li><li><b>Flughafen Triest</b> · ~40 Min.</li><li><b>Ljubljana</b> · ~1 Std. 15</li><li><b>Villach und Klagenfurt</b> · ~2 Std.</li><li><b>Graz</b> · ~3 Std. 30; <b>Salzburg</b> · ~4 Std.</li><li><b>München</b> · ~5 Std. 30; <b>Wien</b> · 5–6 Std.</li></ul></div>
+          <div class="near-card"><h4 data-i18n="near_h6">Mit dem Auto nach Slowenien, Österreich und Deutschland</h4><ul data-i18n="near_l6"><li><b>Autobahnzubringer</b> · ~10 Min.</li><li><b>Flughafen Triest</b> · ~40 Min.</li><li><b>Sežana</b> (Slowenien, gleich hinter der Grenze) · ~20 Min.</li><li><b>Koper</b> · ~30 Min.; <b>Nova Gorica</b> · ~50 Min.</li><li><b>Ljubljana</b> · ~1 Std. 15</li><li><b>Villach und Klagenfurt</b> · ~2 Std.</li><li><b>Graz</b> · ~3 Std. 30; <b>Salzburg</b> · ~4 Std.</li><li><b>München</b> · ~5 Std. 30; <b>Wien</b> · 5–6 Std.</li></ul></div>
         </div>
         <p class="near-foot" data-i18n="near_foot">Geschäfte im Il Giulia laut der offiziellen Website ilgiulia.it; übrige Angaben und Fahrzeiten laut Google Maps (November 2026). Sie können sich ändern.</p>
       </div>
@@ -3233,7 +3242,7 @@
           <details class="faq"><summary data-i18n="faq_q11">Wie wird bezahlt?</summary><p data-i18n="faq_a11">Per Banküberweisung oder Bankscheck (assegno circolare): In Italien müssen Zahlungen beim Immobilienkauf nachvollziehbar sein und werden in der Urkunde angegeben. Die Anzahlung wird bei der Unterzeichnung des Vorvertrags geleistet, der Restbetrag beim Notartermin.</p></details>
           <details class="faq"><summary data-i18n="faq_q12">Stehen Arbeiten am Gebäude an?</summary><p data-i18n="faq_a12">Nein: Die Eigentümerversammlung hat keine außerordentlichen Arbeiten beschlossen. Das Haus hat 27 Einheiten, einen Aufzug und eine gemeinsame Photovoltaikanlage auf dem Dach. Vor dem Angebot können Sie die Protokolle der letzten Versammlungen einsehen.</p></details>
           <details class="faq"><summary data-i18n="faq_q13">Internet und Klimaanlage?</summary><p data-i18n="faq_a13">Glasfaser liegt bis in die Wohnung. Eine Klimaanlage gibt es nicht: Terrasse, Wohnzimmer, Küche und Karstzimmer liegen nach Norden und bleiben im Sommer im Schatten. Wer möchte, kann Geräte nach der Hausordnung einbauen.</p></details>
-          <details class="faq"><summary data-i18n="faq_q14">Wie weit ist es nach Slowenien, Österreich und Deutschland?</summary><p data-i18n="faq_a14">Mit dem Auto, laut Google Maps: Ljubljana etwa 1 Std. 15, Villach und Klagenfurt etwa 2 Std., Graz etwa 3 Std. 30, Salzburg etwa 4 Std., München etwa 5 Std. 30, Wien 5–6 Std. Der Flughafen Triest ist etwa 40 Minuten entfernt, der Autobahnzubringer 10.</p></details>
+          <details class="faq"><summary data-i18n="faq_q14">Wie weit ist es nach Slowenien, Österreich und Deutschland?</summary><p data-i18n="faq_a14">Mit dem Auto, laut Google Maps: Sežana, gleich hinter der slowenischen Grenze, etwa 20 Minuten; Koper etwa 30, Nova Gorica etwa 50; Ljubljana etwa 1 Std. 15, Villach und Klagenfurt etwa 2 Std., Graz etwa 3 Std. 30, Salzburg etwa 4 Std., München etwa 5 Std. 30, Wien 5–6 Std. Der Flughafen Triest ist etwa 40 Minuten entfernt, der Autobahnzubringer 10.</p></details>
         </div>
         </details>
       </div>
@@ -3317,21 +3326,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><strong>Räume 1 &amp; 2</strong></td>
-                    <td>3-flügelige Dreh-Kipp-Fenster (2 Stk.)</td>
-                    <td class="font-code">1790 × 1380 mm</td>
+                    <td><strong>Karstzimmer, Meerzimmer und Arbeitszimmer</strong></td>
+                    <td>3-flügelige Dreh-Kipp-Fenster (3 Stk.)</td>
+                    <td class="font-code">1790 × 1380 mm (2)<br />1770 × 1320 mm (1)</td>
                     <td>0,94 W/m²K</td>
                     <td class="num">135,1 kg je Stück</td>
                   </tr>
                   <tr>
-                    <td><strong>Raum 3</strong></td>
-                    <td>3-flügeliges Dreh-Kipp-Fenster (1 Stk.)</td>
-                    <td class="font-code">1770 × 1320 mm</td>
-                    <td>0,94 W/m²K</td>
-                    <td class="num">135,1 kg</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Räume 4 &amp; 5</strong></td>
+                    <td><strong>Wohnzimmer und Küche</strong></td>
                     <td>Parallel-Schiebe-Kipp-Fenstertür (2 Stk.)</td>
                     <td class="font-code">1920 × 2380 mm</td>
                     <td>0,85 W/m²K</td>
@@ -3600,7 +3602,7 @@
               </div>
               <div class="comp-item-row">
                 <span>EU-Gebäuderichtlinie (EPBD):</span>
-                <strong style="color: var(--accent-green);">Bereits in den effizientesten Klassen</strong>
+                <strong style="color: var(--accent-green);">Weit entfernt von den zuerst zu sanierenden Klassen</strong>
               </div>
               <div class="comp-item-row">
                 <span>Grüne Baufinanzierung:</span>
@@ -3642,7 +3644,7 @@
           <p class="yield-note" data-i18n="gas_note">Kosten geschätzt bei einem Gaspreis von etwa 1,20–1,40 € pro Kubikmeter, alles inklusive; die tatsächlichen Kosten hängen von Vertrag und Verbrauch ab.</p>
         </div>
 
-        <!-- Tab 2: Caldaia a Condensazione 2022 -->
+        <!-- Tab 2: Caldaia a condensazione 2022 -->
         <div class="energy-tab-content" id="etab-caldaia">
           <div class="vg-2col" style="--cols: 1.15fr 0.85fr; align-items: start;">
             <div>
@@ -4351,7 +4353,7 @@
         btnC.classList.remove('active');
         yM.textContent = dict ? dict.val_lib_monthly : '1.300 € / mese';
         yG.textContent = dict ? dict.val_lib_gross : '15.600 € / anno';
-        yT.textContent = dict ? dict.val_lib_tax : '21% Cedolare Secca Ordinaria';
+        yT.textContent = dict ? dict.val_lib_tax : 'Cedolare secca ordinaria 21%';
         yI.textContent = dict ? dict.val_lib_ilia : 'Aliquota ILIA Ordinaria';
         yN.textContent = dict ? dict.val_lib_net : '~ 11.230 € / anno';
       }
@@ -4608,14 +4610,14 @@
         near_h5: "Verde e tempo libero",
         near_l5: "<li><b>Giardino Perini</b> · ~300 m</li><li><b>Bosco del Farneto</b>, il grande bosco dentro la città · ~350 m</li><li><b>Parco di San Giovanni</b> e roseto · ~700 m</li><li><b>Giardino Pubblico</b> e Viale XX Settembre · ~1 km</li><li><b>Palestra e arrampicata</b> al Giulia · 30–40 m</li>",
         near_h6: "In auto verso Slovenia, Austria e Germania",
-        near_l6: "<li><b>Raccordo autostradale</b> · ~10 min</li><li><b>Aeroporto di Trieste</b> · ~40 min</li><li><b>Lubiana</b> · ~1 h 15</li><li><b>Villach e Klagenfurt</b> · ~2 h</li><li><b>Graz</b> · ~3 h 30; <b>Salisburgo</b> · ~4 h</li><li><b>Monaco di Baviera</b> · ~5 h 30; <b>Vienna</b> · 5–6 h</li>",
+        near_l6: "<li><b>Raccordo autostradale</b> · ~10 min</li><li><b>Aeroporto di Trieste</b> · ~40 min</li><li><b>Sežana</b> (Slovenia, appena passato il confine) · ~20 min</li><li><b>Capodistria</b> · ~30 min; <b>Nova Gorica</b> · ~50 min</li><li><b>Lubiana</b> · ~1 h 15</li><li><b>Villach e Klagenfurt</b> · ~2 h</li><li><b>Graz</b> · ~3 h 30; <b>Salisburgo</b> · ~4 h</li><li><b>Monaco di Baviera</b> · ~5 h 30; <b>Vienna</b> · 5–6 h</li>",
         near_foot: "Negozi del Giulia dal sito ufficiale ilgiulia.it; le altre attività e i tempi in auto da Google Maps (novembre 2026). Possono cambiare nel tempo.",
         faq_q12: "Ci sono lavori condominiali in arrivo?",
         faq_a12: "No: oggi l'assemblea non ha deliberato nessun lavoro straordinario. Il palazzo ha 27 unità, l'ascensore e l'impianto fotovoltaico condominiale sul tetto. Prima della proposta puoi chiedere i verbali delle ultime assemblee.",
         faq_q13: "Internet e aria condizionata?",
         faq_a13: "La fibra ottica arriva fino all'appartamento. Non ci sono condizionatori: terrazzo, soggiorno, cucina e Camera Carso sono a nord e d'estate restano all'ombra. Chi li vuole può installarli seguendo il regolamento condominiale.",
         faq_q14: "Quanto dista da Slovenia, Austria e Germania?",
-        faq_a14: "In auto, secondo Google Maps: Lubiana circa 1 h 15, Villach e Klagenfurt circa 2 h, Graz circa 3 h 30, Salisburgo circa 4 h, Monaco di Baviera circa 5 h 30, Vienna 5–6 h. L'aeroporto di Trieste è a circa 40 minuti, il raccordo autostradale a 10.",
+        faq_a14: "In auto, secondo Google Maps: Sežana, appena passato il confine sloveno, circa 20 minuti; Capodistria circa 30, Nova Gorica circa 50; Lubiana circa 1 h 15, Villach e Klagenfurt circa 2 h, Graz circa 3 h 30, Salisburgo circa 4 h, Monaco di Baviera circa 5 h 30, Vienna 5–6 h. L'aeroporto di Trieste è a circa 40 minuti, il raccordo autostradale a 10.",
         contact_form_btn: "<svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-mail\"/></svg> Invia con il modulo (risposta via e-mail o telefono)",
         v3d_tour: "◉ Entra nel Loft a 360°",
         v3d_tours_lbl: "◉ Dentro le idee, a 360°:",
@@ -4656,7 +4658,7 @@
         wa_text: "Buongiorno Marco, ti contatto dal sito per l'appartamento in Via Giulia 77 a Trieste.",
         meta_desc: "349.000 € con posto auto coperto · Trieste, Via Giulia 77: 9° e ultimo piano, 3 camere, terrazzo con vista sul Carso, Classe B. Vendita diretta dal proprietario.",
         meta_title: "Appartamento in vendita a Trieste, 3 camere, ultimo piano – Via Giulia 77",
-        brand_floor: "9° Piano",
+        brand_floor: "9° piano",
         nav_residenza: "Residenza",
         nav_videotour: "Video",
         nav_spaccato: "3D",
@@ -4687,7 +4689,7 @@
         cap1_title: "Nove piani sopra la città, con tutto sotto casa.",
         cap1_subtitle: "Vivere al 9° e ultimo piano di Via Giulia 77 significa avere luce da due lati, l'altopiano del Carso davanti e il traffico della città lontano, nove piani più in basso.",
         cap1_float_title: "Infissi a triplo vetro 2022–2023",
-        cap1_float_desc: "Fornitura IPR con tenuta certificata alla Bora fino a Cat. 5 e isolamento acustico 32 dB.",
+        cap1_float_desc: "Fornitura IPR con tenuta certificata alla bora fino alla classe 5 e isolamento acustico 32 dB.",
         cap1_intro: "Palazzo di fine anni '80 (abitabilità 1990) con un appartamento già rinnovato dove conta: con il Superbonus 110% sono stati fatti il cappotto termico tutto intorno alla casa, gli infissi a triplo vetro, la porta blindata e la caldaia a condensazione (2022). I lavori energetici più costosi sono già fatti. Sopra c'è solo la grande terrazza condominiale con i pannelli fotovoltaici: nessun vicino al piano di sopra.",
         pil1_title: "Posto auto coperto di proprietà (C/6, 13 m²)",
         pil1_desc: "Al piano interrato S1 dello stabile: l'ascensore arriva al portone d'ingresso al piano terra, da cui due rampe di scale interne (14 gradini) scendono all'autorimessa.",
@@ -4728,19 +4730,19 @@
         vid2_badge: "<span><svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-leaf\"/></svg></span> Camera Carso",
         vid2_caption_title: "Camera Carso: la vista sulle colline",
         vid2_caption_sub: "La ripresa attraversa la camera fino alla finestra: vista aperta sulle colline del Carso e sulla città dal 9° piano.",
-        vid2_tag: "Zona Notte",
+        vid2_tag: "Zona notte",
         vid2_title: "Camera Carso",
         vid2_desc: "Camera matrimoniale con vista aperta sul Carso.",
         vid4_badge: "<span><svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-mountain\"/></svg></span> Terrazzo & Vista Carso",
         vid4_caption_title: "Apertura Panoramica sul Carso di Trieste",
         vid4_caption_sub: "Vista aperta sui tetti e sull'altopiano del Carso, nella quiete dell'ultimo piano.",
-        vid4_tag: "Spazio Esterno",
+        vid4_tag: "Spazio esterno",
         vid4_title: "Terrazzo panoramico",
         vid4_desc: "Vista aperta sul Carso dal 9° piano.",
         vid5_badge: "<span><svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-pan\"/></svg></span> Cucina con Uscita Terrazzo",
-        vid5_caption_title: "Cucina Abitabile con Uscita Diretta",
+        vid5_caption_title: "Cucina abitabile con Uscita Diretta",
         vid5_caption_sub: "Disposizione lineare con porta-finestra che apre direttamente sul terrazzo per pranzi all'aperto.",
-        vid5_tag: "Cucina Abitabile",
+        vid5_tag: "Cucina abitabile",
         vid5_title: "Cucina e terrazzo",
         vid5_desc: "Porta-finestra con passaggio esterno diretto.",
 
@@ -4780,12 +4782,12 @@
         more_energy: "Scheda tecnica completa",
         ape_cost_label: "Riscaldamento e acqua calda stimati",
         ape_badge_title: "Classe energetica B",
-        ape_badge_sub: "EPgl,nren 59,09 · EPgl,ren 1,09 kWh/m² anno • APE Valido fino al 21/10/2034",
+        ape_badge_sub: "EPgl,nren 59,09 · EPgl,ren 1,09 kWh/m² anno • APE valido fino al 21/10/2034",
         ape_gas_label: "Fabbisogno di gas stimato",
         ape_save_label: "Risparmio annuo stimato rispetto alla classe G",
         etab_1: "<span><svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-chart\"/></svg></span> Confronto con un alloggio tipico in classe G",
-        etab_2: "<span><svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-flame\"/></svg></span> Caldaia a Condensazione 2022",
-        etab_3: "<span><svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-cert\"/></svg></span> Attestato APE Deposito FVG",
+        etab_2: "<span><svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-flame\"/></svg></span> Caldaia a condensazione 2022",
+        etab_3: "<span><svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-cert\"/></svg></span> Attestato APE depositato in FVG",
         etab_4: "<span><svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-layers\"/></svg></span> Involucro (calcolo EC 700)",
 
         cap6_num: "Capitolo 02 • Foto",
@@ -4803,8 +4805,8 @@
         cap7_subtitle: "Documenti tavolari e catastali allineati, conformità urbanistica attestata da un architetto, immobile libero al rogito.",
         cad_card1_title: "Appartamento + posto auto coperto",
         cad_card2_title: "Per chi investe: stima dell'affitto",
-        yield_btn_conc: "Canone Concordato 3+2",
-        yield_btn_lib: "Canone Libero 4+4",
+        yield_btn_conc: "Canone concordato 3+2",
+        yield_btn_lib: "Canone libero 4+4",
         yield_sub_header: "Stima secondo l'Accordo Territoriale di Trieste (zona 3, sub-fascia 2)",
         yield_row_monthly: "Canone mensile:",
         yield_row_gross: "Canone lordo annuo:",
@@ -4820,7 +4822,7 @@
         val_conc_net: "~ 10.838 € / anno",
         val_lib_monthly: "1.300 € / mese",
         val_lib_gross: "15.600 € / anno",
-        val_lib_tax: "21% Cedolare Secca Ordinaria",
+        val_lib_tax: "Cedolare secca ordinaria 21%",
         val_lib_ilia: "Aliquota ILIA Ordinaria",
         val_lib_net: "~ 11.230 € / anno",
 
@@ -4883,7 +4885,7 @@
         ch_pdf_title: "Scheda di vendita in PDF (A4) ↗",
         ch_pdf_sub: "4 pagine con dati, pianta e foto: da salvare, inoltrare o stampare",
         ch_loc_tag: "Dove si trova",
-        ch_loc_sub: "A pochi passi dal Centro Commerciale Il Giulia (PAM) e fermate Bus 6, 9, 35 (sotto casa)",
+        ch_loc_sub: "A pochi passi dal centro commerciale Il Giulia (PAM), con i bus 6, 9, 35 sotto casa",
         contact_box_title: "Chiedi informazioni o fissa una visita",
         contact_name_label: "Nome e cognome *",
         contact_phone_label: "Telefono / WhatsApp",
@@ -4929,14 +4931,14 @@
         near_h5: "Parks and leisure",
         near_l5: "<li><b>Giardino Perini</b> garden · ~300 m</li><li><b>Farneto wood</b>, the large woodland inside the city · ~350 m</li><li><b>San Giovanni park</b> and rose garden · ~700 m</li><li><b>Public Garden</b> and Viale XX Settembre · ~1 km</li><li><b>Gym and climbing</b> at Il Giulia · 30–40 m</li>",
         near_h6: "By car to Slovenia, Austria and Germany",
-        near_l6: "<li><b>Motorway link</b> · ~10 min</li><li><b>Trieste airport</b> · ~40 min</li><li><b>Ljubljana</b> · ~1 h 15</li><li><b>Villach and Klagenfurt</b> · ~2 h</li><li><b>Graz</b> · ~3 h 30; <b>Salzburg</b> · ~4 h</li><li><b>Munich</b> · ~5 h 30; <b>Vienna</b> · 5–6 h</li>",
+        near_l6: "<li><b>Motorway link</b> · ~10 min</li><li><b>Trieste airport</b> · ~40 min</li><li><b>Sežana</b> (Slovenia, just over the border) · ~20 min</li><li><b>Koper</b> · ~30 min; <b>Nova Gorica</b> · ~50 min</li><li><b>Ljubljana</b> · ~1 h 15</li><li><b>Villach and Klagenfurt</b> · ~2 h</li><li><b>Graz</b> · ~3 h 30; <b>Salzburg</b> · ~4 h</li><li><b>Munich</b> · ~5 h 30; <b>Vienna</b> · 5–6 h</li>",
         near_foot: "Il Giulia shops from the official website ilgiulia.it; other places and driving times from Google Maps (November 2026). They may change over time.",
         faq_q12: "Are any building works planned?",
         faq_a12: "No: the owners' meeting has not approved any extraordinary works. The building has 27 units, a lift and shared solar panels on the roof. Before making an offer you can ask for the minutes of the latest owners' meetings.",
         faq_q13: "Internet and air conditioning?",
         faq_a13: "Fibre broadband reaches the flat. There is no air conditioning: the terrace, living room, kitchen and Karst Room face north and stay in the shade in summer. You can install units if you wish, following the building rules.",
         faq_q14: "How far is it from Slovenia, Austria and Germany?",
-        faq_a14: "By car, according to Google Maps: Ljubljana about 1 h 15, Villach and Klagenfurt about 2 h, Graz about 3 h 30, Salzburg about 4 h, Munich about 5 h 30, Vienna 5–6 h. Trieste airport is about 40 minutes away, the motorway link 10.",
+        faq_a14: "By car, according to Google Maps: Sežana, just over the Slovenian border, about 20 minutes; Koper about 30, Nova Gorica about 50; Ljubljana about 1 h 15, Villach and Klagenfurt about 2 h, Graz about 3 h 30, Salzburg about 4 h, Munich about 5 h 30, Vienna 5–6 h. Trieste airport is about 40 minutes away, the motorway link 10.",
         contact_form_btn: "<svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-mail\"/></svg> Send via the form (reply by email or phone)",
         v3d_tour: "◉ Step inside the Loft in 360°",
         v3d_tours_lbl: "◉ Inside the ideas, in 360°:",
@@ -5250,14 +5252,14 @@
         near_h5: "Grün und Freizeit",
         near_l5: "<li><b>Giardino Perini</b> · ~300 m</li><li><b>Bosco del Farneto</b>, der große Stadtwald · ~350 m</li><li><b>Park San Giovanni</b> mit Rosengarten · ~700 m</li><li><b>Stadtpark (Giardino Pubblico)</b> und Viale XX Settembre · ~1 km</li><li><b>Fitness und Bouldern</b> im Il Giulia · 30–40 m</li>",
         near_h6: "Mit dem Auto nach Slowenien, Österreich und Deutschland",
-        near_l6: "<li><b>Autobahnzubringer</b> · ~10 Min.</li><li><b>Flughafen Triest</b> · ~40 Min.</li><li><b>Ljubljana</b> · ~1 Std. 15</li><li><b>Villach und Klagenfurt</b> · ~2 Std.</li><li><b>Graz</b> · ~3 Std. 30; <b>Salzburg</b> · ~4 Std.</li><li><b>München</b> · ~5 Std. 30; <b>Wien</b> · 5–6 Std.</li>",
+        near_l6: "<li><b>Autobahnzubringer</b> · ~10 Min.</li><li><b>Flughafen Triest</b> · ~40 Min.</li><li><b>Sežana</b> (Slowenien, gleich hinter der Grenze) · ~20 Min.</li><li><b>Koper</b> · ~30 Min.; <b>Nova Gorica</b> · ~50 Min.</li><li><b>Ljubljana</b> · ~1 Std. 15</li><li><b>Villach und Klagenfurt</b> · ~2 Std.</li><li><b>Graz</b> · ~3 Std. 30; <b>Salzburg</b> · ~4 Std.</li><li><b>München</b> · ~5 Std. 30; <b>Wien</b> · 5–6 Std.</li>",
         near_foot: "Geschäfte im Il Giulia laut der offiziellen Website ilgiulia.it; übrige Angaben und Fahrzeiten laut Google Maps (November 2026). Sie können sich ändern.",
         faq_q12: "Stehen Arbeiten am Gebäude an?",
         faq_a12: "Nein: Die Eigentümerversammlung hat keine außerordentlichen Arbeiten beschlossen. Das Haus hat 27 Einheiten, einen Aufzug und eine gemeinsame Photovoltaikanlage auf dem Dach. Vor dem Angebot können Sie die Protokolle der letzten Versammlungen einsehen.",
         faq_q13: "Internet und Klimaanlage?",
         faq_a13: "Glasfaser liegt bis in die Wohnung. Eine Klimaanlage gibt es nicht: Terrasse, Wohnzimmer, Küche und Karstzimmer liegen nach Norden und bleiben im Sommer im Schatten. Wer möchte, kann Geräte nach der Hausordnung einbauen.",
         faq_q14: "Wie weit ist es nach Slowenien, Österreich und Deutschland?",
-        faq_a14: "Mit dem Auto, laut Google Maps: Ljubljana etwa 1 Std. 15, Villach und Klagenfurt etwa 2 Std., Graz etwa 3 Std. 30, Salzburg etwa 4 Std., München etwa 5 Std. 30, Wien 5–6 Std. Der Flughafen Triest ist etwa 40 Minuten entfernt, der Autobahnzubringer 10.",
+        faq_a14: "Mit dem Auto, laut Google Maps: Sežana, gleich hinter der slowenischen Grenze, etwa 20 Minuten; Koper etwa 30, Nova Gorica etwa 50; Ljubljana etwa 1 Std. 15, Villach und Klagenfurt etwa 2 Std., Graz etwa 3 Std. 30, Salzburg etwa 4 Std., München etwa 5 Std. 30, Wien 5–6 Std. Der Flughafen Triest ist etwa 40 Minuten entfernt, der Autobahnzubringer 10.",
         contact_form_btn: "<svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-mail\"/></svg> Über das Formular senden (Antwort per E-Mail oder Telefon)",
         v3d_tour: "◉ Das Loft in 360° betreten",
         v3d_tours_lbl: "◉ In den Ideen, in 360°:",
@@ -5571,14 +5573,14 @@
         near_h5: "Zelenje in prosti čas",
         near_l5: "<li><b>Vrt Perini</b> · ~300 m</li><li><b>Gozd Farneto</b>, velik gozd sredi mesta · ~350 m</li><li><b>Park pri Sv. Ivanu</b> z rožnim vrtom · ~700 m</li><li><b>Javni vrt</b> in Drevored XX. septembra · ~1 km</li><li><b>Fitnes in plezanje</b> v Il Giulia · 30–40 m</li>",
         near_h6: "Z avtom v Slovenijo, Avstrijo in Nemčijo",
-        near_l6: "<li><b>Avtocestni priključek</b> · ~10 min</li><li><b>Letališče Trst</b> · ~40 min</li><li><b>Ljubljana</b> · ~1 h 15 min</li><li><b>Beljak in Celovec</b> · ~2 h</li><li><b>Gradec</b> · ~3 h 30 min; <b>Salzburg</b> · ~4 h</li><li><b>München</b> · ~5 h 30 min; <b>Dunaj</b> · 5–6 h</li>",
+        near_l6: "<li><b>Avtocestni priključek</b> · ~10 min</li><li><b>Letališče Trst</b> · ~40 min</li><li><b>Sežana</b> (takoj za mejo) · ~20 min</li><li><b>Koper</b> · ~30 min; <b>Nova Gorica</b> · ~50 min</li><li><b>Ljubljana</b> · ~1 h 15 min</li><li><b>Beljak in Celovec</b> · ~2 h</li><li><b>Gradec</b> · ~3 h 30 min; <b>Salzburg</b> · ~4 h</li><li><b>München</b> · ~5 h 30 min; <b>Dunaj</b> · 5–6 h</li>",
         near_foot: "Trgovine v Il Giulia po uradni strani ilgiulia.it; drugi podatki in čas vožnje po Google Maps (november 2026). Lahko se spremenijo.",
         faq_q12: "Ali so v stavbi predvidena dela?",
         faq_a12: "Ne: zbor lastnikov ni sklenil nobenih izrednih del. Stavba ima 27 enot, dvigalo in skupno sončno elektrarno na strehi. Pred ponudbo lahko zahtevate zapisnike zadnjih zborov lastnikov.",
         faq_q13: "Internet in klimatska naprava?",
         faq_a13: "Optični internet je napeljan do stanovanja. Klimatske naprave ni: terasa, dnevna soba, kuhinja in Kraška soba so obrnjene proti severu in so poleti v senci. Kdor želi, jo lahko namesti v skladu s hišnim redom.",
         faq_q14: "Kako daleč je do Slovenije, Avstrije in Nemčije?",
-        faq_a14: "Z avtom, po podatkih Google Maps: Ljubljana približno 1 h 15 min, Beljak in Celovec približno 2 h, Gradec približno 3 h 30 min, Salzburg približno 4 h, München približno 5 h 30 min, Dunaj 5–6 h. Letališče Trst je oddaljeno približno 40 minut, avtocestni priključek 10.",
+        faq_a14: "Z avtom, po podatkih Google Maps: Sežana, takoj za mejo, približno 20 minut; Koper približno 30, Nova Gorica približno 50; Ljubljana približno 1 h 15 min, Beljak in Celovec približno 2 h, Gradec približno 3 h 30 min, Salzburg približno 4 h, München približno 5 h 30 min, Dunaj 5–6 h. Letališče Trst je oddaljeno približno 40 minut, avtocestni priključek 10.",
         contact_form_btn: "<svg class=\"ico\" aria-hidden=\"true\"><use href=\"#i-mail\"/></svg> Pošlji prek obrazca (odgovor po e-pošti ali telefonu)",
         v3d_tour: "◉ Vstopite v Loft v 360°",
         v3d_tours_lbl: "◉ V notranjosti idej, v 360°:",
@@ -5966,10 +5968,15 @@
       "Einzelgewicht",
       "Teža elementa"
       ],
-      "Stanze 1 & 2": [
-      "Rooms 1 & 2",
-      "Räume 1 & 2",
-      "Sobi 1 in 2"
+      "Camera Carso, Camera Mare e Studio": [
+      "Karst Room, Sea Room and Study",
+      "Karstzimmer, Meerzimmer und Arbeitszimmer",
+      "Kraška soba, Morska soba in delovna soba"
+      ],
+      "Finestre 3 ante battente/ribalta (3 Pz)": [
+      "3-sash tilt-and-turn windows (3 pcs)",
+      "3-flügelige Dreh-Kipp-Fenster (3 Stk.)",
+      "Trokrilna vrtljivo-nagibna okna (3 kos)"
       ],
       "Finestre 3 ante battente/ribalta (2 Pz)": [
       "3-sash tilt-and-turn windows (2 pcs)",
@@ -6001,10 +6008,10 @@
       "135,1 kg",
       "135,1 kg"
       ],
-      "Stanze 4 & 5": [
-      "Rooms 4 & 5",
-      "Räume 4 & 5",
-      "Prostora 4 in 5"
+      "Soggiorno e cucina": [
+      "Living room and kitchen",
+      "Wohnzimmer und Küche",
+      "Dnevna soba in kuhinja"
       ],
       "Portafinestra scorrevole traslante (2 Pz)": [
       "Tilt-and-slide French window (2 pcs)",
@@ -6076,12 +6083,12 @@
       "Zertifizierung & Abnahme",
       "Certifikati in prevzem"
       ],
-      "Serramenti Aluplast Ideal 8000 Triplo Vetro con saldature invisibili V-Perfect": [
+      "Serramenti Aluplast Ideal 8000 a triplo vetro con saldature invisibili V-Perfect": [
       "Aluplast Ideal 8000 triple-glazed windows with invisible V-Perfect welds",
       "Aluplast Ideal 8000 mit Dreifachverglasung und unsichtbaren V-Perfect-Schweißnähten",
       "Troslojna okna Aluplast Ideal 8000 z nevidnimi zvari V-Perfect"
       ],
-      "5 Vani Luce (16,30 m²)": [
+      "5 vani luce (16,30 m²)": [
       "5 openings (16.30 m²)",
       "5 Öffnungen (16,30 m²)",
       "5 odprtin (16,30 m²)"
@@ -6091,12 +6098,12 @@
       "Ug 0,7 W/m²K • 32 dB",
       "Ug 0,7 W/m²K • 32 dB"
       ],
-      "Posa UNI 11673-2 • Garanzia 10 Anni": [
+      "Posa UNI 11673-2 • Garanzia 10 anni": [
       "UNI 11673-2 installation • 10-year warranty",
       "Montage nach UNI 11673-2 • 10 Jahre Garantie",
       "Vgradnja po UNI 11673-2 • 10 let garancije"
       ],
-      "Cassonetti PVC Monoblocco Expert XT sp. 30 mm coibentati con ispezione frontale bianca": [
+      "Cassonetti in PVC monoblocco Expert XT sp. 30 mm coibentati con ispezione frontale bianca": [
       "Insulated Expert XT PVC monobloc roller-shutter boxes, 30 mm, with white front inspection panel",
       "Gedämmte Expert XT PVC-Monoblock-Rollladenkästen, 30 mm, mit weißer Revisionsöffnung vorne",
       "Izolirani PVC roletni nosilci Expert XT, monoblok 30 mm, z belo sprednjo revizijsko odprtino"
@@ -6116,7 +6123,7 @@
       "Zertifizierte thermische Trennung",
       "Certificirana toplotna prekinitev"
       ],
-      "Avvolgibili Alluminio coibentato Aluprof PA 43 con arganello in acciaio e snodo bianco": [
+      "Avvolgibili in alluminio coibentato Aluprof PA 43 con arganello in acciaio e snodo bianco": [
       "Aluprof PA 43 insulated aluminium roller shutters with steel winch and white joint",
       "Gedämmte Aluprof PA 43 Aluminium-Rollläden mit Stahlkurbel und weißem Gelenk",
       "Izolirane aluminijaste rolete Aluprof PA 43 z jeklenim navijalnim mehanizmom in belim zgibom"
@@ -6131,7 +6138,7 @@
       "IPR-Lieferung (Auftrag C824-21)",
       "Dobava IPR (naročilo C824-21)"
       ],
-      "Porta Blindata Stark Style7 Nettuno con carenatura perimetrale INOX e cilindro Mottura CM5+1": [
+      "Porta blindata Stark Style7 Nettuno con carenatura perimetrale INOX e cilindro Mottura CM5+1": [
       "Stark Style7 Nettuno security door with stainless-steel perimeter trim and Mottura CM5+1 cylinder",
       "Sicherheitstür Stark Style7 Nettuno mit Edelstahl-Rahmenverkleidung und Mottura-Zylinder CM5+1",
       "Protivlomna vrata Stark Style7 Nettuno z obodno obrobo iz nerjavnega jekla in cilindrom Mottura CM5+1"
@@ -6141,12 +6148,12 @@
       "1 Stk.",
       "1 kos"
       ],
-      "Classe 3 Antieffrazione • Ud 1,3 W/m²K": [
+      "Classe 3 antieffrazione • Ud 1,3 W/m²K": [
       "Burglary resistance class 3 • Ud 1.3 W/m²K",
       "Einbruchschutz Klasse 3 • Ud 1,3 W/m²K",
       "Protivlomni razred 3 • Ud 1,3 W/m²K"
       ],
-      "11 Punti chiusura • Chiave protetta": [
+      "11 punti di chiusura • chiave protetta": [
       "11 locking points • protected key",
       "11 Verriegelungspunkte • geschützter Schlüssel",
       "11 zaklepnih točk • zaščiten ključ"
@@ -6171,7 +6178,7 @@
       "Lieferung im Rahmen der Superbonus-110-%-Arbeiten bestätigt (IPR-Auftrag C824-21). Die gesamte Arbeit hat die Abnahme bestanden und hat 10 Jahre Garantie auf die zertifizierte Montage. Über denselben Superbonus 110 % wurden auch die Wärmedämmung rund um die Wohnung, die Sicherheitstür und die neue Brennwerttherme finanziert.",
       "Dobava potrjena v okviru del s Superbonusom 110 % (naročilo IPR C824-21). Celotno delo je uspešno prestalo prevzem in ima 10-letno garancijo na certificirano vgradnjo. Z istim Superbonusom 110 % so bili plačani tudi toplotna izolacija okoli celotnega stanovanja, protivlomna vrata in novi kondenzacijski kotel."
       ],
-      "Porta Blindata Stark Style7 Nettuno (Ud 1,3 W/m²K)": [
+      "Porta blindata Stark Style7 Nettuno (Ud 1,3 W/m²K)": [
       "Stark Style7 Nettuno security door (Ud 1.3 W/m²K)",
       "Sicherheitstür Stark Style7 Nettuno (Ud 1,3 W/m²K)",
       "Protivlomna vrata Stark Style7 Nettuno (Ud 1,3 W/m²K)"
@@ -6186,7 +6193,7 @@
       "Istituto Giordano S.p.A. (Bericht Nr. 340016)",
       "Istituto Giordano S.p.A. (poročilo št. 340016)"
       ],
-      "in Classe 3 Antieffrazione secondo la norma UNI EN 1627:": [
+      "in Classe 3 antieffrazione secondo la norma UNI EN 1627:": [
       "for burglary resistance class 3 under UNI EN 1627:",
       "in Einbruchschutzklasse 3 nach UNI EN 1627:",
       "za protivlomni razred 3 po UNI EN 1627:"
@@ -6231,7 +6238,7 @@
       "aus Spezialstahl gegen Aufbohren und Abreißen.",
       "iz posebnega jekla, odpornega proti vrtanju in izvleku."
       ],
-      "Isolamento Acustico 32 dB": [
+      "Isolamento acustico 32 dB": [
       "32 dB sound insulation",
       "Schalldämmung 32 dB",
       "Zvočna izolacija 32 dB"
@@ -6341,7 +6348,7 @@
       "Technische Abnahme gemeinsam vor Ort in der Via Giulia 77, mit Prüfung aller Kippflügel, des Laufs der großen Fenstertüren und der umlaufenden Dichtungen.",
       "Tehnični prevzem, opravljen skupaj na gradbišču na Via Giulia 77, s preverjanjem delovanja vseh nagibnih kril, drsenja velikih balkonskih vrat in obodnih tesnil."
       ],
-      "Copertura contrattuale IPR sulla posa in opera eseguita ai sensi della norma": [
+      "copertura contrattuale IPR sulla posa in opera eseguita ai sensi della norma": [
       "IPR contractual cover on the installation, carried out under",
       "Vertragliche IPR-Garantie auf die Montage, ausgeführt nach",
       "Pogodbeno jamstvo IPR za vgradnjo, izvedeno po"
@@ -6351,7 +6358,7 @@
       "UNI 11673-1 und UNI 11673-2",
       "UNI 11673-1 in UNI 11673-2"
       ],
-      "Diritto contrattuale a un intervento aggiuntivo di regolazione registri e cerniere entro 12 mesi dalla posa.": [
+      "diritto contrattuale a un intervento aggiuntivo di regolazione registri e cerniere entro 12 mesi dalla posa.": [
       "Contractual right to one extra adjustment of hinges and settings within 12 months of installation.",
       "Vertraglicher Anspruch auf eine zusätzliche Einstellung von Bändern und Beschlägen innerhalb von 12 Monaten nach der Montage.",
       "Pogodbena pravica do ene dodatne nastavitve tečajev in okovja v 12 mesecih po vgradnji."
@@ -6376,7 +6383,7 @@
       "Bei gleicher Fläche (~100 m²) in Triest (Klimazone E, 2102 Gradtage) zeigt der Vergleich mit einer typischen Stadtwohnung klare finanzielle und rechtliche Vorteile:",
       "Pri enaki površini (~100 m²) v Trstu (podnebna cona E, 2102 stopinjska dneva) primerjava s tipičnim mestnim stanovanjem pokaže jasne finančne in pravne prednosti:"
       ],
-      "Via Giulia 77 (9° Piano)": [
+      "Via Giulia 77 (9° piano)": [
       "Via Giulia 77 (9th floor)",
       "Via Giulia 77 (9. Etage)",
       "Via Giulia 77 (9. nadstropje)"
@@ -6401,15 +6408,15 @@
       "~580–680 € / Jahr",
       "~580–680 € / leto"
       ],
-      "Direttiva europea Case Green:": [
+      "Direttiva europea case green:": [
       "EU “Green Homes” directive:",
       "EU-Gebäuderichtlinie (EPBD):",
       "Evropska direktiva o energijski učinkovitosti stavb:"
       ],
-      "Già tra le classi più efficienti": [
-      "Already among the most efficient classes",
-      "Bereits in den effizientesten Klassen",
-      "Že med najučinkovitejšimi razredi"
+      "Lontana dalle classi da riqualificare per prime": [
+      "Well clear of the classes due for renovation first",
+      "Weit entfernt von den zuerst zu sanierenden Klassen",
+      "Daleč od razredov, ki jih je treba prenoviti najprej"
       ],
       "Mutui green:": [
       "Green mortgages:",
@@ -6426,7 +6433,7 @@
       "Wärmedurchgang Fenster (Uw):",
       "Toplotna prehodnost oken (Uw):"
       ],
-      "0,85 – 0,94 W/m²K (Triplo Vetro)": [
+      "0,85 – 0,94 W/m²K (triplo vetro)": [
       "0.85 – 0.94 W/m²K (triple glazing)",
       "0,85 – 0,94 W/m²K (Dreifachverglasung)",
       "0,85 – 0,94 W/m²K (troslojna zasteklitev)"
@@ -6626,7 +6633,7 @@
       "Insiel-Protokoll:",
       "Številka Insiel:"
       ],
-      "Data Deposito:": [
+      "Data deposito:": [
       "Filed on:",
       "Hinterlegt am:",
       "Vpisano:"
@@ -6636,7 +6643,7 @@
       "21.10.2024, 09:14 Uhr",
       "21. 10. 2024, ob 9.14"
       ],
-      "Validità Legale:": [
+      "Validità legale:": [
       "Valid until:",
       "Gültig bis:",
       "Velja do:"
@@ -6646,7 +6653,7 @@
       "21.10.2034 (10 Jahre)",
       "21. 10. 2034 (10 let)"
       ],
-      "Progettista Certificatore:": [
+      "Progettista certificatore:": [
       "Certifier:",
       "Aussteller:",
       "Izdajatelj:"
@@ -6656,7 +6663,7 @@
       "Diego PIAZZOLLA, Industrietechniker (Reg.-Nr. 855)",
       "Diego PIAZZOLLA, industrijski tehnik (reg. št. 855)"
       ],
-      "Società d'Ingegneria:": [
+      "Società d'ingegneria:": [
       "Engineering firm:",
       "Ingenieurbüro:",
       "Inženirsko podjetje:"
@@ -6791,7 +6798,7 @@
       "Neubau-Referenz: 20,82 kWh/m²a",
       "Referenčna novogradnja: 20,82 kWh/m²a"
       ],
-      "Vista Panoramica • 9° Piano": [
+      "Vista panoramica • 9° piano": [
       "Panoramic view • 9th floor",
       "Panoramablick • 9. Etage",
       "Razgled • 9. nadstropje"
@@ -6801,7 +6808,7 @@
       "Von der Terrasse: der grüne Karst und die Dächer von Triest",
       "S terase: zeleni Kras in strehe Trsta"
       ],
-      "Zona Giorno": [
+      "Zona giorno": [
       "Living area",
       "Wohnbereich",
       "Dnevni del"
@@ -6811,7 +6818,7 @@
       "Geräumiges Wohnzimmer, weiße Wände und Tageslicht",
       "Prostorna dnevna soba, bele stene in naravna svetloba"
       ],
-      "Spazio Esterno": [
+      "Spazio esterno": [
       "Outdoor space",
       "Außenbereich",
       "Zunanji prostor"
@@ -6826,7 +6833,7 @@
       "Essbereich und Wohnzimmer mit großen Fensterflächen",
       "Jedilni del in dnevna soba z velikimi okni"
       ],
-      "Vista Aperta": [
+      "Vista aperta": [
       "Open view",
       "Freier Blick",
       "Odprt pogled"
@@ -6916,7 +6923,7 @@
       "Aufzug vom 9. Stock bis zur Haustür, dann zwei Innentreppen zur Garage S1",
       "Dvigalo iz 9. nadstropja do vhodnih vrat, nato dve notranji stopnišči do garaže S1"
       ],
-      "Servizi & Trasporti": [
+      "Servizi e trasporti": [
       "Shops & transport",
       "Einkauf & Verkehr",
       "Trgovine in promet"
@@ -6951,7 +6958,7 @@
       "Wohnung (Sub. 50)",
       "Stanovanje (Sub. 50)"
       ],
-      "Cat. A/2 Civile": [
+      "Cat. A/2 civile": [
       "Cat. A/2 (residential)",
       "Kat. A/2 (Wohnung)",
       "Kat. A/2 (stanovanjska)"
@@ -6966,7 +6973,7 @@
       "2,70 m lichte Höhe (Katasterplan)",
       "2,70 m neto (katastrski načrt)"
       ],
-      "Cat. C/6 Autorimessa": [
+      "Cat. C/6 autorimessa": [
       "Cat. C/6 (garage)",
       "Kat. C/6 (Garage)",
       "Kat. C/6 (garaža)"
@@ -7021,7 +7028,7 @@
       ": das Eigentum geht mit der vom Richter geprüften Eintragung über – eine zusätzliche Sicherheit für den Käufer",
       ": lastništvo preide z vpisom, ki ga preveri sodnik — dodatno jamstvo za kupca"
       ],
-      "Via Giulia 77, Trieste (9° Piano)": [
+      "Via Giulia 77, Trieste (9° piano)": [
       "Via Giulia 77, Trieste (9th floor)",
       "Via Giulia 77, Triest (9. Etage)",
       "Via Giulia 77, Trst (9. nadstropje)"
@@ -7211,7 +7218,7 @@
       "GU-Schiebebeschläge der dreifach verglasten Fenster",
       "Drsno okovje GU troslojnih oken"
       ],
-      "Ingresso condominiale Civico 77 con telecamera": [
+      "Ingresso condominiale del civico 77 con telecamera": [
       "Entrance of building no. 77 with security camera",
       "Hauseingang Nr. 77 mit Kamera",
       "Vhod v stavbo št. 77 s kamero"
@@ -7221,7 +7228,7 @@
       "Aufzugstasten, 9. Stock",
       "Tipke dvigala, 9. nadstropje"
       ],
-      "Fermata Bus 9 e Centro Commerciale Il Giulia": [
+      "Fermata del bus 9 e centro commerciale Il Giulia": [
       "Bus 9 stop and the Il Giulia shopping centre",
       "Haltestelle der Linie 9 und Einkaufszentrum Il Giulia",
       "Postaja avtobusa 9 in nakupovalno središče Il Giulia"
@@ -7321,12 +7328,12 @@
       "1 kostenlose Nachjustierung inklusive:",
       "1 brezplačna nastavitev vključena:"
       ],
-      "✓ 1 Chiave originale sigillata": [
+      "✓ 1 chiave originale sigillata": [
       "✓ 1 sealed original key",
       "✓ 1 versiegelter Originalschlüssel",
       "✓ 1 zapečaten originalni ključ"
       ],
-      "✓ 2 Copie d'uso, già pronte": [
+      "✓ 2 copie d'uso, già pronte": [
       "✓ 2 ready-to-use copies",
       "✓ 2 gebrauchsfertige Kopien",
       "✓ 2 kopiji, pripravljeni za uporabo"
@@ -7336,7 +7343,7 @@
       "✓ „Second Life“-Umcodierung bereits erfolgt: frühere Schlüssel öffnen nicht mehr",
       "✓ Prekodiranje »Drugo življenje« je že opravljeno: prejšnji ključi vrat ne odprejo več"
       ],
-      "✓ 1 Card di Proprietà: con la chiave originale serve per fare i duplicati": [
+      "✓ 1 card di proprietà: con la chiave originale serve per fare i duplicati": [
       "✓ 1 owner card: needed, with the original key, to make copies",
       "✓ 1 Eigentümerkarte: mit dem Originalschlüssel für Nachschlüssel nötig",
       "✓ 1 lastniška kartica: skupaj z originalnim ključem je potrebna za izdelavo kopij"
