@@ -2334,6 +2334,8 @@
     .vgt-chip-line[aria-pressed="true"] { color: var(--ink); }
     .v3d-btn.primary:hover { background: var(--mare-scuro) !important; }
     [data-i18n="ch_wa_tag"] { color: #11804A !important; }
+    /* 18/11: università a tutta larghezza sotto le quattro voci */
+    .location-uni { grid-column: 1 / -1; background: #EEF5F8 !important; border-color: #B9D5E0 !important; }
 
     /* etichetta dell'anteprima */
     .anteprima-tag { position: fixed; right: 14px; bottom: 14px; z-index: 5000; background: #1D2A33; color: #fff; font: 600 12px/1 'Plus Jakarta Sans', sans-serif;
@@ -2985,6 +2987,11 @@
           <div class="location-item">
             <div class="location-dist"><span><svg class="ico" aria-hidden="true"><use href="#i-road"/></svg></span> 10 Min.</div>
             <div class="location-desc" data-i18n="loc_item_4"><strong>Karstplateau & Autobahnzubringer:</strong> etwa 10 Minuten mit dem Auto; von dort weiter Richtung Slowenien, Österreich, Venedig und Flughafen Triest.</div>
+          </div>
+          <!-- 18/11/2026: università a 868 m a piedi (OSRM, percorso pedonale; 410 m in linea d'aria). Niente aliquote: la manovra 2027 non è ancora legge -->
+          <div class="location-item location-uni">
+            <div class="location-dist"><span><svg class="ico" aria-hidden="true"><use href="#i-walk"/></svg></span> 12 Min. zu Fuß</div>
+            <div class="location-desc" data-i18n="loc_item_5"><strong>Universität Triest (Hauptsitz, Piazzale Europa):</strong> etwa 900 Meter zu Fuß, rund zwölf Minuten; von der Terrasse aus sichtbar. Eine günstige Lage auch für alle, die an Studierende vermieten möchten – mit dem italienischen Studentenmietvertrag zum vereinbarten Mietzins (canone concordato) und der ermäßigten Pauschalsteuer auf Mieteinnahmen (cedolare secca).</div>
           </div>
         </div>
       </div>
@@ -4679,6 +4686,7 @@
         loc_item_2: "<strong>Giardino Pubblico & Viale XX Settembre:</strong> 4 minuti di bus; viale pedonale, caffè storici e teatri.",
         loc_item_3: "<strong>Piazza Unità d'Italia & Rive:</strong> 9 minuti con il bus 9 e 2 a piedi; il lungomare di Barcola è a 20 minuti con il 6.",
         loc_item_4: "<strong>Altopiano del Carso & raccordo autostradale:</strong> circa 10 minuti in auto; da lì si prosegue verso Slovenia, Austria, Venezia e l'aeroporto di Trieste.",
+        loc_item_5: "<strong>Università di Trieste (sede centrale, Piazzale Europa):</strong> circa 900 metri a piedi, una dozzina di minuti; dal terrazzo si vede. Una posizione comoda anche per chi pensa di affittare a studenti, con il contratto per studenti a canone concordato e la cedolare secca agevolata.",
         cappos_num: "Capitolo 05 • Posizione",
         cappos_title: "Servizi sotto casa, centro e mare a pochi minuti",
         cappos_subtitle: "Quello che serve ogni giorno è a pochi passi dal portone; il centro, la stazione e il mare si raggiungono in pochi minuti di bus.",
@@ -4999,6 +5007,7 @@
         loc_item_2: "<strong>Public Gardens & Viale XX Settembre:</strong> 4 minutes by bus; pedestrian boulevard, historic cafés and theatres.",
         loc_item_3: "<strong>Piazza Unità d'Italia & Seafront:</strong> 9 minutes on bus 9 plus a 2-minute walk; the Barcola seafront is 20 minutes away on bus 6.",
         loc_item_4: "<strong>Karst Plateau & Motorway Link:</strong> about 10 minutes by car; from there on to Slovenia, Austria, Venice and Trieste Airport.",
+        loc_item_5: "<strong>University of Trieste (main campus, Piazzale Europa):</strong> about 900 metres on foot, roughly twelve minutes; you can see it from the terrace. A convenient location also for anyone thinking of renting to students, with the Italian student lease at agreed rent (canone concordato) and the reduced flat-rate tax on rent (cedolare secca).",
         cappos_num: "Chapter 05 • Location",
         cappos_title: "Shops at the door, the centre and the sea a few minutes away",
         cappos_subtitle: "Everyday needs are a few steps from the front door; the centre, the station and the sea are a few minutes away by bus.",
@@ -5319,6 +5328,7 @@
         loc_item_2: "<strong>Stadtpark & Viale XX Settembre:</strong> 4 Minuten mit dem Bus; Fußgängerzone, historische Kaffeehäuser und Theater.",
         loc_item_3: "<strong>Piazza Unità d'Italia & Uferpromenade:</strong> 9 Minuten mit dem Bus 9 und 2 Minuten zu Fuß; die Strandpromenade von Barcola erreichen Sie in 20 Minuten mit dem Bus 6.",
         loc_item_4: "<strong>Karstplateau & Autobahnzubringer:</strong> etwa 10 Minuten mit dem Auto; von dort weiter Richtung Slowenien, Österreich, Venedig und Flughafen Triest.",
+        loc_item_5: "<strong>Universität Triest (Hauptsitz, Piazzale Europa):</strong> etwa 900 Meter zu Fuß, rund zwölf Minuten; von der Terrasse aus sichtbar. Eine günstige Lage auch für alle, die an Studierende vermieten möchten – mit dem italienischen Studentenmietvertrag zum vereinbarten Mietzins (canone concordato) und der ermäßigten Pauschalsteuer auf Mieteinnahmen (cedolare secca).",
         cappos_num: "Kapitel 05 • Lage",
         cappos_title: "Einkaufen vor der Tür, Zentrum und Meer in wenigen Minuten",
         cappos_subtitle: "Alles für den Alltag liegt wenige Schritte von der Haustür entfernt; Zentrum, Bahnhof und Meer erreichen Sie in wenigen Busminuten.",
@@ -5635,6 +5645,7 @@
         loc_item_2: "<strong>Javni vrt in Viale XX Settembre:</strong> 4 minute z avtobusom; peš ulica, zgodovinske kavarne in gledališča.",
         loc_item_3: "<strong>Trg Unità d’Italia in nabrežje:</strong> 9 minut z avtobusom 9 in še 2 minuti peš; obalna promenada v Barkovljah je 20 minut z avtobusom 6.",
         loc_item_4: "<strong>Kraška planota in priključek na avtocesto:</strong> približno 10 minut z avtom; od tam naprej proti Sloveniji, Avstriji, Benetkam in tržaškemu letališču.",
+        loc_item_5: "<strong>Univerza v Trstu (glavni sedež, Piazzale Europa):</strong> približno 900 metrov peš, kakšnih dvanajst minut; vidi se s terase. Ugodna lega tudi za tiste, ki bi stanovanje oddajali študentom, z italijansko študentsko najemno pogodbo po dogovorjeni najemnini (canone concordato) in znižanim pavšalnim davkom na najemnino (cedolare secca).",
         cappos_num: "Poglavje 05 • Lokacija",
         cappos_title: "Trgovine pred vrati, središče mesta in morje le nekaj minut stran",
         cappos_subtitle: "Vse za vsak dan je le nekaj korakov od vhodnih vrat; središče mesta, železniška postaja in morje so nekaj minut z avtobusom.",
@@ -5856,6 +5867,11 @@
       "27 units with lift; no extraordinary building works approved",
       "27 Einheiten mit Aufzug; keine außerordentlichen Arbeiten beschlossen",
       "27 enot z dvigalom; nobena izredna dela niso sklenjena"
+      ],
+      "12 min a piedi": [
+      "12 min on foot",
+      "12 Min. zu Fuß",
+      "12 min peš"
       ],
       "Sotto casa": [
       "Right downstairs",
