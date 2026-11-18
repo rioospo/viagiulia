@@ -2176,8 +2176,9 @@
     /* ---- primo schermo: la vista intera, senza velo; testi sotto, su fondo chiaro ---- */
     .hero-cinema { display: block !important; height: auto !important; min-height: 0 !important; padding: 0 !important; background: var(--bg); }
     .cinema-slideshow { position: relative !important; inset: auto !important; height: min(76vh, 780px) !important; bottom: auto !important;
-      background: #DCE8EE url('img/web/video/poster_hero_glide.jpg?v=3') center / cover no-repeat; }
-    .cinema-slide.is-video { background: transparent; }
+      background: var(--pietra); }
+    /* 18/11 sera: nessuna foto ferma sotto il video (nelle dissolvenze si vedevano due immagini sovrapposte) */
+    .cinema-slide.is-video { background: var(--pietra); }
     .cinema-slide.is-video video { filter: none !important; }
     .cinema-overlay { display: none !important; }
     .hero-content { position: static !important; padding-top: 34px; padding-bottom: 8px; }
@@ -2201,7 +2202,7 @@
     @media (max-width: 768px) {
       /* sul telefono il video, ritagliato in verticale, mostra soprattutto il telaio in ombra: si apre con la panoramica */
       #heroSlideVideo { display: none !important; }
-      .cinema-slideshow { background-image: url('img/web/hero_panorama.jpg') !important; background-position: 42% center !important; }
+      #heroSlide0 { background: url('img/web/hero_panorama.jpg') 42% center / cover no-repeat !important; }
       .cinema-slideshow { height: 58vh !important; height: 58svh !important; }
       .hero-cinema .slide-indicators { display: none; }
       .hero-pause { top: calc(58svh - 54px) !important; }
