@@ -525,6 +525,13 @@ window.VG77_TRANSIT = {"source":"OpenStreetMap (relazioni 13295183, 13297000, 13
       }, { rootMargin: '400px 0px' });
       io.observe(mapEl);
     } else { init(); }
+    // 18/11/2026: la mappa sta in una tendina (tema chiaro): quando la tendina si apre, la mappa parte subito
+    var dt = mapEl.closest ? mapEl.closest('details') : null;
+    if (dt) dt.addEventListener('toggle', function () {
+      if (!dt.open) return;
+      if (!map) { if (io) io.disconnect(); init(); }
+      else setTimeout(function () { map.invalidateSize(); if (!userMoved) fitAll(false); }, 60);
+    });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
 })();

@@ -64,7 +64,7 @@
   <!-- Leaflet (mappa dei bus): file locali, caricati senza bloccare la pagina -->
   <link rel="stylesheet" href="js/leaflet.css" />
   <script src="js/leaflet.js" defer></script>
-  <script src="js/transit_map.js?v=8" defer></script>
+  <script src="js/transit_map.js?v=9" defer></script>
 
   <style>
     /* ========================================================
@@ -606,7 +606,7 @@
       position: absolute; left: 50%; top: 50%; z-index: 3;
       width: 92px; height: 92px; margin: -46px 0 0 -46px; padding: 0 0 0 6px;
       display: flex; align-items: center; justify-content: center;
-      border-radius: 50%; border: 2px solid rgba(243, 229, 171, 0.85);
+      border-radius: 50%; border: 2px solid rgba(255, 255, 255, 0.85);
       background: rgba(247,244,238, 0.5); color: var(--ink); cursor: pointer;
       backdrop-filter: blur(6px); box-shadow: 0 12px 34px rgba(0, 0, 0,0.135);
       transition: opacity 0.25s ease, transform 0.25s ease, background 0.2s ease;
@@ -2322,6 +2322,13 @@
     /* barra mobile e piè di pagina */
     .mobile-bottom-bar { background: rgba(255,255,255,0.97) !important; border-top: 1px solid var(--border-subtle); }
     .site-footer { background: var(--pietra); color: var(--text-secondary); }
+
+    /* audit 18/11 sera: testo bianco dove il fondo è azzurro scuro o colorato */
+    .skip-link, .vgt-chip[aria-pressed="true"], .comp-pill.red, .seller-avatar, .lightbox-nav:hover,
+    .v3d-gate button:not(.ghost), .v3d-btn.primary, .v3d-fs-exit { color: #fff !important; }
+    .vgt-chip-line[aria-pressed="true"] { color: var(--ink); }
+    .v3d-btn.primary:hover { background: var(--mare-scuro) !important; }
+    [data-i18n="ch_wa_tag"] { color: #11804A !important; }
 
     /* etichetta dell'anteprima */
     .anteprima-tag { position: fixed; right: 14px; bottom: 14px; z-index: 5000; background: #1D2A33; color: #fff; font: 600 12px/1 'Plus Jakarta Sans', sans-serif;
